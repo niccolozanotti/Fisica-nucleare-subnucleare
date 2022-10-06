@@ -7,3 +7,6 @@
 *.html
 *.log
 skeleton.bib
+chapters/*.log
+chapters/*.pdf
+output/*.tex

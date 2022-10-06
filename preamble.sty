@@ -3,13 +3,14 @@
 \usepackage{amsthm}
 \usepackage{graphicx}
 \usepackage{cancel}
-\usepackage[svgnames]{xcolor}
+% \usepackage[svgnames]{xcolor}
 \usepackage[italian]{babel}
 \usepackage{bm}
 \usepackage{simplewick}
 \usepackage{listings}
 \usepackage[displaymath,textmath,sections,graphics,floats]{preview}
 \usepackage{longtable}
+\usepackage{relsize}
 
 \usepackage{pgfplots}
 \usetikzlibrary{intersections}
@@ -36,3 +37,7 @@
 
 % alias for planck constant
 \newcommand{\hp}{\hslash}
+
+% command to insert nuclear element \nucl{A}{Z}{elelement symbol}
+\newcommand{\nucl}[3]{ \ensuremath{ \phantom{\ensuremath{^{#1}_{#2}}} \llap{\ensuremath{^{#1}}} \llap{\ensuremath{_{\rule{0pt}{.75em}#2}}} \mbox{#3} } }
+
