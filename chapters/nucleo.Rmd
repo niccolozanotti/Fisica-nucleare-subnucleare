@@ -1,0 +1,194 @@
+---
+title: "Appunti di Fisica Nucleare e Subnucleare"
+author: "Niccolò Zanotti"
+date: "`r Sys.Date()`"
+output:
+  tufte::tufte_book:
+    toc: yes
+    citation_package: natbib
+    latex_engine: xelatex
+    includes:
+      in_header: ../preamble.sty
+  tufte::tufte_handout:
+    citation_package: natbib
+    latex_engine: xelatex
+    includes:
+      in_header: ../preamble.sty
+  tufte::tufte_html: default
+  pdf_document:
+    includes:
+      in_header: ../preamble.sty
+    toc: yes
+subtitle: Prof. Nicola Semprini Cesari
+runningheader: Appunti di Fisica Nucleare e Subnucleare
+bibliography: bibliography.bib
+link-citations: yes
+link-at-notes: true
+knit: (function(inputFile, encoding) {
+      out_dir <- "output";
+      rmarkdown::render(inputFile,
+                        encoding=encoding,
+                        output_dir=file.path("../",dirname(inputFile), out_dir))})
+---
+
+# Lo studio del nucleo
+
+## La sezione d'urto
+
+In quale modo i fisici possono esplorare la struttura di oggetti così piccoli quali sono gli atomi, i nuclei e le particelle subatomiche? Quali sono le grandezze fisiche sperimentalmente misurabili e quale tipo di informazioni su tali oggetti microscopici è effettivamente possibile ottenere da tali misure?
+
+Gli elementi fondamentali che caratterizzano l'esperimento di Rutherford(1909-1913) cosí come versioni più moderne sono i seguenti:
+
+```{marginfigure}
+ L'esperimento di Geiger-Mursden- Rutherford`
+```
+
+1.  un **fascio incidente** di particelle proiettile;
+2.  un **bersaglio** contenente le particelle da studiare(atomi/nuclei /protoni/neutroni);
+3.  un **rivelatore** dietro/attorno al bersaglio capace di misurare le particelle emergenti[^1].
+
+[^1]: Il progresso tecnologico nel campo delle macchine acceleratrici ha reso possibile una variante dello schema descritto dove la collisione avviene tra le particelle di due fasci contrapposti. I 'collider', certamente più difficili da costruire permettono però di raggiungere, a parità delle tecnologie di accelerazione delle particelle, una maggiore energia della collisione.
+
+Nell'esperimento di Rutherford:
+
+-   fascio: particelle $\alpha$ di $5.6 MeV$
+-   bersaglio: gold foil con spessore di $8.6 \times 10^{-6}$ cm
+-   rivelatore: vetro dipinto da $ZnS$ scintillante al momento dell'incontro con particelle cariche.
+
+**Goal** dell'esperimento: riconoscere le particelle emergenti e misurarne le grandezze cinematiche(energia, quantità di moto) al fine di ottenere informazioni sulla natura dell' **interazione** tra particella del fascio e particella del bersaglio.
+
+Il termine **interazione** è un termine generico. Introduciamo la seguente notazione:
+
+```{r, fig.margin=TRUE,echo=FALSE}
+    include_graphics("figs/diffusione-elastica.jpg")
+```
+
+-   **Processi di diffusione**: particelle emergenti dal bersaglio coincidono con quelle del raggio incidente
+-   **Processi di produzione**: non vale quanto sopra
+
+Tra i processi di diffusione si distinguono processi
+
+-   **elastici** : energia della particella incidente $=$ emergente
+-   **anelastici**: energia della particella incidente $\neq$ emergente
+
+Dato che solitamente la particella proiettile è priva di struttura interna, a differenza di quella bersaglio, si ha diffusione
+
+```{r, fig.margin=TRUE,echo=FALSE}
+    include_graphics("figs/diffusione-anelastica.jpg")
+```
+
+```{r, fig.margin=TRUE,echo=FALSE}
+    include_graphics("figs/produzione-anelastica.jpg")
+```
+
+-   elastica: il bersaglio non modifica la sua struttura e non assorbe energia
+
+-   anelastica: il bersaglio modifica la sua struttura e assorbe energia
+
+Si parla di *diffusione profondamente inelastica* quando l'energia della particella proiettile è tale che la De Broglie wavelength associata risulta molto minore della dimensione della particella bersaglio $\rightarrow$ si può definirne la struttura interna(che varia durante il processo).
+
+Sulla base di questa terminologia è evidente che **un processo di produzione è sempre inelastico**.
+
+Vogliamo ora domandarci quale **grandezza fisica microscopica del bersaglio** sia possibile misurare con un arrangiamento sperimentale alla Rutherford. Per cominciare, occorre tenere presente che nella pratica sperimentale si cerca di ottenere **un fascio di particelle proiettile con densità e velocità uniformi e costanti** da inviare su di un **bersaglio materiale chimicamente omogeneo**. In generale, in questa situazione, **si ottengono informazioni sui componenti microscopici del bersaglio confrontando il fascio di particelle uscente con quello entrante**. In particolare maggiore è il numero di grandezze fisiche del fascio emergente che vengono misurate (distribuzione spaziale, energia, quantità di moto, tipologia, etc. etc.) più dettagliata risulterà l'informazione sui componenti microscopici del bersaglio.
+
+Le assunzioni che faremo sono le seguenti:
+
+1.  il fascio di sezione trasversale $\Sigma$ sia costituito da corpuscoli massivi puntiformi in moto con la stessa velocità $v$ e densità spaziale $n_f$ uniforme e costante;
+2.  il bersaglio sia costituito da sferette massive di raggio dato, distribuite con densità $n_b$uniforme all'interno di un sottile strato materiale di spessore $\Delta x$ e area maggiore di $\Sigma$(in modo da utilizzare tutte le particelle del fascio);
+3.  l'interazione tra particella proiettile e particella bersaglio sia assimilabile ad un urto meccanico;
+4.  a seguito di tale interazione la particella proiettile venga deviata e dunque rilevata in una direzione diversa da quella del fascio.
+
+Date queste condizioni, la probabilità che una singola particella proiettile interagisca con una singola particella del bersaglio vale
+
+$$ 
+     \frac{\sigma}{\Sigma}
+$$
+
+dove $\sigma$ è la sezione trasversale della particella bersaglio e $\Sigma$ la sezione trasversale del fascio. Il numero di particelle deflesse dalla direzione del fascio a seguito dell'urto vale allora
+
+$$ 
+    \Delta N_{def} = \Delta N_f \Delta N_b \frac{\sigma}{\Sigma}
+$$dove $\Delta N_f$ è il numero di particelle del fascio che nel tempo $\Delta t$ hanno avuto la possibilità di interagire con le $\Delta N_b$ particelle del bersaglio.\
+Ora si noti che le $\Delta N_f$ particelle del fascio sono contenute all'interno di un parallelepipedo di area $\Sigma$ ed altezza $v \Delta t$ mentre le $\Delta N_b$ particelle del bersaglio sono contenute all'interno di un parallelepipedo di area $\Sigma$ ed altezza $\Delta x$ **.** Ricordando allora che le densità volumetriche di particelle del fascio e del bersaglio valgono rispettivamente $n_f$ e $n_b$, si ottengono le seguenti espressioni:
+
+$$
+  \Delta N_f = \underbrace{\Sigma v \Delta t}_{ \text{Volume}}n_f
+     \qquad
+      \Delta N_b = \underbrace{\Sigma  \Delta x}_{ \text{Volume}}n_b
+$$
+
+che sostituite forniscono il numero di particelle deflesse nel tempo $\Delta t$:
+
+$$
+      \Delta N_{def} = \Delta N_f \Delta N_b \frac{\sigma}{\Sigma} = 
+       (\Sigma v \Delta t \ n_f)(\Sigma \Delta x \ n_b)\frac{\sigma}{\Sigma}
+$$
+
+e quindi un rate di deflessione
+
+$$
+       \frac{\Delta N_{def}}{\Delta t} = (v n_f)( \Sigma \Delta x n_b) \sigma
+$$ Invertendo la relazione, otteniamo infine l'espressione della **sezione trasversale della particella bersaglio** o **sezione d'urto**
+
+$$
+   \boxed{\  \sigma = \frac{1}{(n_fv)(n_b \Sigma \Delta x)}\frac{dN_{def}}{dt} }
+$$ L'interesse di questa espressione risiede nel fatto che mette in relazione una grandezza fisica microscopica, quale la sezione trasversale $\sigma$ della particella bersaglio, con grandezze fisiche macroscopiche misurabili quali sono i parametri geometrici $n_f,n_b,\Sigma,\Delta x$ e $\frac{\Delta N_{def}}{\Delta t}$.
+
+La grandezza $\sigma$ è detta **sezione d'urto totale** o sezione totale d'interazione ed è ciò che può essere misurato in un tipico arrangiamento alla Rutherford (questa affermazione va presa cum grano salis poiché disponendo di un adeguato apparato si possono misurare le sezioni d'urto in funzione di specifiche variabili d'interesse), ha le **dimensioni di un'area** (in questo caso coincidente con l'area trasversale della particella bersaglio) e dunque si misura in $m^2$(più propriamente in suoi sottomultipli), ed è la grandezza fisica che **caratterizza l'interazione tra la generica particella del fascio e la generica particella del bersaglio**. Ci attendiamo infine che tale espressione abbia una **validità generale** e che possa essere applicata non solo nel caso specifico dell'urto meccanico da noi esaminato (impossibile a livello microscopico!) ma anche nel caso più realistico in cui le particelle del fascio e del bersaglio interagiscono per mezzo di una interazione naturale.
+
+Infatti, anche nel caso delle particelle subatomiche, nel quale la mutua interazione non è certo schematizzabile come un urto meccanico di sfere rigide, sarà sempre possibile introdurre la grandezza microscopica $\sigma$ il cui valore, però, non sarà determinato dalla sezione trasversale della particella ma dalle proprietà della interazione e tra particella proiettile e particella bersaglio.
+
+Dunque, in fisica nucleare e delle particelle elementari gli esperimenti su fasci misurano essenzialmente le sezioni d'urto della interazione elementare fascio-bersaglio. Quando si dispone di una teoria quantitativa di tale interazione la grandezza $\sigma$ può essere calcolata anche teoricamente ed allora, attraverso il confronto con il valore determinato sperimentalmente, risulta possibile saggiare la bontà della teoria stessa. Nella fisica nucleare e delle particelle elementari il confronto tra teoria ed esperimento avviene quasi sempre attraverso le sezioni d'urto.
+
+Se l'apparato sperimentale è costruito in modo opportuno risulta possibile andare oltre il semplice conteggio del numero di particelle deflesse e fornire informazioni sempre più stringenti. Ad esempio, con un apparato sperimentale disposto attorno al bersaglio e *opportunamente segmentato*, in un processo di diffusione risulta possibile misurare la distribuzione angolare delle particelle del fascio deflesse dal bersaglio acquisendo ulteriore informazione sperimentale sulle proprietà della interazione in gioco. In questo modo si potrà misurare la sezione d'urto d'interazione con la condizione ulteriore che la particella proiettile emerga all'interno di un certo angolo solido elementare $d \Omega$. Avremo allora la seguente d'urto elementare (poiché infinitesimo risulta l'elemento di angolo solido)
+
+```{marginfigure}
+    Sezione d'urto differenziale 
+    rispetto all'angolo solido
+```
+
+```{r, fig.margin=TRUE,echo=FALSE}
+    include_graphics("figs/solid-angle-cross-section.jpg")
+```
+
+$$
+    d \sigma = \frac{1}{(n_fv)(n_b \Sigma \Delta x)}d \left( \frac{dN_{def}}{dt} \ \text{in} \ d\Omega\right)
+$$ in altri termini: $$
+    d \sigma = \frac{1}{(n_fv)(n_b \Sigma \Delta x)} \frac{d\dot{N}_{def \ in \ \Delta \Omega}}{d \Omega} d \Omega
+$$
+
+dalla quale otteniamo l'espressione della **sezione d'urto differenziale rispetto all'angolo solido** che è la grandezza misurata dal nostro ipotetico esperimento. Va da sè che l'integrale di tale sezione d'urto differenziale rispetto all'angolo solido debba restituire la sezione d'urto totale
+
+$$
+   \boxed{ \sigma = \iint_{\Omega}\frac{d \sigma}{d \Omega} \, d \Omega }
+$$
+
+relazione che può essere assunta come definizione della sezione d'urto differenziale rispetto all'angolo solido. Se il rivelatore permette di misurare anche l'energia della particella proiettile sarà possibile misurare il numero di particelle del fascio che nella unità di tempo emergono nell'angolo solido elementare $d \Omega$ all'interno dell'intervallo elementare $dE$. Si ha infatti: $$
+       \frac{d \sigma}{d \Omega} = \frac{1}{(n_fv)(n_b \Sigma \Delta x)}\frac{d}{d \Omega} \left( \frac{dN_{def}}{dt} \ \text{in} \ d\Omega\right)
+$$
+
+$$
+      \frac{d^2 \sigma}{dE d \Omega} = \frac{1}{(n_fv)(n_b \Sigma \Delta x)}\frac{d}{dE}\frac{d}{d \Omega} \left( \frac{dN_{def}}{dt} \ \text{in} \ d\Omega \ \text{e} \ dE\right)
+$$Il nostro ipotetico esperimento misurerà allora la seguente **sezione d\'urto doppiamente differenziale in funzione dell\'angolo solido e della energia** definita dalla relazione
+
+$$
+     \sigma = \iint_{\Omega}\int_{E} \frac{d^2 \sigma}{dE d \Omega} \, d \Omega
+$$Gli esempi citati, pur riferendosi a casi particolari chiariscono il fatto, di validità generale, che *il tipo di sezione d\'urto misurata dipende essenzialmente dalle caratteristiche tecniche del rivelatore*.
+
+Nel caso più semplice si misurerà una sezione d\'urto totale di interazione ma, disponendo
+di rivelatori via via più sofisticati, risulterà possibile misurare sezioni d\'urto differenziali di interazione in funzione di un insieme di variabili cinematiche sempre più ampio.
+
+$$
+     \sigma = \underset{\Omega}{\iint}\underset{E}{\int}\frac{d^2 \sigma}{dE d \Omega} \, d \Omega
+$$
+				
+			
+		
+
+	
+
+				
+			
+		
+
+	
