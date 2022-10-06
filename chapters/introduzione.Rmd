@@ -9,16 +9,16 @@ output:
     latex_engine: xelatex
     includes:
       in_header: preamble.sty
-  pdf_document:
-    includes:
-      in_header: preamble.sty
-    toc: yes
   tufte::tufte_handout:
     citation_package: natbib
     latex_engine: xelatex
     includes:
       in_header: preamble.sty
   tufte::tufte_html: default
+  pdf_document:
+    includes:
+      in_header: preamble.sty
+    toc: yes
 subtitle: Prof. A. Bazzani
 runningheader: Appunti di Fisica Nucleare e Subnucleare
 bibliography: bibliography.bib
@@ -26,18 +26,7 @@ link-citations: yes
 link-at-notes: true
 ---
 
-```{r setup, include=FALSE}
-library(tufte)
-# invalidate cache when the tufte version changes
-knitr::opts_chunk$set(cache.extra = packageVersion('tufte'))
-options(htmltools.dir.version = FALSE)
-```
+# Introduzione
 
-```{r, child=c('chapters/introduzione.Rmd', 'chapters/nucleare.Rmd')}
-```
+Valutare cosa mettere di introduzione
 
-# References
-```{r bib, include=FALSE}
-# create a bib file for the R packages used in this document
-knitr::write_bib(c('base', 'rmarkdown'), file = 'skeleton.bib')
-```

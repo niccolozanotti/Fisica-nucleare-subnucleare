@@ -1,6 +1,102 @@
 ---
+title: "Appunti di Fisica Nucleare e Subnucleare"
+author: "Niccolò Zanotti"
+date: "`r Sys.Date()`"
 output:
-  pdf_document: default
-  html_document: default
+  tufte::tufte_book:
+    toc: yes
+    citation_package: natbib
+    latex_engine: xelatex
+    includes:
+      in_header: preamble.sty
+  tufte::tufte_handout:
+    citation_package: natbib
+    latex_engine: xelatex
+    includes:
+      in_header: preamble.sty
+  tufte::tufte_html: default
+  pdf_document:
+    includes:
+      in_header: preamble.sty
+    toc: yes
+subtitle: Prof. A. Bazzani
+runningheader: Appunti di Fisica Nucleare e Subnucleare
+bibliography: bibliography.bib
+link-citations: yes
+link-at-notes: true
 ---
-nucleare a caso
+
+# La Fisica Nucleare
+
+## Le unità di misura della Fisica Nucleare e Subnucleare
+
+La scelta della unità di misura è arbitraria ma, in accordo con i criteri che ispirano i moderni sistemi, soddisfa alcuni semplici requisiti di ordine generale:
+
+-   **l'unità deve essere connessa ad un fenomeno naturale ritenuto stabile ed invariabile nel tempo** piuttosto che ad un oggetto o manufatto particolare il quale potrebbe deteriorarsi o modificare le sue proprietà con il tempo;
+-   **le unità non devono essere ridondanti** e devono costituire un sistema di grandezze fisiche irriducibili dette fondamentali dalle quali ottenere tutte le altre che invece vengono dette derivate;
+-   **l'unità deve essere riproducibile in laboratorio con una relativa facilità** (in realtà è lavoro da professionisti quali sono i metrologi).
+
+Un sistema di unità di misura più appropriato può essere costruito facendo riferimento alle costanti fisiche fondamentali che governano i fenomeni nucleari e subnucleari. Accanto alle grandezze fondamentali, ogni area della fisica introduce anche specifiche costanti fisiche.
+
+Queste possono essere sia dimensionali che adimensionali, riferirsi a specifiche classi di fenomeni - e dunque di *rango locale* - oppure valide per ogni fenomeno fisico e quindi di *rango universale*. Mentre il valore numerico delle costanti dimensionali dipende dalla scelta del sistema di unità misura, quello delle costanti adimensionali ne è del tutto indipendente per cui si ritiene che siano dotate di un più profondo significato fisico anche se a tutt'oggi nessuna teoria è in grado di predirne il valore.
+
+Fu Planck che propose di assumere come grandezze fisiche fondamentali le costanti fisiche universali introducendo i cosiddetti sistemi naturali di unità di misura. Lo scopo di tali sistemi è quello di dedurre le appropriate scale di lunghezze, tempi, masse e temperature direttamente dai fenomeni naturali piuttosto che da convenzioni di natura metrologica
+
+<!-- [in un celebre articolo presentato nel 1899 all’accademia di Berlino, Planck sviluppò un Sistema Naturale basato sulle costanti universali G (costante di gravitazione), k (costante di Boltzmann), c (velocità della luce) ed h (costante di Planck)]. -->
+
+La costruzione di un sistema di unità di misura le cui grandezze abbiano la scala appropriata per una certa classe di fenomeni richiede l'introduzione di specifici vincoli tra le grandezze fondamentali della descrizione macroscopica. Ad esempio, dato che **i fenomeni nucleari e subnucleari sono al tempo stesso relativistici e quantistici** ciò significa che le velocità, ovvero i quozienti tra lunghezze e tempi saranno dell'ordine di c, mentre le azioni, cioè i prodotti delle energie per i tempi caratteristici saranno dell'ordine di $\hslash$. Due costanti universali non sono però sufficienti per fissare la scala delle tre grandezze necessarie al Sistema Internazionale per descrivere la relatività e meccanica quantistica (L, T ed M). Il particolare ruolo giocato dalle macchine acceleratrici in fisica nucleare e delle particelle elementari suggerisce allora di assumere come terza grandezza (non costante) un fondamentale parametro costruttivo della macchina, **l'energia E**. In accordo con le convenzioni adottate nella ingegneria delle macchine acceleratrici si assume come unità l'elettronvolt (eV), ovvero l'energia cinetica acquisita da un elettrone accelerato da una differenza di potenziale di un volt. Si ottiene facilmente la sua conversione in joule: $E_\text{cin} = eV$ da cui $1 eV = 1.602 \times 10^{-19} \ J$.
+
+Definite le unità del **Sistema Naturale della Fisica Nucleare e Subnucleare (SNNS)** possiamo facilmente calcolare i loro valori nel Sistema Internazionale (SI) attraverso le seguenti equazioni dimensionali (si noti che con le lettere minuscole indichiamo le grandezze fondamentali del SNNS e con le maiuscole quelle del SI)
+\[
+      c \sim \frac{L}{T} \qquad \epsilon \sim M c^2 \qquad \epsilon T \sim \hslash
+\]
+\[
+       L \sim cT \qquad M \sim \frac{\epsilon}{c^2} \qquad T \sim \frac{\hslash}{\epsilon}
+\]
+\[
+     \Longrightarrow L \sim \frac{\hslash c}{\epsilon} \qquad M \sim \frac{\epsilon}{c^2} \qquad T \sim           \frac{\hslash}{\epsilon}
+\]
+Da queste deduciamo che le lunghezze possono essere misurate in unità di $\frac{\hslash c}{\epsilon}$ ($\hslash c / eV$ o $1/eV$ se $ħ=c=1$), i tempi in unità di $\frac{\hslash}{\epsilon}$ ($\hslash/eV$ o $1/eV$ se $\hslash=1$) ed infine le masse in unità di $\epsilon/c^2(eV/c^2$ o $eV$ se $c=1$).
+
+Tenendo ora presenti i valori delle costanti universali espresse nel Sistema Internazionale e della conversione tra Joule ($J$) ed elettronvolt ($eV$):
+\[
+    \hslash = 1.055 \times 10^{-34} J \cdot s \quad c = 2.998 \times 10^8 m/s \quad \hslash c = 3.162 \times 10^{-26} J \cdot m
+\]
+\[
+     \qquad \quad 1 eV = 1.602 \times 10^{-19} J
+\]
+possiamo calcolare i coefficienti della conversione tra il Sistema Naturale della Fisica Nucleare e Subnucleare ed il Sistema Internazionale (per quanto riguarda l’energia, piuttosto che gli eV, assumeremo la scala più appropriata dei MeV)
+\[
+      L \sim \frac{\hslash c}{\epsilon} \qquad 1 \left(\frac{\hslash c}{MeV}\right) \sim 1.97      \times 10^{-19} m 
+\]
+\[
+     M \sim \frac{\epsilon}{c^2} \qquad 1 \left(\frac{MeV}{c^2}\right) \sim 1.78 \times 10^{-30} Kg
+\]
+\[
+     \frac{\hp}{\epsilon} \sim T \qquad 1 \left ( \frac{\hp}{MeV} \right) \sim 6.59 \times 10^{-22} s
+\]
+
+
+## Le proprietà generali dei nuclei
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
