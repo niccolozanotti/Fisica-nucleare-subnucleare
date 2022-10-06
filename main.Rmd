@@ -3,12 +3,7 @@ title: "Appunti di Fisica Nucleare e Subnucleare"
 author: "Niccolò Zanotti"
 date: "`r Sys.Date()`"
 output:
-  tufte::tufte_book:
-    toc: yes
-    citation_package: natbib
-    latex_engine: xelatex
-    includes:
-      in_header: preamble.sty
+  tufte::tufte_html: default
   pdf_document:
     includes:
       in_header: preamble.sty
@@ -18,12 +13,22 @@ output:
     latex_engine: xelatex
     includes:
       in_header: preamble.sty
-  tufte::tufte_html: default
+  tufte::tufte_book:
+    toc: yes
+    citation_package: natbib
+    latex_engine: xelatex
+    includes:
+      in_header: preamble.sty
 subtitle: Prof. A. Bazzani
 runningheader: Appunti di Fisica Nucleare e Subnucleare
 bibliography: bibliography.bib
 link-citations: yes
 link-at-notes: true
+knit: (function(inputFile, encoding) {
+      out_dir <- "output";
+      rmarkdown::render(inputFile,
+                        encoding=encoding,
+                        output_dir=file.path(dirname(inputFile), out_dir))})
 ---
 
 ```{r setup, include=FALSE}

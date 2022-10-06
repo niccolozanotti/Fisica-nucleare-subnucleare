@@ -3,18 +3,18 @@ title: "Appunti di Fisica Nucleare e Subnucleare"
 author: "Niccolò Zanotti"
 date: "`r Sys.Date()`"
 output:
+  tufte::tufte_html: default
+  tufte::tufte_handout:
+    citation_package: natbib
+    latex_engine: xelatex
+    includes:
+      in_header: preamble.sty
   tufte::tufte_book:
     toc: yes
     citation_package: natbib
     latex_engine: xelatex
     includes:
       in_header: preamble.sty
-  tufte::tufte_handout:
-    citation_package: natbib
-    latex_engine: xelatex
-    includes:
-      in_header: preamble.sty
-  tufte::tufte_html: default
   pdf_document:
     includes:
       in_header: preamble.sty
