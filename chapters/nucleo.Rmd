@@ -128,11 +128,14 @@ e quindi un rate di deflessione
 
 $$
        \frac{\Delta N_{def}}{\Delta t} = (v n_f)( \Sigma \Delta x n_b) \sigma
-$$ Invertendo la relazione, otteniamo infine l'espressione della **sezione trasversale della particella bersaglio** o **sezione d'urto**
-
-$$
+$$ 
+Invertendo la relazione, otteniamo infine l'espressione della **sezione trasversale della particella bersaglio** o **sezione d'urto**
+\begin{equation}
    \boxed{\  \sigma = \frac{1}{(n_fv)(n_b \Sigma \Delta x)}\frac{dN_{def}}{dt} }
-$$ L'interesse di questa espressione risiede nel fatto che mette in relazione una grandezza fisica microscopica, quale la sezione trasversale $\sigma$ della particella bersaglio, con grandezze fisiche macroscopiche misurabili quali sono i parametri geometrici $n_f,n_b,\Sigma,\Delta x$ e $\frac{\Delta N_{def}}{\Delta t}$.
+   (\#eq:cross-sec-def)
+\end{equation}
+
+L'interesse di questa espressione risiede nel fatto che mette in relazione una grandezza fisica microscopica, quale la sezione trasversale $\sigma$ della particella bersaglio, con grandezze fisiche macroscopiche misurabili quali sono i parametri geometrici $n_f,n_b,\Sigma,\Delta x$ e $\frac{\Delta N_{def}}{\Delta t}$.
 
 La grandezza $\sigma$ è detta **sezione d'urto totale** o sezione totale d'interazione ed è ciò che può essere misurato in un tipico arrangiamento alla Rutherford (questa affermazione va presa cum grano salis poiché disponendo di un adeguato apparato si possono misurare le sezioni d'urto in funzione di specifiche variabili d'interesse), ha le **dimensioni di un'area** (in questo caso coincidente con l'area trasversale della particella bersaglio) e dunque si misura in $m^2$(più propriamente in suoi sottomultipli), ed è la grandezza fisica che **caratterizza l'interazione tra la generica particella del fascio e la generica particella del bersaglio**. Ci attendiamo infine che tale espressione abbia una **validità generale** e che possa essere applicata non solo nel caso specifico dell'urto meccanico da noi esaminato (impossibile a livello microscopico!) ma anche nel caso più realistico in cui le particelle del fascio e del bersaglio interagiscono per mezzo di una interazione naturale.
 
@@ -169,26 +172,24 @@ $$
 
 $$
       \frac{d^2 \sigma}{dE d \Omega} = \frac{1}{(n_fv)(n_b \Sigma \Delta x)}\frac{d}{dE}\frac{d}{d \Omega} \left( \frac{dN_{def}}{dt} \ \text{in} \ d\Omega \ \text{e} \ dE\right)
-$$Il nostro ipotetico esperimento misurerà allora la seguente **sezione d\'urto doppiamente differenziale in funzione dell\'angolo solido e della energia** definita dalla relazione
+$$Il nostro ipotetico esperimento misurerà allora la seguente **sezione d'urto doppiamente differenziale in funzione dell'angolo solido e della energia** definita dalla relazione
 
 $$
      \sigma = \iint_{\Omega}\int_{E} \frac{d^2 \sigma}{dE d \Omega} \, d \Omega
-$$Gli esempi citati, pur riferendosi a casi particolari chiariscono il fatto, di validità generale, che *il tipo di sezione d\'urto misurata dipende essenzialmente dalle caratteristiche tecniche del rivelatore*.
+$$Gli esempi citati, pur riferendosi a casi particolari chiariscono il fatto, di validità generale, che *il tipo di sezione d'urto misurata dipende essenzialmente dalle caratteristiche tecniche del rivelatore*.
 
-Nel caso più semplice si misurerà una sezione d\'urto totale di interazione ma, disponendo
-di rivelatori via via più sofisticati, risulterà possibile misurare sezioni d\'urto differenziali di interazione in funzione di un insieme di variabili cinematiche sempre più ampio.
+Nel caso più semplice si misurerà una sezione d'urto totale di interazione ma, disponendo di rivelatori via via più sofisticati, risulterà possibile misurare sezioni d'urto differenziali di interazione in funzione di un insieme di variabili cinematiche sempre più ampio.
 
+## Calcoli di sezioni d'urto
+
+Immaginiamo di volere ottenere la sezione d'urto differenziale rispetto all'angolo solido di un fascio di proiettili di sezione trascurabile su sfere di raggio $R$ nella ipotesi che abbiano luogo urti classici elastici.
+
+```{r, fig.margin=TRUE,echo=FALSE,fig.cap="Sezione d'urto differenziale di una sfera rigida"}
+    include_graphics("figs/cross-section-calc.jpg")
+```
+
+Senza entrare nel dettaglio della meccanica dell'urto - assumendo un sistema di coordinate sferiche con asse z lungo l'asse centrale della sfera - sappiamo che sussiste una piena simmetria rispetto all'angolo e l'**angolo di emergenza** del proiettile è interamente determinato dal **parametro d'urto** $b$ attarverso una relazione del tipo $$
+     b = b(\vartheta)
 $$
-     \sigma = \underset{\Omega}{\iint}\underset{E}{\int}\frac{d^2 \sigma}{dE d \Omega} \, d \Omega
-$$
-				
-			
-		
 
-	
-
-				
-			
-		
-
-	
+che codifica i dettagli dell'urto stesso. Ciò significa che tutti i proiettili passanti per l'area elementare $bd \varphi db$ saranno deflessi dello stesso angolo solido elementare $d \Omega$ per cui, sulla base di \@ref(eq:cross-sec-def)

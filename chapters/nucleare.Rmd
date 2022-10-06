@@ -119,47 +119,19 @@ $$ $$
      a_{ex} = 0.001 159 652 180 730 (280)
 $$ lo stupefacente accordo costituisce uno dei test più significativi a favore della QED.
 
-Nel caso in cui la particella quantistica non sia puntiforme il fattore $g=2$ si
-modifica ben più pesantemente. Ad esempio, nel caso del protone deve
-essere moltiplicato per $2.79$per cui si ha $g=2 \times 2.79=5.58$ mentre nel caso
-del neutrone deve essere moltiplicato per $-1.91$per cui si ha $g=2 \times(-1.91) = -3.82$.
+Nel caso in cui la particella quantistica non sia puntiforme il fattore $g=2$ si modifica ben più pesantemente. Ad esempio, nel caso del protone deve essere moltiplicato per $2.79$per cui si ha $g=2 \times 2.79=5.58$ mentre nel caso del neutrone deve essere moltiplicato per $-1.91$per cui si ha $g=2 \times(-1.91) = -3.82$.
 
-Tali valori così diversi dal fattore 2 delle particelle puntiformi
-dimostrano la natura non elementare dei nucleoni, un fatto che troverà la
-sua conferma nel modello a quark degli adroni.
+Tali valori così diversi dal fattore 2 delle particelle puntiformi dimostrano la natura non elementare dei nucleoni, un fatto che troverà la sua conferma nel modello a quark degli adroni.
 
-I nucleoni non possiedono invece momento di dipolo elettrico un fatto
-che ha importanti implicazioni sulle quali torneremo.
+I nucleoni non possiedono invece momento di dipolo elettrico un fatto che ha importanti implicazioni sulle quali torneremo.
 
-Il modello a quark degli adroni (particelle soggette alla interazione forte)
-chiarisce che i nucleoni non sono particelle elementari. Tralasciando per ora
-la complessa struttura prevista dalla teoria dei campi quantizzati, in prima
-approssimazione i nucleoni sono pensabili come **stati legati di tre quark** (i
-quark costituiscono una famiglia di 6 particelle elementari del modello
-standard) con \'carica forte\' complessiva nulla (nel gergo della QCD di colore
-bianco) nello stato di minima energia. In particolare neutrone e protone
-sono stati legati dei quark (u, d, d) e (u, u, d) rispettivamente.
+Il modello a quark degli adroni (particelle soggette alla interazione forte) chiarisce che i nucleoni non sono particelle elementari. Tralasciando per ora la complessa struttura prevista dalla teoria dei campi quantizzati, in prima approssimazione i nucleoni sono pensabili come **stati legati di tre quark** (i quark costituiscono una famiglia di 6 particelle elementari del modello standard) con 'carica forte' complessiva nulla (nel gergo della QCD di colore bianco) nello stato di minima energia. In particolare neutrone e protone sono stati legati dei quark (u, d, d) e (u, u, d) rispettivamente.
 
-La natura composta dei nucleoni chiarisce anche la natura della forza
-forte che li lega all\'interno del nucleo. Infatti, oggi sappiamo che le vere
-sorgenti della interazione forte sono le \'cariche forti\' (cariche di colore) dei
-tre quark che compongono i nucleoni per cui la forza forte che li unisce nei
-nuclidi altro non è che il residuo esterno della interazione forte primaria tra
-i quark. Per questo motivo la forza forte tra nucleoni ha una struttura
-complicata e decade rapidamente con la distanza assumendo un carattere a
-**corto raggio**.
+La natura composta dei nucleoni chiarisce anche la natura della forza forte che li lega all'interno del nucleo. Infatti, oggi sappiamo che le vere sorgenti della interazione forte sono le 'cariche forti' (cariche di colore) dei tre quark che compongono i nucleoni per cui la forza forte che li unisce nei nuclidi altro non è che il residuo esterno della interazione forte primaria tra i quark. Per questo motivo la forza forte tra nucleoni ha una struttura complicata e decade rapidamente con la distanza assumendo un carattere a **corto raggio**.
 
-Da questo punto di vista è assai utile l\'analogia con le forze
-elettromagnetiche nelle molecole, le forze di Van der Waals. Le interazioni
-primarie tra le cariche dei nuclei e degli elettroni interni alla molecola sono
-le interazioni elettromagnetiche a lungo raggio caratterizzate da una struttura relativamente semplice. All\'esterno della molecola però, si osserva la risultante di tali interazioni che è attrattiva, ha un andamento spaziale complicato e decade rapidamente con la distanza.
+Da questo punto di vista è assai utile l'analogia con le forze elettromagnetiche nelle molecole, le forze di Van der Waals. Le interazioni primarie tra le cariche dei nuclei e degli elettroni interni alla molecola sono le interazioni elettromagnetiche a lungo raggio caratterizzate da una struttura relativamente semplice. All'esterno della molecola però, si osserva la risultante di tali interazioni che è attrattiva, ha un andamento spaziale complicato e decade rapidamente con la distanza.
 
-In questo senso possiamo affermare che **le forze forti tra nucleoni sono
-le forze di Van der Waals delle interazioni forti tra i quarks**. Premesso che
-la comprensione delle forze forti tra nucleoni a partire dalle sottostanti
-interazioni forti tra quarks mediate da gluoni è un tema di assoluta frontiera
-non ancora risolto (QCD), il carattere essenzialmente **attrattivo** e a **corto
-raggio** della **forza forte** tra nucleoni è noto sin dagli anni \'30.
+In questo senso possiamo affermare che **le forze forti tra nucleoni sono le forze di Van der Waals delle interazioni forti tra i quarks**. Premesso che la comprensione delle forze forti tra nucleoni a partire dalle sottostanti interazioni forti tra quarks mediate da gluoni è un tema di assoluta frontiera non ancora risolto (QCD), il carattere essenzialmente **attrattivo** e a **corto raggio** della **forza forte** tra nucleoni è noto sin dagli anni '30.
 
 [pag. 18-21 come approfondimento dalle dispense]
 
