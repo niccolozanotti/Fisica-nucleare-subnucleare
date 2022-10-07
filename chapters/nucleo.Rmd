@@ -128,11 +128,8 @@ e quindi un rate di deflessione
 
 $$
        \frac{\Delta N_{def}}{\Delta t} = (v n_f)( \Sigma \Delta x n_b) \sigma
-$$ 
-Invertendo la relazione, otteniamo infine l'espressione della **sezione trasversale della particella bersaglio** o **sezione d'urto**
-\begin{equation}
+$$ Invertendo la relazione, otteniamo infine l'espressione della **sezione trasversale della particella bersaglio** o **sezione d'urto** \begin{equation}
    \boxed{\  \sigma = \frac{1}{(n_fv)(n_b \Sigma \Delta x)}\frac{dN_{def}}{dt} }
-   (\#eq:cross-sec-def)
 \end{equation}
 
 L'interesse di questa espressione risiede nel fatto che mette in relazione una grandezza fisica microscopica, quale la sezione trasversale $\sigma$ della particella bersaglio, con grandezze fisiche macroscopiche misurabili quali sono i parametri geometrici $n_f,n_b,\Sigma,\Delta x$ e $\frac{\Delta N_{def}}{\Delta t}$.
@@ -162,10 +159,11 @@ $$
 
 dalla quale otteniamo l'espressione della **sezione d'urto differenziale rispetto all'angolo solido** che è la grandezza misurata dal nostro ipotetico esperimento. Va da sè che l'integrale di tale sezione d'urto differenziale rispetto all'angolo solido debba restituire la sezione d'urto totale
 
-$$
+```{=tex}
+\begin{equation}
    \boxed{ \sigma = \iint_{\Omega}\frac{d \sigma}{d \Omega} \, d \Omega }
-$$
-
+\end{equation}
+```
 relazione che può essere assunta come definizione della sezione d'urto differenziale rispetto all'angolo solido. Se il rivelatore permette di misurare anche l'energia della particella proiettile sarà possibile misurare il numero di particelle del fascio che nella unità di tempo emergono nell'angolo solido elementare $d \Omega$ all'interno dell'intervallo elementare $dE$. Si ha infatti: $$
        \frac{d \sigma}{d \Omega} = \frac{1}{(n_fv)(n_b \Sigma \Delta x)}\frac{d}{d \Omega} \left( \frac{dN_{def}}{dt} \ \text{in} \ d\Omega\right)
 $$
@@ -182,14 +180,139 @@ Nel caso più semplice si misurerà una sezione d'urto totale di interazione m
 
 ## Calcoli di sezioni d'urto
 
-Immaginiamo di volere ottenere la sezione d'urto differenziale rispetto all'angolo solido di un fascio di proiettili di sezione trascurabile su sfere di raggio $R$ nella ipotesi che abbiano luogo urti classici elastici.
+Vediamo due esempi di calcolo di sezioni d'urto :
+
+i)  Sezione d'urto differenziale rispetto all'angolo solido di un fascio di proiettili di sezione trascurabile su sfere di raggio $R$ nella ipotesi che abbiano luogo urti classici elastici. ii). Sezione d'urto differenziale di Rutherford
 
 ```{r, fig.margin=TRUE,echo=FALSE,fig.cap="Sezione d'urto differenziale di una sfera rigida"}
     include_graphics("figs/cross-section-calc.jpg")
 ```
 
-Senza entrare nel dettaglio della meccanica dell'urto - assumendo un sistema di coordinate sferiche con asse z lungo l'asse centrale della sfera - sappiamo che sussiste una piena simmetria rispetto all'angolo e l'**angolo di emergenza** del proiettile è interamente determinato dal **parametro d'urto** $b$ attarverso una relazione del tipo $$
-     b = b(\vartheta)
+i)  Senza entrare nel dettaglio della meccanica dell'urto - assumendo un sistema di coordinate sferiche con asse z lungo l'asse centrale della sfera - sappiamo che sussiste una piena simmetria rispetto all'angolo e l'**angolo di emergenza** del proiettile è interamente determinato dal **parametro d'urto** $b$ attarverso una relazione del tipo \begin{equation}
+         b = b(\vartheta)
+      \end{equation} che codifica i dettagli dell'urto stesso. Ciò significa che tutti i proiettili passanti per l'area elementare $bd \varphi db$ saranno deflessi dello stesso angolo solido elementare $d \Omega$ per cui, sulla base di ($3.2$), possiamo scrivere $$
+          d \sigma = \frac{d \sigma}{d \Omega}d \Omega = b d \varphi db
+    $$ da cui segue $$
+           \frac{d \sigma }{d \Omega} \sin \vartheta d \varphi d \vartheta   =  b d \varphi \left |\frac{db}{d \vartheta}\right | d \vartheta
+    $$ e dunque, infine, la sezione d'urto differenziale rispetto all'angolo solido \begin{equation}
+        \frac{d \sigma}{d \Omega} = \frac{b}{sin \vartheta}\left |\frac{db}{d \vartheta}\right |
+    \end{equation} valida classicamente non solo nel caso della sfera rigida ma in generale. Per calcolare la sezione d'urto differenziale rispetto all'angolo solido nel caso della sfera rigida di raggio R dobbiamo precisare la forma della ($3.3$). Si trova facilmente $$
+         \frac{b}{R} = \sin{\alpha}  \qquad \vartheta = \pi - 2 \alpha 
+    $$ da cui $$
+          b = R \cos{\frac{\vartheta}{2}}
+    $$ Sostituendo nella ($3.4$) otteniamo $$
+         \frac{d \sigma}{d \Omega} = \frac{R \cos{\frac{\vartheta}{2}}}{\sin \vartheta} \left | \frac{d}{d \vartheta}R \cos{\frac{\vartheta}{2}} \right | = \frac{R \cos{\frac{\vartheta}{2}}}{\sin \vartheta}\frac{R}{2} \sin \frac{\vartheta}{2}
+    $$ da cui, infine, la sezione d'urto differenziale della sfera rigida di raggio $R$ \begin{equation}
+         \frac{d \sigma}{d \Omega} = \frac{R^2}{4}
+    \end{equation}
+
+    E' immediato verificare che da questa espressione si ottiene una sezione d'urto totale $\sigma = \pi R^2$.
+
+```{marginfigure}
+    Sezione d'urto differenziale 
+    di una sfera rigida
+```
+
+La formula ($3.4$) può essere utilizzata anche nel caso in cui l'interazione tra le particelle del fascio e quelle del bersaglio non consista in un urto meccanico ma in una interazione mediata da una forza naturale.
+
+ii). Trattiamo allora il caso della **diffusione di Rutherford** di proiettili di carica elettrica positiva $ze$ su bersagli di carica elettrica positiva $Ze$ governata dalla forza $$
+       \bm{F} = \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\bm{i_r}
+ $$ Come noto tale forza **conserva il momento angolare** del proiettile $$
+     \bm{r} \wedge \bm{F} = \frac{d}{dt}\bm{l} \qquad r \bm{i_r} \wedge \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\bm{i_r} = \bm{0} \quad \bm{0} = \frac{d}{dt}\bm{l} \quad \bm{l}=\bm{K}
+ $$ $$
+     \bm{l}_{t = - \infty} = \bm{l}_t \quad (-x \bm{i} + y \bm{j})\wedge(m \dot{x}\bm{i} + m\dot{y}\bm{j})_{t = - \infty} = r \bm{i_r} \wedge m(\dot{r}\bm{i_r} + r \dot{\varphi}\bm{i_{\varphi}}) \quad - \dot{x}y = r^2 \dot{\varphi}
+ $$ $$
+     \dot{x}_{t = - \infty} = v_0 \quad \dot{y}_{t = - \infty} = 0 \quad y_{t = - \infty}= b
+ $$ da cui \begin{equation}
+     \dot{\varphi} = - \frac{v_0 \ b}{r^2}
+ \end{equation} e **conserva l'energia del proiettile** $$
+      \bm{F} \cdot \bm{v} = \frac{dT}{dt} \rightarrow - \nabla V \cdot \bm{v} = \frac{dT}{dt}
+ $$ $$
+        \frac{d(T + V)}{dt} = 0 \qquad E = T + V = K
+ $$ $$
+    T_{t = - \infty}+ V_{t = - \infty} = T_{t = + \infty}+ V_{t = + \infty} \qquad V_{t = \pm \infty} = 
+    - \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r_{t = \pm \infty}} = 0 \quad T_{t = - \infty}=T_{t = + \infty}
+ $$ da cui si ha \begin{equation}
+      v_0 = v_{t = + \infty}
+ \end{equation} Fatte queste premesse conviene risolvere la sola **equazione del moto trasversale**: $$
+          F_y = \frac{d}{dt}m v_y \quad \ \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\sin \varphi = \frac{d}{dt}mv_y
+ $$ $$
+     mv_{y,t= + \infty} - mv_{y,t = - \infty} = \int_{- \infty}^{+\infty} \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\sin \varphi\,dt
+ $$ $$
+     v_{y,t= + \infty} = v_{t= + \infty}\sin \vartheta \qquad v_{y,t = - \infty} = 0 \quad \varphi_{t = +\infty} = \vartheta \quad \varphi_{t = - \infty} = \pi
+ $$ $$
+     mv \sin \vartheta = - \int_{- \infty}^{+ \infty} \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\sin \varphi \frac{r^2}{v_0b}\,d \varphi = \frac{zZe^2}{4 \pi \epsilon_0 v_0 b}(\cos \vartheta + 1)
+ $$ da cui
+
+\begin{equation}
+     b = \frac{zZe^2}{4 \pi \epsilon_0 m v^2_0} \cot \frac{\vartheta}{2}
+ \end{equation} Ora possiamo derivare questa espressione $$
+      \left | \frac{db}{d \vartheta}\right | = \frac{1}{2}\frac{zZe^2}{4 \pi \epsilon_0 m v^2_0}\frac{1}{\sin^2{\vartheta/2}}
+ $$ e sostituirla nella $(3.4)$ assieme alla $(3.7)$ ottenendo $$
+     \frac{d \sigma }{d \Omega} = \left( \frac{zZe^2}{4 \pi \epsilon_0m v^2_0}\right) \cot{\frac{\vartheta}{2}}\frac{1}{2 \sin{\vartheta / 2 \cos (\vartheta /2)}}\frac{1}{2}\left( \frac{zZe^2}{4 \pi \epsilon_0m v^2_0}\right)\frac{1}{\sin^2{\vartheta/2}}
+ $$ da cui la **sezione d'urto differenziale di Rutherford**
+
+\begin{equation}
+     \frac{d \sigma }{d \Omega} = \frac{1}{4} \left( \frac{zZe^2}{4 \pi \epsilon_0m v^2_0}\right) ^2\frac{1}{\sin^4{\vartheta / 2}}
+ \end{equation} un risultato valido anche in meccanica quantistica.
+
+[Esercizio in dispensa pag 38.]\
+<!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
+
+## Le proprietà ondulatorie delle particelle microscopiche
+
+Nel 1913, quando Geiger, Mursden e Rutherford compirono il loro esperimento, interpretarono le collisioni tra particelle del fascio e atomi del materiale in termini di urti governati dalle leggi della meccanica classica. Non potevano fare altrimenti, tuttavia di li poco Bohr - sulla base dei lavori di Plank ed Einstein - e poi nella decade successiva De Broglie, Heisenberg, Schroedinger e Born modificheranno radicalmente il quadro interpretativo introducendo l'idea che **le particelle microscopiche, oltre a possedere proprietà corpuscolari, dovevano possedere anche proprietà ondulatorie,** per cui ad esse si doveva associare una lunghezza d'onda e frequenza (De Broglie) ed una funzione d'onda (Born), soluzione quest'ultima di una determinata equazione d'onda (Schroedinger), giungendo così alla formulazione della meccanica quantistica.
+
+D'altra parte, a partire dai lavori di Planck sul corpo nero (1900) e di Einstein sull'effetto fotoelettrico (1905), venne contemporaneamente affermandosi l'idea che i campi classici maxwelliani - dotati certamente di proprietà ondulatorie poiché capaci dei fenomeni della interferenza e diffrazione -- dovevano essere costituiti da enti microscopici (poi chiamati quanti del campo) dotati anche di proprietà corpuscolari. Si affermò così il concetto di **quanto del campo come ente microscopico intrinsecamente 'ibrido' poiché dotato di proprietà sia ondulatorie che corpuscolari**.
+
+Dato questo stato di cose, si pose naturalmente la domanda se le particelle microscopiche ed i quanti del campo - entrambi dotati di proprietà sia corpuscolari che ondulatorie - dovessero essere pensati come enti distinti oppure no.
+
+La risposta -- fondamento del moderno punto di vista - fu data dalle teorie di campo quantizzato (formulate alla fine degli anni '20 da Dirac, Heisenberg, e Jordan) le quali assumono che **le particelle microscopiche osservate negli apparati sperimentali devono essere identificate con i quanti di specifici campi**, superando in tal modo la ripartizione degli enti fisici in particelle materiali e campi affermata dalla fisica classica. Da ciò consegue che **il linguaggio naturale della fisica delle particelle debba essere quello della teoria dei campi quantizzati** tuttavia, quando le energie in gioco non sono così elevate da rendere necessaria una descrizione relativistica e soprattutto da rendere possibili processi di creazione e distruzione di particelle**, la descrizione offerta dalla meccanica quantistica ordinaria risulta appropriata**.
+
+Per questo, alle basse e medie energie possiamo certamente assumere che la fisica nucleare possa essere ben descritta nell'ambito della meccanica quantistica mentre questo non è certamente più vero nella fisica nucleare alle alte energie dove possono aversi collisioni tra nucleoni ad energie di centinaia o migliaia di GeV per nucleone (Alice ha operato a 2.76 TeV per coppia di nucleoni) e risulta necessaria una descrizione dei processi basata sulle teorie di campo quantizzato.
+
+Volendo richiamare in modo diretto ed euristico alcuni concetti di meccanica quantistica, si può cominciare scrivendo **le grandezze cinematiche fondamentali di una generica onda piana sinusoidale,** ovvero la **pulsazione** ed il **vettore d'onda** collegate tra loro nella **relazione di dispersione** che caratterizza le proprietà fisiche del mezzo in cui l'onda stessa si propaga
+
+$$
+    \omega = \frac{2 \pi}{T} \quad \bm{k} = \frac{2 \pi}{\lambda} \quad \omega = \omega(\bm{k})
+$$Scriviamo anche **le grandezze cinematiche fondamentali di un generico corpuscolo libero** che corrispondono alle espressioni relativistiche della **energia** e **quantità di moto** collegate dalla **relazione energia-impulso** $$
+    E = \frac{m c^2}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad \bm{p} = \frac{m \bm{v}}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad E^2 = p^2c^2 + m^2c^4 
+$$Sulla base di considerazioni di natura assai generale, Einstein e De Broglie ipotizzarono che **le grandezze ondulatorie e corpuscolari fossero legate dalle seguenti relazioni** (valide sia nella meccanica quantistica che nella teoria dei campi quantizzati)
+
+$$
+     E = \hp \omega \qquad \bm{p} = \hp \bm{k}
+$$per cui dedussero il seguente legame esplicito tra grandezze ondulatorie e corpuscolari valido per le particelle microscopiche e le non meglio precisate **'onde quantomeccaniche'** o **'onde di De Broglie'** a loro associate
+
+```{marginfigure}
+    Equazioni di De Broglie-Einstein
+```
+
+$$
+  E = \hp \omega = \frac{m c^2}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad \bm{p} = \hp \bm{k} = \frac{m \bm{v}}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad \omega^2 = k^2c^2+ \frac{m^2c^4}{\hp^2}
 $$
 
-che codifica i dettagli dell'urto stesso. Ciò significa che tutti i proiettili passanti per l'area elementare $bd \varphi db$ saranno deflessi dello stesso angolo solido elementare $d \Omega$ per cui, sulla base di \@ref(eq:cross-sec-def)
+La relazione dispersione (relazione energia-impulso) indica chiaramente che
+le componenti di Fourier delle \'onde quantomeccaniche\' si propagano come
+se il vuoto fosse un **mezzo dispersivo**.
+
+Se ad una particella materiale si devono associare grandezze ondulatorie
+ad essa si dovrà pure associare una fase ed una certa funzione della fase
+detta **funzione d\'onda** il cui significato fisico dovrà essere precisato. Una
+data componente di Fourier di tale onda in forma piana dovrà comunque
+avere la seguente semplice espressione
+
+$$
+     \psi(\bm{r},t) = \psi_0 e^{i(\bm{k \cdot r}-\omega t)} = \psi_0e^{\frac{i}{\hp}(\bm{p \cdot r}-E t)}
+$$
+
+				
+			
+		
+
+	
+
+				
+			
+		
+
+	

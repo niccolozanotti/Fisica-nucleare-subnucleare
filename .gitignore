@@ -10,3 +10,4 @@ skeleton.bib
 chapters/*.log
 chapters/*.pdf
 output/*.tex
+.Rproj.user
