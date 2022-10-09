@@ -275,9 +275,11 @@ Volendo richiamare in modo diretto ed euristico alcuni concetti di meccanica qua
 
 $$
     \omega = \frac{2 \pi}{T} \quad \bm{k} = \frac{2 \pi}{\lambda} \quad \omega = \omega(\bm{k})
-$$Scriviamo anche **le grandezze cinematiche fondamentali di un generico corpuscolo libero** che corrispondono alle espressioni relativistiche della **energia** e **quantità di moto** collegate dalla **relazione energia-impulso** $$
+$$ Scriviamo anche **le grandezze cinematiche fondamentali di un generico corpuscolo libero** che corrispondono alle espressioni relativistiche della **energia** e **quantità di moto** collegate dalla **relazione energia-impulso** \begin{equation}
     E = \frac{m c^2}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad \bm{p} = \frac{m \bm{v}}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad E^2 = p^2c^2 + m^2c^4 
-$$Sulla base di considerazioni di natura assai generale, Einstein e De Broglie ipotizzarono che **le grandezze ondulatorie e corpuscolari fossero legate dalle seguenti relazioni** (valide sia nella meccanica quantistica che nella teoria dei campi quantizzati)
+    \end{equation}
+
+Sulla base di considerazioni di natura assai generale, Einstein e De Broglie ipotizzarono che **le grandezze ondulatorie e corpuscolari fossero legate dalle seguenti relazioni** (valide sia nella meccanica quantistica che nella teoria dei campi quantizzati)
 
 $$
      E = \hp \omega \qquad \bm{p} = \hp \bm{k}
@@ -287,32 +289,167 @@ $$per cui dedussero il seguente legame esplicito tra grandezze ondulatorie e cor
     Equazioni di De Broglie-Einstein
 ```
 
-$$
+```{=tex}
+\begin{equation}
   E = \hp \omega = \frac{m c^2}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad \bm{p} = \hp \bm{k} = \frac{m \bm{v}}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad \omega^2 = k^2c^2+ \frac{m^2c^4}{\hp^2}
+\end{equation}
+```
+
+La relazione dispersione (relazione energia-impulso) indica chiaramente che le componenti di Fourier delle 'onde quantomeccaniche' si propagano come se il vuoto fosse un **mezzo dispersivo**.
+
+Se ad una particella materiale si devono associare grandezze ondulatorie ad essa si dovrà pure associare una fase ed una certa funzione della fase detta **funzione d'onda** il cui significato fisico dovrà essere precisato. Una data componente di Fourier di tale onda in forma piana dovrà comunque avere la seguente semplice espressione[^2]
+
+[^2]: L'utilizzo della notazione complessa non è casuale. Infatti alle due espressioni
+$$
+   \psi_1(\bm{r},t) = \psi_0 e^{i(\bm{k \cdot r}-\omega t)}
+$$
+$$
+     \psi_2(\bm{r},t) = \psi_0 \sin (\bm{k \cdot r}-\omega t)
+$$
+sono associate a probabilità differenti
+$$
+        | \psi_1^2| = \psi_0^2
+$$
+$$
+       | \psi_2^2| = \psi_0^2 \sin^2(\bm{k \cdot r}-\omega t)
+$$
+di cui *solo la prima è in accordo con le verifiche sperimentali*.
+
+\begin{equation}
+     \psi(\bm{r},t) = \psi_0 e^{i(\bm{k \cdot r}-\omega t)} = \psi_0e^{\frac{i}{\hp}(\bm{p \cdot r}-E t)} 
+\end{equation} Come in un qualunque fenomeno ondulatorio, data la funzione d'onda si pone il problema di stabilire **l'equazione d'onda** ovvero l'equazione che ne governa la dinamica.
+
+Trovare l'espressione formale della equazione d'onda in modo diretto per una data componente di Fourier non è difficile poiché sappiamo che una volta sostituita la funzione d'onda ($12$) essa non deve fare altro che restituire la relazione energia-impulso ($10$) o la relazione di dispersione ($11$). A questo scopo vale la pena introdurre le seguenti **operazioni di differenziazione**
+
+$$
+   - i \hp \nabla \psi (\bm{r},t) = - i \hp \nabla \psi_0e^{\frac{i}{\hp}(\bm{p \cdot r}-E t)} = - i \hp \psi_0e^{\frac{i}{\hp}(\bm{p \cdot r}-E t)} \frac{i}{\hp} \bm{p} = \bm{p}\psi(\bm{r},t)
+$$ $$
+        i \hp \frac{\partial}{\partial t} \psi (\bm{r},t) =  i \hp \frac{\partial}{\partial t} \psi_0e^{\frac{i}{\hp}(\bm{p \cdot r}-E t)} =  i \hp \psi_0e^{\frac{i}{\hp}(\bm{p \cdot r}-E t)} \left( - \frac{i}{\hp} E\right) = E\psi(\bm{r},t)
+$$Queste espressioni mostrano che gli operatori differenziali, agendo sulla generica componente di Fourier, ne determinano la rimoltiplicazione per i valori della quantità di moto ed energia, un fatto che suggerisce di definirli come **operatori della quantità di moto** ed **energia:**
+
+-   Operatore della **quantità di moto**$$
+         \hat{P} = - i \hp \nabla    \qquad 
+    $$
+
+-   Operatore **dell'energia**
+
+    $$
+         \hat{E} = i \hp \frac{\partial}{\partial t}
+    $$
+
+Nel linguaggio degli operatori, le precenti espressioni possono allora essere rilette affermando che in una data componente di Fourier dell'onda quantomeccanica **i valori della quantità di moto e della energia sono autovalori degli operatori** $\hat{P}$ ed $\hat{E}$ mentre la funzione d'onda è un loro autostato $$
+    \hat{P}\psi(\bm{r},t) = \bm{p}\psi(\bm{r},t) \qquad 
+    \hat{E}\psi(\bm{r},t) = E\psi(\bm{r},t)
+ $$ Introdotti gli operatori energia e quantità di moto, possiamo partire dalla relazione relativistica energia-impulso della particella libera ed ottenere la sua equazione d'onda. I passaggi sono i seguenti $$
+    E^2 = p^2c^2 + m^2c^4
+$$ $$
+     E^2\psi(\bm{r},t) = p^2c^2\psi(\bm{r},t)+m^2c^4\psi(\bm{r},t)
+$$ $$
+     \left( i \hp \frac{\partial}{\partial t}\right)\left( i \hp \frac{\partial}{\partial t}\right)\psi(\bm{r},t) = c^2 (-i \hp \nabla)(-i \hp \nabla)\psi(\bm{r},t)+m^2c^4 \psi(\bm{r},t)
+$$Si noti che **tale equazione è lineare per cui deve valere non solo per la data componente di Fourier ma -- in modo del tutto generale - per una qualunque sovrapposizione di componenti di Fourier e dunque per una qualsiasi onda**.
+
+Giungiamo così ad individuare **l'equazione d'onda** cercata detta **equazione di Klein-Gordon** valida per le '**onde quantomeccaniche' libere scalari** (senza spin, essendo $\psi$ scalare)
+
+```{marginfigure}
+  Equazione di Klein-Gordon
+```
+
+```{=tex}
+\begin{equation}
+    \nabla^2 \psi(\bm{r},t) - \frac{1}{c^2}\frac{\partial^2}{\partial t^2}\psi(\bm{r},t) = 
+    \frac{m^2c^2}{\hp^2}\psi(\bm{r},t)
+\end{equation}
+```
+Tale equazione fu trovata per la prima volta da Schroedinger il quale però non riuscì a fornire una interpretazione fisica consistente della funzione d'onda. Si trattava di un problema cruciale che poteva essere superato solo interpretando la funzione d'onda nel senso della teoria dei campi quantizzati (affronteremo questo aspetto in maggior dettaglio nella seconda parte del corso). Non essendoci allora i presupposti per un passaggio di tal genere, Schroedinger rinunciò alla equazione d'onda relativistica e ripiegò sulla **equazione d'onda classica** la cui interpretazione sembrava meno problematica. Tale equazione la si può ottenere seguendo esattamente lo stesso tipo di procedimento partendo però dalla espressione **energia-impulso classica delle particelle libere**
+
+$$
+   E = \frac{p^2}{2m}
+$$Compreso questo fatto, possiamo puntare direttamente a costruire **l'equazione d'onda non relativistica per le 'onde quantomeccaniche' inpresenza di forze** aggiungendo il loro potenziale alla espressione precedente
+
+$$
+     E = \frac{p^2}{2m} + V(\bm{r})
 $$
 
-La relazione dispersione (relazione energia-impulso) indica chiaramente che
-le componenti di Fourier delle \'onde quantomeccaniche\' si propagano come
-se il vuoto fosse un **mezzo dispersivo**.
-
-Se ad una particella materiale si devono associare grandezze ondulatorie
-ad essa si dovrà pure associare una fase ed una certa funzione della fase
-detta **funzione d\'onda** il cui significato fisico dovrà essere precisato. Una
-data componente di Fourier di tale onda in forma piana dovrà comunque
-avere la seguente semplice espressione
+Nel caso di una generica componente di Fourier otteniamo allora
 
 $$
-     \psi(\bm{r},t) = \psi_0 e^{i(\bm{k \cdot r}-\omega t)} = \psi_0e^{\frac{i}{\hp}(\bm{p \cdot r}-E t)}
+     E = \frac{p^2}{2m} + V(\bm{r}) \rightarrow E \psi(\bm{r},t) = \frac{p^2}{2m}\psi(\bm{r},t) +
+      V(\bm{r},t)\psi(\bm{r},t)
 $$
 
-				
-			
-		
+$$
+       \left( i \hp \frac{\partial}{\partial t} \right)\psi(\bm{r},t) = \frac{1}{2m}(- i \hp \nabla)(- i \hp \nabla)\psi(\bm{r},t) + V(\bm{r})\psi(\bm{r},t)
+$$
 
-	
+$$
+      i \hp \frac{\partial}{\partial t} \psi(\bm{r},t) = - \frac{\hp^2}{2m}\nabla^2\psi(\bm{r},t)+
+    V(\bm{r})\psi(\bm{r},t) = \left[ - \frac{\hp^2}{2m}\nabla^2 + V(\bm{r})\right] \psi(\bm{r},t)
+$$
 
-				
-			
-		
+Data la linearità della equazione, concludiamo che l'espressione ottenuta deve essere valida non solo per la generica componente di Fourier ma per una qualunque funzione d'onda. Definendo allora l'operatore tra parentesi come **operatore hamiltoniano** $\hat{H}$, otteniamo la seguente **equazione d'onda di Schroedinger** valida per le **'onde quantomeccaniche' scalari (senza spin) non relativistiche in presenza di forze**
+
+```{marginfigure}
+  Equazione d'onda di Schroendinger
+```
+
+```{=tex}
+\begin{equation}
+   i \hp \frac{\partial}{\partial t} \psi(\bm{r},t) = \hat{H}\psi(\bm{r},t) \qquad
+   \hat{H} = - \frac{\hp^2}{2m} \nabla^2 + V(\bm{r})
+\end{equation}
+```
+Tale equazione rese possibile una interpretazione della funzione d'onda che - pur non essendo di validità generale - permetteva comunque di descrivere in modo appropriato i fenomeni quantomeccanici in regime non relativistico ovvero alle basse e medie energie dove non avvengono processi di creazione e/o distruzione di particelle. Tale interpretazione fu proposta da M. Born ed afferma che **il modulo quadrato della funzione d'onda nella posizione**$\bm{r}$ **ed al tempo t rappresenta la densità di probabilità di trovare la particella materiale in quella posizione ed in quell'istante di tempo a seguito di una misura di posizione.** Questa ipotesi va a costituire uno dei fondamentali assiomi interpretativi della meccanica quantistica e comporta che l'espressione \begin{equation}
+       \left | \psi(\bm{r},t)\right |^2 dV
+\end{equation} rappresenti la probabilità di misurare la particella materiale al tempo $t$ all'interno del volume $dV$ centrato nella posizione $\bm{r}$.
+
+I fatti appena richiamati chiariscono che **l\'interazione particella-
+proiettile/particella-bersaglio non deve essere pensata come un processo
+d\'urto meccanico ma, piuttosto, come un processo di diffrazione/rifrazione
+dell\'onda quantomeccanica associata alla particella proiettile a seguito
+della sua interazione con l\'ostacolo-bersaglio**. Dunque essenzialmente un
+processo di \'**ottica delle onde quantomeccaniche**\' dipendente dal tipo di
+interazione in gioco.
+
+Se il bersaglio è totalmente riflettente risulterà un processo di diffrazione
+simile a quello di un tratto di muro piazzato sul percorso di un\'onda in acqua.
+Se il bersaglio è totalmente assorbente risulterà un processo di diffrazione
+simile a quello di un tratto di scogliera. Se invece il bersaglio opera come un
+potenziale di forza avremo un processo di rifrazione assimilabile alle
+distorsioni dei fronti d\'onda determinate dalle variazioni di profondità del
+fondale. Al netto di questi dettagli è comunque evidente che **gli esperimenti
+fascio-bersaglio con particelle microscopiche devono essere interpretati in
+chiave ondulatoria.**
+
+Ad esempio, se vogliamo esplorare la struttura
+di un nucleo atomico dovremo essere in grado di
+risolvere almeno i singoli nucleoni. Ma
+l’interferenza di due onde provenienti da due
+diversi nucleoni è apprezzabile solo se i cammini
+differiscono di una quantità dell’ordine della
+lunghezza d’onda.
+
+```{r, fig.margin=TRUE,echo=FALSE}
+    include_graphics("figs/fascio-bersaglio-de-broglie.jpg")
+```			
+D’altra parte la differenza di
+tali cammini è anche dell’ordine delle dimensioni
+del singolo nucleone. Ciò significa che dovremo
+impiegare particelle proiettile aventi una lunghezza d’onda di De Broglie dell’ordine delle dimensioni del singolo nucleone ovvero dell’ordine di $1 fm$. In questo modo saremo sensibili agli effetti diffrattivi-interferenziali indotti dalla struttura nucleare che potremo osservare raccogliendo le particelle
+diffuse su di un rivelatore capace di misurarne la posizione angolare. Per quanto riguarda invece la scelta del proiettile converrà utilizzare i neutroni dato che non risentono della interazione elettromagnetica che andrebbe a complicare il fenomeno (si tenga però presente che è più difficile avere a che fare con fasci e rivelatori di neutroni!).
+
+Ricordando che
+$$
+      \frac{\hp c}{200 MeV} \sim 1 fm
+$$
+si ha 
+$$
+     p = \hp k = \hp \frac{2 \pi}{\lambda} = \hp \frac{2 \pi}{1} fm^{-1} = \hp 2 \pi \frac{200 MeV}{\hp c}
+     \sim 1.2 \frac{GeV}{c}
+$$
+$$
+         \epsilon = \sqrt{p^2c^2+m^2c^4}\sim \sqrt{(1.2)^2+(1.0)^2} \sim 1.5 GeV
+$$
+da cui si verifica che con un fascio di particelle di circa $1.2 GeV/c$ di impulso ed $1.5 GeV$ di energia si raggiunge lo scopo.
+Se invece vogliamo esplorare la struttura del singolo nucleone dovremo avere un potere risolutivo almeno 100 volte superiore ovvero un impulso $100$ volte maggiore e dunque fasci di particelle di impulso dell’ordine di $100 GeV$.
 
 	
