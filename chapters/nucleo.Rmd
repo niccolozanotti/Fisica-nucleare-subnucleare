@@ -294,26 +294,19 @@ $$per cui dedussero il seguente legame esplicito tra grandezze ondulatorie e cor
   E = \hp \omega = \frac{m c^2}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad \bm{p} = \hp \bm{k} = \frac{m \bm{v}}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad \omega^2 = k^2c^2+ \frac{m^2c^4}{\hp^2}
 \end{equation}
 ```
-
 La relazione dispersione (relazione energia-impulso) indica chiaramente che le componenti di Fourier delle 'onde quantomeccaniche' si propagano come se il vuoto fosse un **mezzo dispersivo**.
 
 Se ad una particella materiale si devono associare grandezze ondulatorie ad essa si dovrà pure associare una fase ed una certa funzione della fase detta **funzione d'onda** il cui significato fisico dovrà essere precisato. Una data componente di Fourier di tale onda in forma piana dovrà comunque avere la seguente semplice espressione[^2]
 
-[^2]: L'utilizzo della notazione complessa non è casuale. Infatti alle due espressioni
-$$
-   \psi_1(\bm{r},t) = \psi_0 e^{i(\bm{k \cdot r}-\omega t)}
-$$
-$$
+[^2]: L'utilizzo della notazione complessa non è casuale. Infatti alle due espressioni $$
+       \psi_1(\bm{r},t) = \psi_0 e^{i(\bm{k \cdot r}-\omega t)}
+    $$ $$
      \psi_2(\bm{r},t) = \psi_0 \sin (\bm{k \cdot r}-\omega t)
-$$
-sono associate a probabilità differenti
-$$
+    $$ sono associate a probabilità differenti $$
         | \psi_1^2| = \psi_0^2
-$$
-$$
+    $$ $$
        | \psi_2^2| = \psi_0^2 \sin^2(\bm{k \cdot r}-\omega t)
-$$
-di cui *solo la prima è in accordo con le verifiche sperimentali*.
+    $$ di cui *solo la prima è in accordo con le verifiche sperimentali*.
 
 \begin{equation}
      \psi(\bm{r},t) = \psi_0 e^{i(\bm{k \cdot r}-\omega t)} = \psi_0e^{\frac{i}{\hp}(\bm{p \cdot r}-E t)} 
@@ -402,54 +395,139 @@ Tale equazione rese possibile una interpretazione della funzione d'onda che - pu
        \left | \psi(\bm{r},t)\right |^2 dV
 \end{equation} rappresenti la probabilità di misurare la particella materiale al tempo $t$ all'interno del volume $dV$ centrato nella posizione $\bm{r}$.
 
-I fatti appena richiamati chiariscono che **l\'interazione particella-
-proiettile/particella-bersaglio non deve essere pensata come un processo
-d\'urto meccanico ma, piuttosto, come un processo di diffrazione/rifrazione
-dell\'onda quantomeccanica associata alla particella proiettile a seguito
-della sua interazione con l\'ostacolo-bersaglio**. Dunque essenzialmente un
-processo di \'**ottica delle onde quantomeccaniche**\' dipendente dal tipo di
-interazione in gioco.
+I fatti appena richiamati chiariscono che **l'interazione particella- proiettile/particella-bersaglio non deve essere pensata come un processo d'urto meccanico ma, piuttosto, come un processo di diffrazione/rifrazione dell'onda quantomeccanica associata alla particella proiettile a seguito della sua interazione con l'ostacolo-bersaglio**. Dunque essenzialmente un processo di '**ottica delle onde quantomeccaniche**' dipendente dal tipo di interazione in gioco.
 
-Se il bersaglio è totalmente riflettente risulterà un processo di diffrazione
-simile a quello di un tratto di muro piazzato sul percorso di un\'onda in acqua.
-Se il bersaglio è totalmente assorbente risulterà un processo di diffrazione
-simile a quello di un tratto di scogliera. Se invece il bersaglio opera come un
-potenziale di forza avremo un processo di rifrazione assimilabile alle
-distorsioni dei fronti d\'onda determinate dalle variazioni di profondità del
-fondale. Al netto di questi dettagli è comunque evidente che **gli esperimenti
-fascio-bersaglio con particelle microscopiche devono essere interpretati in
-chiave ondulatoria.**
+Se il bersaglio è totalmente riflettente risulterà un processo di diffrazione simile a quello di un tratto di muro piazzato sul percorso di un'onda in acqua. Se il bersaglio è totalmente assorbente risulterà un processo di diffrazione simile a quello di un tratto di scogliera. Se invece il bersaglio opera come un potenziale di forza avremo un processo di rifrazione assimilabile alle distorsioni dei fronti d'onda determinate dalle variazioni di profondità del fondale. Al netto di questi dettagli è comunque evidente che **gli esperimenti fascio-bersaglio con particelle microscopiche devono essere interpretati in chiave ondulatoria.**
 
-Ad esempio, se vogliamo esplorare la struttura
-di un nucleo atomico dovremo essere in grado di
-risolvere almeno i singoli nucleoni. Ma
-l’interferenza di due onde provenienti da due
-diversi nucleoni è apprezzabile solo se i cammini
-differiscono di una quantità dell’ordine della
-lunghezza d’onda.
+Ad esempio, se vogliamo esplorare la struttura di un nucleo atomico dovremo essere in grado di risolvere almeno i singoli nucleoni. Ma l'interferenza di due onde provenienti da due diversi nucleoni è apprezzabile solo se i cammini differiscono di una quantità dell'ordine della lunghezza d'onda.
 
 ```{r, fig.margin=TRUE,echo=FALSE}
     include_graphics("figs/fascio-bersaglio-de-broglie.jpg")
-```			
-D’altra parte la differenza di
-tali cammini è anche dell’ordine delle dimensioni
-del singolo nucleone. Ciò significa che dovremo
-impiegare particelle proiettile aventi una lunghezza d’onda di De Broglie dell’ordine delle dimensioni del singolo nucleone ovvero dell’ordine di $1 fm$. In questo modo saremo sensibili agli effetti diffrattivi-interferenziali indotti dalla struttura nucleare che potremo osservare raccogliendo le particelle
-diffuse su di un rivelatore capace di misurarne la posizione angolare. Per quanto riguarda invece la scelta del proiettile converrà utilizzare i neutroni dato che non risentono della interazione elettromagnetica che andrebbe a complicare il fenomeno (si tenga però presente che è più difficile avere a che fare con fasci e rivelatori di neutroni!).
+```
 
-Ricordando che
-$$
+D'altra parte la differenza di tali cammini è anche dell'ordine delle dimensioni del singolo nucleone. Ciò significa che dovremo impiegare particelle proiettile aventi una lunghezza d'onda di De Broglie dell'ordine delle dimensioni del singolo nucleone ovvero dell'ordine di $1 fm$. In questo modo saremo sensibili agli effetti diffrattivi-interferenziali indotti dalla struttura nucleare che potremo osservare raccogliendo le particelle diffuse su di un rivelatore capace di misurarne la posizione angolare. Per quanto riguarda invece la scelta del proiettile converrà utilizzare i neutroni dato che non risentono della interazione elettromagnetica che andrebbe a complicare il fenomeno (si tenga però presente che è più difficile avere a che fare con fasci e rivelatori di neutroni!).
+
+Ricordando che $$
       \frac{\hp c}{200 MeV} \sim 1 fm
-$$
-si ha 
-$$
+$$ si ha $$
      p = \hp k = \hp \frac{2 \pi}{\lambda} = \hp \frac{2 \pi}{1} fm^{-1} = \hp 2 \pi \frac{200 MeV}{\hp c}
      \sim 1.2 \frac{GeV}{c}
-$$
-$$
+$$ $$
          \epsilon = \sqrt{p^2c^2+m^2c^4}\sim \sqrt{(1.2)^2+(1.0)^2} \sim 1.5 GeV
+$$ da cui si verifica che con un fascio di particelle di circa $1.2 GeV/c$ di impulso ed $1.5 GeV$ di energia si raggiunge lo scopo. Se invece vogliamo esplorare la struttura del singolo nucleone dovremo avere un potere risolutivo almeno 100 volte superiore ovvero un impulso $100$ volte maggiore e dunque fasci di particelle di impulso dell'ordine di $100 GeV$.
+
+## Teoria della diffrazione di Kirchhoff
+
+Dato che l'interazione fascio-bersaglio consiste essenzialmente nella diffrazione delle onde di De Broglie associate alle particelle del fascio da parte delle particelle del bersaglio, la corretta soluzione del problema può essere ottenuta cercando l'espressione della funzione d'onda che:
+
+i)  soddisfa l'equazione di Schroedinger con potenziale nella regione in cui il fascio interagisce con il bersaglio;
+ii) soddisfa l'equazione d'onda di Schroedinger libera nella regione esterna alla interazione prima e dopo il bersaglio;
+iii) soddisfa la condizione al contorno di essere un'onda piana prima di incidere sul bersaglio.
+
+Come noto, la diffrazione delle onde scalari classiche da parte di una apertura puo' essere trattata in modo rigoroso per mezzo della **teoria di Kirchhoff**, dettagliatamente esposta in Appendice 1 .
+
+In particolare, se una apertura $A$ è investita da un'onda monocromatica, la funzione d'onda diffratta $\psi(\bm{r})$ in un generico punto dello spazio $\bm{r}$ oltre lo schermo è data dalla seguente espressione:
+
+```{r, fig.margin=TRUE,echo=FALSE}
+    include_graphics("figs/kirchhoff-diffraction-1.jpg")
+```
+
+\begin{equation}
+    \psi(\bm{r}) = \frac{1}{4 \pi} \iint_{A_p} \left[ \psi(\bm{r'}) (\bm{n}' \cdot \nabla') \frac{e^{iks}}{s} - \frac{e^{iks}}{s}(\bm{n}' \cdot \nabla') \psi(\bm{r}) \right]  \, da'
+\end{equation} dove
+
+-   $\bm{r}$ è il vettore posizione del punto di osservazione
+-   $\bm{r'}$ è il vettore posizione di un punto dell'apertura
+-   $\psi(\bm{r'})$ è la funzione d'onda calcolata nel punto $\bm{r'}$ dell'apertura
+-   $\bm{n}'$ è la normale allo schermo nel punto $\bm{r'}$ dell'apertura
+-   $\nabla'$ è il gradiente della funzione d'onda nel punto $\bm{r'}$ dell'apertura
+-   $\bm{k}$ è il modulo del vettore d'onda della funzione d'onda incidente
+-   $s = | \bm{r} - \bm{r'}|$ è il modulo del vettore congiungente il punto dell'apertura con quello di osservazione
+
+Dato che la funzione d'onda $\psi(\bm{r})$ compare in entrambi i membri, tale espressione richiede la conoscenza della funzione 𝜓(𝑟) stessa che si vuole determinare(questo fatto è noto come \`Paradosso di Kirchhoff'. Un circolo vizioso che viene evitato attraverso**l'approssimazione di Kirchhoff** la quale assume che la funzione $\psi(\bm{r})$ sia non nulla nei soli punti dell'apertura $A$ dove coincide conla funzione d'onda monocromatica incidente. Consideriamo allora il caso di onda piana monocromatica diretta lungo l'asse delle $z$ positive incidente su di uno schermo piano normale all'asse stesso. Si ha $$
+       \psi(\bm{r}) = \psi_0 e^{i \bm{k} \cdot \bm{r}}= \psi_0e^{ik \hat{k}(x \hat{i}+y \hat{j}+z \hat{k})}= \psi_0e^{ikz}
+$$ $$
+       \bm{n}' = \bm{k}
+$$ $$
+       \psi(\bm{r'}) = \psi_0 e^{i \bm{k} \cdot \bm{r'}}= \psi_0e^{ik \hat{k}(x' \hat{i}+y' \hat{j}+z' \hat{k})}= \psi_0e^{ikz'}
+$$ e inoltre $$
+     s = \sqrt{(x-x')^2+(y-y')^2+(z-z')^2}
+$$ Sviluppiamo ora i termini presenti nell'equazione di Kirchhoff: $$
+   (\bm{n}' \cdot \nabla')\frac{e^{iks}}{s} = \frac{\partial}{\partial z'}\frac{e^{iks}}{s} = ik \frac{e^{iks}}{s}\frac{\partial s}{\partial z'} - \frac{e^{iks}}{s^2}\frac{\partial s}{\partial z'}  = \left( ik \frac{e^{iks}}{s}- \frac{e^{iks}}{s^2} \right)\frac{\partial s}{\partial z'}
+$$ $$
+    (\bm{n}' \cdot \nabla')\psi(\bm{r'}) = \frac{\partial}{\partial z'}\psi_0e^{ikz'}=ik\psi_0e^{ikz'}
+$$ \begin{align*}
+     \frac{\partial s}{\partial z'} &= \frac{\partial }{\partial z'}|\bm{r'}-\bm{r}| = \frac{\partial }{\partial z'}\sqrt{(x-x')^2+(y-y')^2+(z-z')^2} \\
+     &= - \frac{1}{2s}s(z-z') = - \frac{z-z'}{s} = \cos \vartheta
+\end{align*} con $\cos \vartheta = \frac{\bm{r'}-\bm{r}}{|\bm{r'}-\bm{r}|}$. Da qui ottengo lo sviluppo del primo termine presente nell'equazione di Kirchhoff: 
+
 $$
-da cui si verifica che con un fascio di particelle di circa $1.2 GeV/c$ di impulso ed $1.5 GeV$ di energia si raggiunge lo scopo.
-Se invece vogliamo esplorare la struttura del singolo nucleone dovremo avere un potere risolutivo almeno 100 volte superiore ovvero un impulso $100$ volte maggiore e dunque fasci di particelle di impulso dell’ordine di $100 GeV$.
+     (\bm{n}' \cdot \nabla')\frac{e^{iks}}{s} = -(ik\frac{e^{iks}}{s}-\frac{e^{iks}}{s^2}) \cos \vartheta
+$$ Sostituendo infine le espressioni di $(\bm{n}' \cdot \nabla ') \frac{e^{iks}}{s}$ e di $(\bm{n}' \cdot \nabla')\psi(\bm{r'})$ in $(16)$ otteniamo $$
+       \psi(\bm{r}) = \frac{1}{4 \pi} \iint_{\text{Foro}} \left[-\psi_0 e^{ikz'}\left( ik\frac{e^{iks}}{s}-\frac{e^{iks}}{s^2}\right) \cos \vartheta - \frac{e^{iks}}{s} ik\psi_0 e^{ikz'} \right] \, da' 
+$$
+```{r, fig.margin=TRUE,echo=FALSE}
+    include_graphics("figs/kirchhoff-diffraction-2.jpg")
+```
+Compiamo la seguente *approssimazione*: se il punto di osservazione è a grande distanza, al primo ordine il termine $1/s^2$ può essere trascurato. Abbiamo $$
+   \psi(\bm{r}) \simeq \frac{1}{4 \pi} \iint_{\text{Foro}} \left[-\psi_0 e^{ikz'} ik\frac{e^{iks}}{s} \cos \vartheta - \frac{e^{iks}}{s}ik\psi_0 e^{ikz'} \right]\, da'
+$$ 
+$$
+\psi(\bm{r}) \simeq -\psi_0 \frac{ik}{4 \pi} \iint_{\text{Foro}} \frac{e^{i(ks+kz')}}{s}(\cos \vartheta + 1)\, da' \simeq -\psi_0 \frac{ik}{2 \pi} \iint_{\text{Foro}} \frac{e^{i(ks+kz')}}{s}\,da'
+$$
+```{marginfigure}
+  $f(\vartheta) = 1 + \cos \vartheta$ fa si che ci sia un fattore che modula l'ampiezza(ad esempio se $\vartheta = 0,f(\vartheta) = 2$ mentre è nullo per $\vartheta = \pi$)
+```
+dove nell'ultimo passaggio si è usato $\vartheta << 1 \rightarrow cos \vartheta \simeq 1$.
+Si noti che l\'espressione integrale ottenuta corrisponde al ben noto principio
+di Huygens completato dal **fattore di obliquità** che modula l\'ampiezza in
+modo tale da fornire le onde in avanti ed annullare quelle all\'indietro.
+
+Nell’integrale appena ottenuto vogliamo esprimere la fase dell’esponenziale in forma generale attraverso vettori
+$$
+    k(s + z') = k(|\bm{r}-\bm{r'}|+z') = k (\sqrt{(\bm{r}-\bm{r'})\cdot(\bm{r}-\bm{r'})}+\bm{n}' \cdot \bm{r'})
+$$
+$$
+    = k\left(r \sqrt{1 - \frac{2 \bm{r}\cdot \bm{r'}}{r^2} + \frac{r'^2}{r^2}} + \bm{n}' \cdot \bm{r'}\right) = k\left( r + \frac{r'^2}{2r} - \frac{ \bm{r}\cdot \bm{r'}}{r} + \bm{n}' \cdot \bm{r'}\right)
+$$
+$$
+  = k r + k \frac{r'^2}{2r} - k \frac{ \bm{r}\cdot \bm{r'}}{r} + k \bm{n}' \cdot \bm{r'}
+$$
+I valori assunti da $r'$ sono molto minori rispetto a quelli di $r$; in particolare se $D$ è il diametro del foro ed $L$ la distanza dallo schermo
+$$
+     k \frac{r'^2}{2r} \simeq \frac{D^2}{\lambda L}
+$$
+Se $\frac{D^2}{\lambda L} << 1$ si parla di **regime di Fraunhofer** e il termine in questione può essere trascurato. Si ha quindi
+$$
+    k(s+z') = kr - (k \bm{n} - k \bm{n}') \cdot r'
+$$
+Introducendo il **vettore d'onda trasferito**(che parametrizza lo spostamento del punto di osservazione dall'asse del fasio)
+$$
+    \bm{q} = k \bm{n} - k \bm{n}'
+$$
+otteniamo infine
+$$
+    k(s+ z') \simeq kr - \bm{q} \cdot \bm{r}'
+$$
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		
 
 	
