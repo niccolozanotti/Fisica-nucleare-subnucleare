@@ -30,7 +30,10 @@ knit: (function(inputFile, encoding) {
                         encoding=encoding,
                         output_dir=file.path("../",dirname(inputFile), out_dir))})
 ---
-
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
 # Lo studio del nucleo
 
 ## La sezione d'urto
@@ -178,6 +181,10 @@ $$Gli esempi citati, pur riferendosi a casi particolari chiariscono il fatto, di
 
 Nel caso più semplice si misurerà una sezione d'urto totale di interazione ma, disponendo di rivelatori via via più sofisticati, risulterà possibile misurare sezioni d'urto differenziali di interazione in funzione di un insieme di variabili cinematiche sempre più ampio.
 
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
 ## Calcoli di sezioni d'urto
 
 Vediamo due esempi di calcolo di sezioni d'urto :
@@ -259,6 +266,10 @@ ii). Trattiamo allora il caso della **diffusione di Rutherford** di proiettili d
 [Esercizio in dispensa pag 38.]\
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
 
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
 ## Le proprietà ondulatorie delle particelle microscopiche
 
 Nel 1913, quando Geiger, Mursden e Rutherford compirono il loro esperimento, interpretarono le collisioni tra particelle del fascio e atomi del materiale in termini di urti governati dalle leggi della meccanica classica. Non potevano fare altrimenti, tuttavia di li poco Bohr - sulla base dei lavori di Plank ed Einstein - e poi nella decade successiva De Broglie, Heisenberg, Schroedinger e Born modificheranno radicalmente il quadro interpretativo introducendo l'idea che **le particelle microscopiche, oltre a possedere proprietà corpuscolari, dovevano possedere anche proprietà ondulatorie,** per cui ad esse si doveva associare una lunghezza d'onda e frequenza (De Broglie) ed una funzione d'onda (Born), soluzione quest'ultima di una determinata equazione d'onda (Schroedinger), giungendo così alla formulazione della meccanica quantistica.
@@ -416,6 +427,10 @@ $$ $$
          \epsilon = \sqrt{p^2c^2+m^2c^4}\sim \sqrt{(1.2)^2+(1.0)^2} \sim 1.5 GeV
 $$ da cui si verifica che con un fascio di particelle di circa $1.2 GeV/c$ di impulso ed $1.5 GeV$ di energia si raggiunge lo scopo. Se invece vogliamo esplorare la struttura del singolo nucleone dovremo avere un potere risolutivo almeno 100 volte superiore ovvero un impulso $100$ volte maggiore e dunque fasci di particelle di impulso dell'ordine di $100 GeV$.
 
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
 ## Teoria della diffrazione di Kirchhoff
 
 Dato che l'interazione fascio-bersaglio consiste essenzialmente nella diffrazione delle onde di De Broglie associate alle particelle del fascio da parte delle particelle del bersaglio, la corretta soluzione del problema può essere ottenuta cercando l'espressione della funzione d'onda che:
@@ -501,13 +516,109 @@ $$ Se il riferimento è interno alla apertura, a seguito della condizione di Fra
         s \simeq r - \bm{n} \cdot \bm{r'} \simeq r - r' \cos \vartheta \simeq r
 $$da cui, si ottiene infine l'espressione cercata della **funzione d'onda in campo lontano (o di Fraunhofer) diffratta da una apertura A investita da un'onda monocromatica**
 
-qui roba mancante
+```{=tex}
+\begin{equation}
+   \psi(\bm{r}) \simeq - \psi_0 \frac{ik}{2 \pi} \frac{e^{ikr}}{r}
+   \iint_{ap A} e^{-i \bm{q} \cdot \bm{r}'}\, da'
+\end{equation}
+```
+Come anticipato però, a noi interessa la situazione complementare, poiché vogliamo descrivere l'interazione fascio-bersaglio come diffrazione delle onde di De Broglie del fascio da parte di un ostacolo avente la forma del bersaglio.
+
+La funzione d'onda $\psi_{ost A}$ diffratta da uno schermo avente la forma di A, può essere ottenuta con il semplice **principio degli schermi complementari** o **principio di Babinet.**
+
+```{r, fig.margin=TRUE,echo=FALSE,out.height="40%"}
+    include_graphics("figs/kirchhoff-diffraction-3.jpg")
+```
+
+La $(17)$ fornisce la funzione d'onda diffratta dalla apertura $A$ come integrale dei contributi degli elementi d'area di $A$. E' chiaro che la funzione d'onda $\psi_{ost A}$, diffratta da uno schermo avente la stessa forma di A, deve essere data da un integrale dei contributi degli elementi d'area della superficie complementare CA. Ne consegue che la somma delle funzioni d'onda $\psi_{ap A}+ \psi_{ost A}$ debba essere data da un integrale dei contributi degli elementi d'area del piano inifinito contenente $A$, integrale che deve restituire l'onda monocromatica piana incidente $$
+     \psi_{ap A}(\bm{r})+ \psi_{ost A}(\bm{r}) = \psi_0e^{i \bm{k} \cdot \bm{r}}
+$$ Da questa relazione possiamo allora ricavare la seguente espressione della **funzione d'onda diffratta da uno schermo di area A investita da un'onda monocromatica** $$
+  \psi_{ost A}(\bm{r}) =  \psi_0e^{i \bm{k} \cdot \bm{r}}- \psi_{ap \  A}(\bm{r}) \simeq \psi_0e^{i \bm{k} \cdot \bm{r}} + \psi_0 \frac{e^{ikr}}{r} \frac{ik}{2 \pi} \iint_{ost}e^{-i \bm{q} \cdot \bm{r'}} \, da'
+$$ All'interno dell'integrale di superficie di questa espressione conviene introdurre la **funzione di profilo** $\Gamma$(nota anche come ``funzione pupilla" in otti a classica) la quale, nel caso di una apertura A totalmente trasparente, risulta definita nel modo seguente
+
+$$
+    \Gamma = 
+    \begin{cases}
+       1   \quad \text{all'interno di } A\\
+       0  \quad \text{all'esterno di } A
+    \end{cases}
+$$
+Si ha allora
+$$
+    \psi_{ost A}(\bm{r}) \simeq \psi_0e^{i \bm{k} \cdot \bm{r}} + \psi_0 \frac{e^{ikr}}{r} \frac{ik}{2 \pi} \iint_{S_B} \Gamma e^{-i \bm{q} \cdot \bm{r'}} \, da'
+$$
+dove $S_B$(superficie del bersaglio) è il piano infinito contenente lo schermo/ostacolo $A$.
+
+Si noti che ammettendo valori di $\Gamma$ interni ad $A$ inferiori ad $1$, descriviamo un ostacolo A non più totalmente assorbente come uno schermo, ma piuttosto parzialmente trasparente: nel caso limite in cui $\Gamma = 0$ abbiamo infatti un ostacolo $A$ totalmente trasparente che non genera alcuna diffrazione e restituisce l’onda piana incidente.
+
+Potremmo ottenere la massima generalità ammettendo che $\Gamma$ possa dipendere dalla posizione $\bm{r}'$ in $A$ ed assumere anche valori immaginari in modo da descrivere eventuali effetti assorbitivi. Una simile funzione di profilo ci permette di estendere la diffrazione di un ostacolo $A$ totalmente assorbente al caso generale della diffrazione di un ostacolo $A$ modulante e variamente trasparente, capace di descrivere la diffrazione della fuznione d’onda da parte della materia nucleare.
+Sulla base di queste considerazioni, la funzione d’onda assume la forma seguente (lascieremo cadere d’ora in avanti il pedice ‘ost’)
+$$
+  \psi_{ost A}(\bm{r}) \simeq \psi_0e^{i \bm{k} \cdot \bm{r}} + \psi_0 \frac{e^{ikr}}{r} \underbrace{\frac{ik}{2 \pi} \iint_{S_B} \Gamma(\bm{r}') e^{-i \bm{q} \cdot \bm{r'}} \, da'}_{f(\bm{q})}
+  \qquad 0 \leq \Gamma(\bm{r}') \leq 1
+$$
+Introducendo **l’ampiezza di diffusione**, che integra i contributi modulanti e assorbenti degli elementi d’area dell’ostacolo corrispondenti ad un certo vettore d’onda trasferito $\bm{q}$
+$$
+    f(\bm{q}) = \frac{ik}{2 \pi} \iint_{S_B} \Gamma(\bm{r}')e^{-i \bm{q} \cdot \bm{r}'} \, da'
+$$
+otteniamo la seguente espressione della **funzione d’onda in campo lontano
+diffratta da un ostacolo modulante e assorbente**
+\begin{equation}
+    \psi_0(\bm{r}) = \psi_0 (e^{i \bm{k} \cdot \bm{r}}) +
+    f(\bm{q}) \frac{e^{ikr}}{r}
+\end{equation}
+```{r, fig.margin=TRUE,echo=FALSE}
+    include_graphics("figs/kirchhoff-diffraction-4.jpg")
+```
+Tale espressione mostra che la figura di diffrazione prodotta da un ostacolo in un dato punto dello spazio è il risultato della interferenza dell’onda piana incidente con l’onda circolare proveniente dall’ ostacolo modulata dall’ampiezza di diffusione.
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
+<!-- ------------------------------------------------------------------ -->
 
 ## Le sezioni d'urto in meccanica quantistica
 
-roba lezione precedente
+Dalla definizione generale sappiamo che il quoziente tra sezione d’urto del processo e superficie della sezione del fascio deve fornire la *probabilità del processo* stesso
+$$
+      \text{Prob}_{\text{int}}  = \frac{\sigma_{diff}}{\Sigma}
+$$
+un fatto che ci permette di affermare che la sezione d’urto del processo altro non è che la frazione di sezione del fascio che produce eventi di quel processo.
+D’altra parte, nella meccanica quantistica, la probabilità di un certo processo può essere calcolata mettendo a quoziente il modulo quadrato della funzione d’onda del processo integrato sulla superficie di osservazione $S_O$ con il modulo quadrato della funzione d’onda incidente integrata sulla sezione del fascio
+$\Sigma$:
+$$
+    \text{Prob}_{\text{int}}  = \fraclarg{ \iint_{S_O} |\psi_{diff}|^2 \, dS}{\iint_{\Sigma} |\psi_{inc}|^2| \, d \Sigma}
+$$
+Otteniamo allora la seguente espressione della **sezione d’urto integrale del processo**
+\begin{equation}
+    \sigma_{int} = \Sigma \fraclarg{\iint_{S_0} |\psi_{diff}|^2 \, dS}{\iint_{\Sigma}|\psi_{inc}|^2 \, d \Sigma}
+\end{equation}
+ed anche quella della **sezione d‘urto elementare del processo**
+$$
+     \sigma_{int} = \Sigma \fraclarg{|\psi_{diff}|^2 \, dS}{\iint_{\Sigma}|\psi_{inc}|^2 \, d \Sigma}
+$$
+dove l’elemento $dS$ a numeratore si riferisce, come detto sopra, al generico elemento di superficie di uno schermo lontano $S_O$ su cui osserviamo il processo in esame.
 
-**Significato fisico della probabilita lungo una superficie** Possiamo vedere la probabilita come qualcosa che fluisce lungo la superficie. Come si scrive un flusso di probabilita su una superficie? SAppiamo gia calcolare quanta probabilita fluisce all'interno di un volume La differenza che sussiste e la stessa che c'e tra densita di carica e densita di corrente $$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**Significato fisico della probabilita lungo una superficie** Possiamo vedere la probabilita come qualcosa che fluisce lungo la superficie. Come si scrive un flusso di probabilita su una superficie? Sappiamo gia calcolare quanta probabilita fluisce all'interno di un volume La differenza che sussiste e la stessa che c'e tra densita di carica e densita di corrente $$
      \nabla \cdot \bm{J} = - \frac{\partial \rho}{\partial t}
 $$ $$
      \iiint \nabla \cdot \bm{J} \,dV =  - \frac{\partial }{\partial t}\iiint \rho \, dV
@@ -528,7 +639,7 @@ $$ $$
      \sigma_{\text{diff}} = \iint_{\text{Schermo}} |f(\bm{q})|^2 \, d\Omega
 $$ La sezione di diffusione per unita di angolo solido è $$
      \frac{d \sigma_{diff}}{d \Omega} = |f(\bm{q})|^2
-$$ ---
+$$
 
 Vogliamo ora dimostrare il **teorema ottico** un importante teorema sulle sezioni d'urto. Siamo ora in grado di calcolare la probabalita di venire assorbito dal bersaglio? lQuesta probabilità è $$
     \frac{\sigma_{ass}}{\Sigma} = \frac{\iint_{\Sigma} |\psi_{inc}|^2 \, d\Sigma - \iint_{\text{Schermo}} |\psi_{diffr}|^2 \, dS}{\iint_{\Sigma} |\psi_{inc}|^2 \, d\Sigma}
@@ -588,43 +699,23 @@ $$ ... conti mancanti $$
   \boxed{ \sigma_{diff} = \iint |\Gamma|^2 \, da'}
 $$ $$
   \boxed{ \sigma_{ass} = \iint 1 - |1- \Gamma|^2 \, da'}
-$$ \## Diffrazione di un disco assorbente
+$$ 
 
-Possiamo usare le formule del precedente paragrafo per calcolare le
-sezioni d\'urto del processo di **diffrazione di un\'onda piana su di un ostacolo
-circolare di raggio R completamente assorbente**.
+## Diffrazione di un disco assorbente
 
-Adottando un sistema di coordinate polari con l\'origine al centro del
-disco, la **funzione di profilo del disco nero** è definita dalle condizioni
-$$
+Possiamo usare le formule del precedente paragrafo per calcolare le sezioni d'urto del processo di **diffrazione di un'onda piana su di un ostacolo circolare di raggio R completamente assorbente**.
+
+Adottando un sistema di coordinate polari con l'origine al centro del disco, la **funzione di profilo del disco nero** è definita dalle condizioni $$
     \sigma_{diff} = \iint_{\text{disco}} da' = \pi R^2
-$$
-...[recupera formule]
-$$
+$$ ...[recupera formule] $$
    f(\bm{q}) = \frac{ik}{2 \pi} \iint e^{-i \bm{q} \cdot \bm{r}} \, da
-$$
-$$
+$$ $$
     f(\bm{q}) = \frac{ik}{2 \pi} \int_0^R \int_0^{2\pi} e ^{-i qr \cos \varphi}r d \varphi dr =
       ik \int_0^Rr \underbrace{\left[ \frac{1}{2 \pi}\int_0^{2 \pi} e ^{-iqr \cos \varphi} d \varphi \right]}_{J_0(qr)}dr = 
-$$
-$$
+$$ $$
       =  ik \int_0^R r J_0(qr) \, dr = ik \frac{R}{q} J_1(qr)
-$$
-$$
+$$ $$
       \frac{d \sigma_{diff}}{d \Omega} = 
       \frac{k^2 R^2}{q^2} J_1^2(qr) = \frac{R^2}{\sin^2 \vartheta}J_1^2kqr \sin \vartheta)
-$$
-dove $q = k \sin \vartheta$
+$$ dove $q = k \sin \vartheta$
 
-
-				
-			
-		
-
-	
-
-				
-			
-		
-
-	

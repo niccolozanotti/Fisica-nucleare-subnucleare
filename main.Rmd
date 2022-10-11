@@ -42,9 +42,12 @@ opts_chunk$set(echo = TRUE)
 
 ```{r, child=c('chapters/introduzione.Rmd', 'chapters/nucleare.Rmd','chapters/nucleo.Rmd')}
 ```
+
 ```{r, child=c('chapters/appendice.Rmd')}
 ```
+
 # References
+
 ```{r bib, include=FALSE}
 # create a bib file for the R packages used in this document
 knitr::write_bib(c('base', 'rmarkdown'), file = 'bibliography.bib')
