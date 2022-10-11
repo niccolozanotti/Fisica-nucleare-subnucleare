@@ -459,74 +459,171 @@ $$ $$
 $$ \begin{align*}
      \frac{\partial s}{\partial z'} &= \frac{\partial }{\partial z'}|\bm{r'}-\bm{r}| = \frac{\partial }{\partial z'}\sqrt{(x-x')^2+(y-y')^2+(z-z')^2} \\
      &= - \frac{1}{2s}s(z-z') = - \frac{z-z'}{s} = \cos \vartheta
-\end{align*} con $\cos \vartheta = \frac{\bm{r'}-\bm{r}}{|\bm{r'}-\bm{r}|}$. Da qui ottengo lo sviluppo del primo termine presente nell'equazione di Kirchhoff: 
+\end{align*} con $\cos \vartheta = \frac{\bm{r'}-\bm{r}}{|\bm{r'}-\bm{r}|}$. Da qui ottengo lo sviluppo del primo termine presente nell'equazione di Kirchhoff:
 
 $$
      (\bm{n}' \cdot \nabla')\frac{e^{iks}}{s} = -(ik\frac{e^{iks}}{s}-\frac{e^{iks}}{s^2}) \cos \vartheta
 $$ Sostituendo infine le espressioni di $(\bm{n}' \cdot \nabla ') \frac{e^{iks}}{s}$ e di $(\bm{n}' \cdot \nabla')\psi(\bm{r'})$ in $(16)$ otteniamo $$
        \psi(\bm{r}) = \frac{1}{4 \pi} \iint_{\text{Foro}} \left[-\psi_0 e^{ikz'}\left( ik\frac{e^{iks}}{s}-\frac{e^{iks}}{s^2}\right) \cos \vartheta - \frac{e^{iks}}{s} ik\psi_0 e^{ikz'} \right] \, da' 
 $$
+
 ```{r, fig.margin=TRUE,echo=FALSE}
     include_graphics("figs/kirchhoff-diffraction-2.jpg")
 ```
+
 Compiamo la seguente *approssimazione*: se il punto di osservazione è a grande distanza, al primo ordine il termine $1/s^2$ può essere trascurato. Abbiamo $$
    \psi(\bm{r}) \simeq \frac{1}{4 \pi} \iint_{\text{Foro}} \left[-\psi_0 e^{ikz'} ik\frac{e^{iks}}{s} \cos \vartheta - \frac{e^{iks}}{s}ik\psi_0 e^{ikz'} \right]\, da'
-$$ 
-$$
+$$ $$
 \psi(\bm{r}) \simeq -\psi_0 \frac{ik}{4 \pi} \iint_{\text{Foro}} \frac{e^{i(ks+kz')}}{s}(\cos \vartheta + 1)\, da' \simeq -\psi_0 \frac{ik}{2 \pi} \iint_{\text{Foro}} \frac{e^{i(ks+kz')}}{s}\,da'
 $$
+
 ```{marginfigure}
   $f(\vartheta) = 1 + \cos \vartheta$ fa si che ci sia un fattore che modula l'ampiezza(ad esempio se $\vartheta = 0,f(\vartheta) = 2$ mentre è nullo per $\vartheta = \pi$)
 ```
-dove nell'ultimo passaggio si è usato $\vartheta << 1 \rightarrow cos \vartheta \simeq 1$.
-Si noti che l\'espressione integrale ottenuta corrisponde al ben noto principio
-di Huygens completato dal **fattore di obliquità** che modula l\'ampiezza in
-modo tale da fornire le onde in avanti ed annullare quelle all\'indietro.
 
-Nell’integrale appena ottenuto vogliamo esprimere la fase dell’esponenziale in forma generale attraverso vettori
-$$
+dove nell'ultimo passaggio si è usato $\vartheta << 1 \rightarrow cos \vartheta \simeq 1$. Si noti che l'espressione integrale ottenuta corrisponde al ben noto principio di Huygens completato dal **fattore di obliquità** che modula l'ampiezza in modo tale da fornire le onde in avanti ed annullare quelle all'indietro.
+
+Nell'integrale appena ottenuto vogliamo esprimere la fase dell'esponenziale in forma generale attraverso vettori $$
     k(s + z') = k(|\bm{r}-\bm{r'}|+z') = k (\sqrt{(\bm{r}-\bm{r'})\cdot(\bm{r}-\bm{r'})}+\bm{n}' \cdot \bm{r'})
-$$
-$$
+$$ $$
     = k\left(r \sqrt{1 - \frac{2 \bm{r}\cdot \bm{r'}}{r^2} + \frac{r'^2}{r^2}} + \bm{n}' \cdot \bm{r'}\right) = k\left( r + \frac{r'^2}{2r} - \frac{ \bm{r}\cdot \bm{r'}}{r} + \bm{n}' \cdot \bm{r'}\right)
-$$
-$$
+$$ $$
   = k r + k \frac{r'^2}{2r} - k \frac{ \bm{r}\cdot \bm{r'}}{r} + k \bm{n}' \cdot \bm{r'}
-$$
-I valori assunti da $r'$ sono molto minori rispetto a quelli di $r$; in particolare se $D$ è il diametro del foro ed $L$ la distanza dallo schermo
-$$
+$$ I valori assunti da $r'$ sono molto minori rispetto a quelli di $r$; in particolare se $D$ è il diametro del foro ed $L$ la distanza dallo schermo $$
      k \frac{r'^2}{2r} \simeq \frac{D^2}{\lambda L}
-$$
-Se $\frac{D^2}{\lambda L} << 1$ si parla di **regime di Fraunhofer** e il termine in questione può essere trascurato. Si ha quindi
-$$
+$$ Se $\frac{D^2}{\lambda L} << 1$ si parla di **regime di Fraunhofer** e il termine in questione può essere trascurato. Si ha quindi $$
     k(s+z') = kr - (k \bm{n} - k \bm{n}') \cdot r'
-$$
-Introducendo il **vettore d'onda trasferito**(che parametrizza lo spostamento del punto di osservazione dall'asse del fasio)
-$$
+$$ Introducendo il **vettore d'onda trasferito**(che parametrizza lo spostamento del punto di osservazione dall'asse del fasio) $$
     \bm{q} = k \bm{n} - k \bm{n}'
-$$
-otteniamo infine
-$$
+$$ otteniamo infine $$
     k(s+ z') \simeq kr - \bm{q} \cdot \bm{r}'
+$$ Se il riferimento è interno alla apertura, a seguito della condizione di Fraunhofer si ha(sistema $\simeq$ al centro del foro) $$
+        s \simeq r - \bm{n} \cdot \bm{r'} \simeq r - r' \cos \vartheta \simeq r
+$$da cui, si ottiene infine l'espressione cercata della **funzione d'onda in campo lontano (o di Fraunhofer) diffratta da una apertura A investita da un'onda monocromatica**
+
+qui roba mancante
+
+## Le sezioni d'urto in meccanica quantistica
+
+roba lezione precedente
+
+**Significato fisico della probabilita lungo una superficie** Possiamo vedere la probabilita come qualcosa che fluisce lungo la superficie. Come si scrive un flusso di probabilita su una superficie? SAppiamo gia calcolare quanta probabilita fluisce all'interno di un volume La differenza che sussiste e la stessa che c'e tra densita di carica e densita di corrente $$
+     \nabla \cdot \bm{J} = - \frac{\partial \rho}{\partial t}
+$$ $$
+     \iiint \nabla \cdot \bm{J} \,dV =  - \frac{\partial }{\partial t}\iiint \rho \, dV
+$$ $$
+      \iint_{S(V)} \bm{J}dS = - \frac{\partial }{\partial t}\iiint \rho \, dV  \qquad \bm{j} = \rho \bm{v}
+$$ Questa relazione ci dice: la carica dentro il volume varia in una misura che e uguale al suo flusso di superficie--\> non c'e variazione totale, solo flusso da una parte all'altra--\> cio vale perche le equazioni stabiliscono questo equilibrio
+
 $$
+  \bm{J} = |\psi|^2\bm{v}
+$$ $$
+    \frac{\iint |\psi_1|^2vds}{\iint |\psi_2|^2vds}
+$$ v e costante essendo in un processo di diffusione.
+
+$$
+     \sigma = \Sigma \frac{\iint_{\text{Schermo}}|\psi_0|^2 |f(\bm{q})|^2  \frac{dS}{r^2}}{\iint_{\Sigma} |\psi_0|^2 \, d \Sigma}
+     = \iint_{} |f(\bm{q})|^2d \Omega
+$$ $$
+     \sigma_{\text{diff}} = \iint_{\text{Schermo}} |f(\bm{q})|^2 \, d\Omega
+$$ La sezione di diffusione per unita di angolo solido è $$
+     \frac{d \sigma_{diff}}{d \Omega} = |f(\bm{q})|^2
+$$ ---
+
+Vogliamo ora dimostrare il **teorema ottico** un importante teorema sulle sezioni d'urto. Siamo ora in grado di calcolare la probabalita di venire assorbito dal bersaglio? lQuesta probabilità è $$
+    \frac{\sigma_{ass}}{\Sigma} = \frac{\iint_{\Sigma} |\psi_{inc}|^2 \, d\Sigma - \iint_{\text{Schermo}} |\psi_{diffr}|^2 \, dS}{\iint_{\Sigma} |\psi_{inc}|^2 \, d\Sigma}
+$$ Il ragionamento è di conservazione, in maniera analoga a prima. La Relazione di bilancio e la seguente: $$
+    \iint_{\Sigma} |\psi_{inc}|^2 \, d\Sigma =
+    \iint_{\text{bersaglio}} |\psi_{ass}|^2 \, dS +
+    \iint_{\text{schermo}} |\psi_{diffr}|^2 \, dS
+$$
+
+$$
+ \sigma_{ass} = \Sigma\frac{\iint_{\Sigma} |\psi_{inc}|^2 \, d\Sigma - \iint_{\text{Schermo}} |\psi_{diffr}|^2 \, dS}{\iint_{\Sigma} |\psi_{inc}|^2 \, d\Sigma}
+$$
+
+$$
+     \iint_{sch} |\psi_0 e^{ikz}+\psi_0f(\bm{q})\frac{e^{ikr}}{r}| \, dS
+$$ $$
+\iint_{sch} |\psi_0| dS + \iint_{sch}|\psi_0|^2|f(\bm{q})|^2 \frac{ds}{r^2}\, dS
++ \iint_{sch} 2 \Re\psi_0f(\bm{q})\frac{e^{ik(r-z)}}{r} \, dS=
+$$ $$
+    = |\psi_0|^2 \Sigma + |\psi_0|^2 \sigma_{diff} + 2 \Re \iint f(\bm{q})\frac{e^{ik(r-z)}}{r}\, dS
+$$ perche $|\psi_0|^2 \Sigma$ e non $|\psi_0|^2 S$? *Nella realta abbiamo identita di aree perche il nucleo e piccolissimo rispetto alla sezione del fascio e gli angoli di diffusione sono molto piccoli*.
+
+A questo punto scriviamo $\sigma_{ass}$: $$
+    \sigma_{ass} = \Sigma\frac{\iint_{\Sigma} |\psi_{inc}|^2 \, d\Sigma - \iint_{\text{Schermo}} |\psi_{diffr}|^2 \, dS}{\iint_{\Sigma} |\psi_{inc}|^2 \, d\Sigma} =  \frac{1}{|\psi_0|^2} \left[ |\psi_0|^2 \Sigma - \left( |\psi_0|^2 \Sigma + |\psi_0|^2 \sigma_{diff}+ 2 |\psi_0|^2 \Re\iint_{sch}f(\bm{q})\frac{e^{ik(r-z)}}{r} \, dS \right) \right]
+$$ $$
+    \sigma_{ass} = - \sigma_{diff} - 2 \Re\iint_{sch}f(\bm{q})\frac{e^{ik(r-z)}}{r} \, dS
+$$ $$
+     r - z = \sqrt{x^2 + y^2+z^2} -z = z\sqrt{1 + \frac{x^2}{z^2}+\frac{y^2}{z^2}} \simeq
+     z \left( 1 + \frac{1}{2}\frac{x^2 + y^2}{z^2}\right) -z  = \frac{1}{2}\frac{x^2 + y^2}{z^2}
+$$ Inoltre, se lo schermo è lontano la figura di diffrazione si estende sullo schermo stesso in misura trascurabile, per cui la coordinata z risulta dominare largamente le coordinate x ed y.
+
+[qui disegno su approssimazione]
+
+Risostituendo nell'integrale che fornisce $\sigma_{ass}$ abbiamo $$
+       - 2 \Re\iint_{sch}f(\bm{q})\frac{e^{ik(r-z)}}{r} \, dS = 
+        2 \Re f(\bm{o}) \iint_{sch}\frac{e^{ik \frac{x^2 + y^2}{2z}}}{z} \, dxdy = 
+        \frac{2}{z} \Re f(\bm{o}) \int_{- \infty}^{\infty} e ^{- \frac{k}{2iz}x^2} \, dx 
+        \int_{- \infty}^{\infty} e ^{- \frac{k}{2iz}y^2} \, dy =
+$$ $$
+     = \frac{2}{z} \Re f(\bm{0}) \sqrt{\frac{2iz}{k}}\sqrt{\pi}\sqrt{\frac{2iz}{k}}\sqrt{\pi} = 
+     \frac{2}{z} \Re f(\bm{0}) \frac{2iz}{k}\pi = \frac{4 \pi}{k} \Re i (\Re f(\bm{0}) + i  \Im f(\bm{0}))
+$$ ottenendo infine $$
+  \sigma_{diff} + \sigma_{ass} = \frac{4 \pi}{k} \Im f(\bm{0})
+$$ questo e il **teorema ottico**.
+
+Integrando l'ampiezza di diffusione su tutto l'angolo solido nella ( 3.23 ) si ottiene la seguente espressione della sezione d'urto totale di diffusione in funzione del profilo (vedi 0) $$
+      \sigma_{diff} = \iint |\Gamma|^2 \, da'
+$$ $$
+     \frac{4 \pi}{k} \Im \left(\frac{ik}{2 \pi} \iint \Gamma \, da' \right) = 
+      \frac{4 \pi}{k} \frac{k}{2 \pi} \Im i \iint(\Re \Gamma +i \Im \Gamma) \, da' = 
+      2 \iint \Re \Gamma \, da'
+$$ $$
+    \iint |\Gamma|^2 \, da' + \sigma_{ass} = 2 \iint \Re \Gamma \, da'
+$$ $$
+     \sigma _{ass} = \iint (2 \Re \Gamma - |\Gamma|^2)
+$$ ... conti mancanti $$
+  \boxed{ \sigma_{diff} = \iint |\Gamma|^2 \, da'}
+$$ $$
+  \boxed{ \sigma_{ass} = \iint 1 - |1- \Gamma|^2 \, da'}
+$$ \## Diffrazione di un disco assorbente
+
+Possiamo usare le formule del precedente paragrafo per calcolare le
+sezioni d\'urto del processo di **diffrazione di un\'onda piana su di un ostacolo
+circolare di raggio R completamente assorbente**.
+
+Adottando un sistema di coordinate polari con l\'origine al centro del
+disco, la **funzione di profilo del disco nero** è definita dalle condizioni
+$$
+    \sigma_{diff} = \iint_{\text{disco}} da' = \pi R^2
+$$
+...[recupera formule]
+$$
+   f(\bm{q}) = \frac{ik}{2 \pi} \iint e^{-i \bm{q} \cdot \bm{r}} \, da
+$$
+$$
+    f(\bm{q}) = \frac{ik}{2 \pi} \int_0^R \int_0^{2\pi} e ^{-i qr \cos \varphi}r d \varphi dr =
+      ik \int_0^Rr \underbrace{\left[ \frac{1}{2 \pi}\int_0^{2 \pi} e ^{-iqr \cos \varphi} d \varphi \right]}_{J_0(qr)}dr = 
+$$
+$$
+      =  ik \int_0^R r J_0(qr) \, dr = ik \frac{R}{q} J_1(qr)
+$$
+$$
+      \frac{d \sigma_{diff}}{d \Omega} = 
+      \frac{k^2 R^2}{q^2} J_1^2(qr) = \frac{R^2}{\sin^2 \vartheta}J_1^2kqr \sin \vartheta)
+$$
+dove $q = k \sin \vartheta$
+
+
+				
 			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+		
+
+	
+
+				
 			
 		
 
