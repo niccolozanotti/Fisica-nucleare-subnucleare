@@ -11,6 +11,7 @@
 \usepackage[displaymath,textmath,sections,graphics,floats]{preview}
 \usepackage{longtable}
 \usepackage{relsize}
+\usepackage{amsfonts}
 
 \usepackage{pgfplots}
 \usetikzlibrary{intersections}
@@ -42,4 +43,21 @@
 \newcommand{\nucl}[3]{ \ensuremath{ \phantom{\ensuremath{^{#1}_{#2}}} \llap{\ensuremath{^{#1}}} \llap{\ensuremath{_{\rule{0pt}{.75em}#2}}} \mbox{#3} } }
 
 \newcommand{\fraclarg}[2]{ \frac{ \mathlarger{#1} }{ \mathlarger{#2} } }
+
+%% Real and Imaginary part of a complex number
+\renewcommand{\Re}{\mathfrak{Re}}
+\renewcommand{\Im}{\mathfrak{Im}}
+
+
+
+
+
+
+
+
+
+
+
+
+
 

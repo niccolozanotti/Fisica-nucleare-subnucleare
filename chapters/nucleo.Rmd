@@ -622,168 +622,164 @@ $$ sostituendo nella $(20)$ otteniamo $$
     d \sigma_{diff} = \Sigma \fraclarg{|\psi_0|^2|f(\bm{q})|^2\frac{1}{r^2}r^2 d \Omega}{\iint_{\Sigma}|\psi_0|^2 \, d \Sigma}
     = \Sigma \frac{|\psi_0|^2|f(\bm{q})|^2 d \Omega}{|\psi_0|^2 \Sigma}
     = |f(\bm{q})|^2 d \Omega
-$$da cui, infine, si derivano le espressioni della **sezione d\'urto di diffusione differenziale e totale rispetto all\'angolo solido**
+$$da cui, infine, si derivano le espressioni della **sezione d'urto di diffusione differenziale e totale rispetto all'angolo solido**
 
 \begin{equation}
     \frac{d \sigma_{diff}}{d \Omega} = |f(\bm{q})|^2 \qquad
     \sigma_{diff} = \iint_{\Omega}|f(\bm{q})|^2 \, d \Omega
+\end{equation} Tale espressione chiarisce che la sezione d'urto differenziale di diffusione rispetto all'angolo solido è data dal modulo quadrato della ampiezza di diffusione, dipendente dal vettore d'onda trasferito che parametrizza l'angolo rispetto alla direzione del fascio.
+
+L' espressione ($18$) della funzione d'onda di diffrazione prodotta da un ostacolo ci permette pure il calcolo della sezione d'urto di assorbimento del fascio incidente. Tale sezione d'urto può essere ottenuta osservando che la probabilità incidente sulla superficie $S_B$ deve essere assorbita dal bersaglio su $S_B$, oppure diffratta e osservata sullo schermo di osservazione $S_O$. Tenendo presente che la funzione d'onda incidente è non nulla sulla sezione del fascio $\Sigma$, mentre quella di assorbimento è non nulla sul bersaglio, si ottiene la relazione di bilancio:
+
+$$
+   \iint_{\Sigma} |\psi_{inc}|^2 \, dS =
+        \iint_{S_O} |\psi_{diff}|^2 \, dS -
+         \iint_{bers} |\psi_{ass}|^2 \, d \Sigma
+$$ $$
+        \iint_{\text{bersaglio}} |\psi_{ass}|^2 \, dS =
+        \iint_{\Sigma} |\psi_{inc}|^2 \, d\Sigma -
+         \iint_{S_O} |\psi_{diffr}|^2 \, dS
+$$ Da quest'ultima e dalla ($19$) otteniamo allora la seguente espressione $$
+    \sigma_{ass} =\Sigma \, \fraclarg{\iint_{bers} |\psi_{ass}|^2 \, d \Sigma}{\iint_{\Sigma} |\psi_{inc}|^2 \, d \Sigma}
+    = \Sigma \, \fraclarg{\iint_{\Sigma} |\psi_{inc}|^2 \, d\Sigma -
+         \iint_{S_O} |\psi_{diffr}|^2 \, dS}{\iint_{\Sigma} |\psi_{inc}|^2 \, d \Sigma}
+$$ Se lo schermo di osservazione è sufficientemente lontano e soddisfa la condizione di Fraunhofer possiamo usare la funzione d'onda diffusa ($18$) con asse z normale allo schermo del bersaglio \begin{align*}
+   |\psi_{inc}|^2 &= |\psi_0|^2 \\
+    |\psi_{diff}|^2 &= \left | \psi_0 \left( e^{ikz} + f(\bm{q})\frac{e^{ikr}}{r} \right) \right|^2  \\
+    &=  |\psi_0|^2 + |\psi_0|^2 \frac{|f(\bm{q})|^2}{r^2} + 2 |\psi_0|^2 \Re f(\bm{q})\frac{e^{ik(r-z)}}{r}
+\end{align*} Integrando sullo schermo si ha: 
+$$
+     \iint_{S_O} |\psi_0|^2 \, dS + \iint_{S_O}|\psi_0|^2 |f(\bm{q})|^2\, \frac{dS}{r^2} + \iint_{S_O}2 |\psi_0|^2 \Re f(\bm{q})\frac{e^{ik(r-z)}}{r} \, dS
+$$
+le quali, sostituite nella sezione d'urto d'assorbimento, forniscono 
+$$
+     \sigma_{ass} = \Sigma \,\fraclarg{ \iint_{\Sigma}|\psi_0|^2 \, d \Sigma+ \iint_{S_0} \left [  |\psi_0|^2 \frac{|f(\bm{q})|^2}{r^2} + 2 |\psi_0|^2 \Re f(\bm{q})\frac{e^{ik(r-z)}}{r} \right] \, dS}{\iint_{\Sigma}|\psi_0|^2 \, d \Sigma}
+$$ $$
+    = |\psi_0|^2 \Sigma + |\psi_0|^2 \sigma_{diff} + 2 |\psi_0|^2 \Re \iint_{S_O} f(\bm{q})\frac{e^{ik(r-z)}}{r} \,dS
+$$ Il primo termine si è scritto come $|\psi_0|^2 \Sigma$ (e non $|\psi_0|^2 S)$ in quanto nel caso reale abbiamo identità di aree perche il nucleo e piccolissimo rispetto alla sezione del fascio e gli angoli di diffusione sono molto piccoli.
+
+Per quanto riguarda la sezione d'urto di assorbimento si ha $$
+     \sigma_{ass} = \Sigma   \fraclarg{|\psi_0|^2 \Sigma - \left[ |\psi_0|^2 \Sigma + |\psi_0|^2 \sigma_{diff} +  2 |\psi_0|^2 \Re \iint_{S_O} f(\bm{q})\frac{e^{ik(r-z)}}{r} \,dS \right]}{|\psi_0|^2 \Sigma}
+$$ da cui \begin{equation}
+   = - \sigma_{diff} -  2 |\psi_0|^2 \Re \iint_{S_O} f(\bm{q})\frac{e^{ik(r-z)}}{r} \,dS
+\end{equation} 
+
+Per proseguire negli sviluppi è necessario calcolare l'integrale sullo schermo $S_O$. Assumendo l'origine del riferimento al centro dell'ostacolo e l'asse z normale al piano che lo contiene e dunque normale anche allo schermo lontano, otteniamo per la fase dell'esponenziale 
+```{r, fig.margin=TRUE,echo=FALSE}
+    include_graphics("figs/schema-vett-trasferito.jpg")
+```
+\begin{align*}
+       r - z &= \sqrt{x^2 + y^2+z^2} -z = z\sqrt{1 + \frac{x^2}{z^2}+\frac{y^2}{z^2}} \\
+       & \simeq z \left( 1 + \frac{1}{2}\frac{x^2 + y^2}{z^2}\right) -z  = \frac{1}{2}\frac{x^2 + y^2}{z^2}
+\end{align*}
+Inoltre, se lo schermo è lontano la figura di diffrazione si estende sullo schermo stesso in misura trascurabile, per cui la coordinata z risulta dominare largamente le coordinate x ed y.
+
+
+
+Risostituendo nell'integrale che compare nell'espressione di $\sigma_{ass}$ abbiamo
+$$
+       - 2 \Re\iint_{sch}f(\bm{q})\frac{e^{ik(r-z)}}{r} \, dS =
+        2 \Re f(\bm{o}) \iint_{sch}\frac{e^{ik \frac{x^2 + y^2}{2z}}}{z} \, dxdy 
+$$ 
+$$
+  = \frac{2}{z} \Re f(\bm{o}) \int_{- \infty}^{\infty} e ^{- \frac{k}{2iz}x^2} \, dx
+        \int_{- \infty}^{\infty} e ^{- \frac{k}{2iz}y^2} \, dy = \frac{2}{z} \Re f(\bm{0}) \sqrt{\frac{2iz}{k}}\sqrt{\pi}\sqrt{\frac{2iz}{k}}\sqrt{\pi} 
+$$ $$
+ = \frac{2}{z} \Re f(\bm{0}) \frac{2iz}{k}\pi = \frac{4 \pi}{k} \Re i (\Re f(\bm{0}) + i  \Im f(\bm{0}))
+$$ ottenendo infine $$
+ \boxed{\sigma_{diff} + \sigma_{ass} = \frac{4 \pi}{k} \Im f(\bm{0})}
+$$ risultato noto come **teorema ottico**.
+
+```{marginfigure}
+  Teorema ottico
+```
+
+il quale afferma che la somma delle sezioni d\'urto totale di diffusione ed
+assorbimento, detta sezione d\'urto totale d\'interazione, eguaglia (a meno
+del fattore moltiplicativo $\frac{4 \pi}{k}$ la parte immaginaria dell\'ampiezza di
+diffusione in avanti (ovvero a vettore d\'onda trasferito nullo).
+
+E’ importante sapere che le sezioni d’urto totali di diffusione e assorbimento possono essere espresse anche attraverso integrali della funzione di profilo sulla superficie del bersaglio $S_B$.	
+
+Integrando l’ampiezza di diffusione su tutto l’angolo solido nella ($21$) si ottiene la seguente espressione della sezione d’urto totale di diffusione in funzione del profilo (vedi formula di Kirchhoff in appendice).
+
+\begin{equation}
+  \sigma_{diff} = \iint_{S_B} |\Gamma(\bm{r}')|^2 \, da'
 \end{equation}
-				
-			
-		
 
-	
+$$
+     \frac{4 \pi}{k} \Im \left(\frac{ik}{2 \pi} \iint \Gamma \, da' \right) =
+  \frac{4 \pi}{k} \frac{k}{2 \pi} \Im i \iint(\Re \Gamma +i \Im \Gamma) \, da' =   2 \iint \Re \Gamma \, da'
+$$ 
+$$
+    \iint |\Gamma|^2 \, da' + \sigma_{ass} = 2 \iint \Re \Gamma \, da'
+$$ 
+$$
+     \sigma_{ass} = \iint (2 \Re \Gamma - |\Gamma|^2) \, da'
+$$ 
+ma $|1 - \Gamma|^2 = 1 + |\Gamma|^2 - 2 \Re \Gamma$ e dunque si perviene alle espressioni della sezione d'urto totale di assorbimento in funzione del profilo
+\begin{equation}
+   \boxed{ \sigma_{ass} = \iint \left(1 - |1 - \Gamma|^2 \right) \, da' }
+\end{equation}
+e della sezione d'urto di diffusione
+\begin{equation}
+  \boxed{ \sigma_{diff} = \iint |\Gamma|^2 \, da'}
+\end{equation}
 
-<!-- $$ -->
+## Diffrazione di un disco assorbente
 
-<!--      \sigma = \Sigma \frac{\iint_{\text{Schermo}}|\psi_0|^2 |f(\bm{q})|^2  \frac{dS}{r^2}}{\iint_{\Sigma} |\psi_0|^2 \, d \Sigma} -->
+Possiamo usare le formule del precedente paragrafo per calcolare le sezioni d'urto del processo di **diffrazione di un'onda piana su di un ostacolo circolare di raggio R completamente assorbente**.
 
-<!--      = \iint_{} |f(\bm{q})|^2d \Omega -->
+Adottando un sistema di coordinate polari con l'origine al centro del disco, la **funzione di profilo del disco nero** è definita dalle condizioni
+$$
+    \Gamma  = 
+    \begin{cases}
+      1  \quad r \leq R\\
+      0  \quad r > R
+    \end{cases}
+$$
+Si assuma un riferimento con l’origine al centro del disco e l’asse $z$ normale al piano che lo contiene.
+Con questa scelta, se ci limitiamo a considerare angoli di diffusione non troppo grandi, il vettore $\bm{q}$ giace in un piano parallelo a al piano $xy$ e si ha
+$$
+  \bm{q} = \bm{k} ( \bm{n} - \bm{n}') = k ( \sin \vartheta \hat{i}_r + \cos \vartheta \hat{k} - \hat{k'}) \simeq 
+  k \sin \vartheta \hat{i}_r
+$$
+```{r, fig.margin=TRUE,echo=FALSE}
+    include_graphics("figs/schema-vett-trasferito-2.jpg")
+```
+il vettore $\bm{r}$, che identifica i punti del disco circolare (per comodità lasciamo cadere l’accento), giace sul piano del bersaglio $xy$ a formare un angolo $\varphi$ con $\bm{q}$ per cui si ha $\bm{q} \cdot \bm{r} = qr \cos \varphi$,ed infine– adottatele coordinate cilindriche – l’elemento d’area vale $da = r d \varphi dr$. 
+Ricordando l'**ampiezza di diffusione**
+$$
+      f(\bm{q}) = \frac{ik}{2 \pi} \iint_{S_B} \Gamma(\bm{r}')e^{-i \bm{q} \cdot \bm{r}} \, da
+$$
+questa si scriverà come
+$$
+   f
+$$
 
-<!-- $$ -->
 
-<!-- $$ -->
 
-<!--      \sigma_{\text{diff}} = \iint_{\text{Schermo}} |f(\bm{q})|^2 \, d\Omega -->
 
-<!-- $$ La sezione di diffusione per unita di angolo solido è $$ -->
 
-<!--      \frac{d \sigma_{diff}}{d \Omega} = |f(\bm{q})|^2 -->
 
-<!-- $$ -->
 
-<!-- Vogliamo ora dimostrare il **teorema ottico** un importante teorema sulle sezioni d'urto. Siamo ora in grado di calcolare la probabalita di venire assorbito dal bersaglio? lQuesta probabilità è $$ -->
 
-<!--     \frac{\sigma_{ass}}{\Sigma} = \frac{\iint_{\Sigma} |\psi_{inc}|^2 \, d\Sigma - \iint_{\text{Schermo}} |\psi_{diffr}|^2 \, dS}{\iint_{\Sigma} |\psi_{inc}|^2 \, d\Sigma} -->
 
-<!-- $$ Il ragionamento è di conservazione, in maniera analoga a prima. La Relazione di bilancio e la seguente: $$ -->
 
-<!--     \iint_{\Sigma} |\psi_{inc}|^2 \, d\Sigma = -->
 
-<!--     \iint_{\text{bersaglio}} |\psi_{ass}|^2 \, dS + -->
 
-<!--     \iint_{\text{schermo}} |\psi_{diffr}|^2 \, dS -->
 
-<!-- $$ -->
 
-<!-- $$ -->
 
-<!--  \sigma_{ass} = \Sigma\frac{\iint_{\Sigma} |\psi_{inc}|^2 \, d\Sigma - \iint_{\text{Schermo}} |\psi_{diffr}|^2 \, dS}{\iint_{\Sigma} |\psi_{inc}|^2 \, d\Sigma} -->
 
-<!-- $$ -->
 
-<!-- $$ -->
 
-<!--      \iint_{sch} |\psi_0 e^{ikz}+\psi_0f(\bm{q})\frac{e^{ikr}}{r}| \, dS -->
 
-<!-- $$ $$ -->
 
-<!-- \iint_{sch} |\psi_0| dS + \iint_{sch}|\psi_0|^2|f(\bm{q})|^2 \frac{ds}{r^2}\, dS -->
 
-<!-- + \iint_{sch} 2 \Re\psi_0f(\bm{q})\frac{e^{ik(r-z)}}{r} \, dS= -->
 
-<!-- $$ $$ -->
 
-<!--     = |\psi_0|^2 \Sigma + |\psi_0|^2 \sigma_{diff} + 2 \Re \iint f(\bm{q})\frac{e^{ik(r-z)}}{r}\, dS -->
 
-<!-- $$ perche $|\psi_0|^2 \Sigma$ e non $|\psi_0|^2 S$? *Nella realta abbiamo identita di aree perche il nucleo e piccolissimo rispetto alla sezione del fascio e gli angoli di diffusione sono molto piccoli*. -->
 
-<!-- A questo punto scriviamo $\sigma_{ass}$: $$ -->
 
-<!--     \sigma_{ass} = \Sigma\frac{\iint_{\Sigma} |\psi_{inc}|^2 \, d\Sigma - \iint_{\text{Schermo}} |\psi_{diffr}|^2 \, dS}{\iint_{\Sigma} |\psi_{inc}|^2 \, d\Sigma} =  \frac{1}{|\psi_0|^2} \left[ |\psi_0|^2 \Sigma - \left( |\psi_0|^2 \Sigma + |\psi_0|^2 \sigma_{diff}+ 2 |\psi_0|^2 \Re\iint_{sch}f(\bm{q})\frac{e^{ik(r-z)}}{r} \, dS \right) \right] -->
 
-<!-- $$ $$ -->
-
-<!--     \sigma_{ass} = - \sigma_{diff} - 2 \Re\iint_{sch}f(\bm{q})\frac{e^{ik(r-z)}}{r} \, dS -->
-
-<!-- $$ $$ -->
-
-<!--      r - z = \sqrt{x^2 + y^2+z^2} -z = z\sqrt{1 + \frac{x^2}{z^2}+\frac{y^2}{z^2}} \simeq -->
-
-<!--      z \left( 1 + \frac{1}{2}\frac{x^2 + y^2}{z^2}\right) -z  = \frac{1}{2}\frac{x^2 + y^2}{z^2} -->
-
-<!-- $$ Inoltre, se lo schermo è lontano la figura di diffrazione si estende sullo schermo stesso in misura trascurabile, per cui la coordinata z risulta dominare largamente le coordinate x ed y. -->
-
-<!-- [qui disegno su approssimazione] -->
-
-<!-- Risostituendo nell'integrale che fornisce $\sigma_{ass}$ abbiamo $$ -->
-
-<!--        - 2 \Re\iint_{sch}f(\bm{q})\frac{e^{ik(r-z)}}{r} \, dS =  -->
-
-<!--         2 \Re f(\bm{o}) \iint_{sch}\frac{e^{ik \frac{x^2 + y^2}{2z}}}{z} \, dxdy =  -->
-
-<!--         \frac{2}{z} \Re f(\bm{o}) \int_{- \infty}^{\infty} e ^{- \frac{k}{2iz}x^2} \, dx  -->
-
-<!--         \int_{- \infty}^{\infty} e ^{- \frac{k}{2iz}y^2} \, dy = -->
-
-<!-- $$ $$ -->
-
-<!--      = \frac{2}{z} \Re f(\bm{0}) \sqrt{\frac{2iz}{k}}\sqrt{\pi}\sqrt{\frac{2iz}{k}}\sqrt{\pi} =  -->
-
-<!--      \frac{2}{z} \Re f(\bm{0}) \frac{2iz}{k}\pi = \frac{4 \pi}{k} \Re i (\Re f(\bm{0}) + i  \Im f(\bm{0})) -->
-
-<!-- $$ ottenendo infine $$ -->
-
-<!--   \sigma_{diff} + \sigma_{ass} = \frac{4 \pi}{k} \Im f(\bm{0}) -->
-
-<!-- $$ questo e il **teorema ottico**. -->
-
-<!-- Integrando l'ampiezza di diffusione su tutto l'angolo solido nella ( 3.23 ) si ottiene la seguente espressione della sezione d'urto totale di diffusione in funzione del profilo (vedi 0) $$ -->
-
-<!--       \sigma_{diff} = \iint |\Gamma|^2 \, da' -->
-
-<!-- $$ $$ -->
-
-<!--      \frac{4 \pi}{k} \Im \left(\frac{ik}{2 \pi} \iint \Gamma \, da' \right) =  -->
-
-<!--       \frac{4 \pi}{k} \frac{k}{2 \pi} \Im i \iint(\Re \Gamma +i \Im \Gamma) \, da' =  -->
-
-<!--       2 \iint \Re \Gamma \, da' -->
-
-<!-- $$ $$ -->
-
-<!--     \iint |\Gamma|^2 \, da' + \sigma_{ass} = 2 \iint \Re \Gamma \, da' -->
-
-<!-- $$ $$ -->
-
-<!--      \sigma _{ass} = \iint (2 \Re \Gamma - |\Gamma|^2) -->
-
-<!-- $$ ... conti mancanti $$ -->
-
-<!--   \boxed{ \sigma_{diff} = \iint |\Gamma|^2 \, da'} -->
-
-<!-- $$ $$ -->
-
-<!--   \boxed{ \sigma_{ass} = \iint 1 - |1- \Gamma|^2 \, da'} -->
-
-<!-- $$ -->
-
-<!-- ## Diffrazione di un disco assorbente -->
-
-<!-- Possiamo usare le formule del precedente paragrafo per calcolare le sezioni d'urto del processo di **diffrazione di un'onda piana su di un ostacolo circolare di raggio R completamente assorbente**. -->
-
-<!-- Adottando un sistema di coordinate polari con l'origine al centro del disco, la **funzione di profilo del disco nero** è definita dalle condizioni $$ -->
-
-<!--     \sigma_{diff} = \iint_{\text{disco}} da' = \pi R^2 -->
-
-<!-- $$ ...[recupera formule] $$ -->
-
-<!--    f(\bm{q}) = \frac{ik}{2 \pi} \iint e^{-i \bm{q} \cdot \bm{r}} \, da -->
-
-<!-- $$ $$ -->
-
-<!--     f(\bm{q}) = \frac{ik}{2 \pi} \int_0^R \int_0^{2\pi} e ^{-i qr \cos \varphi}r d \varphi dr = -->
-
-<!--       ik \int_0^Rr \underbrace{\left[ \frac{1}{2 \pi}\int_0^{2 \pi} e ^{-iqr \cos \varphi} d \varphi \right]}_{J_0(qr)}dr =  -->
-
-<!-- $$ $$ -->
-
-<!--       =  ik \int_0^R r J_0(qr) \, dr = ik \frac{R}{q} J_1(qr) -->
-
-<!-- $$ $$ -->
-
-<!--       \frac{d \sigma_{diff}}{d \Omega} =  -->
-
-<!--       \frac{k^2 R^2}{q^2} J_1^2(qr) = \frac{R^2}{\sin^2 \vartheta}J_1^2kqr \sin \vartheta) -->
-
-<!-- $$ dove $q = k \sin \vartheta$ -->
