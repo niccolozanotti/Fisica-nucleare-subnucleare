@@ -28,7 +28,7 @@ knit: (function(inputFile, encoding) {
       out_dir <- "output";
       rmarkdown::render(inputFile,
                         encoding=encoding,
-                        output_dir=file.path("../",dirname(inputFile), out_dir))})
+                        output_dir=file.path("./",dirname("appunti-nucleare"), out_dir))})
 ---
 
 <!-- ------------------------------------------------------------------ -->
@@ -753,9 +753,62 @@ $$
       f(\bm{q}) = \frac{ik}{2 \pi} \iint_{S_B} \Gamma(\bm{r}')e^{-i \bm{q} \cdot \bm{r}} \, da
 $$
 questa si scriverà come
+\begin{align*}
+   f(\bm{q}) &= \frac{ik}{2 \pi} \int_0^{2 \pi} \int_0^{\infty} \Gamma(r) e^{-iq \cos \varphi r} r \,d \varphi dr \\
+   &= \frac{ik}{2 \pi} \int_0^R r \left[ \int_0^{2 \pi} e^{-iq \cos \varphi r} d \varphi \right] \, dr \\
+   &= ik \int_0^R \underbrace{\left[ \frac{1}{2 \pi}\int_0^{2 \pi} e^{-iq \cos \varphi r} d \varphi \right]}_{J_0(qr)} \, dr
+\end{align*}
+dove $J_0(qr)$ è nota come **funzione di Bessel di ordine zero**:
 $$
-   f
+      J_0(qr) = \frac{1}{2 \pi}\int_0^{2 \pi} e^{-iq \cos \varphi r} d \varphi
 $$
+```{marginfigure}
+ qui figura a lato plottata con R delle funzioni di bessel di ordine 0
+```
+Abbiamo allora la seguente espressione dell'ampiezza di diffusione:
+$$
+     f(\bm{q}) = ik \int_0^R r J_0(qr) \, dr
+ $$
+ che può essere integrata per ottenere (Vedi Appendice)
+ $$
+     f(\bm{q}) = ik \frac{R}{q} J_1(qR)
+ $$
+ dove $J_1(qR)$ è la funzione di Bessel di ordine $1$. Tenendo ora conto che $q = k \sin \vartheta$ otteniamo infine
+ \begin{equation}
+     f(\bm{q}) = i \frac{R}{\sin \vartheta} J_1(kR \sin \vartheta)
+\end{equation}
+Tenendo conto ora della funzione profilo considerata dalla $(25)$ si ottiene la seguente espressione
+$$
+    \sigma_{diff} = \iint_{S_B} |\Gamma(\bm{r})|^2 \, da = \iint_{S_B} da
+$$
+dalla quale segue la **sezione d'urto totale del disco assorbente**
+\begin{equation}
+   \sigma_{diff} = \pi R^2
+\end{equation}
+Calcoliamo l'ampiezza di diffusione in avanti
+$$
+    f(\bm{0}) = \frac{ik}{2 \pi} \iint_{S_O} \Gamma (\bm{r}) da = \frac{ik}{2 \pi} \iint_{disco} da = \frac{ik}{2 \pi}
+    \pi R^2 = i \frac{kR^2}{2}
+$$
+e ricordando il teorema ottico abbiamo 
+$$
+    \sigma_{tot} = \frac{4 \pi}{k} \Im f(\bm{0}) = \frac{4 \pi}{k} \Im \left(i  \frac{kR^2}{2}\right) = \frac{4 \pi}{k}\frac{kR^2}{2}
+$$
+da segue la **sezione dl'urto totale d'interazione del disco assorbente**
+\begin{equation}
+   \sigma_{tot} = 2 \pi R^2
+\end{equation}
+Dal teorema ottico infine
+$$
+    \sigma_{ass} = \sigma_{tot} - \sigma_{diff} = 2\pi ^2 - \pi R^2
+$$
+da cui segue l'espressione della **sezione d'urto totale di assorbimento del disco assorbente**
+\begin{equation}
+    \sigma_{ass} = \pi R^2
+\end{equation}
+
+Troviamo allora che la sezione d’urto totale d’interazione di un’onda piana su di un disco assorbente è il doppio della superficie del disco stesso, poiché sia la sezione d’urto totale di diffusione che quella di assorbimento hanno entrambe il valore di quella superficie.
+
 
 
 
