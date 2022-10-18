@@ -93,7 +93,7 @@ Si parla di nuclidi
     -   se questi hanno $N$ e $Z$ scambiati si dicono *speculari*;
 4.  **isomeri** se sono identici ma in uno stato di energia differente.
 
-Il neutrone ha una massa di $939.56 MeV$ che eccede di soli $1.29 MeV$ la massa del protone che ammonta a $938.27 MeV$. Spesso approssimate a $940 MeV$ o addirittura ad $1 GeV$, i nucleoni risultano circa $1840$ volte più massivi dell'elettrone ($0.51 MeV$). La piccola differenza di massa gioca un ruolo chiave in molti fenomeni (vedi [paragrafo](##la-differenza-di-massa-tra-neutrone-e-protone) sulla differenza di massa neutrone-protone).
+Il neutrone ha una massa di $939.56 MeV/c^2$ che eccede di soli $1.29 MeV\c^2$ la massa del protone che ammonta a $938.27 MeV/c^2$. Spesso approssimate a $940 MeV$ o addirittura ad $1 GeV/c^2$, i nucleoni risultano circa $1840$ volte più massivi dell'elettrone ($0.51 MeV/c^2$). La piccola differenza di massa gioca un ruolo chiave in molti fenomeni (vedi [paragrafo](##la-differenza-di-massa-tra-neutrone-e-protone) sulla differenza di massa neutrone-protone).
 
 Sia i **neutroni** che i protoni possiedono un momento angolare intrinseco di **spin** $s=\frac{1}{2}$ (in unità $\hp$). Sulla base della meccanica quantistica, ciò significa che la proiezione del momento angolare lungo un certo asse può assumere i due soli valori $\frac{1}{2} \hp$ e $-\frac{1}{2}\hp$. Lo spin interviene non solo negli aspetti specifici della dinamica dei nucleoni ma anche nella determinazione del loro **comportamento collettivo**. La meccanica quantistica impone ai sistemi di particelle identiche restrizioni peculiari che non hanno analogie nella fisica classica. Sulla base del **teorema spin statistica** i neutroni ed i protoni nucleari - che hanno spin semintero - si comportano collettivamente come **fermioni** e devono soddisfare il **principio di Pauli**, un fatto che gioca un ruolo decisivo nella **stabilità** e **struttura** del nucleo.
 
@@ -106,13 +106,14 @@ Nella fisica classica solo una particella estesa può possedere momento angolare
 Nella fisica quantistica, non solo le particelle estese (composte) ma **anche quelle puntiform**i (elementari) possono essere dotate di **spin** per cui - se dotate di carica elettrica - possiederanno anche un **momento di dipolo magnetico**.
 
 Vediamo da un conto esplicito che l'analogia classica-quantistica è fallimentare: $$
-      \mu = i s = \frac{e}{T}\pi R^2 \rightarrow L = mvR = m \frac{2 \pi R}{T}R
-$$ $$
-             \pi R^2 = \frac{T}{2m}L \rightarrow m = \frac{e}{T}\frac{T}{2m}L = \frac{e \hp}{2m}\left( \frac{L}{\hp}\right) 
-$$ dove la grandezza $\frac{e \hp}{2m}$ viene detta **magnetone di Bohr** e vale $5.05 \times 10^{−27}J/T$. E' un fatto ben noto però che la relazione tra $\mu$ ed $L$ differisce da quella classica per un fattore numerico. Ad esempio, nel caso di particelle puntiformi di spin $1⁄2$, l'equazione **quantomeccanica relativistica di Dirac** conduce ad una relazione contenente un fattore $g$ di valore $2$.
+      \mu = i S = \frac{e}{T}\pi R^2 \rightarrow L = mvR = m \frac{2 \pi R}{T}R
+$$ 
+$$
+             \pi R^2 = \frac{T}{2m}L \rightarrow \mu = \frac{e}{T}\frac{T}{2m}L = \frac{e \hp}{2m}\left( \frac{L}{\hp}\right) 
+$$ dove la grandezza $\frac{e \hp}{2m}$ viene detta **magnetone di Bohr** e vale $9.274\times 10^{−24}J/T$. E' un fatto ben noto però che la relazione tra $\mu$ ed $L$ differisce da quella classica per un fattore numerico. Ad esempio, nel caso di particelle puntiformi di spin $1⁄2$, l'equazione **quantomeccanica relativistica di Dirac** conduce ad una relazione contenente un fattore $g$ di valore $2$.
 
 Preso atto di questo fatto dobbiamo aggiungere che le teorie di campo quantizzato hanno dimostrato che il fattore g=2 delle particelle puntiformi deve subire **piccole correzioni** dovute a certi processi virtuali, soprattutto di natura elettromagnetica, di cui diremo $$
-       g = 2(1-a) \qquad a = \frac{g -2}{2}
+       g = 2(1+a) \qquad a = \frac{g -2}{2}
 $$ La correzione $a$ - detta *momento magnetico anomalo* o anche $\frac{g -2}{2}$ - rappresenta uno dei parametri più importanti per un confronto di alta precisione tra previsioni teoriche e misure sperimentali. A titolo di esempio nel caso dell'elettrone si ha $$
     a_{th} =  0.001 159 652 181 643 (764)
 $$ $$

@@ -866,10 +866,119 @@ $$
 $$
    r_0 \simeq \frac{1}{4} \left( \sqrt{\frac{2.8 \times 10^{-24}}{2 \pi} } - 2.4 \times 10^{-13} \right) \simeq1.1 \ fm
 $$
-Informazioni più dettagliate sulla geometria del nucleo possono essere ottenute da esperimenti capaci di misura- re la sezione d’urto differen-ziale di diffusione. Modellando il nucleo come un disco circolare assorbente la una sezione d’urto differenziale di diffusione sarà data dalla espressione ($$)
+Informazioni più dettagliate sulla geometria del nucleo possono essere ottenute da esperimenti capaci di misura- re la sezione d’urto differenziale di diffusione. Modellando il nucleo come un disco circolare assorbente la una sezione d’urto differenziale di diffusione sarà data dalla espressione 
+$$
+ \frac{d\sigma_{diff}}{d \Omega} = \frac{R^{2}}{\sin ^{2}\theta}J_{1}^{2}\left( \frac{2 \pi R}{\lambda} \sin \theta \right)
+$$
+che va confrontata con i dati sperimentali mostrati a fianco. Si nota subito che i dati mostrano un andamento con l’angolo $\theta$ di tipo diffrattivo, in prima approssimazione compatibile con quello di una funzione di Bessel del primo ordine.
+```{r, fig.margin=TRUE,echo=FALSE,out.width="130%",out.height="90%"}
+    include_graphics("figs/grafico-cross-sect-neutroni-2.png")
+```
+
+È interessante considerare la sezione d'urto differenziale in avanti, ovvero per $\theta$ prossimo a zero.
+Sviluppando asintoticamente la funzione di Bessel per piccoli valori dell'argomento si ha
+$$
+J_{1}(z) \sim \frac{1}{2}z - \frac{1}{16}z^{3}
+$$
+da cui - sostituendo - otteniamo la **sezione d'urto differenziale di diffusione in avanti** dalla quale si può ottenere una nuova **stima del raggio nucleare**
+$$
+ \frac{d\sigma_{diff}}{d \Omega} = \frac{R^{2}}{\sin ^{2}\theta}J_{1}^{2}\left( \frac{2 \pi R}{\lambda} \sin \theta \right) \sim \frac{R^{2}}{\sin ^{2}\theta} \frac{1}{4} \frac{4 \pi^{2} R^{2}}{\lambda^{2}} \sin ^{2} \theta \sim \frac{\pi^{2}R^{4}}{\lambda^{2}}
+$$
+Dalla figura si vede chiaramente che tale sezione d’urto a $\theta=0$ aumenta rapidamente con il numero di nucleoni $A$.
+
+na seconda possibilità consiste nel lavorare sui minimi di diffrazione la cui spaziatura – come noto dall’ottica – deve dipendere dal raggio del disco ovvero dal raggio nucleare.
+
+Ora è noto che le funzioni di Bessel si annullano ripetutamente, un fatto che però non trova corrispondenza nell’andamento delle sezioni d’urto di diffuzione misurate che, pur avendo dei minimi pronunciati, non si annullano mai.
+Questo fatto indica che modellizzare il nucleo come un disco completamente assorbente non è del tutto appropriato e che esiste un certo grado di trasparenza del nucleo rispetto ai neutroni incidenti.
+Trascurando per ora questo fatto ed assumendo che i minimi della sezione d’urto corrispondano agli zeri della funzione di Bessel, abbiamo nel caso del primo zero
+$$
+ J_{1}\left( \frac{2 \pi R}{\lambda}\sin \theta = 3.832 \right)
+$$
+da cui si ottiene la seguente espressione
+$$
+ R = \frac{3.832}{2 \pi} \frac{\lambda}{\sin \theta}
+$$
+che fornisce un’altra stima del raggio nucleare a partire dalla posizione angolare del primo minimo della sezione d’urto differenziale di diffusione.
+
+Per estrarne in modo corretto tutto il contenuto informativo, sarebbe necessario eseguire un ‘fit’ utilizzando il corrispondente chi-quadrato come criterio di bontà e affidabilità della funzione teorica adottata. In questo modo otterremmo un solo valore del raggio nucleare piuttosto che i due stimati e, soprattutto, verificheremmo che l’ipotesi che il nucleo assorba totalmente i neutroni incidenti è troppo drastica poiché non riesce a riprodurre correttamente l’andamento delle sezioni d’urto di diffusione.
+
+I dati richiedono l’ipotesi che il nucleo sia parzialmente trasmittente.
+Si è pensato quindi di modellizzare il nucleo per mezzo di un potenziale complesso dando origine al cosiddetto modello ottico del nucleo(la parte reale del potenziale è solitamente assunta nella forma di Saxon-Woods mentre quella immaginaria nella forma di una gaussiana).
+
+## Energia di legame nucleare
+
+Si immagini un sistema formato da due  sferette omogenee di massa m e raggio $R$,  soggette alla mutua attrazione gravitazionale,  disposte in quiete l’una accanto all’altra con una  energia potenziale iniziale $E_{i}$. Sappiamo che per  separare le sferette dobbiamo applicare su una di  esse una forza esterna uguale e contraria a quella  attrattiva in modo da portarla all’infinito (avendo avuto cura di fissare l’altra!). Nel linguaggio della meccanica dobbiamo compiere lavoro contro la forza attrattiva gravitazionale che tiene unite le sferette, nel più generale linguaggio della energia dobbiamo fornire energia al sistema legato in modo da separarlo nei suoi componenti portandolo ad una energia potenziale finale che indicheremo con $E_{f}$ (in questo caso nulla). Tale energia viene detta energia di legame del sistema e soddisfa la seguente relazione
+
+```{r, fig.margin=TRUE,out.height="100%",out.width="100%",echo=FALSE}
+    include_graphics("figs/en-legame.png")
+```
+
+  \begin{equation}
+ \Delta E = E_{i} = E_{f}
+\end{equation}
+
+Ora immaginiamo di volerla determinare. In linea di principio potremmo utilizzare **tre diversi metodi**:
+
+1. disponendo di una espressione esplicita della forza, potremmo calcolarla teoricamente $$
+  \Delta E = \int_{2 R}^{\infty} \mathbf{F_{est}} \cdot d\mathbf{l} = \int_{2 R}^{\infty} G \frac{m^{2}}{r^{2}} \, dr
+  = G \frac{m^{2}}{2R}
+$$
+2. non disponendo della espressione teorica potremmo misurare ripetutamente la forza applicata sulla sferetta e sommare in modo da ottenere il lavoro compiuto $$
+   \Delta E = \int _{2R}^{\infty} \mathbf{F}_{est} \cdot d\mathbf{l}
+$$
+3. non disponendo della espressione teorica potremmo anche affidarci alla teoria della relatività ristretta (TRR). Sappiamo infatti che ad ogni forma di energia $E$corrisponde una massa inerziale equivalente $M$ data dalla ben nota equazione $M=E/c^{2}$. Su questa base, dato che il contenuto energetico del sistema iniziale legato e del sistema finale separato sono diversi, dobbiamo aspettarci che diverse siano pure le corrispondenti masse inerziali. In particolare da $\Delta E = E_{i} = E_{f}$ otteniamo $E_{f} > E_{i}$ (poiché $\Delta E >0$) da cui discende pure che $M_{f} > M_{i}$ . Dalle espressioni relativistiche $$
+  E_{f} = M_{f}c^{2} \qquad E_{i} = M_{i}c^{2}
+$$otteniamo allora la seguente differenza di massa detta **difetto di massa del sistema legato** $$
+ (M_{f}-M_{i}) = \frac{\Delta E}{c^{2}}
+$$ la quale offre una terza via per accedere all'energia di legame.
+
+Nel caso di un sistema macroscopico di due masse legate dalla forza gravitazionale, il metodo $1$ risulta praticabile poiché conosciamo l’espressione teorica della forza. Superando un certo numero di difficoltà sperimentali potremmo anche utilizzare il metodo $2.$ Certamente nessun fisico sperimentale sarebbe però in grado di utilizzare il metodo $3$ dato che dovrebbe misurare il seguente difetto di massa
+$$
+   (M_{f}-M_{i}) = \frac{\Delta E}{c^{2}} = G \frac{m^{2}}{2Rc^{2}} = 5.6 \times 10^{-54} MeV
+$$
+Nel caso della interazione forte tra nucleoni le cose vanno diversamente. 
+Il metodo $1$ richiederebbe una conoscenza della forte che non abbiamo poiché – appunto – dobbiamo ancora determinarne le proprietà.
+Il metodo $2$ è chiaramente inapplicabile ad un sistema microscopico. 
+Il metodo $3$, basato sulla TRR, potrebbe essere applicabile qualora il difetto di massa del sistema fosse consistente.
+Ora i dati sperimentali mostrano che **l’energia potenziale dell’interazione attrattiva tra nucleoni è tale da fornire un apprezzabile contributo negativo alla inerzia del nucleo**, generando una differenza misurabile tra la massa dei nucleoni componenti e quella del nucleo stesso.
+
+Sulla base di quanto detto, siamo ora in grado di fornire la seguente **definizione operativa della energia di legame** ovvero della *energia necessaria per separare il nucleo nei nucleoni componenti*
+
+\begin{equation}
+     B\left( {}^{A}_{Z}X \right)  = \left[ Nm_{n} + Zm_{p} -m_{N}\left( {}^{A}_{Z}X \right) \right]c^{2}
+\end{equation}
+
+dove $m_{n},m_{p},m_{N}$ sono rispettivamente le masse del neutrone, del protone e del nucleo [^3].
+
+[^3]: Vale la pena precisare che le masse nucleari sono misurabili con minore precisione di quelle atomiche per cui è utile ricavare le prime delle seconde attraverso la relazione
+$$
+   m_{A}\left( {}^{A}_{Z}X \right) = m_{N}\left( {}^{A}_{Z}X \right)+Zm_{e} - \frac{1}{c^{2}}\sum_{i = 1}^{Z}B_{i}^{el}
+$$
+dove $m_{A}$ è la massa dell'atomo corrispondendente al nucleo in esame.
 
 
-## L'energia di legame nucleare
+Limitando la rappresentazione ai soli nuclidi stabili (nel caso vi fosse più di un isotopo stabile si sceglie quello più abbondante) si ottiene l’energia di legame media per nucleone $B/A$ in funzione di $A$ mostrata qui a fianco.
+
+```{r, fig.margin=TRUE,out.height="140%",out.width="140%",echo=FALSE}
+    include_graphics("figs/en-legame-graph.png")
+```
+
+Il quoziente $B/A$ dà una indicazione quantitativa del grado di stabilità del nuclide e permette di stabilire se una data reazione nucleare sia esoenergetica o endoenergetica e, dunque, se possa avvenire spontaneamente oppure no.
+
+Dalla figura possiamo trarre alcune conclusioni generali:
+1. Ci sono configurazioni nucleari particolarmente stabili quali ${}^{4}He, {}^{12}_{}C, {}^{16}_{}O, \dots$
+2. a parte queste eccezioni, l'energia di legame media per nucleone ha un andamento regolare. Aumenta rapidamente con il numero di nucleoni fino ad un valore dell'ordine degli $8 \ MeV$ per poi diminuire assai lentamente
+3. i nucleo piu stabili sono ${}^{56}_{}Fe$ e ${}^{62}_{}Ni$. Ciò significa che i nuclei pesanti alla sua destra pososno raggiungere configurazioni piu stabili (ovvero con $B / A$ piu elevato) aumentando $A$, ovvero aggregandosi in nuclei piu grandi. Detto in altri termini ciò significa che l**e reazioni di fissione dei nuclei pesanti e e quelle di fusione dei nuclei leggeri sono esoenergetiche** ovvero producono energia qualora si sia in grado di innescarle;  
+4. dal punto precedente consegue che **le reazioni di fusione dei nuclei leggeri e fissione dei nuclei pesanti** costituiscono la doppia opportunità offerta dalla fisica nucleare per la produzione di energia.
+
+La via della fusione nucleare è stata scelta dalle stelle. Oggi sappiamo che una stella come il sole ricava la quasi totalità della energia (circa il $98 \%$) dalla fusione di nuclei d’idrogeno in nuclei di elio. L’energia prodotta dalle reazioni di fusione fluisce verso l’esterno. Tale flusso, nella forma di energia cinetica dei prodotti delle reazioni di fusione, fornisce la spinta verso l’esterno capace di opporsi alla contrazione gravitazionale mantenendo il sole in una situazione di equilibrio di forze detto equilibrio idrostatico. 
+
+Dal grafico si può leggere il decorso del processo una volta esaurito l’idrogeno: la contrazione gravitazionale prenderà il sopravvento comprimendo la materia fino al punto da innescare le reazioni di fusione di tre nuclei di elio in un nucleo di carbonio stabilendo un nuovo periodo di equilibrio. Le fasi di equilibrio e contrazione si alterneranno fino alla fusione del silicio in ferro quando la contrazione gravitazionale - non potendo innescare altre reazioni di fusione - procederà inarrestabile facendo collassare la stella che espellerà in modo esplosivo gli strati più esterni lasciando un residuo compatto di materia in uno stato degenere.
+
+La via della *fissione nucleare* trova invece una sua applicazione nei reattori nucleari.
+
+
+
 
 
 
