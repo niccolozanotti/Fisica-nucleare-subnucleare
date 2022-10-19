@@ -235,3 +235,86 @@ dove, data una direzione x dello spazio, $\Delta k_{x}$ e $\Delta \omega$ stiman
 ```{r,fig.margin=TRUE,echo=FALSE,out.height="120%",out.width="120%",fig.align="center"}
     include_graphics("figs/rel-indet.png")
 ```
+In generale si può dimostrare che valgono  le seguenti relazioni
+$$
+    \Delta k_{x} \Delta x \simeq2 \pi  
+$$
+$$
+   \Delta k_{y} \Delta y \simeq2 \pi
+$$
+$$
+   \Delta k_{z} \Delta z \simeq2 \pi
+$$
+$$
+    \Delta \omega \Delta t \simeq2 \pi
+$$
+Nel caso in cui si abbia un pacchetto d'onde che contenga solo una componente di Fourier si avrebbe $\Delta k_{x} = \Delta k_{y} = \Delta k_{z} = 0$ con una conseguente indeterminazione sulle posizioni tendente a $\infty$.
+
+Consideriamo il caso di un'onda piana,di lunghezza d'onda $\lambda$ e vettore d'onda $\bm{k} = k_x \hat{i}$, che viene fatta passare attraverso una fenditura ampia $d$(vedi figura). 
+
+```{r,fig.margin=TRUE,echo=FALSE,out.height="140%",out.width="140%",fig.align="center"}
+    include_graphics("figs/wave-electron-experiment.png")
+```
+
+Il fronte d'onda viene tagliato dalla fenditura stessa:il fronte d'onda lungo $y$ ha un'incertezza $\Delta y = d$. Dalle relazioni precedenti so che viene introdotto un errore $\Delta k_{y} \simeq\frac{2\pi}{d}$ . 
+La fenditura ha deviato il vettore d'onda $\bm{k}$ ed ora ha una certa angolazione $\implies$ il fronte d'onda che si incurva(dal Principio di Huygens-Fresnel). 
+L'angolo di apertura vale quindi
+$$
+   \theta \simeq\frac{\Delta k_{y}}{k_{x}} \simeq \frac{2\pi}{d  \frac{2\pi}{\lambda}} \simeq\frac{\lambda}{d}
+$$
+In ultima analisi quindi il fronte d'onda viene **limitato spazialmente** e dà luogo al fenomeno della **diffrazione**.
+
+Vogliamo ora trovare l'analogo delle relazioni di indeterminazione in **meccanica quantistica**. Partiamo dalle relazioni
+$$
+    \mathbf{p} = \hbar \mathbf{k} \qquad E = \hbar \omega \qquad p_{x} = \hbar k_{x}
+$$
+e arriviamo a
+$$
+  \Delta p_{x} \Delta x \simeq h
+$$
+$$
+   \Delta p_{y} \Delta y \simeq h
+$$
+$$
+  \Delta p_{z} \Delta z \simeq h
+$$
+$$
+   \Delta E \Delta t \simeq h
+$$
+relazioni note come **relazioni di indeterminazione di Heisenberg** le quali affermano che
+
+1. se la misura della posizione di un corpuscolo materiale lungo una certa direzione ha una incertezza $\Delta x$ allora una simultanea misura della quantità di moto lungo la stessa direzione ha una incertezza $\Delta p_x$ tale che il loro prodotto sia dell’ordine della costante di Plank;
+2. se la misura della posizione temporale di un corpuscolo materiale ha una incertezza $\Delta t$ allora una simultanea misura della energia ha una incertezza $\Delta E$ tale che il loro prodotto sia dell’ordine della costante di Planck.
+
+
+Un analogo quantistico dell'esperimento precedente può consistere nell'inviare un elettrone con quantità di moto $\mathbf{p} = p_{x} \hat{i}$ verso una fenditura di ampiezza $d$.
+Nel momento in  l'elettrone passa in mezzo alla fenditura possiamo sicuramente dire che la sua posizione assume un qualche valore *all'interno del range* della fenditura. Si ha quindi che il passaggio attraverso essa e la conseguente limitazione sulla posizione della posizione *equivale ad un'operazione di misura* sulla particella.
+
+```{r,fig.margin=TRUE,echo=FALSE,out.height="140%",out.width="140%",fig.align="center"}
+    include_graphics("figs/beam-electron-experiment.png")
+```
+
+$$
+  \Delta y \simeq d \qquad \Delta p_{y} \simeq \frac{h}{d}
+$$
+con angolo di inclinazione
+$$
+   \theta \simeq \frac{\Delta p_{y}}{p_{x}} \simeq \frac{h}{d \frac{h}{\lambda}} \simeq \frac{\lambda}{d} 
+$$
+
+L'incompatibilità tra le variabili dinamiche di un sistema quantomeccanico è espressa in forma precisa da un fondamentale teorema della meccanica quantistica il quale stabilisce che
+
+> Il prodotto delle deviazioni standard delle misure di due grandezze fisiche $a$ e $b$ in uno stato $\psi$ è limitato inferiormente dal valore di aspettazione del commutatore dei loro operatori diviso il fattore $2i$
+$$
+    \sigma_{a} \sigma_{b} \geq \iiint_{V} \psi^{*}(\mathbf{r},t) \frac{\hat{A}\hat{B} -\hat{B}\hat{A}}{2i} \psi(\mathbf{r},t) \, dV 
+$$
+
+
+
+
+
+
+
+
+
+

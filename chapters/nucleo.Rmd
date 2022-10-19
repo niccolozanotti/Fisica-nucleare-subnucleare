@@ -285,7 +285,7 @@ ii). Trattiamo allora il caso della **diffusione di Rutherford** di proiettili d
 
 ## Le proprietà ondulatorie delle particelle microscopiche
 
-Nel 1913, quando Geiger, Mursden e Rutherford compirono il loro esperimento, interpretarono le collisioni tra particelle del fascio e atomi del materiale in termini di urti governati dalle leggi della meccanica classica. Non potevano fare altrimenti, tuttavia di li poco Bohr - sulla base dei lavori di Plank ed Einstein - e poi nella decade successiva De Broglie, Heisenberg, Schroedinger e Born modificheranno radicalmente il quadro interpretativo introducendo l'idea che **le particelle microscopiche, oltre a possedere proprietà corpuscolari, dovevano possedere anche proprietà ondulatorie,** per cui ad esse si doveva associare una lunghezza d'onda e frequenza (De Broglie) ed una funzione d'onda (Born), soluzione quest'ultima di una determinata equazione d'onda (Schroedinger), giungendo così alla formulazione della meccanica quantistica.
+Nel 1913, quando Geiger, Mursden e Rutherford compirono il loro esperimento, interpretarono le collisioni tra particelle del fascio e atomi del materiale in termini di urti governati dalle leggi della meccanica classica. Non potevano fare altrimenti, tuttavia di li poco Bohr - sulla base dei lavori di Plank ed Einstein - e poi nella decade successiva De Broglie, Heisenberg, Schrödinger e Born modificheranno radicalmente il quadro interpretativo introducendo l'idea che **le particelle microscopiche, oltre a possedere proprietà corpuscolari, dovevano possedere anche proprietà ondulatorie,** per cui ad esse si doveva associare una lunghezza d'onda e frequenza (De Broglie) ed una funzione d'onda (Born), soluzione quest'ultima di una determinata equazione d'onda (Schrödinger), giungendo così alla formulazione della meccanica quantistica.
 
 D'altra parte, a partire dai lavori di Planck sul corpo nero (1900) e di Einstein sull'effetto fotoelettrico (1905), venne contemporaneamente affermandosi l'idea che i campi classici maxwelliani - dotati certamente di proprietà ondulatorie poiché capaci dei fenomeni della interferenza e diffrazione -- dovevano essere costituiti da enti microscopici (poi chiamati quanti del campo) dotati anche di proprietà corpuscolari. Si affermò così il concetto di **quanto del campo come ente microscopico intrinsecamente 'ibrido' poiché dotato di proprietà sia ondulatorie che corpuscolari**.
 
@@ -377,7 +377,7 @@ Giungiamo così ad individuare **l'equazione d'onda** cercata detta **equazione
     \frac{m^2c^2}{\hp^2}\psi(\bm{r},t)
 \end{equation}
 ```
-Tale equazione fu trovata per la prima volta da Schroedinger il quale però non riuscì a fornire una interpretazione fisica consistente della funzione d'onda. Si trattava di un problema cruciale che poteva essere superato solo interpretando la funzione d'onda nel senso della teoria dei campi quantizzati (affronteremo questo aspetto in maggior dettaglio nella seconda parte del corso). Non essendoci allora i presupposti per un passaggio di tal genere, Schroedinger rinunciò alla equazione d'onda relativistica e ripiegò sulla **equazione d'onda classica** la cui interpretazione sembrava meno problematica. Tale equazione la si può ottenere seguendo esattamente lo stesso tipo di procedimento partendo però dalla espressione **energia-impulso classica delle particelle libere**
+Tale equazione fu trovata per la prima volta da Schrödinger il quale però non riuscì a fornire una interpretazione fisica consistente della funzione d'onda. Si trattava di un problema cruciale che poteva essere superato solo interpretando la funzione d'onda nel senso della teoria dei campi quantizzati (affronteremo questo aspetto in maggior dettaglio nella seconda parte del corso). Non essendoci allora i presupposti per un passaggio di tal genere, Schrödinger rinunciò alla equazione d'onda relativistica e ripiegò sulla **equazione d'onda classica** la cui interpretazione sembrava meno problematica. Tale equazione la si può ottenere seguendo esattamente lo stesso tipo di procedimento partendo però dalla espressione **energia-impulso classica delle particelle libere**
 
 $$
    E = \frac{p^2}{2m}
@@ -403,7 +403,7 @@ $$
     V(\bm{r})\psi(\bm{r},t) = \left[ - \frac{\hp^2}{2m}\nabla^2 + V(\bm{r})\right] \psi(\bm{r},t)
 $$
 
-Data la linearità della equazione, concludiamo che l'espressione ottenuta deve essere valida non solo per la generica componente di Fourier ma per una qualunque funzione d'onda. Definendo allora l'operatore tra parentesi come **operatore hamiltoniano** $\hat{H}$, otteniamo la seguente **equazione d'onda di Schroedinger** valida per le **'onde quantomeccaniche' scalari (senza spin) non relativistiche in presenza di forze**
+Data la linearità della equazione, concludiamo che l'espressione ottenuta deve essere valida non solo per la generica componente di Fourier ma per una qualunque funzione d'onda. Definendo allora l'operatore tra parentesi come **operatore hamiltoniano** $\hat{H}$, otteniamo la seguente **equazione d'onda di Schrödinger** valida per le **'onde quantomeccaniche' scalari (senza spin) non relativistiche in presenza di forze**
 
 ```{marginfigure}
   Equazione d'onda di Schroendinger
@@ -415,7 +415,7 @@ Data la linearità della equazione, concludiamo che l'espressione ottenuta deve
    \hat{H} = - \frac{\hp^2}{2m} \nabla^2 + V(\bm{r})
 \end{equation}
 ```
-Tale equazione rese possibile una interpretazione della funzione d'onda che - pur non essendo di validità generale - permetteva comunque di descrivere in modo appropriato i fenomeni quantomeccanici in regime non relativistico ovvero alle basse e medie energie dove non avvengono processi di creazione e/o distruzione di particelle. Tale interpretazione fu proposta da M. Born ed afferma che **il modulo quadrato della funzione d'onda nella posizione**$\bm{r}$ **ed al tempo t rappresenta la densità di probabilità di trovare la particella materiale in quella posizione ed in quell'istante di tempo a seguito di una misura di posizione.** Questa ipotesi va a costituire uno dei fondamentali assiomi interpretativi della meccanica quantistica e comporta che l'espressione \begin{equation}
+Tale equazione rese possibile una interpretazione della funzione d'onda che - pur non essendo di validità generale - permetteva comunque di descrivere in modo appropriato i fenomeni quantomeccanici in regime non relativistico ovvero alle basse e medie energie dove non avvengono processi di creazione e/o distruzione di particelle. Tale interpretazione fu proposta da M. Born ed afferma che **il modulo quadrato della funzione d'onda nella posizione** $\bm{r}$ **ed al tempo t rappresenta la densità di probabilità di trovare la particella materiale in quella posizione ed in quell'istante di tempo a seguito di una misura di posizione.** Questa ipotesi va a costituire uno dei fondamentali assiomi interpretativi della meccanica quantistica e comporta che l'espressione \begin{equation}
        \left | \psi(\bm{r},t)\right |^2 dV
 \end{equation} rappresenti la probabilità di misurare la particella materiale al tempo $t$ all'interno del volume $dV$ centrato nella posizione $\bm{r}$.
 
@@ -432,7 +432,7 @@ Ad esempio, se vogliamo esplorare la struttura di un nucleo atomico dovremo esse
 D'altra parte la differenza di tali cammini è anche dell'ordine delle dimensioni del singolo nucleone. Ciò significa che dovremo impiegare particelle proiettile aventi una lunghezza d'onda di De Broglie dell'ordine delle dimensioni del singolo nucleone ovvero dell'ordine di $1 fm$. In questo modo saremo sensibili agli effetti diffrattivi-interferenziali indotti dalla struttura nucleare che potremo osservare raccogliendo le particelle diffuse su di un rivelatore capace di misurarne la posizione angolare. Per quanto riguarda invece la scelta del proiettile converrà utilizzare i neutroni dato che non risentono della interazione elettromagnetica che andrebbe a complicare il fenomeno (si tenga però presente che è più difficile avere a che fare con fasci e rivelatori di neutroni!).
 
 Ricordando che $$
-      \frac{\hp c}{200 MeV}  1 fm
+      \frac{\hp c}{200 MeV}  \simeq 1 fm
 $$ si ha $$
      p = \hp k = \hp \frac{2 \pi}{\lambda} = \hp \frac{2 \pi}{1} fm^{-1} = \hp 2 \pi \frac{200 MeV}{\hp c}
      \simeq 1.2 \frac{GeV}{c}
@@ -452,11 +452,11 @@ $$ da cui si verifica che con un fascio di particelle di circa $1.2 GeV/c$ di im
 
 Dato che l'interazione fascio-bersaglio consiste essenzialmente nella diffrazione delle onde di De Broglie associate alle particelle del fascio da parte delle particelle del bersaglio, la corretta soluzione del problema può essere ottenuta cercando l'espressione della funzione d'onda che:
 
-i)  soddisfa l'equazione di Schroedinger con potenziale nella regione in cui il fascio interagisce con il bersaglio;
-ii) soddisfa l'equazione d'onda di Schroedinger libera nella regione esterna alla interazione prima e dopo il bersaglio;
+i)  soddisfa l'equazione di Schrödinger con potenziale nella regione in cui il fascio interagisce con il bersaglio;
+ii) soddisfa l'equazione d'onda di Schrödinger libera nella regione esterna alla interazione prima e dopo il bersaglio;
 iii) soddisfa la condizione al contorno di essere un'onda piana prima di incidere sul bersaglio.
 
-Come noto, la diffrazione delle onde scalari classiche da parte di una apertura puo' essere trattata in modo rigoroso per mezzo della **teoria di Kirchhoff**, dettagliatamente esposta in Appendice 1 .
+Come noto, la diffrazione delle onde scalari classiche da parte di una apertura puo' essere trattata in modo rigoroso per mezzo della **teoria di Kirchhoff**, dettagliatamente esposta in Appendice $1$ .
 
 In particolare, se una apertura $A$ è investita da un'onda monocromatica, la funzione d'onda diffratta $\psi(\bm{r})$ in un generico punto dello spazio $\bm{r}$ oltre lo schermo è data dalla seguente espressione:
 
@@ -465,7 +465,7 @@ In particolare, se una apertura $A$ è investita da un'onda monocromatica, la fu
 ```
 
 \begin{equation}
-    \psi(\bm{r}) = \frac{1}{4 \pi} \iint_{A_p} \left[ \psi(\bm{r'}) (\bm{n}' \cdot \nabla') \frac{e^{iks}}{s} - \frac{e^{iks}}{s}(\bm{n}' \cdot \nabla') \psi(\bm{r}) \right]  \, da'
+    \psi(\bm{r}) = \frac{1}{4 \pi} \iint_{A_p} \left[ \psi(\bm{r'}) (\bm{n}' \cdot \nabla') \frac{e^{iks}}{s} - \frac{e^{iks}}{s}(\bm{n}' \cdot \nabla') \psi(\bm{r}') \right]  \, da'
 \end{equation} dove
 
 -   $\bm{r}$ è il vettore posizione del punto di osservazione
@@ -476,10 +476,10 @@ In particolare, se una apertura $A$ è investita da un'onda monocromatica, la fu
 -   $\bm{k}$ è il modulo del vettore d'onda della funzione d'onda incidente
 -   $s = | \bm{r} - \bm{r'}|$ è il modulo del vettore congiungente il punto dell'apertura con quello di osservazione
 
-Dato che la funzione d'onda $\psi(\bm{r})$ compare in entrambi i membri, tale espressione richiede la conoscenza della funzione 𝜓(𝑟) stessa che si vuole determinare(questo fatto è noto come \`Paradosso di Kirchhoff'. Un circolo vizioso che viene evitato attraverso**l'approssimazione di Kirchhoff** la quale assume che la funzione $\psi(\bm{r})$ sia non nulla nei soli punti dell'apertura $A$ dove coincide conla funzione d'onda monocromatica incidente. Consideriamo allora il caso di onda piana monocromatica diretta lungo l'asse delle $z$ positive incidente su di uno schermo piano normale all'asse stesso. Si ha $$
+Dato che la funzione d'onda $\psi(\bm{r})$ compare in entrambi i membri, tale espressione richiede la conoscenza della funzione $\psi(\bm{r})$ stessa che si vuole determinare (questo fatto è noto come \`Paradosso di Kirchhoff'). Un circolo vizioso che viene evitato attraverso**l'approssimazione di Kirchhoff** la quale assume che la funzione $\psi(\bm{r})$ sia non nulla nei soli punti dell'apertura $A$ dove coincide conla funzione d'onda monocromatica incidente. Consideriamo allora il caso di onda piana monocromatica diretta lungo l'asse delle $z$ positive incidente su di uno schermo piano normale all'asse stesso. Si ha $$
        \psi(\bm{r}) = \psi_0 e^{i \bm{k} \cdot \bm{r}}= \psi_0e^{ik \hat{k}(x \hat{i}+y \hat{j}+z \hat{k})}= \psi_0e^{ikz}
 $$ $$
-       \bm{n}' = \bm{k}
+       \bm{n}' = \hat{k}
 $$ $$
        \psi(\bm{r'}) = \psi_0 e^{i \bm{k} \cdot \bm{r'}}= \psi_0e^{ik \hat{k}(x' \hat{i}+y' \hat{j}+z' \hat{k})}= \psi_0e^{ikz'}
 $$ e inoltre $$
@@ -490,8 +490,8 @@ $$ $$
     (\bm{n}' \cdot \nabla')\psi(\bm{r'}) = \frac{\partial}{\partial z'}\psi_0e^{ikz'}=ik\psi_0e^{ikz'}
 $$ \begin{align*}
      \frac{\partial s}{\partial z'} &= \frac{\partial }{\partial z'}|\bm{r'}-\bm{r}| = \frac{\partial }{\partial z'}\sqrt{(x-x')^2+(y-y')^2+(z-z')^2} \\
-     &= - \frac{1}{2s}s(z-z') = - \frac{z-z'}{s} = \cos \vartheta
-\end{align*} con $\cos \vartheta = \frac{\bm{r'}-\bm{r}}{|\bm{r'}-\bm{r}|}$. Da qui ottengo lo sviluppo del primo termine presente nell'equazione di Kirchhoff:
+     &= - \frac{1}{2s}2(z-z') = - \frac{z-z'}{s} = \cos \vartheta
+\end{align*} con $\cos \vartheta = \frac{ (\bm{r'}-\bm{r})\cdot \hat{k}}{|\bm{r'}-\bm{r}|}$. Da qui ottengo lo sviluppo del primo termine presente nell'equazione di Kirchhoff:
 
 $$
      (\bm{n}' \cdot \nabla')\frac{e^{iks}}{s} = -(ik\frac{e^{iks}}{s}-\frac{e^{iks}}{s^2}) \cos \vartheta
@@ -518,13 +518,13 @@ dove nell'ultimo passaggio si è usato $\vartheta << 1 \rightarrow cos \vartheta
 Nell'integrale appena ottenuto vogliamo esprimere la fase dell'esponenziale in forma generale attraverso vettori $$
     k(s + z') = k(|\bm{r}-\bm{r'}|+z') = k (\sqrt{(\bm{r}-\bm{r'})\cdot(\bm{r}-\bm{r'})}+\bm{n}' \cdot \bm{r'})
 $$ $$
-    = k\left(r \sqrt{1 - \frac{2 \bm{r}\cdot \bm{r'}}{r^2} + \frac{r'^2}{r^2}} + \bm{n}' \cdot \bm{r'}\right) = k\left( r + \frac{r'^2}{2r} - \frac{ \bm{r}\cdot \bm{r'}}{r} + \bm{n}' \cdot \bm{r'}\right)
+    = k\left(r \sqrt{1 - \frac{2 \bm{r}\cdot \bm{r'}}{r^2} + \frac{r'^2}{r^2}} + \bm{n}' \cdot \bm{r'}\right) \simeq k\left( r + \frac{r'^2}{2r} - \frac{ \bm{r}\cdot \bm{r'}}{r} + \bm{n}' \cdot \bm{r'}\right)
 $$ $$
   = k r + k \frac{r'^2}{2r} - k \frac{ \bm{r}\cdot \bm{r'}}{r} + k \bm{n}' \cdot \bm{r'}
 $$ I valori assunti da $r'$ sono molto minori rispetto a quelli di $r$; in particolare se $D$ è il diametro del foro ed $L$ la distanza dallo schermo $$
      k \frac{r'^2}{2r} \simeq \frac{D^2}{\lambda L}
 $$ Se $\frac{D^2}{\lambda L} << 1$ si parla di **regime di Fraunhofer** e il termine in questione può essere trascurato. Si ha quindi $$
-    k(s+z') = kr - (k \bm{n} - k \bm{n}') \cdot r'
+    k(s+z') = kr - (k \bm{n} - k \bm{n}') \cdot \bm{r}'
 $$ Introducendo il **vettore d'onda trasferito**(che parametrizza lo spostamento del punto di osservazione dall'asse del fasio) $$
     \bm{q} = k \bm{n} - k \bm{n}'
 $$ otteniamo infine $$
@@ -647,12 +647,9 @@ $$ Se lo schermo di osservazione è sufficientemente lontano e soddisfa la condi
    |\psi_{inc}|^2 &= |\psi_0|^2 \\
     |\psi_{diff}|^2 &= \left | \psi_0 \left( e^{ikz} + f(\bm{q})\frac{e^{ikr}}{r} \right) \right|^2  \\
     &=  |\psi_0|^2 + |\psi_0|^2 \frac{|f(\bm{q})|^2}{r^2} + 2 |\psi_0|^2 \Re f(\bm{q})\frac{e^{ik(r-z)}}{r}
-\end{align*} Integrando sullo schermo si ha: 
-$$
+\end{align*} Integrando sullo schermo si ha: $$
      \iint_{S_O} |\psi_0|^2 \, dS + \iint_{S_O}|\psi_0|^2 |f(\bm{q})|^2\, \frac{dS}{r^2} + \iint_{S_O}2 |\psi_0|^2 \Re f(\bm{q})\frac{e^{ik(r-z)}}{r} \, dS
-$$
-le quali, sostituite nella sezione d'urto d'assorbimento, forniscono 
-$$
+$$ le quali, sostituite nella sezione d'urto d'assorbimento, forniscono $$
      \sigma_{ass} = \Sigma \,\fraclarg{ \iint_{\Sigma}|\psi_0|^2 \, d \Sigma+ \iint_{S_0} \left [  |\psi_0|^2 \frac{|f(\bm{q})|^2}{r^2} + 2 |\psi_0|^2 \Re f(\bm{q})\frac{e^{ik(r-z)}}{r} \right] \, dS}{\iint_{\Sigma}|\psi_0|^2 \, d \Sigma}
 $$ $$
     = |\psi_0|^2 \Sigma + |\psi_0|^2 \sigma_{diff} + 2 |\psi_0|^2 \Re \iint_{S_O} f(\bm{q})\frac{e^{ik(r-z)}}{r} \,dS
@@ -662,26 +659,23 @@ Per quanto riguarda la sezione d'urto di assorbimento si ha $$
      \sigma_{ass} = \Sigma   \fraclarg{|\psi_0|^2 \Sigma - \left[ |\psi_0|^2 \Sigma + |\psi_0|^2 \sigma_{diff} +  2 |\psi_0|^2 \Re \iint_{S_O} f(\bm{q})\frac{e^{ik(r-z)}}{r} \,dS \right]}{|\psi_0|^2 \Sigma}
 $$ da cui \begin{equation}
    = - \sigma_{diff} -  2 |\psi_0|^2 \Re \iint_{S_O} f(\bm{q})\frac{e^{ik(r-z)}}{r} \,dS
-\end{equation} 
+\end{equation}
 
-Per proseguire negli sviluppi è necessario calcolare l'integrale sullo schermo $S_O$. Assumendo l'origine del riferimento al centro dell'ostacolo e l'asse z normale al piano che lo contiene e dunque normale anche allo schermo lontano, otteniamo per la fase dell'esponenziale 
+Per proseguire negli sviluppi è necessario calcolare l'integrale sullo schermo $S_O$. Assumendo l'origine del riferimento al centro dell'ostacolo e l'asse z normale al piano che lo contiene e dunque normale anche allo schermo lontano, otteniamo per la fase dell'esponenziale
+
 ```{r, fig.margin=TRUE,echo=FALSE}
     include_graphics("figs/schema-vett-trasferito.jpg")
 ```
+
 \begin{align*}
        r - z &= \sqrt{x^2 + y^2+z^2} -z = z\sqrt{1 + \frac{x^2}{z^2}+\frac{y^2}{z^2}} \\
        & \simeq z \left( 1 + \frac{1}{2}\frac{x^2 + y^2}{z^2}\right) -z  = \frac{1}{2}\frac{x^2 + y^2}{z^2}
-\end{align*}
-Inoltre, se lo schermo è lontano la figura di diffrazione si estende sullo schermo stesso in misura trascurabile, per cui la coordinata z risulta dominare largamente le coordinate x ed y.
+\end{align*} Inoltre, se lo schermo è lontano la figura di diffrazione si estende sullo schermo stesso in misura trascurabile, per cui la coordinata z risulta dominare largamente le coordinate x ed y.
 
-
-
-Risostituendo nell'integrale che compare nell'espressione di $\sigma_{ass}$ abbiamo
-$$
+Risostituendo nell'integrale che compare nell'espressione di $\sigma_{ass}$ abbiamo $$
        - 2 \Re\iint_{sch}f(\bm{q})\frac{e^{ik(r-z)}}{r} \, dS =
         2 \Re f(\bm{o}) \iint_{sch}\frac{e^{ik \frac{x^2 + y^2}{2z}}}{z} \, dxdy 
-$$ 
-$$
+$$ $$
   = \frac{2}{z} \Re f(\bm{o}) \int_{- \infty}^{\infty} e ^{- \frac{k}{2iz}x^2} \, dx
         \int_{- \infty}^{\infty} e ^{- \frac{k}{2iz}y^2} \, dy = \frac{2}{z} \Re f(\bm{0}) \sqrt{\frac{2iz}{k}}\sqrt{\pi}\sqrt{\frac{2iz}{k}}\sqrt{\pi} 
 $$ $$
@@ -694,35 +688,27 @@ $$ risultato noto come **teorema ottico**.
   Teorema ottico
 ```
 
-il quale afferma che la somma delle sezioni d\'urto totale di diffusione ed
-assorbimento, detta sezione d\'urto totale d\'interazione, eguaglia (a meno
-del fattore moltiplicativo $\frac{4 \pi}{k}$ la parte immaginaria dell\'ampiezza di
-diffusione in avanti (ovvero a vettore d\'onda trasferito nullo).
+il quale afferma che la somma delle sezioni d'urto totale di diffusione ed assorbimento, detta sezione d'urto totale d'interazione, eguaglia (a meno del fattore moltiplicativo $\frac{4 \pi}{k}$ la parte immaginaria dell'ampiezza di diffusione in avanti (ovvero a vettore d'onda trasferito nullo).
 
-E’ importante sapere che le sezioni d’urto totali di diffusione e assorbimento possono essere espresse anche attraverso integrali della funzione di profilo sulla superficie del bersaglio $S_B$.	
+E' importante sapere che le sezioni d'urto totali di diffusione e assorbimento possono essere espresse anche attraverso integrali della funzione di profilo sulla superficie del bersaglio $S_B$.
 
-Integrando l’ampiezza di diffusione su tutto l’angolo solido nella ($21$) si ottiene la seguente espressione della sezione d’urto totale di diffusione in funzione del profilo (vedi formula di Kirchhoff in appendice).
+Integrando l'ampiezza di diffusione su tutto l'angolo solido nella ($21$) si ottiene la seguente espressione della sezione d'urto totale di diffusione in funzione del profilo (vedi formula di Kirchhoff in appendice).
 
+```{=tex}
 \begin{equation}
   \sigma_{diff} = \iint_{S_B} |\Gamma(\bm{r}')|^2 \, da'
 \end{equation}
-
+```
 $$
      \frac{4 \pi}{k} \Im \left(\frac{ik}{2 \pi} \iint \Gamma \, da' \right) =
   \frac{4 \pi}{k} \frac{k}{2 \pi} \Im i \iint(\Re \Gamma +i \Im \Gamma) \, da' =   2 \iint \Re \Gamma \, da'
-$$ 
-$$
+$$ $$
     \iint |\Gamma|^2 \, da' + \sigma_{ass} = 2 \iint \Re \Gamma \, da'
-$$ 
-$$
+$$ $$
      \sigma_{ass} = \iint (2 \Re \Gamma - |\Gamma|^2) \, da'
-$$ 
-ma $|1 - \Gamma|^2 = 1 + |\Gamma|^2 - 2 \Re \Gamma$ e dunque si perviene alle espressioni della sezione d'urto totale di assorbimento in funzione del profilo
-\begin{equation}
+$$ ma $|1 - \Gamma|^2 = 1 + |\Gamma|^2 - 2 \Re \Gamma$ e dunque si perviene alle espressioni della sezione d'urto totale di assorbimento in funzione del profilo \begin{equation}
    \boxed{ \sigma_{ass} = \iint \left(1 - |1 - \Gamma|^2 \right) \, da' }
-\end{equation}
-e della sezione d'urto di diffusione
-\begin{equation}
+\end{equation} e della sezione d'urto di diffusione \begin{equation}
   \boxed{ \sigma_{diff} = \iint |\Gamma|^2 \, da'}
 \end{equation}
 
@@ -730,234 +716,168 @@ e della sezione d'urto di diffusione
 
 Possiamo usare le formule del precedente paragrafo per calcolare le sezioni d'urto del processo di **diffrazione di un'onda piana su di un ostacolo circolare di raggio R completamente assorbente**.
 
-Adottando un sistema di coordinate polari con l'origine al centro del disco, la **funzione di profilo del disco nero** è definita dalle condizioni
-$$
+Adottando un sistema di coordinate polari con l'origine al centro del disco, la **funzione di profilo del disco nero** è definita dalle condizioni $$
     \Gamma  = 
     \begin{cases}
       1  \quad r \leq R\\
       0  \quad r > R
     \end{cases}
-$$
-Si assuma un riferimento con l’origine al centro del disco e l’asse $z$ normale al piano che lo contiene.
-Con questa scelta, se ci limitiamo a considerare angoli di diffusione non troppo grandi, il vettore $\bm{q}$ giace in un piano parallelo a al piano $xy$ e si ha
-$$
+$$ Si assuma un riferimento con l'origine al centro del disco e l'asse $z$ normale al piano che lo contiene. Con questa scelta, se ci limitiamo a considerare angoli di diffusione non troppo grandi, il vettore $\bm{q}$ giace in un piano parallelo a al piano $xy$ e si ha $$
   \bm{q} = \bm{k} ( \bm{n} - \bm{n}') = k ( \sin \vartheta \hat{i}_r + \cos \vartheta \hat{k} - \hat{k'}) \simeq 
   k \sin \vartheta \hat{i}_r
 $$
+
 ```{r, fig.margin=TRUE,echo=FALSE}
     include_graphics("figs/schema-vett-trasferito-2.jpg")
 ```
-il vettore $\bm{r}$, che identifica i punti del disco circolare (per comodità lasciamo cadere l’accento), giace sul piano del bersaglio $xy$ a formare un angolo $\varphi$ con $\bm{q}$ per cui si ha $\bm{q} \cdot \bm{r} = qr \cos \varphi$,ed infine– adottatele coordinate cilindriche – l’elemento d’area vale $da = r d \varphi dr$. 
-Ricordando l'**ampiezza di diffusione**
-$$
+
+il vettore $\bm{r}$, che identifica i punti del disco circolare (per comodità lasciamo cadere l'accento), giace sul piano del bersaglio $xy$ a formare un angolo $\varphi$ con $\bm{q}$ per cui si ha $\bm{q} \cdot \bm{r} = qr \cos \varphi$,ed infine-- adottatele coordinate cilindriche -- l'elemento d'area vale $da = r d \varphi dr$. Ricordando l'**ampiezza di diffusione** $$
       f(\bm{q}) = \frac{ik}{2 \pi} \iint_{S_B} \Gamma(\bm{r}')e^{-i \bm{q} \cdot \bm{r}} \, da
-$$
-questa si scriverà come
-\begin{align*}
+$$ questa si scriverà come \begin{align*}
    f(\bm{q}) &= \frac{ik}{2 \pi} \int_0^{2 \pi} \int_0^{\infty} \Gamma(r) e^{-iq \cos \varphi r} r \,d \varphi dr \\
    &= \frac{ik}{2 \pi} \int_0^R r \left[ \int_0^{2 \pi} e^{-iq \cos \varphi r} d \varphi \right] \, dr \\
    &= ik \int_0^R \underbrace{\left[ \frac{1}{2 \pi}\int_0^{2 \pi} e^{-iq \cos \varphi r} d \varphi \right]}_{J_0(qr)} \, dr
-\end{align*}
-dove $J_0(qr)$ è nota come **funzione di Bessel di ordine zero**:
-$$
+\end{align*} dove $J_0(qr)$ è nota come **funzione di Bessel di ordine zero**: $$
       J_0(qr) = \frac{1}{2 \pi}\int_0^{2 \pi} e^{-iq \cos \varphi r} d \varphi
 $$
+
 ```{marginfigure}
  qui figura a lato plottata con R delle funzioni di bessel di ordine 0
 ```
-Abbiamo allora la seguente espressione dell'ampiezza di diffusione:
-$$
+
+Abbiamo allora la seguente espressione dell'ampiezza di diffusione: $$
      f(\bm{q}) = ik \int_0^R r J_0(qr) \, dr
- $$
- che può essere integrata per ottenere (Vedi Appendice)
- $$
+ $$ che può essere integrata per ottenere (Vedi Appendice) $$
      f(\bm{q}) = ik \frac{R}{q} J_1(qR)
- $$
- dove $J_1(qR)$ è la funzione di Bessel di ordine $1$. Tenendo ora conto che $q = k \sin \vartheta$ otteniamo infine
- \begin{equation}
+ $$ dove $J_1(qR)$ è la funzione di Bessel di ordine $1$. Tenendo ora conto che $q = k \sin \vartheta$ otteniamo infine \begin{equation}
      f(\bm{q}) = i \frac{R}{\sin \vartheta} J_1(kR \sin \vartheta)
-\end{equation}
-Tenendo conto ora della funzione profilo considerata dalla $(25)$ si ottiene la seguente espressione
-$$
+\end{equation} Tenendo conto ora della funzione profilo considerata dalla $(25)$ si ottiene la seguente espressione $$
     \sigma_{diff} = \iint_{S_B} |\Gamma(\bm{r})|^2 \, da = \iint_{S_B} da
-$$
-dalla quale segue la **sezione d'urto totale del disco assorbente**
-\begin{equation}
+$$ dalla quale segue la **sezione d'urto totale del disco assorbente** \begin{equation}
    \sigma_{diff} = \pi R^2
-\end{equation}
-Calcoliamo l'ampiezza di diffusione in avanti
-$$
+\end{equation} Calcoliamo l'ampiezza di diffusione in avanti $$
     f(\bm{0}) = \frac{ik}{2 \pi} \iint_{S_O} \Gamma (\bm{r}) da = \frac{ik}{2 \pi} \iint_{disco} da = \frac{ik}{2 \pi}
     \pi R^2 = i \frac{kR^2}{2}
-$$
-e ricordando il teorema ottico abbiamo 
-$$
+$$ e ricordando il teorema ottico abbiamo $$
     \sigma_{tot} = \frac{4 \pi}{k} \Im f(\bm{0}) = \frac{4 \pi}{k} \Im \left(i  \frac{kR^2}{2}\right) = \frac{4 \pi}{k}\frac{kR^2}{2}
-$$
-da segue la **sezione dl'urto totale d'interazione del disco assorbente**
-\begin{equation}
+$$ da segue la **sezione dl'urto totale d'interazione del disco assorbente** \begin{equation}
    \sigma_{tot} = 2 \pi R^2
-\end{equation}
-Dal teorema ottico infine
-$$
+\end{equation} Dal teorema ottico infine $$
     \sigma_{ass} = \sigma_{tot} - \sigma_{diff} = 2\pi ^2 - \pi R^2
-$$
-da cui segue l'espressione della **sezione d'urto totale di assorbimento del disco assorbente**
-\begin{equation}
+$$ da cui segue l'espressione della **sezione d'urto totale di assorbimento del disco assorbente** \begin{equation}
     \sigma_{ass} = \pi R^2
 \end{equation}
 
-Troviamo allora che la sezione d’urto totale d’interazione di un’onda piana su di un disco assorbente è il doppio della superficie del disco stesso, poiché sia la sezione d’urto totale di diffusione che quella di assorbimento hanno entrambe il valore di quella superficie.
-
+Troviamo allora che la sezione d'urto totale d'interazione di un'onda piana su di un disco assorbente è il doppio della superficie del disco stesso, poiché sia la sezione d'urto totale di diffusione che quella di assorbimento hanno entrambe il valore di quella superficie.
 
 ## Il raggio nucleare
 
-Nell’ottica, forma, dimensioni ed altre proprietà di un oggetto possono essere studiate inviando su di esso onde luminose e registrando le onde emergenti su di uno schermo. Scegliendo la lunghezza d’onda della luce in modo da avere il potere risolutivo desiderato, sullo schermo apparirà una figura di diffrazione con una distribuzione dell’intensità luminosa che caratterizza l’oggetto illuminato. Data l’onda incidente quindi, il problema sarà quello di risalire dalla distribuzione della intensità luminosa osservata alle proprietà dell’oggetto illuminato.
+Nell'ottica, forma, dimensioni ed altre proprietà di un oggetto possono essere studiate inviando su di esso onde luminose e registrando le onde emergenti su di uno schermo. Scegliendo la lunghezza d'onda della luce in modo da avere il potere risolutivo desiderato, sullo schermo apparirà una figura di diffrazione con una distribuzione dell'intensità luminosa che caratterizza l'oggetto illuminato. Data l'onda incidente quindi, il problema sarà quello di risalire dalla distribuzione della intensità luminosa osservata alle proprietà dell'oggetto illuminato.
 
 In fisica nucleare e subnucleare le cose vanno esattamente nello stesso modo.
 
 Ciò premesso, i ragionamenti che potrebbero guidare un esperimento per la **misura delle dimensioni del nucleo atomico** sono i seguenti:
 
-1. *Scelta delle particelle del fascio*. L’uso di fasci di elettroni permetterebbe di ottenere dati molto precisi sia per la qualità dei fasci disponibili che per la puntiformità delle particelle e l’eccellente conoscenza teorica della interazione elettromagnetica. E’ però chiaro che gli elettroni restituirebbero una ‘radiografia’ della distribuzione nucleare dei soli protoni. Volendo ottenere informazioni sulla distribuzione di tutti i nucleoni sarebbe meglio utilizzare fasci di *neutroni* i quali - interagendo solo fortemente - ‘vedrebbero’ sia i protoni che i neutroni senza il ‘disturbo’ addizionale della interazione elettromagnetica che invece si avrebbe usando fasci di *protoni*. Tali vantaggi competono però con la qualità inevitabilmente inferiore dei fasci di neutroni;
-2. *Scelta della energia del fascio*. La scelta della energia è essenzialmente dettata dal potere risolutivo che si vuole avere nello studio della struttura del nucleo per cui la lunghezza d’onda di De Broglie delle particelle del fascio deve essere almeno dell’ordine di grandezza delle dimensioni nucleari. Nel caso dei neutroni, si avrebbe una risoluzione dell’ordine di $10 \  fm \,(1 fm=10^{-15} m)$ con circa $10 Mev$ di energia cinetica $$ \lambda \simeq 10 fm \simeq 10 \frac{1}{200} \frac{\hbar r c}{MeV} \simeq \frac{1}{20} \frac{\hbar  c}{MeV}$$
- $$ E_{cin} = \sqrt{ p^{2}c^{2}+m^{2}c^4 } - mc^{2} \simeq mc^{2} \left(1 + \frac{1}{2} \frac{{p^{2}c^{2}}}{m^{2}c^4}- mc^{2}\right) \simeq \frac{p^{2}}{2m} \simeq \frac{\hbar^{2}k^{2}}{2m}$$
- $$ \simeq 2\pi^{2} \frac{\hbar c^{2}}{mc^{2}\lambda^{2}} \simeq 20 \frac{\hbar^{2} c^{2} }{1000MeV_{1}} \frac{1}{400} \frac{\hbar^{2} c^{2}}{MeV^2} \simeq 8 MeV$$
-3. *Processi in gioco*. Difficilmente un sperimento può prescindere da una qualche ipotesi/conoscenza dei processi che avranno luogo nelle condizioni scelte. Assumendo che i neutroni da $10 \ MeV$ non riescano a trapassare il nucleo atomico, questo potrà essere assimilato ad un disco assorbente.
+1.  *Scelta delle particelle del fascio*. L'uso di fasci di elettroni permetterebbe di ottenere dati molto precisi sia per la qualità dei fasci disponibili che per la puntiformità delle particelle e l'eccellente conoscenza teorica della interazione elettromagnetica. E' però chiaro che gli elettroni restituirebbero una 'radiografia' della distribuzione nucleare dei soli protoni. Volendo ottenere informazioni sulla distribuzione di tutti i nucleoni sarebbe meglio utilizzare fasci di *neutroni* i quali - interagendo solo fortemente - 'vedrebbero' sia i protoni che i neutroni senza il 'disturbo' addizionale della interazione elettromagnetica che invece si avrebbe usando fasci di *protoni*. Tali vantaggi competono però con la qualità inevitabilmente inferiore dei fasci di neutroni;
+2.  *Scelta della energia del fascio*. La scelta della energia è essenzialmente dettata dal potere risolutivo che si vuole avere nello studio della struttura del nucleo per cui la lunghezza d'onda di De Broglie delle particelle del fascio deve essere almeno dell'ordine di grandezza delle dimensioni nucleari. Nel caso dei neutroni, si avrebbe una risoluzione dell'ordine di $10 \  fm \,(1 fm=10^{-15} m)$ con circa $10 Mev$ di energia cinetica $$ \lambda \simeq 10 fm \simeq 10 \frac{1}{200} \frac{\hbar r c}{MeV} \simeq \frac{1}{20} \frac{\hbar  c}{MeV}$$ $$ E_{cin} = \sqrt{ p^{2}c^{2}+m^{2}c^4 } - mc^{2} \simeq mc^{2} \left(1 + \frac{1}{2} \frac{{p^{2}c^{2}}}{m^{2}c^4}- mc^{2}\right) \simeq \frac{p^{2}}{2m} \simeq \frac{\hbar^{2}k^{2}}{2m}$$ $$ \simeq 2\pi^{2} \frac{\hbar c^{2}}{mc^{2}\lambda^{2}} \simeq 20 \frac{\hbar^{2} c^{2} }{1000MeV_{1}} \frac{1}{400} \frac{\hbar^{2} c^{2}}{MeV^2} \simeq 8 MeV$$
+3.  *Processi in gioco*. Difficilmente un sperimento può prescindere da una qualche ipotesi/conoscenza dei processi che avranno luogo nelle condizioni scelte. Assumendo che i neutroni da $10 \ MeV$ non riescano a trapassare il nucleo atomico, questo potrà essere assimilato ad un disco assorbente.
 
-Sulla base di queste considerazioni si potrà costruire un esperimento per determinare il raggio nucleare, attarverso la misura delle sezioni d’urto totali e di difusione di neutroni su bersagli materiali. Ipotizzando che il nucleo possa essere descritto da un disco assorbente si ha la seguente espressione della sezione d’urto totale ($28$)
-$$
+Sulla base di queste considerazioni si potrà costruire un esperimento per determinare il raggio nucleare, attarverso la misura delle sezioni d'urto totali e di difusione di neutroni su bersagli materiali. Ipotizzando che il nucleo possa essere descritto da un disco assorbente si ha la seguente espressione della sezione d'urto totale ($28$) $$
    \sigma = 2 \pi R^2
-$$
-Si possono allora determinare i raggi nucleari misurando la sezione d’urto totale di neutroni di circa 10 MeV su bersagli materiali puri contenenti i diversi tipi di nucleo.
+$$ Si possono allora determinare i raggi nucleari misurando la sezione d'urto totale di neutroni di circa 10 MeV su bersagli materiali puri contenenti i diversi tipi di nucleo.
 
-Nella figura è mostrato un grafico della **sezione d’urto totale e di assorbimento** di neutroni da 14 MeV in funzione della radice cubica del numero di nucleoni A del nucleo.
+Nella figura è mostrato un grafico della **sezione d'urto totale e di assorbimento** di neutroni da 14 MeV in funzione della radice cubica del numero di nucleoni A del nucleo.
 
 ```{r, fig.margin=TRUE,echo=FALSE,out.height="60%",out.width="130%"}
     include_graphics("figs/grafico-cross-sect-neutroni.png")
 ```
-Ci serve un modello capace di fornire una relazione tra la sezione d’urto totale ed il numero di nucleoni del nucleo. Per cominciare, potremmo modellare il nucleo come un **aggregato sferico di nucleoni** a loro volta assimilati a piccole sfere. Ipotizzando che la forza che lega netroni e protoni sia a **corto raggio** con raggio d’azione dell’ordine delle dimensioni del singolo nucleone, il nucleo tenderà ad avere una **densità volumetrica uniforme** per cui potremo scrivere le seguenti relazioni
-$$
+
+Ci serve un modello capace di fornire una relazione tra la sezione d'urto totale ed il numero di nucleoni del nucleo. Per cominciare, potremmo modellare il nucleo come un **aggregato sferico di nucleoni** a loro volta assimilati a piccole sfere. Ipotizzando che la forza che lega netroni e protoni sia a **corto raggio** con raggio d'azione dell'ordine delle dimensioni del singolo nucleone, il nucleo tenderà ad avere una **densità volumetrica uniforme** per cui potremo scrivere le seguenti relazioni $$
  V_{Nuc} \simeq \frac{4}{3} \pi R^3 \qquad V_{Nuc} \simeq A\frac{4}{3} \pi {r_{0}}^3
-$$
-dalle quali si ottiene la seguente relazione tra raggio nucleare e numero atomico
-$$
+$$ dalle quali si ottiene la seguente relazione tra raggio nucleare e numero atomico $$
        R \simeq r_{0} A^{1/3}
-$$
-Immaginando ora il nucleo come un disco assorbente, possiamo sostituire questa relazione nella ($28$) ed ottenere la seguente formula con la quale interpretare i dati
-$$
+$$ Immaginando ora il nucleo come un disco assorbente, possiamo sostituire questa relazione nella ($28$) ed ottenere la seguente formula con la quale interpretare i dati $$
   \sigma = 2 \pi r_{0}^{2}(A^{1/3})^{2}
-$$
-In prima approssimazione la formula funziona. Si noti infatti che i dati hanno effettivamente un andamento ad arco di parabola nella variabile $A^{1/3}$ ma, contrariamente alla previsione della formula, intersecano l’asse verticale
-($A=0$) ad un valore di sezione d’urto non nullo. Ciò significa che dobbiamo aggiungere un termine costante alla sezione d’urto di cui sopra ottenibile solo con l’aggiunta di un termine costante nella espressione del raggio nucleare
-$$
+$$ In prima approssimazione la formula funziona. Si noti infatti che i dati hanno effettivamente un andamento ad arco di parabola nella variabile $A^{1/3}$ ma, contrariamente alla previsione della formula, intersecano l'asse verticale ($A=0$) ad un valore di sezione d'urto non nullo. Ciò significa che dobbiamo aggiungere un termine costante alla sezione d'urto di cui sopra ottenibile solo con l'aggiunta di un termine costante nella espressione del raggio nucleare $$
   R_{Nuc} = r_{0} A^{1/3} + b
-$$
-Bethe suggerì che tale termine dovesse interpretarsi come un una specie di
-**‘alone nucleare’ (nuclear skin), di spessore costante ed uguale per tutti nuclei, dovuto al raggio finito della interazione forte tra nucleoni.**
-Stimando in circa $0.5 \ barn$ il valore approssimativo della sezione d’urto totale ad $A=0$ possiamo estrarre la corrispondente stima di $b$
-$$
+$$ Bethe suggerì che tale termine dovesse interpretarsi come un una specie di **'alone nucleare' (nuclear skin), di spessore costante ed uguale per tutti nuclei, dovuto al raggio finito della interazione forte tra nucleoni.** Stimando in circa $0.5 \ barn$ il valore approssimativo della sezione d'urto totale ad $A=0$ possiamo estrarre la corrispondente stima di $b$ $$
   \sigma = 2 \pi R^{2} = 2 \pi (r_{0} A^{1/3} +b)^{2} \quad \sigma(A^{1/3}=0) = 2\pi b^{2} \qquad b = \sqrt{ \frac{\sigma(A^{1/3}=0)}{2 \pi} }\sim 2.8 \ fm 
-$$
-Il valore meglio compatibile con i dati sperimentali oggi disponibili è circa $b=2.4 \, fm$.
-Una volta determinata la ‘skin’ nucleare possiamo determinare anche il raggio del nucleone $r_0$. Leggendo il valore della sezione d’urto totale d’interazione corrispondente ad un secondo nucleo (ad esempio $A^{1/3}=4$ dove $\sigma = 2.8 barn$) possiamo ottenere la seguente stima di $\bm{r_0}$
-$$
+$$ Il valore meglio compatibile con i dati sperimentali oggi disponibili è circa $b=2.4 \, fm$. Una volta determinata la 'skin' nucleare possiamo determinare anche il raggio del nucleone $r_0$. Leggendo il valore della sezione d'urto totale d'interazione corrispondente ad un secondo nucleo (ad esempio $A^{1/3}=4$ dove $\sigma = 2.8 barn$) possiamo ottenere la seguente stima di $\bm{r_0}$ $$
    \sigma = 2 \pi R^2 = 2 \pi (r_0 A^{1/3} +b)^2  \qquad r_0 = \frac{1}{A^{1/3}} \left( \sqrt{\frac{\sigma}{2 \pi}}-b \right)
-$$
-$$
+$$ $$
    r_0 \simeq \frac{1}{4} \left( \sqrt{\frac{2.8 \times 10^{-24}}{2 \pi} } - 2.4 \times 10^{-13} \right) \simeq1.1 \ fm
-$$
-Informazioni più dettagliate sulla geometria del nucleo possono essere ottenute da esperimenti capaci di misura- re la sezione d’urto differenziale di diffusione. Modellando il nucleo come un disco circolare assorbente la una sezione d’urto differenziale di diffusione sarà data dalla espressione 
-$$
+$$ Informazioni più dettagliate sulla geometria del nucleo possono essere ottenute da esperimenti capaci di misura- re la sezione d'urto differenziale di diffusione. Modellando il nucleo come un disco circolare assorbente la una sezione d'urto differenziale di diffusione sarà data dalla espressione $$
  \frac{d\sigma_{diff}}{d \Omega} = \frac{R^{2}}{\sin ^{2}\theta}J_{1}^{2}\left( \frac{2 \pi R}{\lambda} \sin \theta \right)
-$$
-che va confrontata con i dati sperimentali mostrati a fianco. Si nota subito che i dati mostrano un andamento con l’angolo $\theta$ di tipo diffrattivo, in prima approssimazione compatibile con quello di una funzione di Bessel del primo ordine.
+$$ che va confrontata con i dati sperimentali mostrati a fianco. Si nota subito che i dati mostrano un andamento con l'angolo $\theta$ di tipo diffrattivo, in prima approssimazione compatibile con quello di una funzione di Bessel del primo ordine.
+
 ```{r, fig.margin=TRUE,echo=FALSE,out.width="130%",out.height="90%"}
     include_graphics("figs/grafico-cross-sect-neutroni-2.png")
 ```
 
-È interessante considerare la sezione d'urto differenziale in avanti, ovvero per $\theta$ prossimo a zero.
-Sviluppando asintoticamente la funzione di Bessel per piccoli valori dell'argomento si ha
-$$
+È interessante considerare la sezione d'urto differenziale in avanti, ovvero per $\theta$ prossimo a zero. Sviluppando asintoticamente la funzione di Bessel per piccoli valori dell'argomento si ha $$
 J_{1}(z) \sim \frac{1}{2}z - \frac{1}{16}z^{3}
-$$
-da cui - sostituendo - otteniamo la **sezione d'urto differenziale di diffusione in avanti** dalla quale si può ottenere una nuova **stima del raggio nucleare**
-$$
+$$ da cui - sostituendo - otteniamo la **sezione d'urto differenziale di diffusione in avanti** dalla quale si può ottenere una nuova **stima del raggio nucleare** $$
  \frac{d\sigma_{diff}}{d \Omega} = \frac{R^{2}}{\sin ^{2}\theta}J_{1}^{2}\left( \frac{2 \pi R}{\lambda} \sin \theta \right) \sim \frac{R^{2}}{\sin ^{2}\theta} \frac{1}{4} \frac{4 \pi^{2} R^{2}}{\lambda^{2}} \sin ^{2} \theta \sim \frac{\pi^{2}R^{4}}{\lambda^{2}}
-$$
-Dalla figura si vede chiaramente che tale sezione d’urto a $\theta=0$ aumenta rapidamente con il numero di nucleoni $A$.
+$$ Dalla figura si vede chiaramente che tale sezione d'urto a $\theta=0$ aumenta rapidamente con il numero di nucleoni $A$.
 
-na seconda possibilità consiste nel lavorare sui minimi di diffrazione la cui spaziatura – come noto dall’ottica – deve dipendere dal raggio del disco ovvero dal raggio nucleare.
+na seconda possibilità consiste nel lavorare sui minimi di diffrazione la cui spaziatura -- come noto dall'ottica -- deve dipendere dal raggio del disco ovvero dal raggio nucleare.
 
-Ora è noto che le funzioni di Bessel si annullano ripetutamente, un fatto che però non trova corrispondenza nell’andamento delle sezioni d’urto di diffuzione misurate che, pur avendo dei minimi pronunciati, non si annullano mai.
-Questo fatto indica che modellizzare il nucleo come un disco completamente assorbente non è del tutto appropriato e che esiste un certo grado di trasparenza del nucleo rispetto ai neutroni incidenti.
-Trascurando per ora questo fatto ed assumendo che i minimi della sezione d’urto corrispondano agli zeri della funzione di Bessel, abbiamo nel caso del primo zero
-$$
+Ora è noto che le funzioni di Bessel si annullano ripetutamente, un fatto che però non trova corrispondenza nell'andamento delle sezioni d'urto di diffuzione misurate che, pur avendo dei minimi pronunciati, non si annullano mai. Questo fatto indica che modellizzare il nucleo come un disco completamente assorbente non è del tutto appropriato e che esiste un certo grado di trasparenza del nucleo rispetto ai neutroni incidenti. Trascurando per ora questo fatto ed assumendo che i minimi della sezione d'urto corrispondano agli zeri della funzione di Bessel, abbiamo nel caso del primo zero $$
  J_{1}\left( \frac{2 \pi R}{\lambda}\sin \theta = 3.832 \right)
-$$
-da cui si ottiene la seguente espressione
-$$
+$$ da cui si ottiene la seguente espressione $$
  R = \frac{3.832}{2 \pi} \frac{\lambda}{\sin \theta}
-$$
-che fornisce un’altra stima del raggio nucleare a partire dalla posizione angolare del primo minimo della sezione d’urto differenziale di diffusione.
+$$ che fornisce un'altra stima del raggio nucleare a partire dalla posizione angolare del primo minimo della sezione d'urto differenziale di diffusione.
 
-Per estrarne in modo corretto tutto il contenuto informativo, sarebbe necessario eseguire un ‘fit’ utilizzando il corrispondente chi-quadrato come criterio di bontà e affidabilità della funzione teorica adottata. In questo modo otterremmo un solo valore del raggio nucleare piuttosto che i due stimati e, soprattutto, verificheremmo che l’ipotesi che il nucleo assorba totalmente i neutroni incidenti è troppo drastica poiché non riesce a riprodurre correttamente l’andamento delle sezioni d’urto di diffusione.
+Per estrarne in modo corretto tutto il contenuto informativo, sarebbe necessario eseguire un 'fit' utilizzando il corrispondente chi-quadrato come criterio di bontà e affidabilità della funzione teorica adottata. In questo modo otterremmo un solo valore del raggio nucleare piuttosto che i due stimati e, soprattutto, verificheremmo che l'ipotesi che il nucleo assorba totalmente i neutroni incidenti è troppo drastica poiché non riesce a riprodurre correttamente l'andamento delle sezioni d'urto di diffusione.
 
-I dati richiedono l’ipotesi che il nucleo sia parzialmente trasmittente.
-Si è pensato quindi di modellizzare il nucleo per mezzo di un potenziale complesso dando origine al cosiddetto modello ottico del nucleo(la parte reale del potenziale è solitamente assunta nella forma di Saxon-Woods mentre quella immaginaria nella forma di una gaussiana).
+I dati richiedono l'ipotesi che il nucleo sia parzialmente trasmittente. Si è pensato quindi di modellizzare il nucleo per mezzo di un potenziale complesso dando origine al cosiddetto modello ottico del nucleo(la parte reale del potenziale è solitamente assunta nella forma di Saxon-Woods mentre quella immaginaria nella forma di una gaussiana).
 
 ## Energia di legame nucleare
 
-Si immagini un sistema formato da due  sferette omogenee di massa m e raggio $R$,  soggette alla mutua attrazione gravitazionale,  disposte in quiete l’una accanto all’altra con una  energia potenziale iniziale $E_{i}$. Sappiamo che per  separare le sferette dobbiamo applicare su una di  esse una forza esterna uguale e contraria a quella  attrattiva in modo da portarla all’infinito (avendo avuto cura di fissare l’altra!). Nel linguaggio della meccanica dobbiamo compiere lavoro contro la forza attrattiva gravitazionale che tiene unite le sferette, nel più generale linguaggio della energia dobbiamo fornire energia al sistema legato in modo da separarlo nei suoi componenti portandolo ad una energia potenziale finale che indicheremo con $E_{f}$ (in questo caso nulla). Tale energia viene detta energia di legame del sistema e soddisfa la seguente relazione
+Si immagini un sistema formato da due sferette omogenee di massa m e raggio $R$, soggette alla mutua attrazione gravitazionale, disposte in quiete l'una accanto all'altra con una energia potenziale iniziale $E_{i}$. Sappiamo che per separare le sferette dobbiamo applicare su una di esse una forza esterna uguale e contraria a quella attrattiva in modo da portarla all'infinito (avendo avuto cura di fissare l'altra!). Nel linguaggio della meccanica dobbiamo compiere lavoro contro la forza attrattiva gravitazionale che tiene unite le sferette, nel più generale linguaggio della energia dobbiamo fornire energia al sistema legato in modo da separarlo nei suoi componenti portandolo ad una energia potenziale finale che indicheremo con $E_{f}$ (in questo caso nulla). Tale energia viene detta energia di legame del sistema e soddisfa la seguente relazione
 
 ```{r, fig.margin=TRUE,out.height="100%",out.width="100%",echo=FALSE}
     include_graphics("figs/en-legame.png")
 ```
 
-  \begin{equation}
+```{=tex}
+\begin{equation}
  \Delta E = E_{i} = E_{f}
 \end{equation}
-
+```
 Ora immaginiamo di volerla determinare. In linea di principio potremmo utilizzare **tre diversi metodi**:
 
-1. disponendo di una espressione esplicita della forza, potremmo calcolarla teoricamente $$
-  \Delta E = \int_{2 R}^{\infty} \bm{F}_{est} \cdot d\bm{l} = \int_{2 R}^{\infty} G \frac{m^{2}}{r^{2}} \, dr
-  = G \frac{m^{2}}{2R}
-$$
-2. non disponendo della espressione teorica potremmo misurare ripetutamente la forza applicata sulla sferetta e sommare in modo da ottenere il lavoro compiuto $$
-   \Delta E = \int _{2R}^{\infty} \bm{F}_{est} \cdot d\bm{l}
-$$
-3. non disponendo della espressione teorica potremmo anche affidarci alla teoria della relatività ristretta (TRR). Sappiamo infatti che ad ogni forma di energia $E$corrisponde una massa inerziale equivalente $M$ data dalla ben nota equazione $M=E/c^{2}$. Su questa base, dato che il contenuto energetico del sistema iniziale legato e del sistema finale separato sono diversi, dobbiamo aspettarci che diverse siano pure le corrispondenti masse inerziali. In particolare da $\Delta E = E_{i} = E_{f}$ otteniamo $E_{f} > E_{i}$ (poiché $\Delta E >0$) da cui discende pure che $M_{f} > M_{i}$ . Dalle espressioni relativistiche $$
-  E_{f} = M_{f}c^{2} \qquad E_{i} = M_{i}c^{2}
-$$otteniamo allora la seguente differenza di massa detta **difetto di massa del sistema legato** $$
- (M_{f}-M_{i}) = \frac{\Delta E}{c^{2}}
-$$ la quale offre una terza via per accedere all'energia di legame.
+1.  disponendo di una espressione esplicita della forza, potremmo calcolarla teoricamente $$
+      \Delta E = \int_{2 R}^{\infty} \bm{F}_{est} \cdot d\bm{l} = \int_{2 R}^{\infty} G \frac{m^{2}}{r^{2}} \, dr
+      = G \frac{m^{2}}{2R}
+    $$
+2.  non disponendo della espressione teorica potremmo misurare ripetutamente la forza applicata sulla sferetta e sommare in modo da ottenere il lavoro compiuto $$
+    \Delta E = \int _{2R}^{\infty} \bm{F}_{est} \cdot d\bm{l}
+    $$
+3.  non disponendo della espressione teorica potremmo anche affidarci alla teoria della relatività ristretta (TRR). Sappiamo infatti che ad ogni forma di energia $E$corrisponde una massa inerziale equivalente $M$ data dalla ben nota equazione $M=E/c^{2}$. Su questa base, dato che il contenuto energetico del sistema iniziale legato e del sistema finale separato sono diversi, dobbiamo aspettarci che diverse siano pure le corrispondenti masse inerziali. In particolare da $\Delta E = E_{i} = E_{f}$ otteniamo $E_{f} > E_{i}$ (poiché $\Delta E >0$) da cui discende pure che $M_{f} > M_{i}$ . Dalle espressioni relativistiche $$
+      E_{f} = M_{f}c^{2} \qquad E_{i} = M_{i}c^{2}
+    $$otteniamo allora la seguente differenza di massa detta **difetto di massa del sistema legato** $$
+     (M_{f}-M_{i}) = \frac{\Delta E}{c^{2}}
+    $$ la quale offre una terza via per accedere all'energia di legame.
 
-Nel caso di un sistema macroscopico di due masse legate dalla forza gravitazionale, il metodo $1$ risulta praticabile poiché conosciamo l’espressione teorica della forza. Superando un certo numero di difficoltà sperimentali potremmo anche utilizzare il metodo $2.$ Certamente nessun fisico sperimentale sarebbe però in grado di utilizzare il metodo $3$ dato che dovrebbe misurare il seguente difetto di massa
-$$
+Nel caso di un sistema macroscopico di due masse legate dalla forza gravitazionale, il metodo $1$ risulta praticabile poiché conosciamo l'espressione teorica della forza. Superando un certo numero di difficoltà sperimentali potremmo anche utilizzare il metodo $2.$ Certamente nessun fisico sperimentale sarebbe però in grado di utilizzare il metodo $3$ dato che dovrebbe misurare il seguente difetto di massa $$
    (M_{f}-M_{i}) = \frac{\Delta E}{c^{2}} = G \frac{m^{2}}{2Rc^{2}} = 5.6 \times 10^{-54} MeV
-$$
-Nel caso della interazione forte tra nucleoni le cose vanno diversamente. 
-Il metodo $1$ richiederebbe una conoscenza della forte che non abbiamo poiché – appunto – dobbiamo ancora determinarne le proprietà.
-Il metodo $2$ è chiaramente inapplicabile ad un sistema microscopico. 
-Il metodo $3$, basato sulla TRR, potrebbe essere applicabile qualora il difetto di massa del sistema fosse consistente.
-Ora i dati sperimentali mostrano che **l’energia potenziale dell’interazione attrattiva tra nucleoni è tale da fornire un apprezzabile contributo negativo alla inerzia del nucleo**, generando una differenza misurabile tra la massa dei nucleoni componenti e quella del nucleo stesso.
+$$ Nel caso della interazione forte tra nucleoni le cose vanno diversamente. Il metodo $1$ richiederebbe una conoscenza della forte che non abbiamo poiché -- appunto -- dobbiamo ancora determinarne le proprietà. Il metodo $2$ è chiaramente inapplicabile ad un sistema microscopico. Il metodo $3$, basato sulla TRR, potrebbe essere applicabile qualora il difetto di massa del sistema fosse consistente. Ora i dati sperimentali mostrano che **l'energia potenziale dell'interazione attrattiva tra nucleoni è tale da fornire un apprezzabile contributo negativo alla inerzia del nucleo**, generando una differenza misurabile tra la massa dei nucleoni componenti e quella del nucleo stesso.
 
 Sulla base di quanto detto, siamo ora in grado di fornire la seguente **definizione operativa della energia di legame** ovvero della *energia necessaria per separare il nucleo nei nucleoni componenti*
 
+```{=tex}
 \begin{equation}
      B\left( {}^{A}_{Z}X \right)  = \left[ Nm_{n} + Zm_{p} -m_{N}\left( {}^{A}_{Z}X \right) \right]c^{2}
 \end{equation}
-
+```
 dove $m_{n},m_{p},m_{N}$ sono rispettivamente le masse del neutrone, del protone e del nucleo [^3].
 
-[^3]: Vale la pena precisare che le masse nucleari sono misurabili con minore precisione di quelle atomiche per cui è utile ricavare le prime delle seconde attraverso la relazione
-$$
-   m_{A}\left( {}^{A}_{Z}X \right) = m_{N}\left( {}^{A}_{Z}X \right)+Zm_{e} - \frac{1}{c^{2}}\sum_{i = 1}^{Z}B_{i}^{el}
-$$
-dove $m_{A}$ è la massa dell'atomo corrispondendente al nucleo in esame.
+[^3]: Vale la pena precisare che le masse nucleari sono misurabili con minore precisione di quelle atomiche per cui è utile ricavare le prime delle seconde attraverso la relazione $$
+       m_{A}\left( {}^{A}_{Z}X \right) = m_{N}\left( {}^{A}_{Z}X \right)+Zm_{e} - \frac{1}{c^{2}}\sum_{i = 1}^{Z}B_{i}^{el}
+    $$ dove $m_{A}$ è la massa dell'atomo corrispondendente al nucleo in esame.
 
-
-Limitando la rappresentazione ai soli nuclidi stabili (nel caso vi fosse più di un isotopo stabile si sceglie quello più abbondante) si ottiene l’energia di legame media per nucleone $B/A$ in funzione di $A$ mostrata qui a fianco.
+Limitando la rappresentazione ai soli nuclidi stabili (nel caso vi fosse più di un isotopo stabile si sceglie quello più abbondante) si ottiene l'energia di legame media per nucleone $B/A$ in funzione di $A$ mostrata qui a fianco.
 
 ```{r, fig.margin=TRUE,out.height="140%",out.width="140%",echo=FALSE}
     include_graphics("figs/en-legame-graph.png")
@@ -965,42 +885,11 @@ Limitando la rappresentazione ai soli nuclidi stabili (nel caso vi fosse più d
 
 Il quoziente $B/A$ dà una indicazione quantitativa del grado di stabilità del nuclide e permette di stabilire se una data reazione nucleare sia esoenergetica o endoenergetica e, dunque, se possa avvenire spontaneamente oppure no.
 
-Dalla figura possiamo trarre alcune conclusioni generali:
-1. Ci sono configurazioni nucleari particolarmente stabili quali ${}^{4}He, {}^{12}_{}C, {}^{16}_{}O, \dots$
-2. a parte queste eccezioni, l'energia di legame media per nucleone ha un andamento regolare. Aumenta rapidamente con il numero di nucleoni fino ad un valore dell'ordine degli $8 \ MeV$ per poi diminuire assai lentamente
-3. i nucleo piu stabili sono ${}^{56}_{}Fe$ e ${}^{62}_{}Ni$. Ciò significa che i nuclei pesanti alla sua destra pososno raggiungere configurazioni piu stabili (ovvero con $B / A$ piu elevato) aumentando $A$, ovvero aggregandosi in nuclei piu grandi. Detto in altri termini ciò significa che l**e reazioni di fissione dei nuclei pesanti e e quelle di fusione dei nuclei leggeri sono esoenergetiche** ovvero producono energia qualora si sia in grado di innescarle;  
+Dalla figura possiamo trarre alcune conclusioni generali: 1. Ci sono configurazioni nucleari particolarmente stabili quali ${}^{4}He, {}^{12}_{}C, {}^{16}_{}O, \dots$ 2. a parte queste eccezioni, l'energia di legame media per nucleone ha un andamento regolare. Aumenta rapidamente con il numero di nucleoni fino ad un valore dell'ordine degli $8 \ MeV$ per poi diminuire assai lentamente 3. i nucleo piu stabili sono ${}^{56}_{}Fe$ e ${}^{62}_{}Ni$. Ciò significa che i nuclei pesanti alla sua destra pososno raggiungere configurazioni piu stabili (ovvero con $B / A$ piu elevato) aumentando $A$, ovvero aggregandosi in nuclei piu grandi. Detto in altri termini ciò significa che l**e reazioni di fissione dei nuclei pesanti e e quelle di fusione dei nuclei leggeri sono esoenergetiche** ovvero producono energia qualora si sia in grado di innescarle;\
 4. dal punto precedente consegue che **le reazioni di fusione dei nuclei leggeri e fissione dei nuclei pesanti** costituiscono la doppia opportunità offerta dalla fisica nucleare per la produzione di energia.
 
-La via della fusione nucleare è stata scelta dalle stelle. Oggi sappiamo che una stella come il sole ricava la quasi totalità della energia (circa il $98 \%$) dalla fusione di nuclei d’idrogeno in nuclei di elio. L’energia prodotta dalle reazioni di fusione fluisce verso l’esterno. Tale flusso, nella forma di energia cinetica dei prodotti delle reazioni di fusione, fornisce la spinta verso l’esterno capace di opporsi alla contrazione gravitazionale mantenendo il sole in una situazione di equilibrio di forze detto equilibrio idrostatico. 
+La via della fusione nucleare è stata scelta dalle stelle. Oggi sappiamo che una stella come il sole ricava la quasi totalità della energia (circa il $98 \%$) dalla fusione di nuclei d'idrogeno in nuclei di elio. L'energia prodotta dalle reazioni di fusione fluisce verso l'esterno. Tale flusso, nella forma di energia cinetica dei prodotti delle reazioni di fusione, fornisce la spinta verso l'esterno capace di opporsi alla contrazione gravitazionale mantenendo il sole in una situazione di equilibrio di forze detto equilibrio idrostatico.
 
-Dal grafico si può leggere il decorso del processo una volta esaurito l’idrogeno: la contrazione gravitazionale prenderà il sopravvento comprimendo la materia fino al punto da innescare le reazioni di fusione di tre nuclei di elio in un nucleo di carbonio stabilendo un nuovo periodo di equilibrio. Le fasi di equilibrio e contrazione si alterneranno fino alla fusione del silicio in ferro quando la contrazione gravitazionale - non potendo innescare altre reazioni di fusione - procederà inarrestabile facendo collassare la stella che espellerà in modo esplosivo gli strati più esterni lasciando un residuo compatto di materia in uno stato degenere.
+Dal grafico si può leggere il decorso del processo una volta esaurito l'idrogeno: la contrazione gravitazionale prenderà il sopravvento comprimendo la materia fino al punto da innescare le reazioni di fusione di tre nuclei di elio in un nucleo di carbonio stabilendo un nuovo periodo di equilibrio. Le fasi di equilibrio e contrazione si alterneranno fino alla fusione del silicio in ferro quando la contrazione gravitazionale - non potendo innescare altre reazioni di fusione - procederà inarrestabile facendo collassare la stella che espellerà in modo esplosivo gli strati più esterni lasciando un residuo compatto di materia in uno stato degenere.
 
 La via della *fissione nucleare* trova invece una sua applicazione nei reattori nucleari.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
