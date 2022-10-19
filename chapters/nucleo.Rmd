@@ -181,7 +181,7 @@ $$
 $$Il nostro ipotetico esperimento misurerà allora la seguente **sezione d'urto doppiamente differenziale in funzione dell'angolo solido e della energia** definita dalla relazione
 
 $$
-     \sigma = \iint_{\Omega}\int_{E} \frac{d^2 \sigma}{dE d \Omega} \, d \Omega
+     \sigma = \iint_{\Omega}\int_{E} \frac{d^2 \sigma}{dE d \Omega} \, dE \ d \Omega
 $$Gli esempi citati, pur riferendosi a casi particolari chiariscono il fatto, di validità generale, che *il tipo di sezione d'urto misurata dipende essenzialmente dalle caratteristiche tecniche del rivelatore*.
 
 Nel caso più semplice si misurerà una sezione d'urto totale di interazione ma, disponendo di rivelatori via via più sofisticati, risulterà possibile misurare sezioni d'urto differenziali di interazione in funzione di un insieme di variabili cinematiche sempre più ampio.
@@ -206,17 +206,17 @@ i)  Sezione d'urto differenziale rispetto all'angolo solido di un fascio di proi
 
 i)  Senza entrare nel dettaglio della meccanica dell'urto - assumendo un sistema di coordinate sferiche con asse z lungo l'asse centrale della sfera - sappiamo che sussiste una piena simmetria rispetto all'angolo e l'**angolo di emergenza** del proiettile è interamente determinato dal **parametro d'urto** $b$ attarverso una relazione del tipo \begin{equation}
          b = b(\vartheta)
-      \end{equation} che codifica i dettagli dell'urto stesso. Ciò significa che tutti i proiettili passanti per l'area elementare $bd \varphi db$ saranno deflessi dello stesso angolo solido elementare $d \Omega$ per cui, sulla base di ($3.2$), possiamo scrivere $$
+      \end{equation} che codifica i dettagli dell'urto stesso. Ciò significa che tutti i proiettili passanti per l'area elementare $bd \varphi db$ saranno deflessi dello stesso angolo solido elementare $d \Omega$ per cui, sulla base di ($2$), possiamo scrivere $$
           d \sigma = \frac{d \sigma}{d \Omega}d \Omega = b d \varphi db
     $$ da cui segue $$
            \frac{d \sigma }{d \Omega} \sin \vartheta d \varphi d \vartheta   =  b d \varphi \left |\frac{db}{d \vartheta}\right | d \vartheta
     $$ e dunque, infine, la sezione d'urto differenziale rispetto all'angolo solido \begin{equation}
         \frac{d \sigma}{d \Omega} = \frac{b}{sin \vartheta}\left |\frac{db}{d \vartheta}\right |
-    \end{equation} valida classicamente non solo nel caso della sfera rigida ma in generale. Per calcolare la sezione d'urto differenziale rispetto all'angolo solido nel caso della sfera rigida di raggio R dobbiamo precisare la forma della ($3.3$). Si trova facilmente $$
+    \end{equation} valida classicamente non solo nel caso della sfera rigida ma in generale. Per calcolare la sezione d'urto differenziale rispetto all'angolo solido nel caso della sfera rigida di raggio R dobbiamo precisare la forma della ($3$). Si trova facilmente $$
          \frac{b}{R} = \sin{\alpha}  \qquad \vartheta = \pi - 2 \alpha 
     $$ da cui $$
           b = R \cos{\frac{\vartheta}{2}}
-    $$ Sostituendo nella ($3.4$) otteniamo $$
+    $$ Sostituendo nella ($4$) otteniamo $$
          \frac{d \sigma}{d \Omega} = \frac{R \cos{\frac{\vartheta}{2}}}{\sin \vartheta} \left | \frac{d}{d \vartheta}R \cos{\frac{\vartheta}{2}} \right | = \frac{R \cos{\frac{\vartheta}{2}}}{\sin \vartheta}\frac{R}{2} \sin \frac{\vartheta}{2}
     $$ da cui, infine, la sezione d'urto differenziale della sfera rigida di raggio $R$ \begin{equation}
          \frac{d \sigma}{d \Omega} = \frac{R^2}{4}
@@ -298,7 +298,7 @@ Per questo, alle basse e medie energie possiamo certamente assumere che la fisic
 Volendo richiamare in modo diretto ed euristico alcuni concetti di meccanica quantistica, si può cominciare scrivendo **le grandezze cinematiche fondamentali di una generica onda piana sinusoidale,** ovvero la **pulsazione** ed il **vettore d'onda** collegate tra loro nella **relazione di dispersione** che caratterizza le proprietà fisiche del mezzo in cui l'onda stessa si propaga
 
 $$
-    \omega = \frac{2 \pi}{T} \quad \bm{k} = \frac{2 \pi}{\lambda} \quad \omega = \omega(\bm{k})
+    \omega = \frac{2 \pi}{T} \quad \bm{k} = \frac{2 \pi}{\lambda}\hat{k} \quad \omega = \omega(\bm{k})
 $$ Scriviamo anche **le grandezze cinematiche fondamentali di un generico corpuscolo libero** che corrispondono alle espressioni relativistiche della **energia** e **quantità di moto** collegate dalla **relazione energia-impulso** \begin{equation}
     E = \frac{m c^2}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad \bm{p} = \frac{m \bm{v}}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad E^2 = p^2c^2 + m^2c^4 
     \end{equation}
@@ -920,11 +920,11 @@ Si immagini un sistema formato da due  sferette omogenee di massa m e raggio $R$
 Ora immaginiamo di volerla determinare. In linea di principio potremmo utilizzare **tre diversi metodi**:
 
 1. disponendo di una espressione esplicita della forza, potremmo calcolarla teoricamente $$
-  \Delta E = \int_{2 R}^{\infty} \mathbf{F_{est}} \cdot d\mathbf{l} = \int_{2 R}^{\infty} G \frac{m^{2}}{r^{2}} \, dr
+  \Delta E = \int_{2 R}^{\infty} \bm{F}_{est} \cdot d\bm{l} = \int_{2 R}^{\infty} G \frac{m^{2}}{r^{2}} \, dr
   = G \frac{m^{2}}{2R}
 $$
 2. non disponendo della espressione teorica potremmo misurare ripetutamente la forza applicata sulla sferetta e sommare in modo da ottenere il lavoro compiuto $$
-   \Delta E = \int _{2R}^{\infty} \mathbf{F}_{est} \cdot d\mathbf{l}
+   \Delta E = \int _{2R}^{\infty} \bm{F}_{est} \cdot d\bm{l}
 $$
 3. non disponendo della espressione teorica potremmo anche affidarci alla teoria della relatività ristretta (TRR). Sappiamo infatti che ad ogni forma di energia $E$corrisponde una massa inerziale equivalente $M$ data dalla ben nota equazione $M=E/c^{2}$. Su questa base, dato che il contenuto energetico del sistema iniziale legato e del sistema finale separato sono diversi, dobbiamo aspettarci che diverse siano pure le corrispondenti masse inerziali. In particolare da $\Delta E = E_{i} = E_{f}$ otteniamo $E_{f} > E_{i}$ (poiché $\Delta E >0$) da cui discende pure che $M_{f} > M_{i}$ . Dalle espressioni relativistiche $$
   E_{f} = M_{f}c^{2} \qquad E_{i} = M_{i}c^{2}

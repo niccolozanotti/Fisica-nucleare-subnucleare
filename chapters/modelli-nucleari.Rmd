@@ -2,90 +2,107 @@
 
 ## Il modello nucleare a goccia
 
-<!-- Bohr fu il primo che tento sulla base del modello primitivo di nucleo a dedurre il **modello a goccia**. -->
-<!-- Il nome viene dall'analogia con le forze a corto raggio. -->
-
-<!-- La sola ipotesi dell'andamento a corto raggio non e sufficiente a giustificare l'andamento. La meccanica quantistica potra fornire una giustificazione completa. -->
-<!-- È un *modello fenomenologico*: partendo dalle osservazioni arriva al risultato. -->
 Il grafico della energia di legame media per nucleone commentato nel precedente paragrafo contiene un certo numero di importanti indicazioni sulle proprietà della forza nucleare che sono alla base di un primo modello del nucleo - suggerito da Bohr nel 1935 - fondato essenzialmente sul **raggio finito** della interazione nucleare.
 Similmente alle forze intramolecolari a corto raggio nei liquidi, tale fatto determina una certa analogia tra il comportamento dei nucleoni nel nucleo e le diverse porzioni di un fluido meccanico incomprimibile, ragione che giustifica il nome spesso usato di **modello a goccia**.
 Il suddetto modello ha base **fenomenologica**; la sola ipotesi dell'andamento a corto raggio della forza non è sufficiente a giustificare l'andamento reale
 
-
-Osservazione:
- i nuclei risiedono piu o meno sulla retta definita da
+Come accennato, l’energia di legame tende ad assumere rapidamente il valore medio di circa $8MeV$ per nucleone (saturazione) il che indica una energia di legame del nucleo proporzionale al numero di nucleoni
   $$
-\frac{B}{A} \sim 8 MeV \qquad B \sim 8 MeV \times A
+\frac{B}{A} \simeq 8 MeV \qquad B \simeq 8 MeV \times A
 $$
-Questa relazione dimostra che le forze nucleari sono a **corto raggio** in quanto se fossero a lungo raggio un nucleo stabilirebbe legami con tutti quelli limitrofi[disegno atomi qui] e quindi cio implicherebbe un andamento di 
+Ora, se la forza nucleare si comportasse come una forza a lungo raggio (come le forze gravitazionali o elettromagnetiche) ogni nucleone interagirebbe con tutti i rimanenti altri per cui dovremmo attenderci una energia di legame del nucleo tendenzialmente proporzionale al numero di coppie di nucleoni e dunque quadratica in A
 $$
-B \propto \frac{A(A-1)}{2} \propto A^{2} \qquad \text{oppure diviso A?}
+B \propto \frac{A(A-1)}{2} \propto A^{2} \qquad 
 $$
-che non rispecchia la realtà.
+Poiché i dati sulla energia di legame escludono questo tipo di comportamento, dobbiamo concludere che ogni nucleone del nucleo interagisce solo con un numero di fisso di nucleoni vicini per cui concludiamo che l’interazione forte ha un raggio d’azione finito dell’ordine di grandezza delle dimensioni del nucleone stesso.
 
-il primo tentativo di superare questo limite consiste nell'introdurre un termine 
+Tale conclusione è in perfetto accordo con i dati sulla sezione d’urto di neutroni su nuclei analizzati in precedenza che indicavano un volume nucleare proporzionale al numero di nucleoni, ovvero una densità volumetrica di nucleoni uniforme sul volume nucleare, fatto spiegabile solo postulando la esistenza di una forza d’interazione tra nucleoni a corto raggio.
+
+Il primo tentativo di superare questo limite consiste nell'introdurre un termine 
 $$
   B = a_{v} A
 $$
-Questa formula pero' risulta sovrastimare il volume, per cui si corregge con un segno $-$:
+dove la costante $a_{v}$ viene detta **termine di volume**.Con un andamento $B / A$ , però, si finisce per ottenere una sovrastima del volume.
+```{r, fig.margin=TRUE,echo=FALSE,out.height="140%",out.width="140%"}
+    include_graphics("figs/goccia1.png")
+```
+La deviazione più rilevante si manifesta per valori piccoli di A dove l’energia media di legame è molto inferiore a quanto previsto dalla formula. Si può allora osservare che, assumendo la forza nucleare a corto raggio, si deve tenere conto che un nucleone prossimo alla superficie del nucleo interagirà con un numero di nucleoni inferiore a quello con cui interagirebbe qualora si trovasse all’interno del nucleo stesso. Ciò comporta che i nucleoni superficiali contribuiranno in misura minore alla energia di legame nucleare di quelli interni al volume. Assumendo il nucleo di **forma sferica**, il numero di nucleoni prossimi alla superficie sarà proporzionale a $R^{2}$. Dalla trattazione precedente sappiamo che(omettendo il termine di ``skin nucleare"")
 $$
-  B = a_{v}A - a_{s}A^{2/3}
+    R_{\text{nuc}} = r_{0}A^{1/3}
 $$
 $$
-   4 \pi R^{2} = 4 \pi (r_{0}A^{1/3})^2
+   4 \pi R^{2} = 4 \pi (r_{0}A^{1/3})^2 \implies R_{\text{nuc}} \propto A^{2/3}
 $$
+per cui vi deve essere un termine che deve provocare un difetto di energia di legame proporzionale ad $A^{2/3}$:
+$$
+   B = a_{v}A - a_{s}A^{2/3}
+$$
+dove la costante $a_{s}$ viene detta **termine di superficie**. L'andamento di $B / A$ con questa ulteriore correzione può apprezzarsi a lato.
+```{r, fig.margin=TRUE,echo=FALSE,out.height="140%",out.width="140%"}
+    include_graphics("figs/goccia2.png")
+```
 
-Immaginiamo per assurdo che nel nucleo ci siano tutti protoni, il lavoro(di estrazione)da svolgere per mantenere tale configurazione sarebbe maggiore rispetto a quello per mantenere una configurazione con anche neutroni all'interno.
-Ci aspettiamo quindi un altro termine correttivo dipendente da $A$ e da $Z$ che va anch'esso a sottrarre la precedente espressione
-$$
-   B = a_{v}A - a_{s}A^{2/3} - a_{c} Z^{?}
-$$
-Per capire come è questo andamento, immaginiamo di avere una sfera omogenea(di densita volumetrica uniforme) di carica $q$ . Il lavoro prima detto e solo legato ai protoni non ai neutroni, per cui e legato alla proprieta' che derivano dalla carica.
+Un ulteriore miglioramento può essere ottenuto tenendo presente che i protoni del nucleo si *respingono elettrostaticamente* diminuendo quindi il lavoro necessario per separarli dal nucleo stesso. In effetti se, per assurdo, si avesse un nucleo composto solo di protoni(senza neutroni) il lavoro da spendere per mantenerne la configurazione sarebbe sicuramente maggiore.
 
-[disegno sfera e carica che viene allontanata visto in em]
+Ipotizzando una *distribuzione di protoni uniforme* nel volume nucleare(ricordiamo essere sferico dall'ipotesi precedente), otteniamo la seguente espressione del lavoro fatto dalle forze coulombiane repulsive per separare la carica nucleare
+$$
+  \delta L = \int _{R}^{\infty} \left( \frac{q \delta q}{4 \pi \epsilon_{0}r^{2}}  \bm{i}_{r} \right)(dr \bm{i}_{r})=
+  - \frac{q \delta q}{4 \pi \epsilon_{0}r} \bigg |_{R}^{\infty} = 
+  - \frac{q \delta q}{4 \pi \epsilon_{0}R}
+$$
+$$
+   q = \rho \frac{ 4}{3} \pi R^{3} \qquad \delta q = \rho 4 \pi R^{2} dR
+$$
+$$
+  \delta L = \frac{1}{4 \pi \epsilon_{0}R}\left( \rho \frac{ 4}{3}\pi R^{3} \right)(\rho 4 \pi R^{2} dR) = \frac{4 \pi \rho^{2}}{3 \epsilon_{0}}R^{4}dR
+$$
+$$
+ L = \int \delta l = \frac{4 \pi \rho^{2}}{15 \epsilon_{0}}R_{0}^{5} \qquad Q = \rho \frac{ 4}{3} \pi R_{0}^{3} = Ze
+$$
+$$
+ L = \frac{3}{20 \pi \epsilon_{0}} \frac{Q^{2}}{R_{0}} = \frac{3e^{2}}{20 \pi \epsilon_{0}r_{0}} \frac{Z^{2}}{A^{1/3}}
+ \implies L \propto \frac{ Z^{2}}{A^{1/3}}
+$$
+Ne consegue che la energia di legame nucleare dovrà essere corretta sottraendo un termine proporzionale a $Z^{2} / A^{1/3}$ per cui l'espressione dell'energia di legame acquisirà la forma seguente
+$$
+   B = a_{v}A - a_{s}A^{2/3} - a_{c} \frac{Z^{2}}{A^{1/3}}
+$$
+dove la nuova costante $a_{c}$ viene detta **termine coulombiano**.
+Il termine coulombiano deve chiaramente annullarsi per $A=1$(non c'e interazione elettrostatica) per cui l'unica forma possibile è
+$$
+L \propto \frac{Z(Z-1)}{A^{1/3}} \quad
+$$
+```{r, fig.margin=TRUE,echo=FALSE,out.height="140%",out.width="140%"}
+    include_graphics("figs/goccia3.png")
+```
 
-Il calcolo del lavoro fornisce
+L’andamento $B/A$ risulta ulteriormente migliorato (si tenga presente che nei nuclei stabili si ha approssimativamente $Z=A/2$ per cui il termine coulombiano sottrae un contributo crescente con $A^{2/3}$).
+
+Se il modellino fenomenologico costruito finora fosse completo  dovremmo concludere che i nuclei più stabili($B= B_{max}$) sono quelli con $Z=0$ ovvero i nuclei di soli neutroni. Tale fatto è palesemente contraddetto dai dati sperimentali i quali mostrano che i nuclei stabili hanno un numero di protoni di poco inferiore a quello dei neutroni (la differenza tra neutroni e protoni tende a crescere con il numero atomico).
+Il nostro modello – basato sulla natura a corto raggio della interazione nucleare – non offre alcun appiglio per dare un fondamento fisico a questo stato di cose che potrà essere spiegato solo nel contesto della meccanica quantistica attraverso il *principio di esclusione di Pauli*. In questa situazione l’unica possibilità è quella di introdurre un termine ‘ad hoc’ capace di descrivere i dati sperimentali.
+
+Bisogna quindi fare in modo che il modello ci dica che i nuclei piu stabili sono quelli con lo stesso numero di protoni e neutroni.
+Raggiungiamo l'obiettivo introducendo un nuovo termine del tipo:
 $$
-     \int \frac{1}{4 \pi e_{0}} \frac{q \delta q}{r^{2}} \, dr = \frac{q \delta q}{4 \pi e_{0}R}
+  Z \simeq \frac{A}{2} \quad A - 2Z \simeq 0
 $$
-$$
- q = \frac{4}{3} \pi R^{3} \rho \qquad \delta Q = 4 \pi R^{2} dR \rho
-$$
-$$
-  dL = \frac{\rho^{2}}{4 \pi e_{0} R} \left( \frac{4}{3} \pi R^{3} \times \frac{4}{3 } \pi R^{2} dR \rho \right)
-$$
-$$
- L = \frac{\rho^2}{4 \pi e_{0}} \frac{\frac{16 \pi^{2}}{3}R^{5}}{5} = 4 \frac{\pi \rho^{2}R^5}{15 e_{0}}
-$$
-$$
-   \rho R^{3} = \frac{3}{4 \pi}Q
-$$
-$$
-  L = \frac{4 \pi}{15 e_{0}} \frac{9Q^{2}}{16 \pi^{2}r} = \frac{3}{20 \pi e_{0}} \frac{Q^2}{R} \propto \frac{Q^{2}}{R}
-$$
-$$
-  L \propto \frac{e^{2}Z^{2}}{R} \propto \frac{Z^{2}}{R} \propto \frac{Z^{2}}{A^{1/3}}
-$$
-La correzione deve essere tale che per $A=1$ il lavoro va a $0$ per cui l'unica possibile forma del termine di correzione coulumbiano risulta essere
-$$
-      L \propto \frac{Z^2}{A^{1/3}} \propto \frac{Z(Z-1)}{A^{1/3}}
-$$
-Nel momento in cui $Z=0$ abbiamo la massima energia di legame. Quindi secondo questo modello abbiamo la stabilità massima per questo tipo di nucleo.
-*In natura pero si vede che si ha lo stesso numero di neutroni e protoni.*
-Ma perchè?
-In realta non c'e nessun ragionamento classico che ci possa dare una risposta. Vedremo che cio e legato al principio di esclusione di Pauli, un effetto puramente quantomeccani $\implies$bisogna fare in modo che il modello ci dica che i nuclei piu stabili sono quelli con lo stesso numero di protoni e neutroni.
-RAggiungiamo l'obiettivo introducendo un nuovo termine aggiuntivo:
-$$
-  Z \sim \frac{A}{2} \quad A - 2Z \sim 0
-$$
-detto **coefficiente di asimmetria** perche governa la differenza tra neutroni e protoni
+Ricordando però che con il crescere di $A, Z$ tende ad essere via via più piccolo di $A/2$ (il quoziente protoni/neutroni diminuisce con $A$), tale termine correttivo dovrà seguire una legge inversa ad A modulata da un qualche esponente. I dati indicano che la prima potenza è sufficiente per cui abbiamo la seguente espressione della energia di legame nucleare
 $$
     B = a_{v}A - a_{s}A^{2/3} - a_{c} \frac{Z(Z-1)}{A^{1/3}} - \frac{a_{a}(A-2Z)^{2}}{A}
 $$
-La deviazione dalla bisettrice e tanto piu grande quanto $A$ e piu grande(dati sperimentali nel grafico iniziale), quindi questo spiega l' $A$ a denominatore.
+dove la nuova costante $a_{a}$ viene detta **termine di asimmetria**.
+Notiamo che la presenza di $A$ a denominatore è giustificata osservando l'andamento dei dati sperimentali nel grafico visto in precedenza:tanto piu $A$ è grande tanto piu $B / A$ devia dalla tangente alla curva(quindi verso il basso).
 
-Infine, dobbiamo tenere conto di un’ultima proprietà dei nuclei. I dati sperimentali mostrano che tra i 254 nuclei stabili noti ben 148 sono del tipo **pari-pari** (un numero pari sia di protoni che di neutroni), 101 sono del tipo **pari-dispari** (un numero pari di protoni ma dispari di neutroni o viceversa) e solo 5 sono del tipo dispari-dispari (vedi tabella). Similmente, tra i 35 nuclei a lunga vita media si hanno 22 pari-pari, 9 pari-dispari e 4 dispari-dispari.
-
+Per completare il modello è necessario tenere conto di un ulteriore proprietà dei nuclei.
+I dati sperimentali mostrano che tra i 254 nuclei stabili noti ben 148 sono del tipo **pari-pari** (un numero pari sia di protoni che di neutroni), 101 sono del tipo **pari-dispari** (un numero pari di protoni ma dispari di neutroni o viceversa) e solo 5 sono del tipo dispari-dispari (vedi tabella). Similmente, tra i 35 nuclei a lunga vita media si hanno 22 pari-pari, 9 pari-dispari e 4 dispari-dispari.
+```{r, fig.margin=TRUE,echo=FALSE,out.height="20%",out.width="90%",fig.align="center"}
+    include_graphics("figs/goccia4.png")
+```
+Tali dati sembrano suggerire che per qualche motivo la forza forte tra nucleoni da luogo a nuclei di maggiore stabilità quando vengono legati **numeri pari** di neutroni e protoni, un fatto che trova una sua diretta evidenza nell’andamento della energia di legame per nucleone della serie isotopica dello xenon.
+```{r, fig.margin=TRUE,echo=FALSE,out.height="140%",out.width="120%",fig.align="center"}
+    include_graphics("figs/goccia5.png")
+```
+Tenendo presente che il  nucleo di Xenon ha $Z=54$  protoni, si può infatti  constatare che gli isotopi con  un numero pari di neutroni  hanno una maggiore energia  di legame per nucleone.
 Per rendere conto di questo fatto si introduce un nuovo coefficiente detto di **pairing**
 $$
     a_{p} \frac{\delta}{A^{3/4}}
@@ -95,101 +112,126 @@ $$
     \delta =
     \begin{cases}
        +1    \qquad  \text{pari-pari}   \\ 
-        0  \qquad \text{pari-dispari}   \\
+        \ 0  \qquad  \ \ \text{pari-dispari}   \\
        -1  \qquad  \text{dispari-dispari}
     \end{cases}
 $$
-Giungiamo così alla seguente espressione complessiva della energia di legame nucleare detta anche formula semiempirica della energia di legame nucleare o **formula di Weizsacker** della energia di legame nucleare
+Giungiamo così alla seguente espressione complessiva della energia di legame nucleare detta anche **formula semiempirica della energia di legame nucleare** o **formula di Weizsacker** della energia di legame nucleare
+\begin{equation}
+   \boxed{    B = a_{v}A - a_{s}A^{2/3} - a_{c} \frac{Z(Z-1)}{A^{1/3}} - a_{a}\frac{(A-2Z)^{2}}{A} +     a_{p} \frac{\delta}{A^{3/4}}}
+\end{equation}
+Essa dipende da $5$ parametri il cui valore numerico viene determinato adattando la formula ai dati sperimentali di$B/A$.
+A titolo di esempio, una possibile combinazione di valori è la seguente(i valori sono in $MeV$):
 $$
-   \boxed{    B = a_{v}A - a_{s}A^{2/3} - a_{c} \frac{Z(Z-1)}{A^{1/3}} - \frac{a_{a}(A-2Z)^{2}}{A} +     a_{p} \frac{\delta}{A^{3/4}}}
+ a_{v} = 15.5 \quad a_{s} = 16.8 \quad a_{c} = 0.72 \quad a_{a} = 23.0 \quad a_{p} = 34.0
 $$
-Il modello a gas di fermioni (principio di Pauli)riesce a rendere conto del termine $a_{a}$ mentre fallisce per quest'ultimo termine.
-Il modello a shell tiene conto anche di quest'ultimo per cui è piu completo.
+
+La formula della energia di legame nucleare è utile 
+- come strumento di calcolo
+- perchè suggerisce una prima interpretazione del nucleo e delle forze che lo tengono insieme.
+
+Da essa deduciamo che le forze tra nucleoni devono essere **molto intense** ma a **short range** (proprietà di saturazione), producono una distribuzione spaziale tendenzialmente uniforme di nucleoni e conducono ad una espressione della energia di legame con termini di volume e superficie in analogia con quanto accade per i liquidi, ragione che giustifica il nome spesso usato di **modello nucleare a goccia**.
+
+Il modello a gas di fermioni (giustificabile con considerazioni quantomeccaniche )riesce a rendere conto del termine $a_{a}$ mentre fallisce per quello di pairing.
+Vedremo che il modello a shell sarà quello piu preciso.
 
 
-La formula di Weizsacker è utile per 
-1. fare calcoli
-2. permette di dedurre proprieta' fondamentali del  nucleo che saranno risolti da modelli piu precisi
----
+
 ## Richiami di meccanica quantistica
-Ad ogni ente quantomeccanico è associata una funzione d'onda
+
+**OSSERVABILI E VALORI DI ASPETTAZIONE**
+
+I sistemi fisici microscopici in regime non relativistico sono descritti dalla funzione d’onda $\psi(\bm{r},t)$ che si assume descriva in modo completo lo stato fisico della particella, ovvero dica tutto ciò che può essere detto su di essa. Il significato fisico della funzione d’onda è definito dalla ipotesi di Born  secondo la quale il *modulo quadrato fornisce la densità di probabilità di localizzazione della particella nel punto* $\bm{r}$ al tempo t a seguito della interazione con un apparato di misura:
 $$
- \psi(\bm{r},t) 
+   | \psi(\bm{r},t)|^{2}dV
 $$
-che ha la proprieta di avere una probabilita di osservazione di esso in un volume $dV$ pari a 
-$$
-   \mid \psi(\bm{r},t)|^{2}dV
-$$
-L'evoluzione nel tempo è governata dall'equazione di Schrödinger
+Tale ipotesi comporta la **condizione di normalizzazione**, ovvero che l’integrale del modulo quadrato della funzione d’onda sul volume occupato dal sistema microscopico debba essere pari ad uno, e stabilisce che in meccanica quantistica la **grandezza fisica osservabile** sia il modulo quadrato della funzione d’onda piuttosto che la funzione d’onda stessa.
+
+Si assume infine che l’evoluzione temporale della funzione d’onda sia governata dalla equazione di Schrödinger
 $$
      i \hslash \frac{\partial}{\partial t} \psi = \hat{H} \psi \qquad \hat{H} = - \frac{\hslash^{2}}{2m} \nabla^{2} + V
 $$
 Come possiamo arrivare al **valore di aspettazione** di posizione e quantità di moto?
-- Calcolo del valore di aspettazione della posizione di una particella.
-Nel caso particolare di onda piana:
+Calcolo del valore medio della posizione di una particella.
+Nel caso  di un' onda piana:
 $$
  \psi(\bm{r},t) = \psi_{0} e^{ i/\hslash (\bm{p} \cdot \bm{r}-Et) }
 $$
-se $p$ ed $r$(oppure $E$??) fossero sempre avrei che la posizione ha la stessa probabilita su un piano infinito. Per cui una misurazione ripetuta potrebbe portare ad un esito diverso della posizione.
+se $p$ ed $E$ fossero sempre definiti avrei che tutte le posizioni nel piano hanno la stessa probabilità di essere misurate.
+Per cui una misurazione ripetuta potrebbe portare ad un esito diverso della posizione.
 $\implies$ragionamento in termini statistici$\implies$posso solo conoscere il **valore medio** della posizione.
 $$
   \bm{r} |\psi(\bm{r},t)|^{2}dV \qquad <\bm{r}> = \sum_{i}^{n} \frac{\bm{r}_{i}p_{i}}{\sum_{i}^{n}p_{i}}
 $$
-$$
-      <\bm{r}> = \frac{\iiint_{V} \bm{r} |\psi(\bm{r},t)|^{2}dV }{\iiint_{V}|\psi(\bm{r},t)|^{2}dV }
-$$
-dove il denominatore $=1$ prendendo un $\psi$ normalizzato.
+
+\begin{equation}
+       <\bm{r}> = \frac{\iiint_{V} \bm{r} |\psi(\bm{r},t)|^{2}dV }{\iiint_{V}|\psi(\bm{r},t)|^{2}dV }
+\end{equation}
+dove il denominatore è unitario dalla condizione di normalizzazione. 
+A questo punto si ha, con  $\psi^*$ complesso coniugato,
 $$
   <\bm{r}> = \iiint_{V} \psi^*(\bm{r},t)\bm{r}\psi(\bm{r},t)\,dV
 $$
-con $\psi^*$ complesso coniugato.
-che e il valore di aspettazione della variabile dinamica $\bm{r}$.
+ovvero la *media delle posizioni corrisponde alla media del vettore posizione $\bm{r}$ pesata dal modulo quadro della funzione d'onda.*
 
+Meno immediato è comprendere come calcolare ad esempio la quantità di moto della particella. Ragionando ancora una volta in modo euristico possiamo richiamare le espressioni, scritte nel capitolo precedente, per una data componente di Fourier della funzione d’onda
+$$
+    - i \hslash \psi(\bm{r},t) = \hat{P} \psi(\bm{r},t) = \bm{p} \psi(\bm{r},t) \qquad
+    i \hslash \frac{\partial}{\partial t} \psi(\bm{r},t) = \hat{E}\psi(\bm{r},t)= E\psi(\bm{r},t)
+$$
+Si vede che nel caso in cui la funzione d’onda abbia quantità di moto ed energia definite (ovvero nel caso in cui la funzione d’onda coincida con una data componente di Fourier) allora gli operatori a primo membro estraggono da essa i corrispondenti valori ponendoli nella posizione di autovalori ovvero di moltiplicatori. In meccanica quantistica si assume che tale fatto abbia valida generale: 
 
-*Remark 1*
-In uno stato quantomeccanico alcune variabili possono assumere diversi valori,**indefinite** (usiamo la previsione statistica) mentre altre sono contemporaneamente **definite** ovvero hanno un valore ben definito. 
-*Remark 2*
-Se volessimo un'onda concentrata in una posizione nello spazio necessitiamo di una **sovrapposizione** di onde$\implies$valore di posizione definito e di quantita di moto indefinito.
+>Se in uno stato quantomeccanico $\psi$ un osservabile ha un valore definito $o$ allora lo stato $\psi$ è autostato del corrispondente operatore $O$ con autovalore $o$($O \psi = o \psi$).
 
-Ritornando al problema, come faccio ora ad estrarre il valore di $\bm{p}$ ?
-$$
-   - i \hslash \nabla \psi = \bm{p} \psi
-$$
-$$
-    \psi^{*}(-i \hslash \nabla) \psi = \bm{p} \psi^{*}\psi
-$$
-Integrando nel volume ambo i membri
-$$
-    \iiint_{V} \psi^{*}(-i \hslash \nabla) \psi \, dV = \iiint_{V} \bm{p} \psi^{*}\psi \, dV
-$$
-ottenendo il risultato desiderato:
-$$
-   < \bm{p} > = \iiint_{V} \psi^{*}(\bm{r},t)(-i \hslash \nabla)\psi(\bm{r},t) \, dV
-$$
-In meccanica quantistica
-> Ad ogni osservabile e associato un operatore, e attraverso questo e sempre
->  possibile calcolare il valore di aspettazione.
->  $$ <O> = \iiint_{V} \psi^{*}(\bm{r},t)\hat{O}\psi(\bm{r},t) \, dV$$
+Proseguendo nel ragionamento, operando sulla prima delle equazioni precedenti(prima moltiplicando per $\psi^{*}$ e poi integrando ambo i membri) si ha
 
----
 $$
-   \psi (\bm{r},t) = \psi_{0}e^{ i(\bm{k}\cdot \bm{r}- \omega t) }
+   - i \hslash \nabla \psi = \bm{p} \psi \implies
+       \psi^{*}(-i \hslash \nabla) \psi = \bm{p} \psi^{*}\psi
 $$
-Definita su tutto lo spazio ed il tempo, uguale a se stessa in ogni posizione e tempo. Su $\bm{r}$ e $t$ l'indefinizione e massima mentre su $\bm{k}$ e $\omega$ il contrario.
-Se vogliamo avere un pacchetto di onde temporalmente concentrate in un intervallo ristretto $\implies$ e necessario che vi siano sovrapposizione di onde a tante frequenze diverse (**regola dei radiomotori**)
-Empiricamente si ha 
 $$
-    \Delta \omega \Delta t \sim 2 \pi
+    \iiint_{V} \psi^{*}(-i \hslash \nabla) \psi \, dV = \iiint_{V} \bm{p} \psi^{*}\psi \, dV = \bm{p}
+$$
+dove si è sfruttata la normalizzazione della funzione d'onda.
+Si noti che tale espressione, valida nel caso di una data componente di Fourier, è strutturalmente analoga alla posizione media delle posizioni della particella microscopica ($33$) valida invece in generale.
+Non è difficile mostrare che nel caso di un generico pacchetto d’onde il valore medio della quantità di moto della particella continua ad essere dato da questo integrale per cui scriveremo 
+$$
+   <\bm{p}> = \iiint_{V} \psi^{*}\hat{P}\psi \, dV = \iiint_{V} \psi^{*}(- i \hslash \nabla )\psi \, dV
+$$
+Inoltre, essendo le grandezze fisiche espresse da numeri reali, gli operatori associati alle variabili dinamiche dovranno essere **hermitiani**.
+
+Giungiamo allora a formulare uno degli assiomi della meccanica quantistica nella seguente forma:
+
+>Ad ogni grandezza fisica misurabile $o$ (osservabile) di un dato sistema microscopico, risulta associato un operatore lineare complesso hermitiano $O$. Il valore medio delle misure della osservabile $o$ al tempo $t$ in un certo stato quantomeccanico $\psi(\bm{r},t)$ è dato dal seguente integrale detto valore di aspettazione 
+$$
+ \boxed{<o> = \iiint_{V} \psi^{*}(\bm{r},t)\hat{O}\psi(\bm{r},t) \, dV}
 $$
 
-[Disegno dispersione su bell-distribution]
-Se $\Delta t \to 0 \implies \Delta w \to \infty$ e analogamente, a livello spaziale se $\Delta x \to 0 \implies \Delta k \to \infty$
-Questo a livello puramente **classico**.
-In meccanica quantistica si passa 
+Quanto detto rende evidente che, dato un sistema quantomeccanico, si pone il problema fondamentale di individuare le grandezze fisiche osservabili e di determinare le corrispondenti operatori associati. La fisica atomica, ma ancor più la fisica delle particelle, chiariscono che un criterio generale non esiste e che sia le osservabili che le loro espressioni operatoriali possono essere trovate solo fondandosi sui dati sperimentali.  
+Ciò non toglie che si sia verificato che le espressioni operatoriali delle variabili dinamiche classiche possano essere trovate (sia pure con alcune limitazioni che per ora tralasciamo) attraverso una procedura, detta **principio di corrispondenza** (che applicheremo al caso del momento angolare), la quale però non può essere applicata nel caso di variabili dinamiche che non abbiano un corrispondente classico. In tali casi l’unica guida rimangono i dati sperimentali ed il percorso può essere lungo e tortuoso.
+
+::: fullwidth
+ **DEFINIZIONE ED INDEFINIZIONE DELLE OSSERVABILI**
+:::
+
+Una volta compreso in che modo debbano calcolarsi le variabili dinamiche di un sistema quantomeccanico è necessario accennare ad un delicato problema già sullo sfondo di alcune nostre considerazioni. 
+Riprendiamo l'esempio dell'onda piana prograssiva visto poco fa.
 $$
-   \hslash \Delta \omega \Delta t \sim 2 \pi \hslash
+ \psi(\bm{r},t) = \psi_{0}e^{ i/\hslash (\bm{p}\cdot \bm{r}- \omega t)}
 $$
+Con tutta evidenza tale espressione descrive una particella avente quantità di moto ed energia definite ma posizione spaziale e temporale completamente **indefinite**. Infatti, fissato il tempo, le superfici equifase dell’onda risultano essere piani perpendicolari al vettore quantità di moto. Ciò significa che il modulo quadrato della funzione d’onda assumerà un valore uniforme sui punti di tali superfici (in realtà nel caso di una singola componente di Fourier su tutti i punti dello spazio). A sua volta ciò significa che la particella potrà essere localizzata con densità di probabilità uniforme su tutti i punti della superficie di un piano perpendicolare alla quantità di moto che equivale ad affermare che la posizione della particella è assolutamente indefinita.
+
+Un minimo di conoscenza delle proprietà delle onde riconosce in questo fatto qualcosa di noto poiché sappiamo bene che *una qualunque componente di Fourier di un’onda piana possiede vettore d’onda e pulsazione definite ma posizione spaziale e temporale assolutamente indefinite*.
+
+Sappiamo anche che per avere onde con posizione spaziale e temporale meglio definite é necessario sovrapporre componenti di Fourier di diverso vettore d’onda e pulsazione andando a costituire i cosiddetti pacchetti d’onde.  
+Infine dalla **fisica classica**[^4] sappiamo che nei pacchetti d’onde valgono le cosiddette **relazioni di indeterminazione** che esprimono queste proprietà in forma quantitativa approssimata
 $$
-    \Delta E \Delta t \sim \hslash
+    \Delta k_{x} \Delta x \simeq2 \pi \qquad \Delta \omega \Delta t \simeq2 \pi
 $$
-$\implies$ incompatibilità degli osservabili.
+dove, data una direzione x dello spazio, $\Delta k_{x}$ e $\Delta \omega$ stimano la dispersione del vettore d’onda e della pulsazione del pacchetto, mentre $\Delta x$ e $\Delta t$ ne stimano la dispersione spaziale e temporale.
+
+[^4]: The general idea is present in *any system where there are plane waves* A physically realizable wave is always in the form of a wave packet which is finite in extent. A wave packet is built up by superposing waves with definite wave number. By simple Fourier analysis, a highly localized packet will require a wide spread of wave vectors, whereas a packet with a large spacial extent can be composed of wave numbers quite close to a specific value 
+
+```{r,fig.margin=TRUE,echo=FALSE,out.height="120%",out.width="120%",fig.align="center"}
+    include_graphics("figs/rel-indet.png")
+```
