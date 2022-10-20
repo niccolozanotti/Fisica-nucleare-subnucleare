@@ -419,11 +419,79 @@ I possibili valori del quadrato del momento angolare sono dati dalla successione
 
 **MOMENTO ANGOLARE INTRINSECO O SPIN**
 
+Nella meccanica classica i corpi materiali puntiformi possiedono al più solo momento angolare orbitale mentre quelli estesi possono essere portatori anche di un momento angolare intrinseco (spin). Scegliendo il polo di riduzione coincidente con il centro di massa del corpo materiale, il momento angolare orbitale si annulla e l’unico momento angolare residuo del corpo esteso è quello intrinseco che si manifesta come rotazione del corpo stesso attorno ad un asse baricentrico.
+
+Date queste premesse, ci si può domandare se anche le particelle microscopiche possiedano un momento angolare intrinseco (spin) in aggiunta al momento angolare orbitale. I fatti sperimentali mostrano che la risposta è affermativa e che il momento angolare intrinseco o spin deve essere introdotto anche nel caso delle particelle microscopiche.
+Vi sono però delle sostanziali differenze
+
+- **meccanica classica**: un momento angolare intrinseco o residuo può esistere solo per i *corpi estesi* (non puntiformi) e questo si interpreta come la somma dei momenti angolari orbitali di tutte le parti che lo compongono;
+- **meccanica quantistica**: un momento angolare intrinseco o di spin può esistere anche per le particelle puntiformi e come tale non è riducibile in nessun modo a somme di momenti angolari orbitali delle parti del sistema;
+- **meccanica classica**:   il modulo del momento angolare intrinseco può assumere con *continuità qualunque valore*, ha un carattere estrinseco e descrive essenzialmente lo stato cinematico di rotazione del sistema rispetto ad un prefissato riferimento;
+- **meccanica quantistica**:  il modulo del momento angolare intrinseco può assumere un solo valore *fisso* ed *immutabile*. A seguito di tale invariabilità perde il suo carattere estrinseco di natura cinematica ed assume - al pari della massa e delle cariche interne del corpuscolo - lo status di grandezza fisica intrinseca preposta alla descrizione di una nuova proprietà statica della particella.
+
+Per questi ed altri motivi possiamo affermare che *lo spin è una variabile dinamica essenziamente quantistica* senza una diretta corrispondenza classica.
+
+Pauli pensò che fosse necessario introdurre una **terna di  operatori di spin**
+$$
+   S_{x} \qquad S_{y} \qquad S_{z}
+$$
+soddisfacenti le  regole di commutazione 'tipo momento angolare'
+$$
+   [ S_{x},S_{y}] = i \hbar S_{z} \qquad  [ S_{y},S_{z}] = i \hbar S_{x} \qquad   [ S_{z},S_{x}] = i \hbar S_{y}
+$$
+ed operano sullo **spazio degli stati di spin**, uno ‘spazio interno’ diverso da quello su cui operano gli operatori del momento angolare orbitale (lo spin è dunque un nuovo grado di libertà del sistema microscopico).
+
+In analogia con il caso del momento della quantità di moto, le regole di commutazione appena scritte implicano che **uno stato quantomeccanico ammette valori definiti del modulo quadrato dello spin e e della sua terza componente**.
+
+In particolare, risolta l’equazione agli autovalori degli operatori quadrato del momento angolare di spin e della sua terza componente si può ottenere l’insieme degli autovalori e delle autofunzioni:
+$$
+   \hat{S}^{2} \eta_{s,s_{z}} = s (s+1) \hbar^{2} \eta_{s,s_{z}} \qquad s = 0, \frac{1}{2}, 1, \frac{3}{2}, \dots
+$$
+$$
+   \hat{S}_{z} \eta_{s,s_{z}} = s_{z} \hbar \eta_{s,s_{z}} \qquad s_{z} = -s, -s+1, \dots , s-1, s 
+$$
+dove $s_{z}$ compie salti unitari tra un valore di $s$ e il seguente.
+I possibili valori del quadrato del momento angolare di spin sono dati dalla $s(s+1)\hbar^{2}$. Per ciascuno di questi, i possibili valori del momento angolare di spin lungo $z$ sono dati dalla successione discreta di  $2s+1$ valori $s_{z} \hbar$.
+I numeri $s$ e $s_{z}$ descrivono compiutamente lo stato quantomeccanico e sono detti numeri quantici dello spin. Essi individuano specifici vettori $\eta_{s,s_{z}}$ nello spazio degli spin e dato che, fissato un certo $s$ si hanno $2s+1$ diversi valori di $s_{z}$ che individuano $2s+1$ vettori linearmente indipendenti (e normalizzati) nello spazio degli spin, ne deriva che **lo spazio dello spin di valore s è uno ‘spazio interno’ complesso di $2s+1$ dimensioni**.
+
+Esempio: 
+- Se $s = \frac{1}{2}$ allora $s_{z} = - \frac{1}{2} , \frac{1}{2}$ , $\eta_{\frac{1}{2},- \frac{1}{2}}, \eta_{\frac{1}{2}, \frac{1}{2}}$
+- Se $s = 1$ allora $s_{z} = -1,0,1$ , $\eta_{1,1},\eta_{\frac{1}{2}, \frac{1}{2}}$
+- Se $s = 0$ allora $s_{z} = 0$ , $\eta_{0,0}$ e si dice che la particella non ha spin 
+
+Da quanto detto consegue che lo stato quantomeccanico di una particella microscopica di spin s dovrà essere rappresentato nello *spazio prodotto* dello spazio degli stati quantomeccanici ‘ordinari’ già visto, con lo spazio degli stati di spin, ovvero dalla funzione d’onda ‘estesa’
+$$
+  \xi(\mathbf{r},t) =   \psi(\mathbf{r},t) \eta_{s,s_{z}}
+$$
+dove $\eta$ è il vettore di spin.
+
+(È utile sta cosa?)L'analogo classico piu vicino all'onda piana,con $\eta_{\frac{1}{2}, \frac{1}{2}}$ ampiezza spinoriale,
+$$
+    \eta_{\frac{1}{2}, \frac{1}{2}} \psi_{0}e^{ i/\hbar (\mathbf{p}\cdot \mathbf{r} - Et)}
+$$
+è un'onda piana di campo elettrico
+$$
+    \mathbf{E}_{0} \sin(\mathbf{k}\cdot \mathbf{r} - \omega t)
+$$
+<!-- La meccanica quantistica si estende oltre gli spazi ordinari verso spazi astratti incui si introduconi operatori ad hoc come nel caso dello spin. -->
+
+<!-- #TODO vedi sta cosa -->
+<!-- **Cosa matematica** -->
+<!-- $$ -->
+<!--    \psi(x) \ , \qquad x \in \mathbb{C} -->
+<!-- $$ -->
+<!-- quantizziamo: -->
+<!-- $$ -->
+<!--    \underbrace{ \psi(x_{1}) }_{ \psi_{1} },\underbrace{ \psi(x_{2}) }_{ \psi_{2} },\underbrace{ \psi(x_{3}) }_{ \psi_{3} }\dots  -->
+<!-- $$ -->
+<!-- Ora definendo un *prodotto scalare* tale da introdurre un algebra come quella lineare consueta: -->
+<!-- $$ -->
+<!--  (    \psi_{1} , \psi_{2} , \psi_{3}  , \dots  ) \implies \sum_{i}^{N} \psi_{j}^{*}\psi_{j} -->
+<!-- $$ -->
+ E’ importante sottolineare che l’introduzione di un apposito ‘spazio complesso’ per la descrizione degli stati di spin delle particelle microscopiche costituisce un precedente teorico di grande rilevanza. Essa infatti suggerisce che eventuali gradi di libertà interni delle particelle richiesti dalla analisi dei dati sperimentali possano essere descritti in ambito quantomeccanico semplicemente introducendo spazi vettoriali complessi addizionali dotati della giusta dimensionalità.
 
 
-
-
-
+**LA SOMMA DEI MOMENTI ANGOLARI**
 
 
 
