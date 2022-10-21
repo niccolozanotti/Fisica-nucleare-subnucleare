@@ -437,7 +437,7 @@ $$
 $$
 soddisfacenti le  regole di commutazione 'tipo momento angolare'
 $$
-   [ S_{x},S_{y}] = i \hbar S_{z} \qquad  [ S_{y},S_{z}] = i \hbar S_{x} \qquad   [ S_{z},S_{x}] = i \hbar S_{y}
+   [ S_{x},S_{y}] = i \hslash S_{z} \qquad  [ S_{y},S_{z}] = i \hslash S_{x} \qquad   [ S_{z},S_{x}] = i \hslash S_{y}
 $$
 ed operano sullo **spazio degli stati di spin**, uno ‘spazio interno’ diverso da quello su cui operano gli operatori del momento angolare orbitale (lo spin è dunque un nuovo grado di libertà del sistema microscopico).
 
@@ -445,13 +445,13 @@ In analogia con il caso del momento della quantità di moto, le regole di commu
 
 In particolare, risolta l’equazione agli autovalori degli operatori quadrato del momento angolare di spin e della sua terza componente si può ottenere l’insieme degli autovalori e delle autofunzioni:
 $$
-   \hat{S}^{2} \eta_{s,s_{z}} = s (s+1) \hbar^{2} \eta_{s,s_{z}} \qquad s = 0, \frac{1}{2}, 1, \frac{3}{2}, \dots
+   \hat{S}^{2} \eta_{s,s_{z}} = s (s+1) \hslash^{2} \eta_{s,s_{z}} \qquad s = 0, \frac{1}{2}, 1, \frac{3}{2}, \dots
 $$
 $$
-   \hat{S}_{z} \eta_{s,s_{z}} = s_{z} \hbar \eta_{s,s_{z}} \qquad s_{z} = -s, -s+1, \dots , s-1, s 
+   \hat{S}_{z} \eta_{s,s_{z}} = s_{z} \hslash \eta_{s,s_{z}} \qquad s_{z} = -s, -s+1, \dots , s-1, s 
 $$
 dove $s_{z}$ compie salti unitari tra un valore di $s$ e il seguente.
-I possibili valori del quadrato del momento angolare di spin sono dati dalla $s(s+1)\hbar^{2}$. Per ciascuno di questi, i possibili valori del momento angolare di spin lungo $z$ sono dati dalla successione discreta di  $2s+1$ valori $s_{z} \hbar$.
+I possibili valori del quadrato del momento angolare di spin sono dati dalla $s(s+1)\hslash^{2}$. Per ciascuno di questi, i possibili valori del momento angolare di spin lungo $z$ sono dati dalla successione discreta di  $2s+1$ valori $s_{z} \hslash$.
 I numeri $s$ e $s_{z}$ descrivono compiutamente lo stato quantomeccanico e sono detti numeri quantici dello spin. Essi individuano specifici vettori $\eta_{s,s_{z}}$ nello spazio degli spin e dato che, fissato un certo $s$ si hanno $2s+1$ diversi valori di $s_{z}$ che individuano $2s+1$ vettori linearmente indipendenti (e normalizzati) nello spazio degli spin, ne deriva che **lo spazio dello spin di valore s è uno ‘spazio interno’ complesso di $2s+1$ dimensioni**.
 
 Esempio: 
@@ -461,17 +461,17 @@ Esempio:
 
 Da quanto detto consegue che lo stato quantomeccanico di una particella microscopica di spin s dovrà essere rappresentato nello *spazio prodotto* dello spazio degli stati quantomeccanici ‘ordinari’ già visto, con lo spazio degli stati di spin, ovvero dalla funzione d’onda ‘estesa’
 $$
-  \xi(\mathbf{r},t) =   \psi(\mathbf{r},t) \eta_{s,s_{z}}
+  \xi(\bm{r},t) =   \psi(\bm{r},t) \eta_{s,s_{z}}
 $$
 dove $\eta$ è il vettore di spin.
 
 (È utile sta cosa?)L'analogo classico piu vicino all'onda piana,con $\eta_{\frac{1}{2}, \frac{1}{2}}$ ampiezza spinoriale,
 $$
-    \eta_{\frac{1}{2}, \frac{1}{2}} \psi_{0}e^{ i/\hbar (\mathbf{p}\cdot \mathbf{r} - Et)}
+    \eta_{\frac{1}{2}, \frac{1}{2}} \psi_{0}e^{ i/\hslash (\bm{p}\cdot \bm{r} - Et)}
 $$
 è un'onda piana di campo elettrico
 $$
-    \mathbf{E}_{0} \sin(\mathbf{k}\cdot \mathbf{r} - \omega t)
+    \bm{E}_{0} \sin(\bm{k}\cdot \bm{r} - \omega t)
 $$
 <!-- La meccanica quantistica si estende oltre gli spazi ordinari verso spazi astratti incui si introduconi operatori ad hoc come nel caso dello spin. -->
 
@@ -493,10 +493,241 @@ $$
 
 **LA SOMMA DEI MOMENTI ANGOLARI**
 
+Sia nei sistemi classici che quantomeccanici accade di dovere calcolare il momento angolare di un sistema formato da due sottosistemi aventi ciascuno un dato momento angolare, come si deve fare?
 
+- *Fisica classica*: ai momenti angolari sono associati vettori, pertanto al momento angolare del sistema complessivo si associa la somma vettoriale dei momenti angolari dei due sottosistemi. Dati allora i momenti angolari $\bm{J}_{1}$ e $\bm{J}_{2}$ dei due sottosistemi, il momento angolare del sistema complessivo sarà dato dalla somma vettoriale $\bm{J} = \bm{J}_{1}+ \bm{J}_{2}$ calcolata con la regola del parallelogramma e dipendente da moduli direzioni e versi relativi dei vettori sommati. In particolare, il modulo di tale momento angolare assumerà la seguente serie continua di valori
+$$
+ \bm{J} = \bm{J_{1}} + \bm{J_{2}} \qquad | |\bm{J_{1}}| - |\bm{J}_{2}| | \leq | \bm{J}| \leq|\bm{J}_{1} | | + | \bm{J}_{2} | |
+$$
+- *Meccanica quantistica*: ai momenti angolari sono associati operatori, al momento angolare del sistema complessivo si associata allora la somma operatoriale degli operatori momento angolare dei due sottosistemi. Dati allora gli operatori momento angolare $\hat{J}_{1}$ e $\hat{J}_{2}$ dei due sottosistemi, l’operatore momento angolare del sistema complessivo sarà dato dalla somma operatoriale $\hat{J} = \hat{J}_{1}+ \hat{J}_{2}$. In accordo con le regole generali della meccanica quantistica, si pone allora il problema di determinare autovalori e autostati di tale operatore somma dei momenti angolari. 
 
+In relazione a questo problema, è semplice mostrare con prova diretta che se gli operatori $\hat{J}_{1}$ e $\hat{J}_{2}$ soddisfano le relazioni di commutazione viste in precedenza allora anche l’operatore $\hat{J} = \hat{J}_{1}+ \hat{J}_{2}$ soddisferà relazioni di commutazione dello stesso tipo. Ciò significa che gli operatori $J^{2} = (J_{1} + \hat{J}_{2})^{2}$
+e $\hat{J}_{z} = \hat{J_{1z}} + \hat{J_{2z}}$ avranno in generale i seguenti autovalori
+$$
+ j(j+1) \hslash^{2} \qquad j = 0, \frac{1}{2}, 1, \frac{3}{2}
+$$
+$$
+ m \hslash  \qquad m = -j , -j +1, \dots , j-1, j
+$$
+Sulla base di considerazioni generali non è possibile dire di più, per cui risulta necessario citare i risultati del teorema della somma dei momenti angolari in meccanica quantistica.
 
+Dati allora due stati quantomeccanici con momento angolare definito $\phi_{j_{1},m_{1}}$e $\phi_{j_{2},m_{2}}$ autostati degli operatori $\hat{J}_{1},\hat{J}_{1z}$ e $\hat{J}_{2}, \hat{J}_{2z}$ si ha
+$$
+ \hat{J}_{1}^{2} \ \phi_{j_{1},m_{1}}(\bm{r}) = j_{1}(j_{1}+1) \hslash \ \phi_{j_{1},m_{1}}(\bm{r}) \qquad j_{1} = 0, \frac{1}{2}, 1, \frac{3}{2}
+$$
+$$
+ \hat{J}_{1z} \ \phi_{j_{1},m_{1}}(\bm{r}) = m \hslash \ \phi_{j_{1},m_{1}}(\bm{r})  \qquad m_{1} = -j_{1} , -j_{1} +1, \dots , j_{1}-1, j_{1}
+$$
+$$
+ \hat{J}_{2}^{2} \ \phi_{j_{2},m_{2}}(\bm{r}) = j_{2}(j_{2}+1) \hslash \ \phi_{j_{2},m_{2}}(\bm{r}) \qquad j_{2} = 0, \frac{1}{2}, 1, \frac{3}{2}
+$$
+$$
+ \hat{J}_{2z} \ \phi_{j_{2},m_{2}}(\bm{r}) = m \hslash \ \phi_{j_{2},m_{2}}(\bm{r})  \qquad m_{2} = -j_{2} , -j_{2} +1, \dots , j_{2}-1, j_{2}
+$$
+Lo stato quantomeccanico complessivo $\phi_{j,m}$ è autostato degli operatori  $J^{2} = (J_{1} + \hat{J}_{2})^{2}$ e $\hat{J}_{z} = \hat{J_{1z}} + \hat{J_{2z}}$ dove i loro numeri quantici$j$ ed $m$ soddisfano le seguenti relazioni
+$$
+ \hat{J}^{2} \ \phi_{j,m}(\bm{r}) = j(j+1) \hslash \ \phi_{j,m}(\bm{r}) \qquad | j_{1} - j_{2}|<j<|j_{1}+j_{2}|
+$$
+$$
+ \hat{J}_{z} \ \phi_{j,m}(\bm{r}) = m \hslash \ \phi_{j,m}(\bm{r})  \qquad m = m_{1}+m_{2}
+$$
 
+*Esercizio didattico - Spazio di spinori 2 dimensionale*.
+Consideriamo uno spazio di spinori identificato da 
+$$
+   s = \frac{1}{2} \qquad s_{z} = - \frac{1}{2} , \frac{1}{2}
+$$
+per cui si hanno gli spinori 
+$$
+   \xi_{\frac{1}{2}, \frac{1}{2}} \qquad \xi_{- \frac{1}{2}, \frac{1}{2}}
+$$
+Per quanto riguarda gli operatori di spin si ha
+$$
+  \hat{S}^{2} \xi_{\frac{1}{2}, \pm \frac{1}{2}} = \frac{3}{4} \hslash^{2} \xi_{\frac{1}{2}, \pm \frac{1}{2}}
+$$
+e
+$$
+  \hat{S}_{z} \xi_{\frac{1}{2}, \frac{1}{2}} = \frac{1}{2} \hslash \xi_{\frac{1}{2}, \frac{1}{2}} \qquad
+    \hat{S}_{z} \xi_{\frac{1}{2}, - \frac{1}{2}} = - \frac{1}{2} \hslash \xi_{\frac{1}{2}, -\frac{1}{2}} 
+$$
+Lo spazio è chiaramente bidimensionale dove le direzioni sono identificate dai 2 spinori: 
+[qui disegno di lato ]
+
+Nel momento in cui si utilizza uno spazio astratto per rappresentare lo spin è necessario che valga la condizione della sovrapposizione di stati che giustifica la spazializzazione dello spin. 
+A livello classico tale richiesta in uno spazio ordinario sarebbe quella che tutte le posizioni intermedie fossero accessibili.
+
+In ogni caso siamo interessati solamente agli stati normalizzati, e dunque non è fondamentale operare in tutto lo spazio, bensì possiamo restringerci alla sfera unitaria.
+
+Per dare una forma piu semplice e concreta agli spinori, eseguo la seguente identificazione
+$$
+    \xi_{\frac{1}{2}, \frac{1}{2}} =
+    \begin{pmatrix}
+    1 \\ 0
+\end{pmatrix} \qquad
+\xi_{\frac{1}{2}, - \frac{1}{2}} =
+ \begin{pmatrix}
+     0 \\ 1
+\end{pmatrix}
+$$
+Gli operatori $\hat{S}$ assumeranno forma matriciale in tale rappresentazione
+$$
+ S_{x,y,z} = 
+ \begin{pmatrix}
+    \alpha & \alpha \\ 
+\alpha & \alpha 
+\end{pmatrix} 
+$$
+Dovendo rispettare la condizione che $S$ sia *autoaggiunta* la costruiamo come
+$$
+ S_{x,y,z} = 
+ \begin{pmatrix}
+    a & b - ic \\ 
+b + ic & d 
+\end{pmatrix} 
+$$
+Volendo però stare in totale generalità scriveremo
+
+ \begin{align*}
+ S &= 
+ \begin{pmatrix}
+ a + d & b-ic  \\
+  b+ic & a-d
+\end{pmatrix}    \\
+&= 
+ a
+ \begin{pmatrix}
+    1 & 0 \\
+  0 & 1
+\end{pmatrix}
++ b \begin{pmatrix}
+ 0 & 1 \\
+   1 & 0
+\end{pmatrix}
++ c \begin{pmatrix}
+ 0 & -1  \\
+ 1 & 0
+\end{pmatrix}
++d \begin{pmatrix}
+1 & 0 \\
+0 & -1
+\end{pmatrix}
+\end{align*}
+
+Notiamo che qualunque matrice è combinazione lineare di queste 4 matrici$\implies$ analogo dei versori. Le matrici di base sono le cossiddette **matrici di Pauli**.
+$$
+ M = a \ I_{2 \times 2} + b \sigma_{1} + c \sigma_{2} + d \sigma_{3}
+$$
+Osserviamo che la matrice identità non puo far parte in questa base, altrimenti si andrebbe a perdere la condizione di non commutazione propria degli operatori di spin(essa commuta con tutte le matrici).
+La rappresentazione matriciale di $\hat{S}_{z}$ sarà la seguente
+$$
+ \hat{S}_{z} \begin{pmatrix}
+ 1  \\
+0
+\end{pmatrix} =
+\frac{1}{2} \hslash \ I 
+\begin{pmatrix}
+1 \\
+0
+\end{pmatrix}
+\qquad 
+  \hat{S}_{z} \begin{pmatrix}
+0  \\
+1
+\end{pmatrix}
+= - \frac{1}{2} \hslash I \begin{pmatrix}
+0 \\
+1
+\end{pmatrix}
+$$
+$$
+ \implies
+     \hat{S}_{z} = 
+     \begin{pmatrix}
+      \frac{1}{2} \hslash & 0  \\
+          0 & - \frac{1}{2} \hslash
+\end{pmatrix}
+$$
+Quindi $\hat{S}_{z}$ deve essere **diagonale con i valori di spin sulla diagonale**.
+Quindi quella appena scritta e una base ortonormale (essendo gia i vettori normalizzati) di $\hat{S}_{z}$
+$$
+    \hat{S}_{z} = \frac{\hslash}{2}
+    \begin{pmatrix}
+    1 & 0  \\
+     0 & -1      
+\end{pmatrix} = \frac{\hslash}{2} \sigma_{3}
+$$
+Svolgendo il conto vediamo che anche la relazione di commutazione 
+$$
+   [ \hat{S}_{z}, \hat{S}_{x}] = i \hslash \hat{S}_{y}
+$$
+è rispettata.In conclusione
+$$
+ \hat{S}_{x} = \frac{\hslash}{2} \sigma_{1} \qquad
+     \hat{S}_{y} =  \frac{\hslash}{2} \sigma_{2} \qquad
+   \hat{S}_{z} = \frac{\hslash}{2} \sigma_{3}
+$$
+Un vettore generico di spin generico si scrive come
+$$
+ \psi = \psi (\bm{r},t) \begin{pmatrix}
+ \alpha  \\
+\beta
+\end{pmatrix}
+$$
+Scelta una base ortonormale verifichiamo che
+$$
+   \hat{S}^{2} 
+   \begin{pmatrix}
+  1  \\
+   0
+\end{pmatrix}
+   = (\hat{S}_{x}^{2} + \hat{S}_{y}^{2}+\hat{S}_{z}^{2})\begin{pmatrix}
+ 1 \\
+0
+\end{pmatrix} = \frac{3 \hslash^{2}}{4} I = \frac{3\hslash^{2}}{4} \begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix}\begin{pmatrix}
+1 \\
+0
+\end{pmatrix}
+ = 3 \frac{\hslash^{2}}{4} \begin{pmatrix}
+1 \\
+0
+\end{pmatrix}
+$$
+risultato che ci aspettavamo. Un aspetto piuttosto rilevante è che abbiamo visto che $\hat{S}$ ed $\hat{S}_{z}$ sono gli unici operatori a poter essere diagonalizzati contemporaneamente $\implies$ torna con l'interpretazione fisica sulla misurazione quantistica.
+
+Si noti che, contrariamente al caso classico dove la somma di due momenti angolari definiti fornisce un momento angolare definito, nel caso quantistico ciò accade solo per la terza componente rimanendo invece indefinito il suo modulo quadrato e dunque il numero quantico $j$.
+Si tratta con tutta evidenza di una conseguenza delle indefinizioni delle componenti $x$ e $y$ dei momenti angolari sommati che rende però necessario precisare la relazione esistente tra gli stati quantomeccanici dei sistemi parziali $\phi_{j_1, m_1}$ e $\phi_{j_2,m_2}$ e lo stato quantomeccanico del sistema complessivo $\phi_{j,m}$.
+
+In base a quanto detto precedentemente, dati 
+$$
+ (j_{1},m_{1}) \qquad (j_{2},m_{2})
+$$
+Il teorema dice che $j,m$ continuano ad essere interi e vale la seguente relazione
+$$
+  | j_{1} - j_{2}| \leq j \leq | j_{1} + j_{2} |
+$$
+$$
+    m = m_{1} + m_{2}
+$$
+Mentre i sistemi parziali hanno momento angolare
+$$
+ Y_{2,2}=(2,0) \qquad Y_{1,1}=(1,1)
+$$
+$$
+ j = 1,2,3, \dots \quad m = 1
+$$
+il sistema totale non ha momento angolare definito$\implies$ collasso.
+Vale la sovrappposizione
+$$
+ a Y_{1,1}+bY_{2,1}+cY_{3,1}
+$$
+dove $a,b,c$ si dicono i **coefficienti di Clebsch-Gordan**.
+In generale si può mostrare che
+$$
+\phi_{j_{1}m_{1}} \phi_{j_{2}m_{2}} = \sum_{\substack{j=| j_{1}-j_{2}| \\ m = m_{1}+m_{2}} }^{| j_{1}+j_{2}|} C_{jm}^{j_{1}m_{1}j_{2}m_{2}} \phi_{jm}
+$$
 
 
 
