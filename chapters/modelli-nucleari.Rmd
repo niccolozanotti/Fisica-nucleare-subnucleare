@@ -370,7 +370,7 @@ $$
 $$
 Verifichiamo allora che uno stato quantomeccanico non ammette valori definiti del momento della quantità di moto lungo $x, y$ e $z$ poiché la proiezione lungo $x$ è incompatibile con quella lungo $y$, quella lungo z con quella lungo $x$ e quella lungo $y$ con quella lungo $z$. Ciò significa che *in uno stato quantomeccanico il momento angolare può assumere valori definiti lungo una sola direzione* che solitamente si assume come asse $z$.
 
-fConsideriamo ora l’operatore **modulo quadrato del momento angolare**
+Consideriamo ora l’operatore **modulo quadrato del momento angolare**
 $$
    \hat{L}^{2} = \hat{L}_{x}^{2} + \hat{L}_{y}^{2} + \hat{L}_{z}^{2}
 $$
@@ -382,9 +382,9 @@ $$
     include_graphics("figs/ang-mom-cone.png")
 ```
 ```{marginfigure}
-Il set dei possibili valori di $\hat{L_x}$ e $\hat{L_y}$ descrive un cono attorno ad $hat{L}_z$
+Il set dei possibili valori di $\hat{L_x}$ e $\hat{L_y}$ descrive un cono attorno ad $\hat{L}_z$
 ```
-Dalle (4.14) e (4.16) concludiamo allora che **uno stato quantomeccanico ammette valori definiti del quadrato del momento angolare e della sua componente lungo $z$**.
+Dalle relazioni di commutazioni scritte, concludiamo allora che **uno stato quantomeccanico ammette valori definiti del quadrato del momento angolare e della sua componente lungo $z$**.
 
 Giunti a questo punto si pone il problema di stabilire quali siano i valori
 definiti del quadrato del momento angolare e della sua componente lungo z
@@ -728,6 +728,69 @@ In generale si può mostrare che
 $$
 \phi_{j_{1}m_{1}} \phi_{j_{2}m_{2}} = \sum_{\substack{j=| j_{1}-j_{2}| \\ m = m_{1}+m_{2}} }^{| j_{1}+j_{2}|} C_{jm}^{j_{1}m_{1}j_{2}m_{2}} \phi_{jm}
 $$
+```{r, fig.margin=TRUE,echo=FALSE,out.height="130%",out.width="130%",fig.align="center"}
+    include_graphics("figs/cl-gord.png")
+```
+In figura a lato si può vedere una tabella di coefficienti di Clebsch-Gordan.
+
+**STATI QUANTOMECCANICI DI DUE PARTICELLE IDENTICHE**
+Lo studio dei sistemi quantomeccanici formati da particelle identiche conduce a nuove sorprendenti proprietà che non trovano alcuna analogia nella fisica classica. Vediamo un esempio.
+
+Immaginiamo di essere in ambito  macroscopico e quindi soggetti alle leggi della  *fisica classica*. 
+```{r, fig.margin=TRUE,echo=FALSE,out.height="130%",out.width="130%",fig.align="center"}
+    include_graphics("figs/identical-part1.png")
+```
+Immaginiamo poi che, in una  certa porzione di spazio, si muovano due piccole  sferette, e che tale spazio sia illuminato ad intervalli di tempo regolari da una luce  stroboscopica. Il lampo luminoso al tempo $t’$ mostrerà le due sferette nelle posizioni $r_{1}'$ e $r_{2}'$ e quello al tempo $t''$ in $r_{1}''$ e $r_{2}''$. Con tutta evidenza, se le due sferette sono diverse non esiste alcun problema nell’associare alle posizioni osservate, in ogni dato istante di tempo, la specifica sferetta. Si dice allora che in meccanica classica due particelle diverse sono sempre distinguibili.
+
+Diverso sembra il caso in cui le due sferette siano identiche. Infatti, non sapremmo dire se la sferetta nella posizione $r_{1}''(r_{2}'')$ al tempo $t''$ sia quella che al tempo $t'$ si trovava in $r_{1}'$ o quella che si trovava in $r_{2}'$. L’identità delle sferette ci ha condotti dunque alla impossibilità di associare con certezza le posizioni alle particelle. L’ambiguità, però, non è essenziale poichè può essere superata qualora al tempo t’ siano note, non solo le posizioni delle sferette, ma anche le loro velocità $v_1’$ e $v_2’$. Infatti, al tempo $t''$ ciascuna sferetta dovrà trovarsi non troppo lontano dalla direzione della propria velocità al tempo $t'$ (se l’istante $t''$ non è troppo lontano da $t'$). Concludiamo allora che, se in un istante di tempo le posizioni e le velocità di due sferette identiche sono note con sufficiente precisione, sarà sempre possibile determinare la loro posizione in ogni istante di tempo successivo.
+
+Poiché nella meccanica classica non ci sono limitazioni nel conoscere in ogni istante di tempo le posizioni e le velocità delle particelle in gioco, concludiamo che **nella fisica classica sia le particelle diverse che quelle identiche sono sempre distinguibili**.
+
+Cosa accade in meccanica quantistica? E’ semplice rendersi conto che nel caso di particelle diverse una ipotetica misura di massa, carica o di una qualunque variabile interna capace di determinarne l’identità sarà in grado di dirci senza ambiguità quale posizione occupi ciascuna delle due particelle. Dunque, analogamente al caso della meccanica classica, giungiamo quindi ad affermare che nella meccanica quantistica due particelle diverse sono sempre distinguibili.
+
+Ben diverso è il caso in cui le particelle siano identiche. Infatti - a differenza di ciò che accade in meccanica classica – uno stato quantomeccanico non può possedere in ogni istate di tempo sia posizioni definite che velocità definite (principio di indeterminazione). Se ad esempio al tempo $t'$ sono definite le posizioni $r_{1}'$ e $r_{2}'$ delle due particelle identiche, risulteranno allora indefinite le corrispondenti velocità $v_{1}'$ e $v_{2}'$ pregiudicando dunque la possibilità di attribuire univocamente una posizione a ciascuna di esse al tempo t’’. Analogamente, se al tempo t’ sono definite le velocità $v_{1}'$ e $v_{2}'$ delle due particelle identiche (e dunque le quantità di moto), risulteranno allora indefinite le loro posizioni che non potranno essere univocamente assegnate alle particelle stesse.
+
+Giungiamo allora a concludere che **nella meccanica quantistica due particelle identiche sono sempre indistinguibili**.
+Tale fatto può essere visto in modo  ancor più diretto attraverso il seguente  
+esempio. Immaginiamo di avere due  particelle microscopiche identiche che si  trovino in stati quantomeccanici diversi,  ad esempio di quantità di moto ed  energia ($E_1, p_1$) ed ($E_2, p_2$) descritte da due  onde piane di De Broglie (vedi figura).  
+```{r, fig.margin=TRUE,echo=FALSE,out.height="130%",out.width="130%",fig.align="center"}
+    include_graphics("figs/identical-part2.png")
+```
+Con tutta evidenza due misure di  posizione potranno trovare la particella  ($E_{1},p_{1}$) nella posizione $r_{1}$ e la particella ($E_{2},p_{2}$) nella posizione $r_{2}$, oppure la particella ($E_{2}, p_{2}$) nella posizione $r_{1}$ e la particella ($E_{1}, p_{1}$) nella posizione $r_{2}$, dando quindi luogo alla ambiguità discussa.
+
+L’esempio può guidarci anche alla costruzione della funzione d’onda del sistema quantomeccanico delle due particelle identiche.  
+Per cominciare consideriamo due particelle identiche poste in regioni di spazio differenti ovvero mutuamente isolate (ad esempio ponendole in contenitori diversi). La densità di probabilità di osservare la particella ($E_{1},p_{1}$) nella posizione $r_{1}$ e la particella ($E_{2},p_{2}$) nella posizione $r_{2}$ è data allora dal modulo quadrato della seguente funzione d’onda
+
+ \begin{equation}
+    \psi_{E_{1},\mathbf{p}_{1}}(\mathbf{r}_{1},t) \psi_{E_{2},\mathbf{p}_{2}}(\mathbf{r}_{2},t)
+\end{equation}
+
+dove i termini a prodotto sono le funzioni d’onda delle singole particelle
+$$
+  \psi_{E_{1},\mathbf{p}_{1}}(\mathbf{r}_{1},t) = A_{E_{1},\mathbf{p}_{1}}e^{ \frac{i}{\hbar} (\mathbf{p}_{1} \cdot \mathbf{r}_{1}-E_{1}t)}
+$$
+$$
+   \psi_{E_{2},\mathbf{p}_{2}}(\mathbf{r}_{2},t) = A_{E_{2},\mathbf{p}_{2}}e^{ \frac{i}{\hbar} (\mathbf{p}_{2} \cdot \mathbf{r}_{2}-E_{2}t)}
+$$
+Se ora rimuoviamo la condizione di isolamento, costruendo un unico sistema fisico formato da due particelle identiche poste nella stessa regione di spazio (ad esempio mettendole entrambe nello stesso contenitore) ci rendiamo subito conto che la funzione d’onda ($35$) non descrive lo stato quantomeccanico in modo completo. Infatti - come osservato in precedenza – è anche possibile che una misura di posizione sul sistema trovi la particella ($E_{2},p_{2}$) in $r_{1}$ e la particella ($E_{1},p_{1}$) in $r_{2}$, un esito evidentemente non descritto dalla ($35$). Tale esito è invece descritto dalla seguente funzione d’onda
+
+\begin{equation}
+  \psi_{E_{2},\mathbf{p}_{2}}(\mathbf{r}_{1},t) \psi_{E_{1},\mathbf{p}_{1}}(\mathbf{r}_{2},t)
+\end{equation}
+dove i termini a prodotto sono dati dalle funzioni d’onda delle singole particelle
+
+$$
+  \psi_{E_{1},\mathbf{p}_{1}}(\mathbf{r}_{2},t) = A_{E_{1},\mathbf{p}_{1}}e^{ \frac{i}{\hbar} (\mathbf{p}_{1} \cdot \mathbf{r}_{2}-E_{1}t)}
+$$
+$$
+   \psi_{E_{2},\mathbf{p}_{2}}(\mathbf{r}_{1},t) = A_{E_{2},\mathbf{p}_{2}}e^{ \frac{i}{\hbar} (\mathbf{p}_{2} \cdot \mathbf{r}_{1}-E_{2}t)}
+$$
+Ora, dato che il sistema di due particelle identiche può dare luogo ad entrambi gli esiti ($35$) e ($36$), tali esiti – in accordo con i principi generali della meccanica quantistica - dovranno essere sommati coerentemente. In assenza di ulteriori prescrizioni, non potremo che introdurre due generici coefficienti complessi ottenendo uno stato che - pur soddisfacendo i requisiti richiesti - contiene due coefficienti arbitrari
+$$
+ \psi_{sis} = \alpha \, \psi_{E_{1},\mathbf{p}_{1}}(\mathbf{r}_{1},t) \psi_{E_{2},\mathbf{p}_{2}}(\mathbf{r}_{2},t) +
+  \beta \, \psi_{E_{2},\mathbf{p}_{2}}(\mathbf{r}_{1},t) \psi_{E_{1},\mathbf{p}_{1}}(\mathbf{r}_{2},t) 
+$$
+una ambiguità nota con il nome di **degenerazione di scambio**.
 
 
 
