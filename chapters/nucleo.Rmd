@@ -200,8 +200,8 @@ Vediamo due esempi di calcolo di sezioni d'urto :
 
 i)  Sezione d'urto differenziale rispetto all'angolo solido di un fascio di proiettili di sezione trascurabile su sfere di raggio $R$ nella ipotesi che abbiano luogo urti classici elastici. ii). Sezione d'urto differenziale di Rutherford
 
-```{r, fig.margin=TRUE,echo=FALSE,fig.cap="Sezione d'urto differenziale di una sfera rigida"}
-    include_graphics("figs/cross-section-calc.jpg")
+```{r, fig.margin=TRUE,echo=FALSE,fig.cap="Sezione d'urto differenziale di una sfera rigida",out.height="142%",out.width="142%",fig.align='center'}
+    include_graphics("figs/ex-cross-section.jpeg")
 ```
 
 i)  Senza entrare nel dettaglio della meccanica dell'urto - assumendo un sistema di coordinate sferiche con asse z lungo l'asse centrale della sfera - sappiamo che sussiste una piena simmetria rispetto all'angolo e l'**angolo di emergenza** del proiettile è interamente determinato dal **parametro d'urto** $b$ attarverso una relazione del tipo \begin{equation}
@@ -515,9 +515,11 @@ $$
 
 dove nell'ultimo passaggio si è usato $\vartheta << 1 \rightarrow cos \vartheta \simeq 1$. Si noti che l'espressione integrale ottenuta corrisponde al ben noto principio di Huygens completato dal **fattore di obliquità** che modula l'ampiezza in modo tale da fornire le onde in avanti ed annullare quelle all'indietro.
 
-Nell'integrale appena ottenuto vogliamo esprimere la fase dell'esponenziale in forma generale attraverso vettori $$
+Nell'integrale appena ottenuto vogliamo esprimere la fase dell'esponenziale in forma generale attraverso vettori 
+$$
     k(s + z') = k(|\bm{r}-\bm{r'}|+z') = k (\sqrt{(\bm{r}-\bm{r'})\cdot(\bm{r}-\bm{r'})}+\bm{n}' \cdot \bm{r'})
-$$ $$
+$$ 
+$$
     = k\left(r \sqrt{1 - \frac{2 \bm{r}\cdot \bm{r'}}{r^2} + \frac{r'^2}{r^2}} + \bm{n}' \cdot \bm{r'}\right) \simeq k\left( r + \frac{r'^2}{2r} - \frac{ \bm{r}\cdot \bm{r'}}{r} + \bm{n}' \cdot \bm{r'}\right)
 $$ $$
   = k r + k \frac{r'^2}{2r} - k \frac{ \bm{r}\cdot \bm{r'}}{r} + k \bm{n}' \cdot \bm{r'}
