@@ -8,7 +8,7 @@ di informazioni su tali oggetti microscopici è effettivamente possibile
 ottenere da tali misure?
 Gli elementi fondamentali che caratterizzano l'esperimento di
 Rutherford(1909-1913) cosí come versioni più moderne sono i seguenti:
-\marginnote{L'esperimento di Geiger-Mursden- Rutherford`}
+%\marginnote{L'esperimento di Geiger-Mursden-Rutherford}
 
 \begin{enumerate}
 	\item
@@ -31,48 +31,42 @@ Nell'esperimento di Rutherford:
 
 \begin{itemize}
 	\tightlist
-	\item
-	fascio: particelle \(\alpha\) di \(5.6 MeV\)
-	\item
-	bersaglio: gold foil con spessore di \(8.6 \times 10^{-6}\) cm
-	\item
-	rivelatore: vetro dipinto da \(ZnS\) scintillante al momento
+	\item fascio: particelle $alpha$ di 5.6 MeV;
+	\item bersaglio: gold foil con spessore di \(8.6 \times 10^{-6}\) cm
+	\item rivelatore: vetro dipinto da \(ZnS\) scintillante al momento
 	dell'incontro con particelle cariche.
 \end{itemize}
 
 \textbf{Goal} dell'esperimento: riconoscere le particelle emergenti e
-misurarne le grandezze cinematiche(energia, quantità di moto) al fine di
+misurarne le grandezze cinematiche( energia, quantità di moto) al fine di
 ottenere informazioni sulla natura dell' \textbf{interazione} tra
 particella del fascio e particella del bersaglio.
 
-Il termine \textbf{interazione} è un termine generico.
+Il termine \textbf{interazione} è un termine generico che può indicare sia la semplice deviazione di un certo angolo
+di una particella del fascio da parte di una particella del bersaglio che vere e proprie reazioni nel corso delle quali
+le particelle incidenti si trasformano in particelle di altro tipo
 Introduciamo la seguente notazione:
-
+\begin{itemize}
+	\tightlist
+	\item
+	\textbf{Processi di diffusione}: le particelle emergenti dal bersaglio
+	coincidono con quelle del raggio incidente;
+	\item
+	\textbf{Processi di produzione}: non vale quanto sopra.
+\end{itemize}
+Tra i processi di diffusione si distinguono processi:
 \begin{marginfigure}
 	\includegraphics{figs/diffusione-elastica}
 	%    \caption{This is a margin figure.}
 	\label{fig:diffusione-elastica}
 \end{marginfigure}
-
 \begin{itemize}
 	\tightlist
 	\item
-	\textbf{Processi di diffusione}: particelle emergenti dal bersaglio
-	coincidono con quelle del raggio incidente
+	\textbf{elastici} : energia della particella incidente = energia particella emergente
 	\item
-	\textbf{Processi di produzione}: non vale quanto sopra
+	\textbf{anelastici}: energia della particella incidente \(\neq\) energia particella emergente
 \end{itemize}
-Tra i processi di diffusione si distinguono processi
-
-\begin{itemize}
-	\tightlist
-	\item
-	\textbf{elastici} : energia della particella incidente \(=\) emergente
-	\item
-	\textbf{anelastici}: energia della particella incidente \(\neq\)
-	emergente
-\end{itemize}
-
 Dato che solitamente la particella proiettile è priva di struttura
 interna, a differenza di quella bersaglio, si ha diffusione
 \begin{marginfigure}
@@ -88,21 +82,18 @@ interna, a differenza di quella bersaglio, si ha diffusione
 \end{marginfigure}
 
 \begin{itemize}
-	\item
-	elastica: il bersaglio non modifica la sua struttura e non assorbe
-	energia
-	\item
-	anelastica: il bersaglio modifica la sua struttura e assorbe energia
+	\item \textbf{elastica}:se il bersaglio non modifica la sua struttura e non assorbe
+	energia$ \left( \Delta E^{Tot}_{cin} = 0 \right)$;
+	\item \textbf{inelastica}: se il bersaglio modifica la sua struttura e assorbe energia.
 \end{itemize}
-
+A seguito della diffusione la particella bersaglio può decadere in nuove particelle in un processo noto come
+\textbf{produzione inelastica} (chiaramente l'elasticità non si può avere, sulla base della terminologia introdotta)
+caratterizzata da $\left( \Delta E^{Tot}_{cin} \neq 0 \right)$.
 Si parla di \emph{diffusione profondamente inelastica} quando l'energia
-della particella proiettile è tale che la De Broglie wavelength
+della particella proiettile è tale che la De Broglie wavelength ad essa
 associata risulta molto minore della dimensione della particella
-bersaglio \(\rightarrow\) si può definirne la struttura interna(che
+bersaglio $ \rightarrow$ si può definirne la struttura interna (che
 varia durante il processo).
-
-Sulla base di questa terminologia è evidente che \textbf{un processo di
-produzione è sempre inelastico}.
 
 Vogliamo ora domandarci quale \textbf{grandezza fisica microscopica del
 bersaglio} sia possibile misurare con un arrangiamento sperimentale alla
@@ -117,23 +108,21 @@ microscopici del bersaglio confrontando il fascio di particelle uscente
 con quello entrante}.
 In particolare maggiore è il numero di grandezze
 fisiche del fascio emergente che vengono misurate (distribuzione
-spaziale, energia, quantità di moto, tipologia, etc...) più
+spaziale, energia, quantità di moto, tipologia, etc\ldots) più
 dettagliata risulterà l'informazione sui componenti microscopici del
 bersaglio.
 
 Le assunzioni che faremo sono le seguenti:
-
 \begin{enumerate}
 	\tightlist
 	\item
 	il fascio di sezione trasversale \(\Sigma\) sia costituito da
 	corpuscoli massivi puntiformi in moto con la stessa velocità \(v\) e
 	densità spaziale \(n_f\) uniforme e costante;
-	\item
-	il bersaglio sia costituito da sferette massive di raggio dato,
-	distribuite con densità \(n_b\)uniforme all'interno di un sottile
+	\item il bersaglio sia costituito da sferette massive di raggio dato,
+	distribuite con densità \(n_b\) uniforme all'interno di un sottile
 	strato materiale di spessore \(\Delta x\) e area maggiore di
-	\(\Sigma\)(in modo da utilizzare tutte le particelle del fascio);
+	\(\Sigma\) (in modo da utilizzare tutte le particelle del fascio);
 	\item
 	l'interazione tra particella proiettile e particella bersaglio sia
 	assimilabile ad un urto meccanico;
@@ -142,45 +131,38 @@ Le assunzioni che faremo sono le seguenti:
 	dunque rilevata in una direzione diversa da quella del fascio.
 \end{enumerate}
 Date queste condizioni, la probabilità che una singola particella
-proiettile interagisca con una singola particella del bersaglio vale
-
+proiettile $ p^{(i)}_f$ interagisca con una singola particella del bersaglio $ p^{(j)}_b$ vale
 \[
 	\frac{\sigma}{\Sigma}
 \]
-
-dove \(\sigma\) è la sezione trasversale della particella bersaglio e
-\(\Sigma\) la sezione trasversale del fascio. Il numero di particelle
-deflesse dalla direzione del fascio a seguito dell'urto vale allora
-
+dove \(\sigma\) è la sezione trasversale della particella bersaglio e \(\Sigma\) la sezione trasversale del fascio.
+In pratica, detto \(\Delta N_f\) il numero di particelle del fascio che nel tempo \(\Delta t\) hanno avuto la
+possibilità di interagire con le \(\Delta N_b\) particelle del bersaglio, si ha un \emph{numero di particelle deflesse
+dalla direzione del fascio} a seguito dell'urto pari a
 \[
-	\Delta N_{def} = \Delta N_f \Delta N_b \frac{\sigma}{\Sigma}
-\]dove \(\Delta N_f\) è il numero di particelle del fascio che nel tempo
-\(\Delta t\) hanno avuto la possibilità di interagire con le
-\(\Delta N_b\) particelle del bersaglio.\\
+	\Delta N_{def} = \sum_{j}^{\Delta N_b} \sum_{i}^{\Delta N_f} \frac{\sigma}{\Sigma}=
+	\Delta N_f \Delta N_b \frac{\sigma}{\Sigma}
+\]
+
 Ora si noti che le \(\Delta N_f\) particelle del fascio sono contenute
 all'interno di un parallelepipedo di area \(\Sigma\) ed altezza
 \(v \Delta t\) mentre le \(\Delta N_b\) particelle del bersaglio sono
 contenute all'interno di un parallelepipedo di area \(\Sigma\) ed
-altezza \(\Delta x\) \textbf{.} Ricordando allora che le densità
-volumetriche di particelle del fascio e del bersaglio valgono
+altezza \(\Delta x\).
+Ricordando allora che le densità volumetriche di particelle del fascio e del bersaglio valgono
 rispettivamente \(n_f\) e \(n_b\), si ottengono le seguenti espressioni:
-
 \[
 	\Delta N_f = \underbrace{\Sigma v \Delta t}_{ \text{Volume}}n_f
 	\qquad
 	\Delta N_b = \underbrace{\Sigma  \Delta x}_{ \text{Volume}}n_b
 \]
-
 che sostituite forniscono il numero di particelle deflesse nel tempo
 \(\Delta t\):
-
 \[
 	\Delta N_{def} = \Delta N_f \Delta N_b \frac{\sigma}{\Sigma} =
 	(\Sigma v \Delta t \ n_f)(\Sigma \Delta x \ n_b)\frac{\sigma}{\Sigma}
 \]
-
 e quindi un rate di deflessione
-
 \[
 	\frac{\Delta N_{def}}{\Delta t} = (v n_f)( \Sigma \Delta x n_b) \sigma
 \] Invertendo la relazione, otteniamo infine l'espressione della
@@ -188,26 +170,25 @@ e quindi un rate di deflessione
 \textbf{sezione d'urto}
 \begin{equation}
 	\boxed{\  \sigma = \frac{1}{(n_fv)(n_b \Sigma \Delta x)}\frac{dN_{def}}{dt} }
+	\label{eq:cross-section-def}
 \end{equation}
-
 L'interesse di questa espressione risiede nel fatto che mette in
 relazione una grandezza fisica microscopica, quale la sezione
 trasversale \(\sigma\) della particella bersaglio, con grandezze fisiche
 macroscopiche misurabili quali sono i parametri geometrici
 \(n_f,n_b,\Sigma,\Delta x\) e \(\frac{\Delta N_{def}}{\Delta t}\).
 
-La grandezza \(\sigma\) è detta \textbf{sezione d'urto totale} o sezione
-totale d'interazione ed è ciò che può essere misurato in un tipico
+La grandezza \(\sigma\) è detta \textbf{sezione d'urto totale} o \emph{sezione
+totale d'interazione} ed è ciò che può essere misurato in un tipico
 arrangiamento alla Rutherford (questa affermazione va presa cum grano
 salis poiché disponendo di un adeguato apparato si possono misurare le
 sezioni d'urto in funzione di specifiche variabili d'interesse), ha le
 \textbf{dimensioni di un'area} (in questo caso coincidente con l'area
 trasversale della particella bersaglio) e dunque si misura in
-\(m^2\)(più propriamente in suoi sottomultipli), ed è la grandezza
+\(m^2\) (più propriamente in suoi sottomultipli), ed è la grandezza
 fisica che \textbf{caratterizza l'interazione tra la generica particella
 del fascio e la generica particella del bersaglio}.
-Ci attendiamo infine
-che tale espressione abbia una \textbf{validità generale} e che possa
+Ci attendiamo infine che tale espressione abbia una \textbf{validità generale} e che possa
 essere applicata non solo nel caso specifico dell'urto meccanico da noi
 esaminato (impossibile a livello microscopico!) ma anche nel caso più
 realistico in cui le particelle del fascio e del bersaglio interagiscono
@@ -224,7 +205,7 @@ Dunque, in fisica nucleare e delle particelle elementari gli esperimenti
 su fasci misurano essenzialmente le sezioni d'urto della interazione
 elementare fascio-bersaglio.
 Quando si dispone di una teoria
-quantitativa di tale interazione la grandezza \(\sigma\) può essere
+quantitativa di tale interazione la grandezza $\sigma$ può essere
 calcolata anche teoricamente ed allora, attraverso il confronto con il
 valore determinato sperimentalmente, risulta possibile saggiare la bontà
 della teoria stessa.
@@ -232,32 +213,27 @@ Nella fisica nucleare e delle particelle elementari
 il confronto tra teoria ed esperimento avviene quasi sempre attraverso
 le sezioni d'urto.
 
+Se l'apparato sperimentale è costruito in modo opportuno risulta
+possibile andare oltre il semplice conteggio del numero di particelle
+deflesse e fornire informazioni sempre più stringenti.
+Ad esempio, con un apparato sperimentale disposto attorno al bersaglio e
+\emph{opportunamente segmentato}, in un processo di diffusione risulta
+possibile misurare la distribuzione angolare delle particelle del fascio
+deflesse dal bersaglio acquisendo un'ulteriore informazione sperimentale
+sulle proprietà della interazione in gioco.
 \begin{marginfigure}
 	\includegraphics{figs/solid-angle-cross-section}
 	%    \caption{This is a margin figure.}
 	\label{fig:solid-angle-cross-section}
 \end{marginfigure}
-
-Se l'apparato sperimentale è costruito in modo opportuno risulta
-possibile andare oltre il semplice conteggio del numero di particelle
-deflesse e fornire informazioni sempre più stringenti.
-Ad esempio, con
-un apparato sperimentale disposto attorno al bersaglio e
-\emph{opportunamente segmentato}, in un processo di diffusione risulta
-possibile misurare la distribuzione angolare delle particelle del fascio
-deflesse dal bersaglio acquisendo ulteriore informazione sperimentale
-sulle proprietà della interazione in gioco.
-In questo modo si potrà
-misurare la sezione d'urto d'interazione con la condizione ulteriore che
+In questo modo si potrà misurare la sezione d'urto d'interazione con la condizione ulteriore che
 la particella proiettile emerga all'interno di un certo angolo solido
 elementare \(d \Omega\).
 Avremo allora la seguente d'urto elementare
 (poiché infinitesimo risulta l'elemento di angolo solido)
 
-
 \marginnote{Sezione d'urto differenziale \\
 	rispetto all'angolo solido}
-
 \[
 	d \sigma = \frac{1}{(n_fv)(n_b \Sigma \Delta x)}d \left( \frac{dN_{def}}{dt} \ \text{in} \ d\Omega\right)
 \]
@@ -265,22 +241,19 @@ in altri termini:
 \[
 	d \sigma = \frac{1}{(n_fv)(n_b \Sigma \Delta x)} \frac{d\dot{N}_{def \ in \ \Delta \Omega}}{d \Omega} d \Omega
 \]
-
 dalla quale otteniamo l'espressione della \textbf{sezione d'urto
 differenziale rispetto all'angolo solido} che è la grandezza misurata
 dal nostro ipotetico esperimento.
 Va da sè che l'integrale di tale
 sezione d'urto differenziale rispetto all'angolo solido debba restituire
 la sezione d'urto totale
-
 \begin{equation}
 	\boxed{ \sigma = \iint_{\Omega}\frac{d \sigma}{d \Omega} \, d \Omega }
+	\label{eq:cross-section-solid-angle}
 \end{equation}
-
 relazione che può essere assunta come definizione della sezione d'urto
 differenziale rispetto all'angolo solido.
-Se il rivelatore permette di
-misurare anche l'energia della particella proiettile sarà possibile
+Se il rivelatore permette di misurare anche l'energia della particella proiettile sarà possibile
 misurare il numero di particelle del fascio che nella unità di tempo
 emergono nell'angolo solido elementare \(d \Omega\) all'interno
 dell'intervallo elementare \(dE\).
@@ -308,49 +281,86 @@ Vediamo due esempi di calcolo di sezioni d'urto :
 	\item[ii.] Sezione d'urto differenziale di Rutherford.
 \end{description}
 
-\smallcaps{ Caso \emph{i}}. \\
-
+\smallcaps{ Caso \emph{i}}.
 Senza entrare nel dettaglio della meccanica dell'urto - assumendo un sistema di coordinate sferiche con asse z lungo l'asse centrale della sfera - sappiamo che sussiste una piena simmetria rispetto all'angolo e l'\textbf{angolo di emergenza} del proiettile è interamente determinato dal \textbf{parametro d'urto} $b$ attarverso una relazione del tipo
 \begin{equation}
-	b = b(\vartheta)
+	b = b(\theta)
+	\label{eq:cross-sec-calc1}
 \end{equation} che codifica i dettagli dell'urto stesso.
-\begin{marginfigure}
-	\includegraphics[width = 1.3 \textwidth,scale = 1]{figs/ex-cross-section}
-	%    \caption{Sezione d'urto differenziale di una sfera rigida.}
+
+\begin{figure}
+	\centering
+	\includegraphics{figs/ex-cross-section}
+	\caption{Calcolo della sezione d'urto differenziale rispetto all'angolo solido di un fascio su sfere di raggio noto
+	nell'ipotesi di urti classici elastici.}
 	\label{fig:ex-cross-section}
-\end{marginfigure}
-Ciò significa che tutti i proiettili passanti per l'area elementare $bd \varphi db$ saranno deflessi dello stesso angolo solido elementare $d \Omega$ per cui, sulla base di ($2$), possiamo scrivere \[
-	d \sigma = \frac{d \sigma}{d \Omega}d \Omega = b d \varphi db
-\] da cui segue \[
-	\frac{d \sigma }{d \Omega} \sin \vartheta d \varphi d \vartheta   =  b d \varphi \left |\frac{db}{d \vartheta}\right | d \vartheta
-\] e dunque, infine, la sezione d'urto differenziale rispetto all'angolo solido \begin{equation}
-	\frac{d \sigma}{d \Omega} = \frac{b}{sin \vartheta}\left |\frac{db}{d \vartheta}\right |
+\end{figure}
+Facendo riferimento allo schema in figura~\ref{fig:ex-cross-section} si ha
+\begin{gather*}
+    d \sigma' = \int d \sigma = 2 \pi b(\theta) \, db\\
+    d \Omega' = \int d \Omega = \int_{0}^{2 \pi} d \varphi \sin(\theta) d \theta = 2 \pi \sin(\theta) \, d \theta
+\end{gather*}
+e inoltre dalla definizione di angolo solido:
+\[
+ d \Omega = \frac{dS}{{r}^{2}}= \sin (\theta) \, d \theta d \varphi
+\]
+Riusciamo quindi a scrivere la nostra sezione d'urto doppiamente differenziale, sulla base di
+(\ref{eq:cross-section-solid-angle}):
+\[
+	d \sigma = \frac{d \sigma}{d \Omega}d \Omega
+	= \frac{2 \pi b \, db}{2 \pi \sin(\theta) d \theta} \sin(\theta) d \theta d \varphi
+	=  b d \varphi db
+\]
+Ciò significa che tutti i proiettili passanti per l'area elementare $bd \varphi db$ saranno deflessi dello stesso angolo
+solido elementare $d \Omega$.
+Da qui segue
+\[
+	\frac{d \sigma }{d \Omega} \sin (\theta) d \varphi d \theta   =  b d \varphi \left |\frac{db}{d \theta}\right | d \theta
+\]
+e dunque, infine, la sezione d'urto differenziale rispetto all'angolo solido
+\begin{equation}
+	\frac{d \sigma}{d \Omega} = \frac{b}{sin (\theta)}\left |\frac{db}{d \theta}\right |
+	\label{eq:cross-sec-calc2}
 \end{equation} valida classicamente non solo nel caso della sfera rigida ma in generale.
-Per calcolare la sezione d'urto differenziale rispetto all'angolo solido nel caso della sfera rigida di raggio R dobbiamo precisare la forma della ($3$).
-Si trova facilmente \[
-	\frac{b}{R} = \sin{\alpha}  \qquad \vartheta = \pi - 2 \alpha
-\] da cui \[
-	b = R \cos{\frac{\vartheta}{2}}
-\] Sostituendo nella ($4$) otteniamo \[
-	\frac{d \sigma}{d \Omega} = \frac{R \cos{\frac{\vartheta}{2}}}{\sin \vartheta} \left | \frac{d}{d \vartheta}R \cos{\frac{\vartheta}{2}} \right | = \frac{R \cos{\frac{\vartheta}{2}}}{\sin \vartheta}\frac{R}{2} \sin \frac{\vartheta}{2}
-\] da cui, infine, la sezione d'urto differenziale della sfera rigida di raggio $R$ \begin{equation}
+
+Per calcolare la sezione d'urto differenziale rispetto all'angolo solido nel caso della sfera rigida di raggio R dobbiamo
+ora precisare la forma della (\ref{eq:cross-sec-calc1}).
+Si trova facilmente
+\[
+	\frac{b}{R} = \sin{\alpha}  \qquad \theta = \pi - 2 \alpha
+\]
+da cui
+\[
+	b = R \cos{\frac{\theta}{2}}
+\]
+Sostituendo nella (\ref{eq:cross-sec-calc2}) otteniamo
+\[
+	\frac{d \sigma}{d \Omega} = \frac{R \cos{\frac{\theta}{2}}}{\sin \theta} \left | \frac{d}{d \theta}R \cos{\frac{\theta}{2}} \right | = \frac{R \cos{\frac{\theta}{2}}}{\sin \theta}\frac{R}{2} \sin \frac{\theta}{2}
+\]
+da cui, infine, la sezione d'urto differenziale della sfera rigida di raggio $R$
+\begin{equation}
 	\frac{d \sigma}{d \Omega} = \frac{R^2}{4}
+	\label{eq:cross-section-rigid-sphere}
 \end{equation}
 
 E' immediato verificare che da questa espressione si ottiene una sezione d'urto totale $\sigma = \pi R^2$.
 
 \marginnote{Sezione d'urto differenziale di una sfera rigida}
 
-La formula ($3.4$) può essere utilizzata anche nel caso in cui l'interazione tra le particelle del fascio e quelle del bersaglio non consista in un urto meccanico ma in una interazione mediata da una forza naturale.
+La formula (\ref{eq:cross-section-rigid-sphere}) può essere utilizzata \emph{anche nel caso in cui l'interazione} tra le
+particelle del fascio e quelle del bersaglio \emph{non consista in un urto meccanico} ma in una interazione mediata da una
+forza naturale.
 
-\smallcaps{Caso} \emph{ii}. \\
-
-Trattiamo allora il caso della \textbf{diffusione di Rutherford} di proiettili di carica elettrica positiva $ze$ su bersagli di carica elettrica positiva $Ze$ governata dalla forza \[
+\smallcaps{Caso} \emph{ii}.
+Trattiamo allora il caso della \textbf{diffusione di Rutherford} di proiettili di carica elettrica positiva $ze$ su bersagli di carica elettrica positiva $Ze$ governata dalla forza
+\[
 	\bm{F} = \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\bm{i_r}
-\] Come noto tale forza \textbf{conserva il momento angolare} del proiettile \begin{gather*}
+\]
+Come noto tale forza \textbf{conserva il momento angolare} del proiettile
+\begin{gather*}
 	\bm{r} \wedge \bm{F} = \frac{d}{dt}\bm{l} \qquad r \bm{i_r} \wedge \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\bm{i_r} = \bm{0} \quad \bm{0} = \frac{d}{dt}\bm{l} \quad \bm{l}=\bm{K}\\
 	\bm{l}_{t = - \infty} = \bm{l}_t \quad (-x \bm{i} + y \bm{j})\wedge(m \dot{x}\bm{i} + m\dot{y}\bm{j})_{t = - \infty} = r \bm{i_r} \wedge m(\dot{r}\bm{i_r} + r \dot{\varphi}\bm{i_{\varphi}}) \quad - \dot{x}y = r^2 \dot{\varphi}\\
-	\dot{x}_{t = - \infty} = v_0 \quad \dot{y}_{t = - \infty} = 0 \quad y_{t = - \infty}= b\\
+	\dot{x}_{t = - \infty} = v_0 \quad \dot{y}_{t = - \infty} = 0 \quad y_{t = - \infty}= b
 \end{gather*} da cui
 \begin{equation}
 	\dot{\varphi} = - \frac{v_0 \ b}{r^2}
@@ -370,25 +380,25 @@ Fatte queste premesse conviene risolvere la sola \textbf{equazione del moto tras
 \begin{gather*}
 	F_y = \frac{d}{dt}m v_y \quad \ \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\sin \varphi = \frac{d}{dt}mv_y\\
 	mv_{y,t= + \infty} - mv_{y,t = - \infty} = \int_{- \infty}^{+\infty} \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\sin \varphi\,dt\\
-	v_{y,t= + \infty} = v_{t= + \infty}\sin \vartheta \qquad v_{y,t = - \infty} = 0 \quad \varphi_{t = +\infty} = \vartheta \quad \varphi_{t = - \infty} = \pi\\
-	mv \sin \vartheta = - \int_{- \infty}^{+ \infty} \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\sin \varphi \frac{r^2}{v_0b}\,d \varphi = \frac{zZe^2}{4 \pi \epsilon_0 v_0 b}(\cos \vartheta + 1)\\
+	v_{y,t= + \infty} = v_{t= + \infty}\sin \theta \qquad v_{y,t = - \infty} = 0 \quad \varphi_{t = +\infty} = \theta \quad \varphi_{t = - \infty} = \pi\\
+	mv \sin \theta = - \int_{- \infty}^{+ \infty} \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\sin \varphi \frac{r^2}{v_0b}\,d \varphi = \frac{zZe^2}{4 \pi \epsilon_0 v_0 b}(\cos \theta + 1)\\
 \end{gather*}
 da cui
 \begin{equation}
-	b = \frac{zZe^2}{4 \pi \epsilon_0 m v^2_0} \cot \frac{\vartheta}{2}
+	b = \frac{zZe^2}{4 \pi \epsilon_0 m v^2_0} \cot \frac{\theta}{2}
 \end{equation}
 Ora possiamo derivare questa espressione
 \[
-	\left | \frac{db}{d \vartheta}\right | = \frac{1}{2}\frac{zZe^2}{4 \pi \epsilon_0 m v^2_0}\frac{1}{\sin^2{\vartheta/2}}
+	\left | \frac{db}{d \theta}\right | = \frac{1}{2}\frac{zZe^2}{4 \pi \epsilon_0 m v^2_0}\frac{1}{\sin^2{\theta/2}}
 \]
 e sostituirla nella $(3.4)$ assieme alla $(3.7)$ ottenendo
 \[
-	\frac{d \sigma }{d \Omega} = \left( \frac{zZe^2}{4 \pi \epsilon_0m v^2_0}\right) \cot{\frac{\vartheta}{2}}\frac{1}{2 \sin{\vartheta / 2 \cos (\vartheta /2)}}\frac{1}{2}\left( \frac{zZe^2}{4 \pi \epsilon_0m v^2_0}\right)\frac{1}{\sin^2{\vartheta/2}}
+	\frac{d \sigma }{d \Omega} = \left( \frac{zZe^2}{4 \pi \epsilon_0m v^2_0}\right) \cot{\frac{\theta}{2}}\frac{1}{2 \sin{\theta / 2 \cos (\theta /2)}}\frac{1}{2}\left( \frac{zZe^2}{4 \pi \epsilon_0m v^2_0}\right)\frac{1}{\sin^2{\theta/2}}
 \]
 da cui la \textbf{sezione d'urto differenziale di Rutherford}
 
 \begin{equation}
-	\frac{d \sigma }{d \Omega} = \frac{1}{4} \left( \frac{zZe^2}{4 \pi \epsilon_0m v^2_0}\right) ^2\frac{1}{\sin^4{\vartheta / 2}}
+	\frac{d \sigma }{d \Omega} = \frac{1}{4} \left( \frac{zZe^2}{4 \pi \epsilon_0m v^2_0}\right) ^2\frac{1}{\sin^4{\theta / 2}}
 \end{equation} un risultato valido anche in meccanica quantistica.
 
 	[Esercizio in dispensa pag 38.]
@@ -784,16 +794,16 @@ Sviluppiamo ora i termini presenti nell'equazione di Kirchhoff:
 \end{gather*}
 \begin{align*}
 	\frac{\partial s}{\partial z'} & = \frac{\partial }{\partial z'}|\bm{r'}-\bm{r}| = \frac{\partial }{\partial z'}\sqrt{(x-x')^2+(y-y')^2+(z-z')^2} \\
-	                               & = - \frac{1}{2s}2(z-z') = - \frac{z-z'}{s} = \cos \vartheta
+	                               & = - \frac{1}{2s}2(z-z') = - \frac{z-z'}{s} = \cos \theta
 \end{align*}
-con $\cos \vartheta = \frac{ (\bm{r'}-\bm{r})\cdot \hat{k}}{|\bm{r'}-\bm{r}|}$.
+con $\cos \theta = \frac{ (\bm{r'}-\bm{r})\cdot \hat{k}}{|\bm{r'}-\bm{r}|}$.
 Da qui ottengo lo sviluppo del primo termine presente nell'equazione di Kirchhoff:
 \[
-	(\bm{n}' \cdot \nabla')\frac{e^{iks}}{s} = -\left(ik\frac{e^{iks}}{s}-\frac{e^{iks}}{s^2}\right) \cos \vartheta
+	(\bm{n}' \cdot \nabla')\frac{e^{iks}}{s} = -\left(ik\frac{e^{iks}}{s}-\frac{e^{iks}}{s^2}\right) \cos \theta
 \]
 Sostituendo infine le espressioni di $(\bm{n}' \cdot \nabla ') \frac{e^{iks}}{s}$ e di $(\bm{n}' \cdot \nabla')\psi(\bm{r'})$ in $(16)$ otteniamo
 \[
-	\psi(\bm{r}) = \frac{1}{4 \pi} \iint_{\text{Foro}} \left[-\psi_0 e^{ikz'}\left( ik\frac{e^{iks}}{s}-\frac{e^{iks}}{s^2}\right) \cos \vartheta - \frac{e^{iks}}{s} ik\psi_0 e^{ikz'} \right] \, da'
+	\psi(\bm{r}) = \frac{1}{4 \pi} \iint_{\text{Foro}} \left[-\psi_0 e^{ikz'}\left( ik\frac{e^{iks}}{s}-\frac{e^{iks}}{s^2}\right) \cos \theta - \frac{e^{iks}}{s} ik\psi_0 e^{ikz'} \right] \, da'
 \]
 
 \begin{marginfigure}
@@ -806,15 +816,15 @@ Compiamo la seguente \emph{approssimazione}: se il punto di osservazione
 è a grande distanza, al primo ordine il termine \(1/s^2\) può essere
 trascurato. Abbiamo
 \begin{gather*}
-	\psi(\bm{r}) \simeq \frac{1}{4 \pi} \iint_{\text{Foro}} \left[-\psi_0 e^{ikz'} ik\frac{e^{iks}}{s} \cos \vartheta - \frac{e^{iks}}{s}ik\psi_0 e^{ikz'} \right]\, da'\\
-	\psi(\bm{r}) \simeq -\psi_0 \frac{ik}{4 \pi} \iint_{\text{Foro}} \frac{e^{i(ks+kz')}}{s}(\cos \vartheta + 1)\, da' \simeq -\psi_0 \frac{ik}{2 \pi} \iint_{\text{Foro}} \frac{e^{i(ks+kz')}}{s}\,da'\\
+	\psi(\bm{r}) \simeq \frac{1}{4 \pi} \iint_{\text{Foro}} \left[-\psi_0 e^{ikz'} ik\frac{e^{iks}}{s} \cos \theta - \frac{e^{iks}}{s}ik\psi_0 e^{ikz'} \right]\, da'\\
+	\psi(\bm{r}) \simeq -\psi_0 \frac{ik}{4 \pi} \iint_{\text{Foro}} \frac{e^{i(ks+kz')}}{s}(\cos \theta + 1)\, da' \simeq -\psi_0 \frac{ik}{2 \pi} \iint_{\text{Foro}} \frac{e^{i(ks+kz')}}{s}\,da'\\
 \end{gather*}
 
-\marginnote{$f(\vartheta) = 1 + \cos \vartheta$ fa si che ci sia un fattore che modula l'ampiezza(ad esempio se $\vartheta = 0,f(\vartheta) = 2$ mentre è nullo per $\vartheta = \pi$)}
+\marginnote{$f(\theta) = 1 + \cos \theta$ fa si che ci sia un fattore che modula l'ampiezza(ad esempio se $\theta = 0,f(\theta) = 2$ mentre è nullo per $\theta = \pi$)}
 
 
 dove nell'ultimo passaggio si è usato
-\(\vartheta << 1 \rightarrow cos \vartheta \simeq 1\). Si noti che
+\(\theta << 1 \rightarrow \cos \theta \simeq 1\). Si noti che
 l'espressione integrale ottenuta corrisponde al ben noto principio di
 Huygens completato dal \textbf{fattore di obliquità} che modula
 l'ampiezza in modo tale da fornire le onde in avanti ed annullare quelle
@@ -830,7 +840,7 @@ distanza dallo schermo
 \[
 	k \frac{r'^2}{2r} \simeq \frac{D^2}{\lambda L}
 \]
-Se \(\frac{D^2}{\lambda L} << 1\) si parla di \textbf{regime di
+Se \(\frac{D^2}{\lambda L} \ll 1\) si parla di \textbf{regime di
 Fraunhofer} e il termine in questione può essere trascurato. Si ha
 quindi \[
 		   k(s+z') \simeq kr - (k \bm{n} - k \bm{n}') \cdot \bm{r}'
@@ -841,7 +851,7 @@ lo spostamento del punto di osservazione dall'asse del fascio) \[
 						k(s+ z') \simeq kr - \bm{q} \cdot \bm{r}'
 \] Se il riferimento è interno alla apertura, a seguito della condizione
 di Fraunhofer si ha(sistema \(\simeq\) al centro del foro) \[
-															   s \simeq r - \bm{n} \cdot \bm{r'} \simeq r - r' \cos \vartheta \simeq r
+															   s \simeq r - \bm{n} \cdot \bm{r'} \simeq r - r' \cos \theta \simeq r
 \]
 da cui, si ottiene infine l'espressione cercata della \textbf{funzione
 d'onda in campo lontano (o di Fraunhofer) diffratta da una apertura A
@@ -973,7 +983,8 @@ Infatti, dalla ($18$) si ottengono subito le seguenti espressioni delle funzioni
 	d \sigma_{diff} = \Sigma \fraclarg{|\psi_0|^2|f(\bm{q})|^2\frac{1}{r^2}r^2 d \Omega}{\iint_{\Sigma}|\psi_0|^2 \, d \Sigma}
 	= \Sigma \frac{|\psi_0|^2|f(\bm{q})|^2 d \Omega}{|\psi_0|^2 \Sigma}
 	= |f(\bm{q})|^2 d \Omega
-\]da cui, infine, si derivano le espressioni della \textbf{sezione d'urto di diffusione differenziale e totale rispetto all'angolo solido}
+\]
+da cui, infine, si derivano le espressioni della \textbf{sezione d'urto di diffusione differenziale e totale rispetto all'angolo solido}
 
 \begin{equation}
 	\frac{d \sigma_{diff}}{d \Omega} = |f(\bm{q})|^2 \qquad
@@ -1084,8 +1095,8 @@ condizioni
 \]
 Si assuma un riferimento con l'origine al centro del disco e l'asse $z$ normale al piano che lo contiene.
 Con questa scelta, se ci limitiamo a considerare angoli di diffusione non troppo grandi, il vettore $\bm{q}$ giace in un piano parallelo a al piano $xy$ e si ha \[
-	\bm{q} = \bm{k} ( \bm{n} - \bm{n}') = k ( \sin \vartheta \hat{\imath}_r + \cos \vartheta \hat{k} - \hat{k'}) \simeq
-	k \sin \vartheta \hat{\imath}_r
+	\bm{q} = \bm{k} ( \bm{n} - \bm{n}') = k ( \sin \theta \hat{\imath}_r + \cos \theta \hat{k} - \hat{k'}) \simeq
+	k \sin \theta \hat{\imath}_r
 \]
 
 \begin{marginfigure}
@@ -1131,9 +1142,9 @@ Abbiamo allora la seguente espressione dell'ampiezza di diffusione:
 	f(\bm{q}) = ik \frac{R}{q} J_1(qR)
 \]
 dove \(J_1(qR)\) è la funzione di Bessel di ordine \(1\).
-Tenendo ora conto che \(q = k \sin \vartheta\) otteniamo infine
+Tenendo ora conto che \(q = k \sin \theta\) otteniamo infine
 \begin{equation}
-	f(\bm{q}) = i \frac{R}{\sin \vartheta} J_1(kR \sin \vartheta)
+	f(\bm{q}) = i \frac{R}{\sin \theta} J_1(kR \sin \theta)
 \end{equation}
 Tenendo conto ora della funzione profilo considerata dalla \((25)\) si ottiene la seguente espressione
 \[
