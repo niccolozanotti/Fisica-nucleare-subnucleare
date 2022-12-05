@@ -6,6 +6,8 @@ output/*.tex
 !out/*.pdf
 *.ilg
 *.ind
+out/
+
 
 
 
