@@ -4,7 +4,8 @@ skeleton.bib
 output/*.tex
 .idea/
 !out/*.pdf
-
+*.ilg
+*.ind
 
 
 

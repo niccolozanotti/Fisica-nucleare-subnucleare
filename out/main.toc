@@ -1,0 +1,32 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{Fisica nucleare}{5}{chapter*.2}%
+\contentsline {section}{\numberline {0.1}Le unità di misura della Fisica Nucleare e Subnucleare}{5}{section.0.1}%
+\contentsline {section}{\numberline {0.2}Le proprietà generali dei nuclei}{7}{section.0.2}%
+\contentsline {section}{\numberline {0.3}Le carte dei nuclidi}{11}{section.0.3}%
+\contentsline {chapter}{Lo studio del nucleo}{17}{chapter*.8}%
+\contentsline {section}{\numberline {0.4}La sezione d'urto}{17}{section.0.4}%
+\contentsline {section}{\numberline {0.5}Calcoli di sezioni d'urto}{21}{section.0.5}%
+\contentsline {section}{\numberline {0.6}Le proprietà ondulatorie delle particelle microscopiche}{24}{section.0.6}%
+\contentsline {section}{\numberline {0.7}Teoria della diffrazione di Kirchoff}{30}{section.0.7}%
+\contentsline {section}{\numberline {0.8}Le sezioni d'urto in meccanica quantistica}{34}{section.0.8}%
+\contentsline {section}{\numberline {0.9}Diffrazione di un disco assorbente}{38}{section.0.9}%
+\contentsline {section}{\numberline {0.10}Il raggio nucleare}{40}{section.0.10}%
+\contentsline {section}{\numberline {0.11}Energia di legame nucleare}{44}{section.0.11}%
+\contentsline {chapter}{I primi modelli nucleari}{47}{chapter*.9}%
+\contentsline {section}{\numberline {0.12}Richiami di meccanica quantistica}{51}{section.0.12}%
+\contentsline {subsection}{\numberline {0.12.1}Osservabili e valori di aspettazione}{51}{subsection.0.12.1}%
+\contentsline {subsection}{\numberline {0.12.2}Definizione ed indefinizione delle osservabili}{54}{subsection.0.12.2}%
+\contentsline {subsection}{\numberline {0.12.3}Momento angolare orbitale}{57}{subsection.0.12.3}%
+\contentsline {subsection}{\numberline {0.12.4}Momento angolare intrinseco o spin}{59}{subsection.0.12.4}%
+\contentsline {subsection}{\numberline {0.12.5}La somma dei momenti angolari}{61}{subsection.0.12.5}%
+\contentsline {subsection}{\numberline {0.12.6}Stati quantomeccanici di due particelle identiche}{65}{subsection.0.12.6}%
+\contentsline {section}{\numberline {0.13}Il nucleo come gas di fermioni}{68}{section.0.13}%
+\contentsline {chapter}{La fisica delle particelle elmeentari}{69}{chapter*.10}%
+\contentsline {section}{\numberline {0.14}Profilo storico}{69}{section.0.14}%
+\contentsline {section}{\numberline {0.15}Aspetti generali del modello standard}{70}{section.0.15}%
+\contentsline {section}{\numberline {0.16}L'intensità relativa delle interazioni}{70}{section.0.16}%
+\contentsline {section}{\numberline {0.17}I campi quantizzati}{70}{section.0.17}%
+\contentsline {section}{\numberline {0.18}Simmetria in fisica delle particelle}{70}{section.0.18}%
+\contentsline {chapter}{Appendici}{71}{chapter*.11}%
+\contentsfinish 
