@@ -352,46 +352,81 @@ particelle del fascio e quelle del bersaglio \emph{non consista in un urto mecca
 forza naturale.
 
 \smallcaps{Caso} \emph{ii}.
-Trattiamo allora il caso della \textbf{diffusione di Rutherford} di proiettili di carica elettrica positiva $ze$ su bersagli di carica elettrica positiva $Ze$ governata dalla forza
+Trattiamo allora il caso della \textbf{diffusione di Rutherford} di proiettili di carica elettrica positiva $ze$ su 
+bersagli di carica elettrica positiva $Ze$ governata dalla forza
 \[
-	\bm{F} = \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\bm{i_r}
+	\bm{F} = \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\hat{\bm{r}}
 \]
-Come noto tale forza \textbf{conserva il momento angolare} del proiettile
-\begin{gather*}
-	\bm{r} \wedge \bm{F} = \frac{d}{dt}\bm{l} \qquad r \bm{i_r} \wedge \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\bm{i_r} = \bm{0} \quad \bm{0} = \frac{d}{dt}\bm{l} \quad \bm{l}=\bm{K}\\
-	\bm{l}_{t = - \infty} = \bm{l}_t \quad (-x \bm{i} + y \bm{j})\wedge(m \dot{x}\bm{i} + m\dot{y}\bm{j})_{t = - \infty} = r \bm{i_r} \wedge m(\dot{r}\bm{i_r} + r \dot{\varphi}\bm{i_{\varphi}}) \quad - \dot{x}y = r^2 \dot{\varphi}\\
-	\dot{x}_{t = - \infty} = v_0 \quad \dot{y}_{t = - \infty} = 0 \quad y_{t = - \infty}= b
-\end{gather*} da cui
+con potenziale associato 
+\[
+    V = \frac{zZ {e}^{2}}{4 \pi \epsilon_0 } \frac{1}{r}
+\]
+Dalla seconda equazione cardinale si ha
+\[
+      \bm{r} \wedge \bm{F} = \dot{\bm{L}}
+\]
+per cui, come noto tale forza \textbf{conserva il momento angolare} del proiettile:
+\[
+	  \bm{r} \wedge \bm{F} = r \hat{\bm{r}} \wedge \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\hat{\bm{r}} = 0 \rightarrow
+	  \dot{\bm{L}} = \bm{0} \rightarrow \bm{L} = \bm{cost}
+\]
+Ciò implica
+\[
+	\bm{L}_{t \to - \infty} = \bm{L}_t \qquad
+	\left( \bm{r} \wedge m \bm{v} \right)_{- \infty} = \left( \bm{r} \wedge m \bm{v} \right)_{t}
+\]
+Tenendo conto delle seguenti condizioni al contorno
+\[
+    x_{ - \infty} \leq 0  , \ \dot{x}_{- \infty} = v_0 \qquad y_{- \infty} = b , \  \dot{y}_{- \infty} = 0
+\]
+la precedente si  riscrive come(il secondo termine è stato scritto in coordinate polari piane)
+\[
+	(-x \hat{\bm{i}} + y \hat{\bm{j}}) \wedge (m \dot{x} \hat{\bm{i}} + m \dot{y} \hat{\bm{j}})_{- \infty} =
+	r \hat{\bm{r}} \wedge m(\dot{r}\hat{\bm{r}} + r \dot{\varphi}\hat{\varphi})
+\]
+da cui si ottiene
+\[
+   - \dot{x}y = {r}^{2} \dot{\varphi}
+\]
 \begin{equation}
 	\dot{\varphi} = - \frac{v_0 \ b}{r^2}
+	\label{eq:ex-cross-section2-1}
 \end{equation}
-e conserva l'energia del proiettile
+Sfruttiamo ora la conservazione dell'energia:
 \begin{gather*}
-	\bm{F} \cdot \bm{v} = \frac{dT}{dt} \rightarrow - \nabla V \cdot \bm{v} = \frac{dT}{dt}\\
-	\frac{d(T + V)}{dt} = 0 \qquad E = T + V = K\\
-	T_{t = - \infty}+ V_{t = - \infty} = T_{t = + \infty}+ V_{t = + \infty} \qquad V_{t = \pm \infty} =
-	- \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r_{t = \pm \infty}} = 0 \quad T_{t = - \infty}=T_{t = + \infty}\\
+    T_{- \infty} + V_{- \infty} = T_{\infty} + V_{\infty}\\
+    V_{\pm \infty} = - \frac{zZ {e}^{2}}{4 \pi \epsilon_0 } \frac{1}{r_{\pm \infty}} = 0 \rightarrow
+	T_{- \infty}  = T_{\infty}
 \end{gather*}
-da cui si ha
+ed otteniamo
 \begin{equation}
-	v_0 = v_{t = + \infty}
+	v_0 = v_{\infty}
+	\label{eq:ex-cross-section2-2}
 \end{equation}
 Fatte queste premesse conviene risolvere la sola \textbf{equazione del moto trasversale}:
 \begin{gather*}
 	F_y = \frac{d}{dt}m v_y \quad \ \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\sin \varphi = \frac{d}{dt}mv_y\\
-	mv_{y,t= + \infty} - mv_{y,t = - \infty} = \int_{- \infty}^{+\infty} \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\sin \varphi\,dt\\
-	v_{y,t= + \infty} = v_{t= + \infty}\sin \theta \qquad v_{y,t = - \infty} = 0 \quad \varphi_{t = +\infty} = \theta \quad \varphi_{t = - \infty} = \pi\\
-	mv \sin \theta = - \int_{- \infty}^{+ \infty} \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\sin \varphi \frac{r^2}{v_0b}\,d \varphi = \frac{zZe^2}{4 \pi \epsilon_0 v_0 b}(\cos \theta + 1)\\
+	mv_{y,t= + \infty} - mv_{y,t = - \infty} = \int_{- \infty}^{+\infty} \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\sin \varphi\,dt
 \end{gather*}
+Dalle condizioni al contorno
+\[
+	v_{y,t= + \infty} = v_{t= + \infty}\sin \theta \qquad v_{y,t = - \infty} = 0 \quad \varphi_{t = +\infty} = \theta \quad \varphi_{t = - \infty} = \pi
+\]
+e usando (\ref{eq:ex-cross-section2-1}) si ottiene
+\[
+	mv \sin \theta = - \int_{- \infty}^{+ \infty} \frac{zZe^2}{4 \pi \epsilon_0}\frac{1}{r^2}\sin \varphi
+	\frac{r^2}{v_0b}\,d \varphi = \frac{zZe^2}{4 \pi \epsilon_0 v_0 b}(\cos \theta + 1)
+\]
 da cui
 \begin{equation}
 	b = \frac{zZe^2}{4 \pi \epsilon_0 m v^2_0} \cot \frac{\theta}{2}
+	\label{eq:ex-cross-section2-3}
 \end{equation}
 Ora possiamo derivare questa espressione
 \[
 	\left | \frac{db}{d \theta}\right | = \frac{1}{2}\frac{zZe^2}{4 \pi \epsilon_0 m v^2_0}\frac{1}{\sin^2{\theta/2}}
 \]
-e sostituirla nella $(3.4)$ assieme alla $(3.7)$ ottenendo
+e sostituirla nella (\ref{eq:cross-sec-calc2}) assieme alla (\ref{eq:ex-cross-section2-2}) ottenendo
 \[
 	\frac{d \sigma }{d \Omega} = \left( \frac{zZe^2}{4 \pi \epsilon_0m v^2_0}\right) \cot{\frac{\theta}{2}}\frac{1}{2 \sin{\theta / 2 \cos (\theta /2)}}\frac{1}{2}\left( \frac{zZe^2}{4 \pi \epsilon_0m v^2_0}\right)\frac{1}{\sin^2{\theta/2}}
 \]
@@ -399,9 +434,10 @@ da cui la \textbf{sezione d'urto differenziale di Rutherford}
 
 \begin{equation}
 	\frac{d \sigma }{d \Omega} = \frac{1}{4} \left( \frac{zZe^2}{4 \pi \epsilon_0m v^2_0}\right) ^2\frac{1}{\sin^4{\theta / 2}}
-\end{equation} un risultato valido anche in meccanica quantistica.
+\end{equation}
+un risultato valido anche in meccanica quantistica.
 
-	[Esercizio in dispensa pag 38.]
+[Esercizio in dispensa pag 38.]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Le proprietà ondulatorie delle particelle microscopiche}\label{sec:proprieta-ondulatorie-delle-particelle-microscopiche}
@@ -430,7 +466,8 @@ chiamati quanti del campo) dotati anche di proprietà corpuscolari.
 Si affermò così il concetto di \textbf{quanto del campo come ente
 microscopico intrinsecamente `ibrido' poiché dotato di proprietà sia
 ondulatorie che corpuscolari}.
-Dato questo stato di cose, si pose naturalmente la domanda se le particelle microscopiche ed i quanti del campo - entrambi dotati di proprietà sia corpuscolari che ondulatorie - dovessero essere pensati come enti distinti oppure no.
+Dato questo stato di cose, si pose naturalmente la domanda se le particelle microscopiche ed i quanti del campo -
+entrambi dotati di proprietà sia corpuscolari che ondulatorie - dovessero essere pensati come enti distinti oppure no.
 
 La risposta -- fondamento del moderno punto di vista - fu data dalle
 teorie di campo quantizzato (formulate alla fine degli anni '20 da
@@ -461,7 +498,6 @@ cinematiche fondamentali di una generica onda piana sinusoidale,} ovvero
 la \textbf{pulsazione} ed il \textbf{vettore d'onda} collegate tra loro
 nella \textbf{relazione di dispersione} che caratterizza le proprietà
 fisiche del mezzo in cui l'onda stessa si propaga
-
 \[
 	\omega = \frac{2 \pi}{T} \quad \bm{k} = \frac{2 \pi}{\lambda}\hat{k} \quad \omega = \omega(\bm{k})
 \]
@@ -470,7 +506,9 @@ generico corpuscolo libero} che corrispondono alle espressioni
 relativistiche della \textbf{energia} e \textbf{quantità di moto}
 collegate dalla \textbf{relazione energia-impulso}
 \begin{equation}
-	E = \frac{m c^2}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad \bm{p} = \frac{m \bm{v}}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad E^2 = p^2c^2 + m^2c^4
+	E = \frac{m c^2}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad \bm{p} = \frac{m \bm{v}}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad
+	E^2 = p^2 c^2 + m^2 c^4
+	\label{eq:energy-momentum-rel}
 \end{equation}
 
 Sulla base di considerazioni di natura assai generale, Einstein e De
@@ -484,11 +522,12 @@ per cui dedussero il seguente legame esplicito tra grandezze
 ondulatorie e corpuscolari valido per le particelle microscopiche e le
 non meglio precisate \textbf{`onde quantomeccaniche'} o \textbf{`onde di
 De Broglie'} a loro associate
-
 \marginnote{Equazioni di De Broglie-Einstein}
-
 \begin{equation}
-	E = \hp \omega = \frac{m c^2}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad \bm{p} = \hp \bm{k} = \frac{m \bm{v}}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad \omega^2 = k^{2c}^2+ \frac{m^{2c}^4}{\hp^2}
+	E = \hp \omega = \frac{m c^2}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad
+	\bm{p} = \hp \bm{k} = \frac{m \bm{v}}{\sqrt{1 - \frac{v^2}{c^2}}} \qquad
+	\omega^2 = k^{2} c^2+ \frac{m^{2} c^4}{\hp^2}
+	\label{eq:de-broglie-einstein-rel}
 \end{equation}
 
 La relazione dispersione (relazione energia-impulso) indica chiaramente
@@ -499,21 +538,20 @@ ad essa si dovrà pure associare una fase ed una certa funzione della
 fase detta \textbf{funzione d'onda} il cui significato fisico dovrà
 essere precisato.
 Una data componente di Fourier di tale onda in forma
-piana dovrà comunque avere la seguente semplice espressione\footnote{L'utilizzo
+piana dovrà comunque avere la seguente semplice espressione\sidenote{L'utilizzo
 della notazione complessa non è casuale. Infatti alle due espressioni
 	\[
 		\psi_1(\bm{r},t) = \psi_0 e^{i(\bm{k \cdot r}-\omega t)}
 	\] \[
 		\psi_2(\bm{r},t) = \psi_0 \sin (\bm{k \cdot r}-\omega t)
-	\] sono associate a probabilità differenti \[
+	\] sono associate probabilità differenti \[
 		| \psi_1^2| = \psi_0^2
 	\] \[
 		| \psi_2^2| = \psi_0^2 \sin^2(\bm{k \cdot r}-\omega t)
 	\] di cui \emph{solo la prima è in accordo con le verifiche sperimentali}.}
-
-
 \begin{equation}
-	\psi(\bm{r},t) = \psi_0 e^{i(\bm{k \cdot r}-\omega t)} = \psi_{0e}^{\frac{i}{\hp}(\bm{p \cdot r}-E t)}
+	\psi(\bm{r},t) = \psi_0 e^{i(\bm{k \cdot r}-\omega t)} = \psi_{0} e^{\frac{i}{\hp}(\bm{p \cdot r}-E t)}
+	\label{eq:wave-function-expr}
 \end{equation}
 Come in un qualunque fenomeno ondulatorio, data la
 funzione d'onda si pone il problema di stabilire \textbf{l'equazione
@@ -521,34 +559,33 @@ d'onda} ovvero l'equazione che ne governa la dinamica.
 
 Trovare l'espressione formale della equazione d'onda in modo diretto per
 una data componente di Fourier non è difficile poiché sappiamo che una
-volta sostituita la funzione d'onda (\(12\)) essa non deve fare altro
-che restituire la relazione energia-impulso (\(10\)) o la relazione di
-dispersione (\(11\)).
+volta sostituita la funzione d'onda (\ref{eq:wave-function-expr}) essa non deve fare altro
+che restituire la relazione energia-impulso (\ref{eq:energy-momentum-rel}) o la relazione di
+dispersione (\ref{eq:de-broglie-einstein-rel}).
 A questo scopo vale la pena introdurre le seguenti \textbf{operazioni di differenziazione}
-
 \begin{gather*}
-	- i \hp \nabla \psi (\bm{r},t) = - i \hp \nabla \psi_{0e}^{\frac{i}{\hp}(\bm{p \cdot r}-E t)} = - i \hp \psi_{0e}^{\frac{i}{\hp}(\bm{p \cdot r}-E t)} \frac{i}{\hp} \bm{p} = \bm{p}\psi(\bm{r},t)\\
-	i \hp \frac{\partial}{\partial t} \psi (\bm{r},t) =  i \hp \frac{\partial}{\partial t} \psi_{0e}^{\frac{i}{\hp}(\bm{p \cdot r}-E t)} =  i \hp \psi_{0e}^{\frac{i}{\hp}(\bm{p \cdot r}-E t)} \left( - \frac{i}{\hp} E\right) = E\psi(\bm{r},t)\\
+	- i \hp \nabla \psi (\bm{r},t) = - i \hp \nabla \psi_{0} e ^{\frac{i}{\hp}(\bm{p \cdot r}-E t)} =
+	- i \hp \psi_{0} e^{\frac{i}{\hp}(\bm{p \cdot r}-E t)} \frac{i}{\hp} \bm{p} = \bm{p}\psi(\bm{r},t)\\
+	i \hp \frac{\partial}{\partial t} \psi (\bm{r},t) =
+	i \hp \frac{\partial}{\partial t} \psi_{0} e^{\frac{i}{\hp}(\bm{p \cdot r}-E t)} =
+	i \hp \psi_{0} e^{\frac{i}{\hp}(\bm{p \cdot r}-E t)} \left( - \frac{i}{\hp} E\right) = E\psi(\bm{r},t)
+	\label{eq:differential-operators-qm}
 \end{gather*}
-Queste espressioni mostrano che gli operatori differenziali, agendo
+Le precedenti relazioni mostrano che gli operatori differenziali, agendo
 sulla generica componente di Fourier, ne determinano la
 rimoltiplicazione per i valori della quantità di moto ed energia, un
 fatto che suggerisce di definirli come \textbf{operatori della quantità
 di moto} ed \textbf{energia}:
 \begin{itemize}
-	\item
-	Operatore della \textbf{quantità di moto}
+	\item Operatore della \textbf{quantità di moto}
 	\[
 	   \hat{P} = - i \hp \nabla    \qquad
 	\]
-	\item
-	Operatore \textbf{dell'energia}
-
+	\item Operatore \textbf{dell'energia}
 	\[
 		\hat{E} = i \hp \frac{\partial}{\partial t}
 	\]
 \end{itemize}
-
 Nel linguaggio degli operatori, le precenti espressioni possono allora
 essere rilette affermando che in una data componente di Fourier
 dell'onda quantomeccanica \textbf{i valori della quantità di moto e
@@ -565,7 +602,7 @@ I passaggi sono i seguenti
 \begin{gather*}
 	E^2 = p^2c^2 + m^2c^4\\
 	E^2\psi(\bm{r},t) = p^2c^2\psi(\bm{r},t)+m^2c^4\psi(\bm{r},t)\\
-	\left( i \hp \frac{\partial}{\partial t}\right)\left( i \hp \frac{\partial}{\partial t}\right)\psi(\bm{r},t) = c^2 (-i \hp \nabla)(-i \hp \nabla)\psi(\bm{r},t)+m^2c^4 \psi(\bm{r},t)\\
+	\left( i \hp \frac{\partial}{\partial t}\right)\left( i \hp \frac{\partial}{\partial t}\right)\psi(\bm{r},t) = c^2 (-i \hp \nabla)(-i \hp \nabla)\psi(\bm{r},t)+m^2c^4 \psi(\bm{r},t)
 \end{gather*}
 Si noti che \textbf{tale equazione è lineare per cui deve valere non
 solo per la data componente di Fourier ma -- in modo del tutto generale
@@ -580,15 +617,14 @@ quantomeccaniche' libere scalari} (senza spin, essendo \(\psi\) scalare)
 \begin{equation}
 	\nabla^2 \psi(\bm{r},t) - \frac{1}{c^2}\frac{\partial^2}{\partial t^2}\psi(\bm{r},t) =
 	\frac{m^2c^2}{\hp^2}\psi(\bm{r},t)
+	\label{eq:klein-gordon}
 \end{equation}
-
 Tale equazione fu trovata per la prima volta da Schrödinger il quale
 però non riuscì a fornire una interpretazione fisica consistente della
 funzione d'onda.
 Si trattava di un problema cruciale che poteva essere
 superato solo interpretando la funzione d'onda nel senso della teoria
-dei campi quantizzati (affronteremo questo aspetto in maggior dettaglio
-nella seconda parte del corso).
+dei campi quantizzati.
 Non essendoci allora i presupposti per
 un passaggio di tal genere, Schrödinger rinunciò alla equazione d'onda
 relativistica e ripiegò sulla \textbf{equazione d'onda classica} la cui
@@ -596,59 +632,55 @@ interpretazione sembrava meno problematica.
 Tale equazione la si può
 ottenere seguendo esattamente lo stesso tipo di procedimento partendo
 però dalla espressione \textbf{energia-impulso classica delle particelle libere}
-
 \[
 	E = \frac{p^2}{2m}
 \]
 Compreso questo fatto, possiamo puntare direttamente a costruire
 \textbf{l'equazione d'onda non relativistica per le `onde
-quantomeccaniche' inpresenza di forze} aggiungendo il loro potenziale
+quantomeccaniche' in presenza di forze} aggiungendo il loro potenziale
 alla espressione precedente
 \[
 	E = \frac{p^2}{2m} + V(\bm{r})
 \]
-
 Nel caso di una generica componente di Fourier otteniamo allora
-
 \begin{gather*}
 	E = \frac{p^2}{2m} + V(\bm{r}) \rightarrow E \psi(\bm{r},t) = \frac{p^2}{2m}\psi(\bm{r},t) +
 	V(\bm{r},t)\psi(\bm{r},t)\\
 	\left( i \hp \frac{\partial}{\partial t} \right)\psi(\bm{r},t) = \frac{1}{2m}(- i \hp \nabla)(- i \hp \nabla)\psi(\bm{r},t) + V(\bm{r})\psi(\bm{r},t)\\
 	i \hp \frac{\partial}{\partial t} \psi(\bm{r},t) = - \frac{\hp^2}{2m}\nabla^2\psi(\bm{r},t)+
-	V(\bm{r})\psi(\bm{r},t) = \left[ - \frac{\hp^2}{2m}\nabla^2 + V(\bm{r})\right] \psi(\bm{r},t)\\
+	V(\bm{r})\psi(\bm{r},t) = \left[ - \frac{\hp^2}{2m}\nabla^2 + V(\bm{r})\right] \psi(\bm{r},t)
 \end{gather*}
-
 Data la linearità della equazione, concludiamo che l'espressione
 ottenuta deve essere valida non solo per la generica componente di
 Fourier ma per una qualunque funzione d'onda.
 Definendo allora
 l'operatore tra parentesi come \textbf{operatore hamiltoniano}
 \(\hat{H}\), otteniamo la seguente \textbf{equazione d'onda di
-Schrödinger} valida per le \textbf{`onde quantomeccaniche' scalari
-	(senza spin) non relativistiche in presenza di forze}
-\marginnote{Equazione d'onda di Schroendinger}
-
-
+Schrödinger} valida per le \textbf{`onde quantomeccaniche' scalari (senza spin) non relativistiche in presenza di forze}
+\marginnote{Equazione d'onda di Schrödinger}
 \begin{equation}
 	i \hp \frac{\partial}{\partial t} \psi(\bm{r},t) = \hat{H}\psi(\bm{r},t) \qquad
 	\hat{H} = - \frac{\hp^2}{2m} \nabla^2 + V(\bm{r})
+	\label{eq:schroedinger}
 \end{equation}
-
 Tale equazione rese possibile una interpretazione della funzione d'onda
 che - pur non essendo di validità generale - permetteva comunque di
 descrivere in modo appropriato i fenomeni quantomeccanici in regime non
 relativistico ovvero alle basse e medie energie dove non avvengono
 processi di creazione e/o distruzione di particelle.
-Tale
-interpretazione fu proposta da M. Born ed afferma che \textbf{il modulo
-quadrato della funzione d'onda nella posizione} \(\bm{r}\) \textbf{ed al
-tempo t rappresenta la densità di probabilità di trovare la particella
-materiale in quella posizione ed in quell'istante di tempo a seguito di
-una misura di posizione.} Questa ipotesi va a costituire uno dei
+Tale interpretazione fu proposta da M. Born ed afferma che
+\begin{quote}
+	Il modulo quadrato della funzione d'onda nella posizione $ \bm{r}$ ed al
+	tempo t rappresenta la densità di probabilità di trovare la particella
+	materiale in quella posizione ed in quell'istante di tempo a seguito di
+	una misura di posizione.
+\end{quote}
+Questa ipotesi va a costituire uno dei
 fondamentali assiomi interpretativi della meccanica quantistica e
 comporta che l'espressione
 \begin{equation}
 	\left | \psi(\bm{r},t)\right |^2 dV
+	\label{eq:wave-probability-density}
 \end{equation}
 rappresenti la probabilità di misurare la particella
 materiale al tempo \(t\) all'interno del volume \(dV\) centrato nella
@@ -712,7 +744,7 @@ si ha
 \begin{gather*}
 	p = \hp k = \hp \frac{2 \pi}{\lambda} = \hp \frac{2 \pi}{1} fm^{-1} = \hp 2 \pi \frac{200 MeV}{\hp c}
 	\simeq 1.2 \frac{GeV}{c}\\
-	\epsilon = \sqrt{p^{2c}^2+m^{2c}^4}\simeq \sqrt{(1.2)^2+(1.0)^2} \simeq 1.5 GeV\\
+	\epsilon = \sqrt{p^{2} c^2+m^{2} c^4}\simeq \sqrt{(1.2)^2+(1.0)^2} \simeq 1.5 GeV
 \end{gather*}
 da cui si verifica che con un fascio di particelle di circa $1.2 GeV/c$ di impulso ed $1.5 GeV$ di energia si raggiunge lo scopo.
 Se invece vogliamo esplorare la struttura del singolo nucleone dovremo avere un potere risolutivo almeno 100 volte superiore ovvero un impulso $100$ volte maggiore e dunque fasci di particelle di impulso dell'ordine di $100 GeV$.
@@ -928,8 +960,9 @@ Tale espressione mostra che la figura di diffrazione prodotta da un ostacolo in 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Dalla definizione generale sappiamo che il quoziente tra sezione d'urto
 del processo e superficie della sezione del fascio deve fornire la
-\emph{probabilità del processo} stesso \[
-										   \text{Prob}_{\text{int}}  = \frac{\sigma_{diff}}{\Sigma}
+\emph{probabilità del processo} stesso
+\[
+	\text{Prob}_{\text{int}}  = \frac{\sigma_{diff}}{\Sigma}
 \] un fatto che ci permette di affermare che la sezione d'urto del
 processo altro non è che la frazione di sezione del fascio che produce
 eventi di quel processo.
