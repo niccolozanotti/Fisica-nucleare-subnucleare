@@ -710,8 +710,7 @@ in chiave ondulatoria.}
 
 Ad esempio, se vogliamo esplorare la struttura di un nucleo atomico
 dovremo essere in grado di risolvere almeno i singoli nucleoni.
-Ma
-l'interferenza di due onde provenienti da due diversi nucleoni è
+Ma l'interferenza di due onde provenienti da due diversi nucleoni è
 apprezzabile solo se i cammini differiscono di una quantità dell'ordine
 della lunghezza d'onda.
 \begin{marginfigure}
@@ -759,21 +758,20 @@ del problema può essere ottenuta cercando l'espressione della funzione
 d'onda che:
 \begin{enumerate}
 	\tightlist
-	\item
-	soddisfa l'equazione di Schrödinger con potenziale nella regione in
+	\item soddisfa l'equazione di Schrödinger con potenziale nella regione in
 	cui il fascio interagisce con il bersaglio;
-	\item
-	soddisfa l'equazione d'onda di Schrödinger libera nella regione
+	\item soddisfa l'equazione d'onda di Schrödinger libera nella regione
 	esterna alla interazione prima e dopo il bersaglio;
-	\item
-	soddisfa la condizione al contorno di essere un'onda piana prima di
+	\item soddisfa la condizione al contorno di essere un'onda piana prima di
 	incidere sul bersaglio.
 \end{enumerate}
+Seguiremo un approccio che sottolinea l'identità tra onde classiche e onde di De Broglie
+utilizzando l'ottica classica.
 Come noto, la diffrazione delle onde scalari classiche da parte di una
 apertura puo' essere trattata in modo rigoroso per mezzo della
-\textbf{teoria di Kirchhoff}, dettagliatamente esposta in Appendice
-\(1\).
-In particolare, se una apertura \(A\) è investita da un'onda
+\textbf{teoria di Kirchhoff}, la cui trattazione formale si trova nel famoso testo di Ottica Classica
+di Born~\cite{Born2019}.
+In particolare, se una apertura $A$ è investita da un'onda
 monocromatica, la funzione d'onda diffratta \(\psi(\bm{r})\) in un
 generico punto dello spazio \(\bm{r}\) oltre lo schermo è data dalla
 seguente espressione:
@@ -784,9 +782,10 @@ seguente espressione:
 \end{marginfigure}
 
 \begin{equation}
-	\psi(\bm{r}) = \frac{1}{4 \pi} \iint_{A_p} \left[ \psi(\bm{r'}) (\bm{n}' \cdot \nabla') \frac{e^{iks}}{s} - \frac{e^{iks}}{s}(\bm{n}' \cdot \nabla') \psi(\bm{r}') \right]  \, da'
-\end{equation} dove
-
+	\psi(\bm{r}) = \frac{1}{4 \pi} \mathlarger{\iint_{A}} \left[ \psi(\bm{r'}) (\bm{n}' \cdot \nabla') \frac{e^{iks}}{s} - \frac{e^{iks}}{s}(\bm{n}' \cdot \nabla') \psi(\bm{r}') \right]  \, da'
+	\label{eq:kirchhoff-diffraction-formula}
+\end{equation}
+dove
 \begin{itemize}
 	\tightlist
 	\item \(\bm{r}\) è il vettore posizione del punto di osservazione
@@ -799,102 +798,136 @@ seguente espressione:
 	\item \(\bm{k}\) è il modulo del vettore d'onda della funzione d'onda incidente
 	\item \(s = | \bm{r} - \bm{r'}|\) è il modulo del vettore congiungente il punto dell'apertura con quello di osservazione
 \end{itemize}
-
 Dato che la funzione d'onda \(\psi(\bm{r})\) compare in entrambi i
 membri, tale espressione richiede la conoscenza della funzione
 \(\psi(\bm{r})\) stessa che si vuole determinare (questo fatto è noto
-come `Paradosso di Kirchhoff'). Un circolo vizioso che viene evitato
-attraverso\textbf{l'approssimazione di Kirchhoff} la quale assume che la
+come `Paradosso di Kirchhoff').
+Un circolo vizioso che viene evitato attraverso \textbf{l'approssimazione di Kirchhoff} la quale assume che la
 funzione \(\psi(\bm{r})\) sia non nulla nei soli punti dell'apertura
-\(A\) dove coincide conla funzione d'onda monocromatica incidente.
+\(A\) ed ivi coincida con la funzione d'onda monocromatica incidente(eliminando cosí il problema
+dell'incurvatura dei fronti d'onda).
+
 Consideriamo allora il caso di onda piana monocromatica diretta lungo
 l'asse delle \(z\) positive incidente su di uno schermo piano normale
-all'asse stesso. Si ha
+all'asse stesso.
+Si ha
 \begin{gather*}
-	\psi(\bm{r}) = \psi_0 e^{i \bm{k} \cdot \bm{r}}= \psi_0e^{ik \hat{k}(x \hat{\imath}+y \hat{\jmath}+z \hat{k})}= \psi_{0e}^{ikz}\\
+	\psi(\bm{r}) = \psi_0 e^{i \bm{k} \cdot \bm{r}}= \psi_0 e^{ik \hat{k}(x \hat{\imath}+y \hat{\jmath}+z \hat{k})}
+	= \psi_{0} e^{ikz}\\
 	\bm{n}' = \hat{k}\\
-	\psi(\bm{r'}) = \psi_0 e^{i \bm{k} \cdot \bm{r'}}= \psi_0e^{ik \hat{k}(x' \hat{\imath}+y' \hat{\jmath}+z' \hat{k})}= \psi_{0e}^{ikz'}\\
+	\psi(\bm{r'}) = \psi_0 e^{i \bm{k} \cdot \bm{r'}}= \psi_0 e^{ik \hat{k}(x' \hat{\imath}+y' \hat{\jmath}+z' \hat{k})}
+	= \psi_{0} e^{ikz'}
 \end{gather*}
 e inoltre
 \[
-	s = \sqrt{(x-x')^2+(y-y')^2+(z-z')^2}
+	s = |\bm{r} - \bm{r}'| = \sqrt{(x-x')^2+(y-y')^2+(z-z')^2}
 \]
 Sviluppiamo ora i termini presenti nell'equazione di Kirchhoff:
 \begin{gather*}
 	(\bm{n}' \cdot \nabla')\frac{e^{iks}}{s} = \frac{\partial}{\partial z'}\frac{e^{iks}}{s} = ik \frac{e^{iks}}{s}\frac{\partial s}{\partial z'} - \frac{e^{iks}}{s^2}\frac{\partial s}{\partial z'}  = \left( ik \frac{e^{iks}}{s}- \frac{e^{iks}}{s^2} \right)\frac{\partial s}{\partial z'}\\
-	(\bm{n}' \cdot \nabla')\psi(\bm{r'}) = \frac{\partial}{\partial z'}\psi_0e^{ikz'}=ik\psi_0e^{ikz'}\\
+	(\bm{n}' \cdot \nabla')\psi(\bm{r'}) = \frac{\partial}{\partial z'}\psi_0e^{ikz'}=ik\psi_0 e^{ikz'}
 \end{gather*}
 \begin{align*}
-	\frac{\partial s}{\partial z'} & = \frac{\partial }{\partial z'}|\bm{r'}-\bm{r}| = \frac{\partial }{\partial z'}\sqrt{(x-x')^2+(y-y')^2+(z-z')^2} \\
+	\frac{\partial s}{\partial z'} & = \frac{\partial }{\partial z'}|\bm{r'}-\bm{r}|
+	= \frac{\partial }{\partial z'}\sqrt{(x-x')^2+(y-y')^2+(z-z')^2} \\
 	                               & = - \frac{1}{2s}2(z-z') = - \frac{z-z'}{s} = \cos \theta
 \end{align*}
-con $\cos \theta = \frac{ (\bm{r'}-\bm{r})\cdot \hat{k}}{|\bm{r'}-\bm{r}|}$.
-Da qui ottengo lo sviluppo del primo termine presente nell'equazione di Kirchhoff:
+con
 \[
-	(\bm{n}' \cdot \nabla')\frac{e^{iks}}{s} = -\left(ik\frac{e^{iks}}{s}-\frac{e^{iks}}{s^2}\right) \cos \theta
+\cos \theta = \frac{ (\bm{r'}-\bm{r})\cdot \hat{k}}{|\bm{r'}-\bm{r}|}
 \]
-Sostituendo infine le espressioni di $(\bm{n}' \cdot \nabla ') \frac{e^{iks}}{s}$ e di $(\bm{n}' \cdot \nabla')\psi(\bm{r'})$ in $(16)$ otteniamo
-\[
-	\psi(\bm{r}) = \frac{1}{4 \pi} \iint_{\text{Foro}} \left[-\psi_0 e^{ikz'}\left( ik\frac{e^{iks}}{s}-\frac{e^{iks}}{s^2}\right) \cos \theta - \frac{e^{iks}}{s} ik\psi_0 e^{ikz'} \right] \, da'
-\]
-
 \begin{marginfigure}
 	\includegraphics[width = 1.25 \textwidth, height = 1.25 \textheight]{figs/kirchhoff-diffraction-2}
 	%    \caption{Sezione d'urto differenziale di una sfera rigida.}
 	\label{fig:kirchhoff2}
 \end{marginfigure}
-
+Da qui si ottiene lo sviluppo del primo termine presente nell'equazione di Kirchhoff (\ref{eq:kirchhoff-diffraction-formula}):
+\[
+	(\bm{n}' \cdot \nabla')\frac{e^{iks}}{s} = -\left(ik\frac{e^{iks}}{s}-\frac{e^{iks}}{s^2}\right) \cos \theta
+\]
+Sostituendo infine le espressioni di $(\bm{n}' \cdot \nabla ') \frac{e^{iks}}{s}$ e di
+$(\bm{n}' \cdot \nabla')\psi(\bm{r'})$ in (\ref{eq:kirchhoff-diffraction-formula}) otteniamo
+\[
+	\psi(\bm{r}) = \frac{1}{4 \pi} \mathlarger{\iint_{\text{Foro}}} \left[-\psi_0 e^{ikz'}\left( ik\frac{e^{iks}}{s}-\frac{e^{iks}}{s^2}\right) \cos \theta - \frac{e^{iks}}{s} ik\psi_0 e^{ikz'} \right] \, da'
+\]
 Compiamo la seguente \emph{approssimazione}: se il punto di osservazione
 è a grande distanza, al primo ordine il termine \(1/s^2\) può essere
-trascurato. Abbiamo
+trascurato.
+Abbiamo
 \begin{gather*}
-	\psi(\bm{r}) \simeq \frac{1}{4 \pi} \iint_{\text{Foro}} \left[-\psi_0 e^{ikz'} ik\frac{e^{iks}}{s} \cos \theta - \frac{e^{iks}}{s}ik\psi_0 e^{ikz'} \right]\, da'\\
-	\psi(\bm{r}) \simeq -\psi_0 \frac{ik}{4 \pi} \iint_{\text{Foro}} \frac{e^{i(ks+kz')}}{s}(\cos \theta + 1)\, da' \simeq -\psi_0 \frac{ik}{2 \pi} \iint_{\text{Foro}} \frac{e^{i(ks+kz')}}{s}\,da'\\
+	\psi(\bm{r}) \simeq \frac{1}{4 \pi} \mathlarger{\iint_{\text{Foro}}} \left[-\psi_0 e^{ikz'} ik\frac{e^{iks}}{s}
+	\cos \theta - \frac{e^{iks}}{s}ik\psi_0 e^{ikz'} \right]\, da'\\
+	\psi(\bm{r}) \simeq -\psi_0 \frac{ik}{4 \pi} \mathlarger{\iint_{\text{Foro}}} \frac{e^{i(ks+kz')}}{s}(\cos \theta + 1)\,
+	da' \simeq -\psi_0 \frac{ik}{2 \pi} \iint_{\text{Foro}} \frac{e^{i(ks+kz')}}{s}\,da'
 \end{gather*}
-
-\marginnote{$f(\theta) = 1 + \cos \theta$ fa si che ci sia un fattore che modula l'ampiezza(ad esempio se $\theta = 0,f(\theta) = 2$ mentre è nullo per $\theta = \pi$)}
-
-
+\marginnote
+{ $f(\theta) = 1 + \cos \theta$ fa si che ci sia un fattore che modula l'ampiezza con casi limite
+	\begin{itemize}
+		\item $f(0) = 2$;
+		\item $f(\pi) = 0$.
+	\end{itemize}
+}
 dove nell'ultimo passaggio si è usato
-\(\theta << 1 \rightarrow \cos \theta \simeq 1\). Si noti che
+\(\theta \ll 1 \rightarrow \cos \theta \simeq 1\).
+Si noti che
 l'espressione integrale ottenuta corrisponde al ben noto principio di
 Huygens completato dal \textbf{fattore di obliquità} che modula
 l'ampiezza in modo tale da fornire le onde in avanti ed annullare quelle
 all'indietro.
-Nell'integrale appena ottenuto vogliamo esprimere la fase dell'esponenziale in forma generale attraverso vettori \begin{gather*}
+Nell'integrale appena ottenuto vogliamo esprimere la fase dell'esponenziale in forma generale attraverso vettori
+\begin{gather*}
 	k(s + z') = k(|\bm{r}-\bm{r'}|+z') = k \left(\sqrt{(\bm{r}-\bm{r'})\cdot(\bm{r}-\bm{r'})}+\bm{n}' \cdot \bm{r'}\right)\\
-	= k\left(r \sqrt{1 - \frac{2 \bm{r}\cdot \bm{r'}}{r^2} + \frac{r'^2}{r^2}} + \bm{n}' \cdot \bm{r'}\right) \simeq k\left( r + \frac{r'^2}{2r} - \frac{ \bm{r}\cdot \bm{r'}}{r} + \bm{n}' \cdot \bm{r'}\right)\\
-	= k r + k \frac{r'^2}{2r} - k \frac{ \bm{r}\cdot \bm{r'}}{r} + k \bm{n}' \cdot \bm{r'}\\
+	= k\left(r \sqrt{1 - \frac{2 \bm{r}\cdot \bm{r'}}{r^2} + \frac{r'^2}{r^2}} + \bm{n}' \cdot \bm{r'}\right)
+	\simeq k \left\{ r  \left[ 1 + \frac{1}{2} \left( \frac{2 \bm{r}\cdot \bm{r'}}{r^2} + \frac{r'^2}{r^2}\right) \right]
+	+ \bm{n}' \cdot \bm{r'} \right\} \\
+	=  k\left( r + \frac{r'^2}{2r} - \frac{ \bm{r}\cdot \bm{r'}}{r} + \bm{n}' \cdot \bm{r'}\right)
+	= k r + k \frac{r'^2}{2r} - k \frac{ \bm{r}\cdot \bm{r'}}{r} + k \bm{n}' \cdot \bm{r'}
 \end{gather*}
 I valori assunti da \(r'\) sono molto minori rispetto a quelli di
-\(r\); in particolare se \(D\) è il diametro del foro ed \(L\) la
-distanza dallo schermo
+\(r\); in particolare se \(D\) è la dimensione lineare del foro e \(L\) la
+distanza dal punto di osservazione
 \[
 	k \frac{r'^2}{2r} \simeq \frac{D^2}{\lambda L}
 \]
 Se \(\frac{D^2}{\lambda L} \ll 1\) si parla di \textbf{regime di
-Fraunhofer} e il termine in questione può essere trascurato. Si ha
-quindi \[
-		   k(s+z') \simeq kr - (k \bm{n} - k \bm{n}') \cdot \bm{r}'
-\] Introducendo il \textbf{vettore d'onda trasferito}(che parametrizza
-lo spostamento del punto di osservazione dall'asse del fascio) \[
-																   \bm{q} = k \bm{n} - k \bm{n}'
-\] otteniamo infine \[
-						k(s+ z') \simeq kr - \bm{q} \cdot \bm{r}'
-\] Se il riferimento è interno alla apertura, a seguito della condizione
-di Fraunhofer si ha(sistema \(\simeq\) al centro del foro) \[
-															   s \simeq r - \bm{n} \cdot \bm{r'} \simeq r - r' \cos \theta \simeq r
+Fraunhofer} e il termine in questione può essere trascurato.
+Chiamando
+\[
+    \hat{\bm{n}} = \frac{\bm{r}}{r}
+\]
+si ha
+\[
+	k(s+z') \simeq kr - (k \bm{n} - k \bm{n}') \cdot \bm{r}'
+\]
+Introducendo il \textbf{vettore d'onda trasferito}(che parametrizza
+lo spostamento del punto di osservazione dall'asse del fascio)
+\[
+	\bm{q} = k \bm{n} - k \bm{n}'
+\]
+\begin{marginfigure}
+	\centering
+	\includegraphics[width = 1.25 \textwidth, height = 1.25 \textheight]{figs/schema-vett-trasferito}
+	%    \caption{Sezione d'urto differenziale di una sfera rigida.}
+	\label{fig:vett-trasferito}
+\end{marginfigure}
+otteniamo infine
+\[
+	k(s+ z') \simeq kr - \bm{q} \cdot \bm{r}'
+\]
+Se il riferimento è interno alla apertura, a seguito della condizione
+di Fraunhofer si ha (sistema \(\simeq\) al centro del foro)
+\[
+	s \simeq r - \bm{n} \cdot \bm{r'} \simeq r - r' \cos \theta \simeq r
 \]
 da cui, si ottiene infine l'espressione cercata della \textbf{funzione
-d'onda in campo lontano (o di Fraunhofer) diffratta da una apertura A
+d'onda in campo lontano (o di Fraunhofer) scatterata da una apertura $A$
 investita da un'onda monocromatica}
-
 \begin{equation}
 	\psi(\bm{r}) \simeq - \psi_0 \frac{ik}{2 \pi} \frac{e^{ikr}}{r}
 	\iint_{ap A} e^{-i \bm{q} \cdot \bm{r}'}\, da'
+	\label{eq:far-field-scattered-wave}
 \end{equation}
-
-Come anticipato però, a noi interessa la situazione complementare,
+Come anticipato, però, a noi interessa la situazione complementare,
 poiché vogliamo descrivere l'interazione fascio-bersaglio come
 diffrazione delle onde di De Broglie del fascio da parte di un ostacolo
 avente la forma del bersaglio.
@@ -902,85 +935,113 @@ avente la forma del bersaglio.
 La funzione d'onda \(\psi_{ost A}\) diffratta da uno schermo avente la
 forma di A, può essere ottenuta con il semplice \textbf{principio degli
 schermi complementari} o \textbf{principio di Babinet.}
-
-La $(17)$ fornisce la funzione d'onda diffratta dalla apertura $A$ come integrale dei contributi degli elementi d'area di $A$.
-E' chiaro che la funzione d'onda $\psi_{ost A}$, diffratta da uno schermo avente la stessa forma di A, deve essere data da un integrale dei contributi degli elementi d'area della superficie complementare CA. Ne consegue che la somma delle funzioni d'onda $\psi_{ap A}+ \psi_{ost A}$ debba essere data da un integrale dei contributi degli elementi d'area del piano inifinito contenente $A$, integrale che deve restituire l'onda monocromatica piana incidente \[
-	\psi_{ap A}(\bm{r})+ \psi_{ost A}(\bm{r}) = \psi_0e^{i \bm{k} \cdot \bm{r}}
-\]
 \begin{marginfigure}
 	\centering
-	\includegraphics[width = .8 \textwidth, height = .8 \textheight]{figs/kirchhoff-diffraction-3}
+	\includegraphics[width = .7 \textwidth, height = .7 \textheight]{figs/kirchhoff-diffraction-3}
 	%    \caption{Sezione d'urto differenziale di una sfera rigida.}
 	\label{fig:kirchhoff3}
 \end{marginfigure}
-Da questa relazione possiamo allora ricavare la seguente espressione della \textbf{funzione d'onda diffratta da uno schermo di area A investita da un'onda monocromatica}
+La (\ref{eq:far-field-scattered-wave}) fornisce la funzione d'onda diffratta dalla apertura $A$ come integrale dei contributi degli elementi d'area
+di $A$.
+E' chiaro che la funzione d'onda $\psi_{ost A}$, diffratta da uno schermo avente la stessa forma di A, deve essere data
+da un integrale dei contributi degli elementi d'area della superficie complementare CA.
+
+Ne consegue che la somma delle funzioni d'onda $\psi_{ap A}+ \psi_{ost A}$ debba essere data da un integrale dei contributi degli elementi d'area del
+piano inifinito contenente $A$, integrale che deve restituire l'onda monocromatica piana incidente
 \[
-	\psi_{ost A}(\bm{r}) =  \psi_0e^{i \bm{k} \cdot \bm{r}}- \psi_{ap \  A}(\bm{r}) \simeq \psi_0e^{i \bm{k} \cdot \bm{r}} + \psi_0 \frac{e^{ikr}}{r} \frac{ik}{2 \pi} \iint_{ost}e^{-i \bm{q} \cdot \bm{r'}} \, da'
+	\psi_{ap A}(\bm{r})+ \psi_{ost A}(\bm{r}) = \psi_0 e^{i \bm{k} \cdot \bm{r}}
 \]
-All'interno dell'integrale di superficie di questa espressione conviene introdurre la \textbf{funzione di profilo} $\Gamma$(nota anche come \`f̀unzione pupilla" in ottica classica) la quale, nel caso di una apertura A totalmente trasparente, risulta definita nel modo seguente
+Da questa relazione possiamo allora ricavare la seguente espressione della \textbf{funzione d'onda diffratta da uno schermo di area A investita da un'onda monocromatica}
+\begin{align}
+	    \psi_{ost A}(\bm{r}) & =  \psi_0 e^{i \bm{k} \cdot \bm{r}}- \psi_{ap \  A}(\bm{r}) \nonumber \\
+		 & \simeq \psi_0 e^{i \bm{k} \
+		\cdot \bm{r}} + \psi_0 \frac{e^{ikr}}{r} \frac{ik}{2 \pi} \iint_{A}e^{-i \bm{q} \cdot \bm{r'}} \, da'
+		\label{eq:screen-scattered-wave}
+\end{align}
+All'interno dell'integrale di superficie di questa espressione conviene introdurre la \textbf{funzione di profilo}
+$\Gamma$ (nota anche come ``f̀unzione pupilla'' in ottica classica) la quale, nel caso di una apertura A totalmente trasparente, risulta definita nel modo seguente
 \[
 	\Gamma =
 	\begin{cases}
 		1   \quad \text{all'interno di } A \\
 		0  \quad \text{all'esterno di } A
 	\end{cases}
-\] Si ha allora \[
-	\psi_{ost A}(\bm{r}) \simeq \psi_0e^{i \bm{k} \cdot \bm{r}} + \psi_0 \frac{e^{ikr}}{r} \frac{ik}{2 \pi} \iint_{S_B} \Gamma e^{-i \bm{q} \cdot \bm{r'}} \, da'
-\] dove $S_B$(superficie del bersaglio) è il piano infinito contenente lo schermo/ostacolo $A$.
-
-Si noti che ammettendo valori di $\Gamma$ interni ad $A$ inferiori ad $1$, descriviamo un ostacolo A non più totalmente assorbente come uno schermo, ma piuttosto parzialmente trasparente: nel caso limite in cui $\Gamma = 0$ abbiamo infatti un ostacolo $A$ totalmente trasparente che non genera alcuna diffrazione e restituisce l'onda piana incidente.
-
-Potremmo ottenere la massima generalità ammettendo che $\Gamma$ possa dipendere dalla posizione $\bm{r}'$ in $A$ ed assumere anche valori immaginari in modo da descrivere eventuali effetti assorbitivi.
-Una simile funzione di profilo ci permette di estendere la diffrazione di un ostacolo $A$ totalmente assorbente al caso generale della diffrazione di un ostacolo $A$ modulante e variamente trasparente, capace di descrivere la diffrazione della fuznione d'onda da parte della materia nucleare.
-Sulla base di queste considerazioni, la funzione d'onda assume la forma seguente (lascieremo cadere d'ora in avanti il pedice 'ost')
+\]
+Si ha allora
 \[
-	\psi_{ost A}(\bm{r}) \simeq \psi_0e^{i \bm{k} \cdot \bm{r}} + \psi_0 \frac{e^{ikr}}{r} \underbrace{\frac{ik}{2 \pi} \iint_{S_B} \Gamma(\bm{r}') e^{-i \bm{q} \cdot \bm{r'}} \, da'}_{f(\bm{q})}
-	\qquad 0 \leq \Gamma(\bm{r}') \leq 1
+	\psi_{ost A}(\bm{r}) \simeq \psi_0e^{i \bm{k} \cdot \bm{r}} + \psi_0 \frac{e^{ikr}}{r} \frac{ik}{2 \pi} \iint_{S_B} \Gamma e^{-i \bm{q} \cdot \bm{r'}} \, da'
+\]
+dove $S_B$ (superficie del bersaglio) è il piano infinito contenente lo schermo/ostacolo $A$.
+Si noti che ammettendo valori di $\Gamma$ interni ad $A$ inferiori ad $1$, descriviamo un ostacolo A non più totalmente
+assorbente come uno schermo, ma piuttosto parzialmente trasparente: nel caso limite in cui $\Gamma = 0$ abbiamo infatti un ostacolo $A$ totalmente trasparente che non genera alcuna diffrazione e restituisce l'onda piana incidente.
+
+Potremmo ottenere la massima generalità ammettendo che $\Gamma$ possa dipendere dalla posizione $\bm{r}'$ in $A$ ed
+\emph{assumere anche valori immaginari in modo da descrivere eventuali effetti assorbitivi}.
+Una simile funzione di profilo ci permette di estendere la diffrazione di un ostacolo $A$ totalmente assorbente al caso
+generale della diffrazione di un ostacolo $A$ modulante e variamente trasparente, capace di descrivere la diffrazione della funzione d'onda da parte della materia nucleare.
+Sulla base di queste considerazioni, la funzione d'onda assume la forma seguente
+\begin{marginfigure} Ampiezza di diffusione \end{marginfigure}
+\[
+	\psi_{ost A}(\bm{r}) \simeq \psi_0 e^{i \bm{k} \cdot \bm{r}} + \psi_0 \frac{e^{ikr}}{r} \underbrace{\frac{ik}{2 \pi}
+	\iint_{S_B} \Gamma(\bm{r}') e^{-i \bm{q} \cdot \bm{r'}} \, da'}_{f(\bm{q})}
+	\qquad \Gamma(\bm{r}') \in \mathbb{C}
 \]
 Introducendo \textbf{l'ampiezza di diffusione}, che integra i contributi modulanti e assorbenti degli elementi d'area dell'ostacolo corrispondenti ad un certo vettore d'onda trasferito $\bm{q}$
-\[
+\begin{equation}
 	f(\bm{q}) = \frac{ik}{2 \pi} \iint_{S_B} \Gamma(\bm{r}')e^{-i \bm{q} \cdot \bm{r}'} \, da'
-\]
-otteniamo la seguente espressione della \textbf{funzione d'onda in campo lontano diffratta da un ostacolo modulante e assorbente}
+    \label{eq:scattering-amplitude}
+\end{equation}
+e da (\ref{eq:screen-scattered-wave}) otteniamo la seguente espressione della \textbf{funzione d'onda in campo lontano diffratta da un ostacolo modulante e assorbente}
 \begin{equation}
 	\psi_0(\bm{r}) = \psi_0 \left(e^{i \bm{k} \cdot \bm{r}} +
 	f(\bm{q}) \frac{e^{ikr}}{r}\right)
+	\label{eq:far-field-obstacle-scattered-wave}
 \end{equation}
-
 \begin{marginfigure}
 	\centering
 	\includegraphics{figs/kirchhoff-diffraction-4}
 	%    \caption{Sezione d'urto differenziale di una sfera rigida.}
 	\label{fig:kirchhoff4}
 \end{marginfigure}
-
-Tale espressione mostra che la figura di diffrazione prodotta da un ostacolo in un dato punto dello spazio è il risultato della interferenza dell'onda piana incidente con l'onda sferica proveniente dall' ostacolo modulata dall'ampiezza di diffusione.
+Tale espressione mostra che la figura di diffrazione prodotta da un ostacolo in un dato punto dello spazio è il
+risultato della interferenza dell'onda piana incidente con l'onda sferica proveniente dall' ostacolo modulata
+dall'ampiezza di diffusione.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Le sezioni d'urto in meccanica quantistica}\label{sec:le-sezioni-d'urto-in-meccanica-quantistica}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Dalla definizione generale sappiamo che il quoziente tra sezione d'urto
-del processo e superficie della sezione del fascio deve fornire la
-\emph{probabilità del processo} stesso
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Per definizone, la \emph{probabilitá che si verifichi una certa ``interazione''} tra fascio e bersaglio corrisponde a
 \[
-	\text{Prob}_{\text{int}}  = \frac{\sigma_{diff}}{\Sigma}
-\] un fatto che ci permette di affermare che la sezione d'urto del
+	 p_{int} = \frac{\sigma_{int}}{\Sigma}
+\]
+un fatto che ci permette di affermare che la sezione d'urto del
 processo altro non è che la frazione di sezione del fascio che produce
-eventi di quel processo.
+eventi di quel processo di interazione.
 D'altra parte, nella meccanica quantistica, la
 probabilità di un certo processo può essere calcolata mettendo a
 quoziente il modulo quadrato della funzione d'onda del processo
-integrato sulla superficie di osservazione \(S_O\) con il modulo
+integrato sulla \emph{superficie di osservazione} $ S_O$ con il modulo
 quadrato della funzione d'onda incidente integrata sulla sezione del
-fascio \(\Sigma\):
-\[
-	\text{Prob}_{\text{int}}  = \fraclarg{ \iint_{S_O} |\psi_{diff}|^2 \, dS}{\iint_{\Sigma} |\psi_{inc}|^2| \, d \Sigma}
-\]
-Otteniamo allora la seguente espressione della \textbf{sezione d'urto
-integrale del processo}
+fascio \(\Sigma\)\sidenote
+{
+Si ha una profonda analogia con l'ottica classica. Basti pensare al caso delle onde elettromagnetiche, per cui l'equivalente
+della relazione~\ref{eq:quantum-interaction-probability} sarebbe la valutazione del bilancio energetico
+tra l'energia dell'onda post processo(scattering/absorption) e quella di quella incidente pre processo.
+Il denominatore della ~\ref{eq:quantum-interaction-probability} rappresenta quindi una ``probabilità entrante'',
+ovvero il fascio incidente appena prima di interagire con il bersaglio.
+}
+\begin{equation}
+	p_{int}  = \fraclarg{ \iint_{S_O} |\psi_{int}|^2 \, dS}{\iint_{\Sigma} |\psi_{inc}|^2| \, d \Sigma}
+	\label{eq:quantum-interaction-probability}
+\end{equation}
+Otteniamo allora la seguente espressione della \textbf{sezione d'urto integrale del processo}
 \begin{equation}
 	\sigma_{int} = \Sigma \fraclarg{\iint_{S_0} |\psi_{diff}|^2 \, dS}{\iint_{\Sigma}|\psi_{inc}|^2 \, d \Sigma}
-\end{equation} ed anche quella della \textbf{sezione d'urto elementare
-del processo}
+\end{equation}
+ed anche quella della \textbf{sezione d'urto elementare del processo}
 \begin{equation}
 	d \sigma_{int} = \Sigma \fraclarg{|\psi_{diff}|^2 \, dS}{\iint_{\Sigma}|\psi_{inc}|^2 \, d \Sigma}
 \end{equation}
