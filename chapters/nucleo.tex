@@ -49,7 +49,7 @@ Introduciamo la seguente notazione:
 \begin{itemize}
 	\tightlist
 	\item
-	\textbf{Processi di diffusione}: le particelle emergenti dal bersaglio
+	\textbf{Processi di diffusione(scattering)}: le particelle emergenti dal bersaglio
 	coincidono con quelle del raggio incidente;
 	\item
 	\textbf{Processi di produzione}: non vale quanto sopra.
@@ -217,7 +217,7 @@ Se l'apparato sperimentale è costruito in modo opportuno risulta
 possibile andare oltre il semplice conteggio del numero di particelle
 deflesse e fornire informazioni sempre più stringenti.
 Ad esempio, con un apparato sperimentale disposto attorno al bersaglio e
-\emph{opportunamente segmentato}, in un processo di diffusione risulta
+\emph{opportunamente segmentato}, in un processo di scattering risulta
 possibile misurare la distribuzione angolare delle particelle del fascio
 deflesse dal bersaglio acquisendo un'ulteriore informazione sperimentale
 sulle proprietà della interazione in gioco.
@@ -260,7 +260,7 @@ dell'intervallo elementare \(dE\).
 Si ha infatti:
 \begin{gather*}
 	\frac{d \sigma}{d \Omega} = \frac{1}{(n_fv)(n_b \Sigma \Delta x)}\frac{d}{d \Omega} \left( \frac{dN_{def}}{dt} \ \text{in} \ d\Omega\right)\\
-	\frac{d^2 \sigma}{dE d \Omega} = \frac{1}{(n_fv)(n_b \Sigma \Delta x)}\frac{d}{dE}\frac{d}{d \Omega} \left( \frac{dN_{def}}{dt} \ \text{in} \ d\Omega \ \text{e} \ dE\right)\\
+	\frac{d^2 \sigma}{dE d \Omega} = \frac{1}{(n_fv)(n_b \Sigma \Delta x)}\frac{d}{dE}\frac{d}{d \Omega} \left( \frac{dN_{def}}{dt} \ \text{in} \ d\Omega \ \text{e} \ dE\right)
 \end{gather*}
 Il nostro ipotetico esperimento misurerà allora la seguente
 \textbf{sezione d'urto doppiamente differenziale in funzione dell'angolo
@@ -980,13 +980,13 @@ Potremmo ottenere la massima generalità ammettendo che $\Gamma$ possa dipendere
 Una simile funzione di profilo ci permette di estendere la diffrazione di un ostacolo $A$ totalmente assorbente al caso
 generale della diffrazione di un ostacolo $A$ modulante e variamente trasparente, capace di descrivere la diffrazione della funzione d'onda da parte della materia nucleare.
 Sulla base di queste considerazioni, la funzione d'onda assume la forma seguente
-\begin{marginfigure} Ampiezza di diffusione \end{marginfigure}
+\begin{marginfigure} Ampiezza di scattering \end{marginfigure}
 \[
 	\psi_{ost A}(\bm{r}) \simeq \psi_0 e^{i \bm{k} \cdot \bm{r}} + \psi_0 \frac{e^{ikr}}{r} \underbrace{\frac{ik}{2 \pi}
 	\iint_{S_B} \Gamma(\bm{r}') e^{-i \bm{q} \cdot \bm{r'}} \, da'}_{f(\bm{q})}
 	\qquad \Gamma(\bm{r}') \in \mathbb{C}
 \]
-Introducendo \textbf{l'ampiezza di diffusione}, che integra i contributi modulanti e assorbenti degli elementi d'area dell'ostacolo corrispondenti ad un certo vettore d'onda trasferito $\bm{q}$
+Introducendo \textbf{l'ampiezza di scattering}, che integra i contributi modulanti e assorbenti degli elementi d'area dell'ostacolo corrispondenti ad un certo vettore d'onda trasferito $\bm{q}$
 \begin{equation}
 	f(\bm{q}) = \frac{ik}{2 \pi} \iint_{S_B} \Gamma(\bm{r}')e^{-i \bm{q} \cdot \bm{r}'} \, da'
     \label{eq:scattering-amplitude}
@@ -1005,7 +1005,7 @@ e da (\ref{eq:screen-scattered-wave}) otteniamo la seguente espressione della \t
 \end{marginfigure}
 Tale espressione mostra che la figura di diffrazione prodotta da un ostacolo in un dato punto dello spazio è il
 risultato della interferenza dell'onda piana incidente con l'onda sferica proveniente dall' ostacolo modulata
-dall'ampiezza di diffusione.
+dall'ampiezza di scattering.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1037,58 +1037,70 @@ ovvero il fascio incidente appena prima di interagire con il bersaglio.
 	p_{int}  = \fraclarg{ \iint_{S_O} |\psi_{int}|^2 \, dS}{\iint_{\Sigma} |\psi_{inc}|^2| \, d \Sigma}
 	\label{eq:quantum-interaction-probability}
 \end{equation}
+Il termine a denominatore fa si che sia rispettata la condizione di normalizzazione per cui il quoziente può davvero
+rappresentare una probabilità.
+Si pensi infatti ai casi limite(per definitezza consideriamo il processo in questione un processo di scattering):
+\begin{itemize}
+	\item $\psi_{scatt} = \psi_{inc}$: si ha l'onda incidente tutta sullo schermo per cui $ p_{scatt} = 1$;
+	misurando sullo schermo tutta l’onda iniziale significa che sicuramente c’è stata l’interazione di
+	scattering che ha prodotto l’onda stessa;
+	\item $ \psi_{scatt} = 0$: l'interezza dell'onda viene assorbita dallo schermo per cui $ p_{scatt} = 0$.
+\end{itemize}
 Otteniamo allora la seguente espressione della \textbf{sezione d'urto integrale del processo}
 \begin{equation}
-	\sigma_{int} = \Sigma \fraclarg{\iint_{S_0} |\psi_{diff}|^2 \, dS}{\iint_{\Sigma}|\psi_{inc}|^2 \, d \Sigma}
+	\sigma_{int} = \Sigma \fraclarg{\iint_{S_0} |\psi_{int}|^2 \, dS}{\iint_{\Sigma}|\psi_{inc}|^2 \, d \Sigma}
+	\label{eq:integral-interaction-cross-section}
 \end{equation}
 ed anche quella della \textbf{sezione d'urto elementare del processo}
 \begin{equation}
-	d \sigma_{int} = \Sigma \fraclarg{|\psi_{diff}|^2 \, dS}{\iint_{\Sigma}|\psi_{inc}|^2 \, d \Sigma}
+	d \sigma_{int} = \Sigma \fraclarg{|\psi_{scatt}|^2 \, dS}{\iint_{\Sigma}|\psi_{inc}|^2 \, d \Sigma}
+	\label{eq:differential-interaction-cross-section}
 \end{equation}
 dove l'elemento \(dS\) a numeratore si riferisce, come
 detto sopra, al generico elemento di superficie di uno schermo lontano
 \(S_O\) su cui osserviamo il processo in esame.
-\marginnote
-{
-	\textbf{Significato fisico della probabilita lungo una superficie(da sistemare)}
-
-	Possiamo vedere la probabilita come qualcosa che fluisce lungo la superficie. Come si scrive un flusso di probabilita su una superficie? Sappiamo gia calcolare quanta probabilita fluisce all'interno di un volume La differenza che sussiste e la stessa che c'e tra densita di carica e densita di corrente \[
-		\nabla \cdot \bm{J} = - \frac{\partial \rho}{\partial t}
-	\] \[
-		\iiint \nabla \cdot \bm{J} \,dV =  - \frac{\partial }{\partial t}\iiint \rho \, dV
-	\] \[
-		\iint_{S(V)} \bm{J}dS = - \frac{\partial }{\partial t}\iiint \rho \, dV  \qquad \bm{j} = \rho \bm{v}
-	\] Questa relazione ci dice: la carica dentro il volume varia in una misura che e uguale al suo flusso di superficie--\> non c'e variazione totale, solo flusso da una parte all'altra--\> cio vale perche le equazioni stabiliscono questo equilibrio
-
-	\[
-		\bm{J} = |\psi|^2\bm{v}
-	\] \[
-		\frac{\iint |\psi_1|^2vds}{\iint |\psi_2|^2vds}
-	\] v e costante essendo in un processo di diffusione.
-}
+%%%TODO 09/12/22 niccolozanotti: Valuta se mettere questa cosa fatta in classe a cazzo di cane
+%\marginnote
+%{
+%	\textbf{Significato fisico della probabilita lungo una superficie(da sistemare)}
+%
+%	Possiamo vedere la probabilita come qualcosa che fluisce lungo la superficie. Come si scrive un flusso di probabilita su una superficie? Sappiamo gia calcolare quanta probabilita fluisce all'interno di un volume La differenza che sussiste e la stessa che c'e tra densita di carica e densita di corrente \[
+%		\nabla \cdot \bm{J} = - \frac{\partial \rho}{\partial t}
+%	\] \[
+%		\iiint \nabla \cdot \bm{J} \,dV =  - \frac{\partial }{\partial t}\iiint \rho \, dV
+%	\] \[
+%		\iint_{S(V)} \bm{J}dS = - \frac{\partial }{\partial t}\iiint \rho \, dV  \qquad \bm{j} = \rho \bm{v}
+%	\] Questa relazione ci dice: la carica dentro il volume varia in una misura che e uguale al suo flusso di superficie--\> non c'e variazione totale, solo flusso da una parte all'altra--\> cio vale perche le equazioni stabiliscono questo equilibrio
+%
+%	\[
+%		\bm{J} = |\psi|^2\bm{v}
+%	\] \[
+%		\frac{\iint |\psi_1|^2vds}{\iint |\psi_2|^2vds}
+%	\] v e costante essendo in un processo di diffusione.
+%}
 
 Nel caso il processo in esame consista nella diffusione da parte dell'ostacolo, risulta possibile calcolare in pochi passaggi la sezione d'urto di diffusione nell'angolo solido elementare.
 Infatti, dalla ($18$) si ottengono subito le seguenti espressioni delle funzioni d'onda incidente e diffusa \[
 	\psi_{inc} = \psi_o e^{i \bm{k} \cdot \bm{r}} \qquad
-	\psi_{diff} = \psi_o f(\bm{q})\frac{e^{ikr}}{r}
+	\psi_{scatt} = \psi_o f(\bm{q})\frac{e^{ikr}}{r}
 \] tenendo poi conto che l'elemento di superficie di un eventuale schermo $S_O$ di forma sferica può essere espresso come segue \[
 	dS = r^2 d \Omega
 \] sostituendo nella $(20)$ otteniamo \[
-	d \sigma_{diff} = \Sigma \fraclarg{|\psi_0|^2|f(\bm{q})|^2\frac{1}{r^2}r^2 d \Omega}{\iint_{\Sigma}|\psi_0|^2 \, d \Sigma}
+	d \sigma_{scatt} = \Sigma \fraclarg{|\psi_0|^2|f(\bm{q})|^2\frac{1}{r^2}r^2 d \Omega}{\iint_{\Sigma}|\psi_0|^2 \, d \Sigma}
 	= \Sigma \frac{|\psi_0|^2|f(\bm{q})|^2 d \Omega}{|\psi_0|^2 \Sigma}
 	= |f(\bm{q})|^2 d \Omega
 \]
 da cui, infine, si derivano le espressioni della \textbf{sezione d'urto di diffusione differenziale e totale rispetto all'angolo solido}
 
 \begin{equation}
-	\frac{d \sigma_{diff}}{d \Omega} = |f(\bm{q})|^2 \qquad
-	\sigma_{diff} = \iint_{\Omega}|f(\bm{q})|^2 \, d \Omega
-\end{equation} Tale espressione chiarisce che la sezione d'urto differenziale di diffusione rispetto all'angolo solido è data dal modulo quadrato della ampiezza di diffusione, dipendente dal vettore d'onda trasferito che parametrizza l'angolo rispetto alla direzione del fascio.
+	\frac{d \sigma_{scatt}}{d \Omega} = |f(\bm{q})|^2 \qquad
+	\sigma_{scatt} = \iint_{\Omega}|f(\bm{q})|^2 \, d \Omega
+\end{equation}
+Tale espressione chiarisce che la sezione d'urto differenziale di diffusione rispetto all'angolo solido è data dal modulo quadrato della ampiezza di diffusione, dipendente dal vettore d'onda trasferito che parametrizza l'angolo rispetto alla direzione del fascio.
 
 L' espressione ($18$) della funzione d'onda di diffrazione prodotta da un ostacolo ci permette pure il calcolo della sezione d'urto di assorbimento del fascio incidente.
 Tale sezione d'urto può essere ottenuta osservando che la probabilità incidente sulla superficie $S_B$ deve essere assorbita dal bersaglio su $S_B$, oppure diffratta e osservata sullo schermo di osservazione $S_O$.
 Tenendo presente che la funzione d'onda incidente è non nulla sulla sezione del fascio $\Sigma$, mentre quella di assorbimento è non nulla sul bersaglio, si ottiene la relazione di bilancio:
-
 \begin{gather*}
 	\iint_{\Sigma} |\psi_{inc}|^2 \, dS =
 	\iint_{S_O} |\psi_{diffr}|^2 \, dS +
@@ -1106,15 +1118,15 @@ Tenendo presente che la funzione d'onda incidente è non nulla sulla sezione del
 	                 & =  |\psi_0|^2 + |\psi_0|^2 \frac{|f(\bm{q})|^2}{r^2} + 2 |\psi_0|^2 \Re f(\bm{q})\frac{e^{ik(r-z)}}{r}
 \end{align*} Integrando sullo schermo si ha: \begin{gather*}
 	\iint_{S_O} |\psi_0|^2 \, dS + \iint_{S_O}|\psi_0|^2 |f(\bm{q})|^2\, \frac{dS}{r^2} + \iint_{S_O}2 |\psi_0|^2 \Re f(\bm{q})\frac{e^{ik(r-z)}}{r} \, dS\\
-	= |\psi_0|^2 \Sigma + |\psi_0|^2 \sigma_{diff} + 2 |\psi_0|^2 \Re \iint_{S_O} f(\bm{q})\frac{e^{ik(r-z)}}{r} \,dS\\
+	= |\psi_0|^2 \Sigma + |\psi_0|^2 \sigma_{scatt} + 2 |\psi_0|^2 \Re \iint_{S_O} f(\bm{q})\frac{e^{ik(r-z)}}{r} \,dS\\
 \end{gather*} Il primo termine si è scritto come $|\psi_0|^2 \Sigma$ (e non $|\psi_0|^2 S)$ in quanto nel caso reale abbiamo identità di aree perche il nucleo e piccolissimo rispetto alla sezione del fascio ed inoltre gli angoli di diffusione sono molto piccoli.
 
 Per quanto riguarda la sezione d'urto di assorbimento si ha
 \[
-	\sigma_{ass} = \Sigma   \fraclarg{|\psi_0|^2 \Sigma - \left[ |\psi_0|^2 \Sigma + |\psi_0|^2 \sigma_{diff} +  2 |\psi_0|^2 \Re \iint_{S_O} f(\bm{q})\frac{e^{ik(r-z)}}{r} \,dS \right]}{|\psi_0|^2 \Sigma}
+	\sigma_{ass} = \Sigma   \fraclarg{|\psi_0|^2 \Sigma - \left[ |\psi_0|^2 \Sigma + |\psi_0|^2 \sigma_{scatt} +  2 |\psi_0|^2 \Re \iint_{S_O} f(\bm{q})\frac{e^{ik(r-z)}}{r} \,dS \right]}{|\psi_0|^2 \Sigma}
 \] da cui
 \begin{equation}
-	\sigma_{ass} = - \sigma_{diff} -  2  \Re \iint_{S_O} f(\bm{q})\frac{e^{ik(r-z)}}{r} \,dS
+	\sigma_{ass} = - \sigma_{scatt} -  2  \Re \iint_{S_O} f(\bm{q})\frac{e^{ik(r-z)}}{r} \,dS
 \end{equation}
 
 Per proseguire negli sviluppi è necessario calcolare l'integrale sullo schermo $S_O$.
@@ -1139,7 +1151,7 @@ Risostituendo nell'integrale che compare nell'espressione di $\sigma_{ass}$ abbi
 	\int_{- \infty}^{\infty} e ^{- \frac{k}{2iz}y^2} \, dy = - \frac{2}{z} \Re f(\bm{0}) \sqrt{\frac{2iz}{k}}\sqrt{\pi}\sqrt{\frac{2iz}{k}}\sqrt{\pi}\\
 	= - \frac{2}{z} \Re f(\bm{0}) \frac{2iz}{k}\pi = - \frac{4 \pi}{k} \Re i (\Re f(\bm{0}) + i  \Im f(\bm{0}))\\
 \end{gather*} ottenendo infine \[
-	\boxed{\sigma_{diff} + \sigma_{ass} = \frac{4 \pi}{k} \Im f(\bm{0})}
+	\boxed{\sigma_{scatt} + \sigma_{ass} = \frac{4 \pi}{k} \Im f(\bm{0})}
 \] risultato noto come \textbf{teorema ottico}.
 
 \marginnote{Teorema ottico}
@@ -1159,7 +1171,7 @@ Integrando l'ampiezza di diffusione su tutto l'angolo solido nella
 di diffusione in funzione del profilo (vedi formula di Kirchhoff in
 appendice).
 \begin{equation}
-	\sigma_{diff} = \iint_{S_B} |\Gamma(\bm{r}')|^2 \, da'
+	\sigma_{scatt} = \iint_{S_B} |\Gamma(\bm{r}')|^2 \, da'
 \end{equation}
 \begin{gather*}
 	\frac{4 \pi}{k} \Im \left(\frac{ik}{2 \pi} \iint \Gamma \, da' \right) =
@@ -1242,11 +1254,11 @@ Tenendo ora conto che \(q = k \sin \theta\) otteniamo infine
 \end{equation}
 Tenendo conto ora della funzione profilo considerata dalla \((25)\) si ottiene la seguente espressione
 \[
-	\sigma_{diff} = \iint_{S_B} |\Gamma(\bm{r})|^2 \, da = \iint_{S_B} da
+	\sigma_{scatt} = \iint_{S_B} |\Gamma(\bm{r})|^2 \, da = \iint_{S_B} da
 \]
 dalla quale segue la \textbf{sezione d'urto totale di diffusione del disco assorbente}
 \begin{equation}
-	\sigma_{diff} = \pi R^2
+	\sigma_{scatt} = \pi R^2
 \end{equation}
 Calcoliamo l'ampiezza di diffusione in avanti
 \[
@@ -1262,7 +1274,7 @@ da segue la \textbf{sezione dl'urto totale d'interazione del disco assorbente}
 \end{equation}
 Dal teorema ottico infine
 \[
-	\sigma_{ass} = \sigma_{tot} - \sigma_{diff} = 2\pi ^2 - \pi R^2
+	\sigma_{ass} = \sigma_{tot} - \sigma_{scatt} = 2\pi ^2 - \pi R^2
 \] da cui segue l'espressione della \textbf{sezione d'urto totale di
 assorbimento del disco assorbente}
 \begin{equation}
@@ -1366,7 +1378,7 @@ Leggendo il valore della sezione d'urto totale d'interazione corrispondente ad u
 	r_0 \simeq \frac{1}{4} \left( \sqrt{\frac{2.8 \times 10^{-24}}{2 \pi} } - 2.4 \times 10^{-13} \right) \simeq1.1 \ fm\\
 \end{gather*} Informazioni più dettagliate sulla geometria del nucleo possono essere ottenute da esperimenti capaci di misura- re la sezione d'urto differenziale di diffusione.
 Modellando il nucleo come un disco circolare assorbente la una sezione d'urto differenziale di diffusione sarà data dalla espressione \[
-	\frac{d\sigma_{diff}}{d \Omega} = \frac{R^{2}}{\sin ^{2}\theta}J_{1}^{2}\left( \frac{2 \pi R}{\lambda} \sin \theta \right)
+	\frac{d\sigma_{scatt}}{d \Omega} = \frac{R^{2}}{\sin ^{2}\theta}J_{1}^{2}\left( \frac{2 \pi R}{\lambda} \sin \theta \right)
 \] che va confrontata con i dati sperimentali mostrati a fianco.
 Si nota subito che i dati mostrano un andamento con l'angolo $\theta$ di tipo diffrattivo, in prima approssimazione compatibile con quello di una funzione di Bessel del primo ordine.
 
@@ -1375,7 +1387,7 @@ Sviluppando asintoticamente la funzione di Bessel per piccoli valori dell'argome
 	J_{1}(z) \sim \frac{1}{2}z - \frac{1}{16}z^{3}
 \] da cui - sostituendo - otteniamo la \textbf{sezione d'urto differenziale di diffusione in avanti} dalla quale si può ottenere una nuova \textbf{stima del raggio nucleare}
 \[
-	\frac{d\sigma_{diff}}{d \Omega} = \frac{R^{2}}{\sin ^{2}\theta}J_{1}^{2}\left( \frac{2 \pi R}{\lambda} \sin \theta \right) \sim \frac{R^{2}}{\sin ^{2}\theta} \frac{1}{4} \frac{4 \pi^{2} R^{2}}{\lambda^{2}} \sin ^{2} \theta \sim \frac{\pi^{2}R^{4}}{\lambda^{2}}
+	\frac{d\sigma_{scatt}}{d \Omega} = \frac{R^{2}}{\sin ^{2}\theta}J_{1}^{2}\left( \frac{2 \pi R}{\lambda} \sin \theta \right) \sim \frac{R^{2}}{\sin ^{2}\theta} \frac{1}{4} \frac{4 \pi^{2} R^{2}}{\lambda^{2}} \sin ^{2} \theta \sim \frac{\pi^{2}R^{4}}{\lambda^{2}}
 \]
 \begin{marginfigure}
 	\centering
