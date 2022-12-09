@@ -1,2 +1,33 @@
-Integriamo la sezione d’urto di diffusione sullo schermo lontano $ S_O$ sul quale si osserva la diffrazione
-(supporremo lo schermo grande rispetto alle dimensioni della figura di diffrazione)
+\begin{fullwidth}
+    Integriamo la sezione d'urto di scattering sullo schermo $ S_O$ su cui si osserva la diffrazione in approssimazione di
+    far field(schermo lontano).
+    Supporremo inoltre lo schermo molto esteso rispetto all'estensione della figura di diffrazione.
+    \[
+        \sigma_{scatt} = \iint_{\Omega} |f(\bm{q})|^2 \, d \Omega = \iint_{S_O} \frac{|f(\bm{q})|^2}{r^2} \, da
+    \]
+    Ora, sostituendo l'espressione della scattering amplitude (\ref{eq:scattering-amplitude}) ed utilizzando l'identità
+    $ |f|^2 = \bar{f}f$ abbiamo
+    \begin{align*}
+        \sigma_{scatt} &= \iint_{S_O} \left[
+            \frac{1}{{r}^{2}} \left(
+            \frac{ik}{2 \pi} \iint_{S_B} \Gamma(\bm{r}')
+            e^{-i \bm{q} \cdot \bm{r}'} \, da'
+            \right)
+            \left( - \frac{ik}{2 \pi} \iint_{S_B} \bar{\Gamma}(\bm{r}') e^{i \bm{q} \cdot \bm{r}''} \, da'' \right)
+            \right] \,  da \\
+        & =  \frac{{k}^{2}}{4 \pi^2} \iint_{S_O} \left( \frac{1}{{r}^{2}} \iint_{S_B}  \iint_{S_B}
+        \Gamma(\bm{r}') \bar{\Gamma}(\bm{r}'') e^{i \bm{q} \cdot (\bm{r}''-\bm{r}')} \, da'' da' \right) \, da \\
+        & = \frac{{k}^{2}}{4 \pi^2}  \iint_{S_B}  \iint_{S_B}\left(\iint_{S_O} \frac{1}{{r}^{2}}
+        \Gamma(\bm{r}') \bar{\Gamma}(\bm{r}'') e^{i \bm{q} \cdot (\bm{r}''-\bm{r}')} \, da \right) \, da'' da'
+    \end{align*}
+
+    Assumendo un sistema di coordinate cartesiano con l’asse z orientato normalmente agli schermi, la coordinata z
+    del secondo schermo assume valori grandi, si hanno allora le relazioni seguenti
+
+
+
+
+
+
+
+\end{fullwidth}
