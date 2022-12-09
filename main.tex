@@ -3,8 +3,8 @@
 %----------------------------------------------------------------------------------------
 
 \documentclass{tufte-book} % Use the tufte-book class which in turn uses the tufte-common class
-%\setcounter{tocdepth}{2}
-%\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{2}
 
 
 \hypersetup{colorlinks} % Comment this line if you don't wish to have colored links
@@ -89,13 +89,13 @@
 \usepackage{xcolor}
 \usepackage{hyperref} % Used to generate the index
 \hypersetup{colorlinks=true,linkcolor=red}
-\makeindex % Generate the index which is printed at the end of the document
+%\makeindex % Generate the index which is printed at the end of the document
 
 %----------------------------------------------------------------------------------------
 %	BOOK META-INFORMATION
 %----------------------------------------------------------------------------------------
 
-\title{Appunti dal corso di Fisica Nucleare\\ e Subnucleare} % Title of the book
+\title{Appunti di\\Fisica Nucleare} % Title of the book
 
 \author{Niccolò Zanotti} % Author
 
@@ -191,13 +191,18 @@ limitations under the License.\index{license}
 
         \input{chapters/modelli-nucleari.tex}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{La fisica delle particelle elmeentari}\label{ch:particelle-elementari}
+\appendix
+\chapter{Appendice A : Integrazione sull'angolo solido della sezione d'urto di scattering}
+\label{ch:integrazione-sezione-urto-angolo-solido}
+ \input{chapters/appendiceA}
 
-  \input{chapters/particelle-elementari.tex}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\chapter{Appendici}\label{ch:appendice}
+\chapter{Appendice B : Funzione di Bessel di ordine zero}
+\label{ch:funzione-bessel-zero}
+\input{chapters/appendiceB}
 
- \input{chapters/appendice.tex}
+\chapter{Appendice C : Integrazione della funzione di Bessel di ordine zero}
+\label{ch:integrazione-bessel-zero}
+\input{chapters/appendiceC}
 
 
 \mainmatter
@@ -214,6 +219,6 @@ limitations under the License.\index{license}
 
 %----------------------------------------------------------------------------------------
 
-\printindex % Print the index at the very end of the document
+%\printindex % Print the index at the very end of the document
 %\bibliography
 \end{document}
