@@ -7,22 +7,65 @@
     \]
     Ora, sostituendo l'espressione della scattering amplitude (\ref{eq:scattering-amplitude}) ed utilizzando l'identità
     $ |f|^2 = \bar{f}f$ abbiamo
-    \begin{align*}
+    \begin{align}
         \sigma_{scatt} &= \iint_{S_O} \left[
             \frac{1}{{r}^{2}} \left(
             \frac{ik}{2 \pi} \iint_{S_B} \Gamma(\bm{r}')
             e^{-i \bm{q} \cdot \bm{r}'} \, da'
             \right)
             \left( - \frac{ik}{2 \pi} \iint_{S_B} \bar{\Gamma}(\bm{r}') e^{i \bm{q} \cdot \bm{r}''} \, da'' \right)
-            \right] \,  da \\
+            \right] \,  da  \ nonumber \\
         & =  \frac{{k}^{2}}{4 \pi^2} \iint_{S_O} \left( \frac{1}{{r}^{2}} \iint_{S_B}  \iint_{S_B}
-        \Gamma(\bm{r}') \bar{\Gamma}(\bm{r}'') e^{i \bm{q} \cdot (\bm{r}''-\bm{r}')} \, da'' da' \right) \, da \\
+        \Gamma(\bm{r}') \bar{\Gamma}(\bm{r}'') e^{i \bm{q} \cdot (\bm{r}''-\bm{r}')} \, da'' da' \right) \, da \nonumber\\
         & = \frac{{k}^{2}}{4 \pi^2}  \iint_{S_B}  \iint_{S_B}\left(\iint_{S_O} \frac{1}{{r}^{2}}
         \Gamma(\bm{r}') \bar{\Gamma}(\bm{r}'') e^{i \bm{q} \cdot (\bm{r}''-\bm{r}')} \, da \right) \, da'' da'
-    \end{align*}
-
+        \label{eq:sigma-scattering-1}
+    \end{align}
+    Vogliamo ora sviluppare la fase dell'esponenziale.
     Assumendo un sistema di coordinate cartesiano con l’asse z orientato normalmente agli schermi, la coordinata z
     del secondo schermo assume valori grandi, si hanno allora le relazioni seguenti
+    \[
+    r = \sqrt{ x^{2}+y^{2}+z^{2} } = z \sqrt{ 1+ \frac{x^{2}+y^{2}}{z^{2}} } \simeq z \left( 1 + \frac{x^{2}+y^{2}}{2z^{2}} \right)
+    = z + \frac{x^{2}+y^{2}}{2z} \simeq z
+    \]
+    Per quanto riguarda il vettore d'onda trasferito, definendo $\hat{ \bm{n}} = \frac{\bm{r}}{r}$ nell'approssimazione
+    di $z \gg x,y$ si ha
+    \begin{gather}
+        \bm{q} = k (\hat{\bm{n}} - \hat{\bm{n}}') = k \left( \frac{\bm{r}}{r}  - \hat{\bm{k}}\right) \simeq k\left( \frac{x}{z}\hat{\bm{i}} + \frac{y}{z} \hat{\bm{j}} + \hat{\bm{k}} -\hat{\bm{k}}\right) = k\left( \frac{x}{z} \hat{\bm{i}} +\frac{y}{z} \hat{\bm{j}} \right)\\
+        \bm{q} \cdot (\bm{r}'' - \bm{r}'') \simeq \left( \frac{x}{z} \hat{\bm{i}} + \frac{y}{z} \hat{\bm{j}} \right) \cdot [(x''-x')\hat{\bm{i}} + (y''-y')\hat{\bm{j}}+(z''-z')\hat{\bm{k}}]
+    = \frac{kx}{z}(x''-x') +\frac{ky}{z}(y''-y')
+    \end{gather}
+    che sostituite nella~\ref{eq:sigma-scattering-1} forniscono
+    \[
+    \sigma_{scatt} = \frac{k^{2}}{4 \pi^{2}} \iint_{S_{B}}\iint_{S_{B}} \left( \iint_{S_{O}} \frac{1}{z^{2}} \Gamma(\bm{r}')\bar{\Gamma}(\bm{r}'') e^{ i \frac{kx}{z}(x''-x') + i \frac{ky}{z} (y'' - y')} \, dxdy\right) da''da'
+    \]
+    Nelle nostre ipotesi $S_{o} \gg S_{B}$, per cui sviluppiamo la precedente come
+    \[
+     = \frac{k^{2}}{4 \pi^{2}} \iint_{S_{B}}\iint_{S_{B}} da'' da'\frac{1}{z^{2}} \Gamma(\bm{r}') \bar{\Gamma}(\bm{r}'') \frac{4 \pi^{2}z^{2}}{k^{2}}\left( \frac{1}{2 \pi} \int_{-\infty}^{\infty} e^{ ik \frac{x}{z}(x'-x'') } \frac{x}{z} \, dk  \right)\left( \frac{1}{2 \pi} \int_{-\infty}^{\infty} e^{ ik \frac{y}{z}(y'-y'') } \frac{y}{z} \, dk  \right)
+    \]
+    Utilizzando ora l'espressione esponenziale della delta di Dirac:
+    \[
+    \int_{-\infty}^{\infty} e^{ ikx } \, dk = 2 \pi \, \delta(x)
+    \]
+    riscriviamo
+    \[
+    \sigma_{scatt} = \iint_{S_{B}}\iint_{S_{B}} \Gamma(\bm{r}') \bar{\Gamma}(\bm{r}'') \delta(x''-x')\delta(y''-y') \,dx''dy''dx'dy'
+    \]
+    Tenendo ora conto di
+    \begin{itemize}
+        \item $z'' = z'$ avendo scelto il riferimento con l'asse $z$ normale al piano di integrazione;
+        \item le delta di dirac bloccano gli integrali ai valori $x''=x',y''=y'$;
+        \item $\bm{r}''=\bm{r}'$(gli assi $z$ e $z'$ sono collineari).
+    \end{itemize}
+    in defininita abbiamo
+    \[
+    \sigma_{scatt} = \iint_{S_{B}}  \Gamma(\bm{r}') \bar{\Gamma}(\bm{r}'') \, dx'dy'= \iint_{S_{B}} |\Gamma(\bm{r}')|^{2} \, dx'dy'
+    \]
+    Abbiamo quindi ritrovato la (\ref{eq:scattering-cross-section-profile-func}):
+    \[
+    \sigma_{scatt} = \iint_{S_{B}}  |\Gamma(\bm{r}')|^{2} \, da'
+    \]
+
 
 
 

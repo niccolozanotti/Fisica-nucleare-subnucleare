@@ -1199,16 +1199,34 @@ Integrando l'ampiezza di diffusione su tutto l'angolo solido nella
 di diffusione in funzione del profilo (vedi Appendice A).
 \begin{equation}
 	\sigma_{scatt} = \iint_{S_B} |\Gamma(\bm{r}')|^2 \, da'
+	\label{eq:scattering-cross-section-profile-func}
 \end{equation}
+D'altra parte sulla base della (\ref{eq:scattering-amplitude}) il secondo membro del teorema ottico si riscrive come
+\begin{align*}
+	\frac{4 \pi}{k} \Im[f(\mathbf{0})] &= \frac{4\pi}{k} \Im \frac{ik}{2 \pi} \iint_{S_{B}} \Re \Gamma(\mathbf{r}') +
+	i \Im \Gamma(\mathbf{r}') \, da' \\
+	& = 2 \Im \iint_{S_{B}} i \Re \Gamma(\mathbf{r}') -  \Im \Gamma(\mathbf{r}') \, da' = \iint_{S_{B}} 2 \Re \Gamma(\mathbf{r}') , da'
+\end{align*}
+da cui si ottiene la seguente espressione della \textbf{sezione d'urto totale di interazione} in funzione del profilo:
+\begin{equation}
+	\sigma_{tot} = \iint_{S_{B}} 2 \Re \Gamma(\mathbf{r}') , da'
+	\label{eq:total-interaction-cross-section-profile-func}
+\end{equation}
+Sostituendo la (\ref{eq:scattering-cross-section-profile-func}) e la (\ref{eq:total-interaction-cross-section-profile-func})
+nella (\ref{eq:optical-theorem}) otteniamo
 \begin{gather*}
-	\frac{4 \pi}{k} \Im \left(\frac{ik}{2 \pi} \iint \Gamma \, da' \right) =
-	\frac{4 \pi}{k} \frac{k}{2 \pi} \Im i \iint(\Re \Gamma +i \Im \Gamma) \, da' =   2 \iint \Re \Gamma \, da'\\
-	\iint |\Gamma|^2 \, da' + \sigma_{ass} = 2 \iint \Re \Gamma \, da'\\
-	\sigma_{ass} = \iint (2 \Re \Gamma - |\Gamma|^2) \, da'
+    \sigma_{ass} + \iint_{S_B} |\Gamma(\bm{r}')|^2 \, da' = \iint_{S_{B}} 2 \Re \Gamma(\mathbf{r}') , da'\\
+    \sigma_{ass} = \iint_{S_{B}} (2 \Re \Gamma(\mathbf{r}') - | \Gamma(\mathbf{r}')|^{2}) \, da'
 \end{gather*}
-ma $|1 - \Gamma|^2 = 1 + |\Gamma|^2 - 2 \Re \Gamma$ e dunque si perviene alle espressioni della sezione d'urto totale
-di assorbimento in funzione del profilo \begin{equation}
-	\boxed{ \sigma_{ass} = \iint \left(1 - |1 - \Gamma|^2 \right) \, da' }
+da cui, osservando che
+\begin{gather*}
+    | 1 - \Gamma|^{2} = (1 - \Re \Gamma)^{2} + (\Im \Gamma)^{2} = 1 + |\Gamma|^{2} - 2 \Re \Gamma\\
+    2 \Re \Gamma - | \Gamma |^{2} = 1 - | 1 - \Gamma|^{2}
+\end{gather*}
+perveniamo infine alla seguente espressione della \textbf{sezione d'urto totale di assorbimento} in funzione del profilo
+\begin{equation}
+	\sigma_{ass} = \iint_{S_{B}}(1 - | 1 - \Gamma|^{2}) \, da'
+	\label{eq:absorption}
 \end{equation}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Diffrazione di un disco assorbente}\label{sec:diffrazione-di-un-disco-assorbente}
