@@ -1,1 +1,17 @@
-Appendice C
+Le derivate delle funzioni di Bessel possono essere espresse attraverso altre funzioni di Bessel(vedi 9.1.30
+Abramowitz-Stegun\cite{AbramSteg}).
+Da questa formula si trova la relazione seguente
+\[
+ \frac{1}{z} \frac{d}{dz} z J_1(z) = J_0(z)
+\]
+Dalla (\ref{eq:scattering-amplitude-bessel-zero}) abbiamo
+\begin{align*}
+    f(\bm{q}) & = ik \int_{0}^R rJ_{0}(qr) \, dr \\
+    &= i \frac{k}{q^{2}}\int_{0}^{qR}zJ_{0}(z) \, dz \\
+    & = i \frac{k}{q^{2}}\int_{0}^{qR}z \frac{1}{z} \frac{d}{dz}zJ_{1}(z) \, dz \\
+    & = i \frac{k}{q^{2}} zJ_{1}(z) \big{|}_{0}^{qR}
+\end{align*}
+da cui infine
+\[
+f(\bm{q}) = i \frac{kR}{q}J_{1}(qR)
+\]

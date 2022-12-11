@@ -1247,67 +1247,70 @@ condizioni
 	\end{cases}
 \]
 Si assuma un riferimento con l'origine al centro del disco e l'asse $z$ normale al piano che lo contiene.
-Con questa scelta, se ci limitiamo a considerare angoli di diffusione non troppo grandi, il vettore $\bm{q}$ giace in un piano parallelo a al piano $xy$ e si ha \[
-	\bm{q} = \bm{k} ( \bm{n} - \bm{n}') = k ( \sin \theta \hat{\imath}_r + \cos \theta \hat{k} - \hat{k'}) \simeq
-	k \sin \theta \hat{\imath}_r
-\]
-
 \begin{marginfigure}
 	\centering
 	\includegraphics{figs/schema-vett-trasferito-2}
 	%    \caption{Sezione d'urto differenziale di una sfera rigida.}
 	\label{fig:vett-trasferito2}
 \end{marginfigure}
-
-il vettore \(\bm{r}\), che identifica i punti del disco circolare (per
-comodità lasciamo cadere l'accento), giace sul piano del bersaglio
-\(xy\) a formare un angolo \(\varphi\) con \(\bm{q}\) per cui si ha
-\(\bm{q} \cdot \bm{r} = qr \cos \varphi\),ed infine-- adottatele
-coordinate cilindriche -- l'elemento d'area vale
-\(da = r d \varphi dr\).
-Ricordando l'\textbf{ampiezza di diffusione}
-\[
-	f(\bm{q}) = \frac{ik}{2 \pi} \iint_{S_B} \Gamma(\bm{r}')e^{-i \bm{q} \cdot \bm{r}} \, da
+Con questa scelta, se ci limitiamo a considerare angoli di diffusione non troppo grandi, il vettore $\bm{q}$ giace in un piano parallelo a al piano $xy$ e si ha \[
+	\bm{q} = \bm{k} ( \bm{n} - \bm{n}') = k ( \sin \theta \hat{\imath}_r + \cos \theta \hat{k} - \hat{k'}) \simeq
+	k \sin \theta \hat{\imath}_r
 \]
-questa si scriverà come
+il vettore \(\bm{r}\), che identifica i punti del disco circolare (per comodità lasciamo cadere l'accento),
+giace sul piano del bersaglio \(xy\) a formare un angolo \(\varphi\) con \(\bm{q}\) per cui si ha
+\(\bm{q} \cdot \bm{r} = qr \cos \varphi\),ed infine - adottate le coordinate cilindriche - l'elemento d'area vale
+\(da = r d \varphi dr\).
+
+L'ampiezza di scattering (\ref{eq:scattering-amplitude}) si scriverá come
 \begin{align*}
 	f(\bm{q}) & = \frac{ik}{2 \pi} \int_0^{2 \pi} \int_0^{\infty} \Gamma(r) e^{-iq \cos \varphi r} r \,d \varphi dr                      \\
 	& = \frac{ik}{2 \pi} \int_0^R r \left[ \int_0^{2 \pi} e^{-iq \cos \varphi r} d \varphi \right] \, dr                       \\
 	& = ik \int_0^R \underbrace{\left[ \frac{1}{2 \pi}\int_0^{2 \pi} e^{-iq \cos \varphi r} d \varphi \right]}_{J_0(qr)} \, dr
 \end{align*}
-dove \(J_0(qr)\) è nota come \textbf{funzione di Bessel di
-ordine zero}:
+dove \(J_0(qr)\) è nota come \textbf{funzione di Bessel di ordine zero} (vedi Appendice B):
 \[
 	J_0(qr) = \frac{1}{2 \pi}\int_0^{2 \pi} e^{-iq \cos \varphi r} d \varphi
 \]
-
 \begin{marginfigure}
-	\includegraphics[width = 1.25 \textwidth, height = 1.25 \textheight]{figs/bessel-func-1st-kind}
-	\caption{Rappresentazione grafica delle funzioni di Bessel del primo tipo.}
+	\centering
+	\includegraphics[width = 1.25 \textwidth, height = 1.25 \textheight]{figs/bessel-functions-1stkind}
+%	\caption{Rappresentazione grafica delle funzioni di Bessel del primo tipo.}
 	\label{fig:bessel-func}
 \end{marginfigure}
-
 Abbiamo allora la seguente espressione dell'ampiezza di diffusione:
-\[
+\begin{equation}
 	f(\bm{q}) = ik \int_0^R r J_0(qr) \, dr
-\] che può essere integrata per ottenere (Vedi Appendice)
+	\label{eq:scattering-amplitude-bessel-zero}
+\end{equation}
+che può essere integrata per ottenere (vedi Appendice C)
 \[
 	f(\bm{q}) = ik \frac{R}{q} J_1(qR)
 \]
-dove \(J_1(qR)\) è la funzione di Bessel di ordine \(1\).
+dove \(J_1(qR)\) è la \textbf{funzione di Bessel di ordine} \(1\).
 Tenendo ora conto che \(q = k \sin \theta\) otteniamo infine
 \begin{equation}
 	f(\bm{q}) = i \frac{R}{\sin \theta} J_1(kR \sin \theta)
+	\label{eq:scattering-amplitude-bessel-one}
 \end{equation}
-Tenendo conto ora della funzione profilo considerata dalla \((25)\) si ottiene la seguente espressione
+%%%TODO 11/12/22 niccolozanotti: discorso su J_1 quando theta -> 0
+e da (\ref{eq:scattering-cross-section-solid-angle}) segue l'espressione della \textbf{sezione d'urto differenziale di
+scattering del disco assorbente}
+\begin{equation}
+	\frac{d \sigma_{scatt}}{d \Omega} = \frac{{R}^{2}}{\sin^2 \theta} J_1(kR \sin \theta)
+    \label{eq:scattering-differential-cross-section-absorptive-disk}
+\end{equation}
+Tenendo conto ora della funzione profilo considerata dalla (\ref{eq:scattering-cross-section-profile-func}) si ottiene
+la seguente espressione
 \[
 	\sigma_{scatt} = \iint_{S_B} |\Gamma(\bm{r})|^2 \, da = \iint_{S_B} da
 \]
 dalla quale segue la \textbf{sezione d'urto totale di diffusione del disco assorbente}
 \begin{equation}
 	\sigma_{scatt} = \pi R^2
+	\label{eq:total-scattering-cross-section-absorptive-disk}
 \end{equation}
-Calcoliamo l'ampiezza di diffusione in avanti
+Calcoliamo la forward scattering amplitude:
 \[
 	f(\bm{0}) = \frac{ik}{2 \pi} \iint_{S_O} \Gamma (\bm{r}) da = \frac{ik}{2 \pi} \iint_{disco} da = \frac{ik}{2 \pi}
 	\pi R^2 = i \frac{kR^2}{2}
@@ -1318,14 +1321,17 @@ Calcoliamo l'ampiezza di diffusione in avanti
 da segue la \textbf{sezione dl'urto totale d'interazione del disco assorbente}
 \begin{equation}
 	\sigma_{tot} = 2 \pi R^2
+	\label{eq:total-interaction-cross-section-absorptive-disk}
 \end{equation}
 Dal teorema ottico infine
 \[
 	\sigma_{ass} = \sigma_{tot} - \sigma_{scatt} = 2\pi ^2 - \pi R^2
-\] da cui segue l'espressione della \textbf{sezione d'urto totale di
+\]
+da cui segue l'espressione della \textbf{sezione d'urto totale di
 assorbimento del disco assorbente}
 \begin{equation}
 	\sigma_{ass} = \pi R^2
+	\label{eq:absorptive-cross-section-absorptive-disk}
 \end{equation}
 
 Troviamo allora che la sezione d'urto totale d'interazione di un'onda

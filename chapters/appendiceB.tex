@@ -1,0 +1,18 @@
+La rappresentazione integrale della funzione di Bessel di ordine zero che si incontra più di frequente è la seguente
+(vedi 9.1.18 Abramowitz-Stegun\cite{AbramSteg})
+\[
+J_{0}(x) = \frac{1}{\pi} \int_{0}^{\pi} \cos(x \cos \varphi) \, d\varphi
+\]
+Da qui si trova facilmente
+\begin{align*}
+    J_{0}(x) &= \frac{1}{\pi} \int_{0}^{\pi} \frac{e^{ ix\cos \varphi }+e^{ -ix\cos \varphi }}{2} \, d\varphi \\
+    &= \frac{1}{2\pi} \int_{0}^{\pi} e^{ ix\cos \varphi }  \, d\varphi + \ \int_{0}^{\pi}e^{ -ix\cos \varphi } \, d\varphi  \\
+    &= \frac{1}{2\pi} \int_{\pi}^{2\pi}e^{ ix \cos (\varphi'-x) } \, d(\varphi'-x) \ + \ \frac{1}{2\pi} \int_{0}^{\pi} e^{ -ix\cos \varphi }\, d\varphi \\
+    & =\frac{1}{2\pi} \int_{\pi}^{2\pi}e^{ -ix \cos \varphi' } \, d\varphi' \ + \ \frac{1}{2\pi} \int_{0}^{\pi} e^{ -ix\cos \varphi }\, d\varphi
+\end{align*}
+da cui infine
+\[
+J_{0}(x) = \frac{1}{2\pi} \int_{0}^{2 \pi} e^{ -ix \cos \varphi }\, d\varphi
+\]
+
+

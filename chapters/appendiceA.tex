@@ -14,7 +14,7 @@
             e^{-i \bm{q} \cdot \bm{r}'} \, da'
             \right)
             \left( - \frac{ik}{2 \pi} \iint_{S_B} \bar{\Gamma}(\bm{r}') e^{i \bm{q} \cdot \bm{r}''} \, da'' \right)
-            \right] \,  da  \ nonumber \\
+            \right] \,  da  \nonumber \\
         & =  \frac{{k}^{2}}{4 \pi^2} \iint_{S_O} \left( \frac{1}{{r}^{2}} \iint_{S_B}  \iint_{S_B}
         \Gamma(\bm{r}') \bar{\Gamma}(\bm{r}'') e^{i \bm{q} \cdot (\bm{r}''-\bm{r}')} \, da'' da' \right) \, da \nonumber\\
         & = \frac{{k}^{2}}{4 \pi^2}  \iint_{S_B}  \iint_{S_B}\left(\iint_{S_O} \frac{1}{{r}^{2}}
@@ -30,12 +30,12 @@
     \]
     Per quanto riguarda il vettore d'onda trasferito, definendo $\hat{ \bm{n}} = \frac{\bm{r}}{r}$ nell'approssimazione
     di $z \gg x,y$ si ha
-    \begin{gather}
+    \begin{gather*}
         \bm{q} = k (\hat{\bm{n}} - \hat{\bm{n}}') = k \left( \frac{\bm{r}}{r}  - \hat{\bm{k}}\right) \simeq k\left( \frac{x}{z}\hat{\bm{i}} + \frac{y}{z} \hat{\bm{j}} + \hat{\bm{k}} -\hat{\bm{k}}\right) = k\left( \frac{x}{z} \hat{\bm{i}} +\frac{y}{z} \hat{\bm{j}} \right)\\
         \bm{q} \cdot (\bm{r}'' - \bm{r}'') \simeq \left( \frac{x}{z} \hat{\bm{i}} + \frac{y}{z} \hat{\bm{j}} \right) \cdot [(x''-x')\hat{\bm{i}} + (y''-y')\hat{\bm{j}}+(z''-z')\hat{\bm{k}}]
     = \frac{kx}{z}(x''-x') +\frac{ky}{z}(y''-y')
-    \end{gather}
-    che sostituite nella~\ref{eq:sigma-scattering-1} forniscono
+    \end{gather*}
+    che sostituite nella (\ref{eq:sigma-scattering-1}) forniscono
     \[
     \sigma_{scatt} = \frac{k^{2}}{4 \pi^{2}} \iint_{S_{B}}\iint_{S_{B}} \left( \iint_{S_{O}} \frac{1}{z^{2}} \Gamma(\bm{r}')\bar{\Gamma}(\bm{r}'') e^{ i \frac{kx}{z}(x''-x') + i \frac{ky}{z} (y'' - y')} \, dxdy\right) da''da'
     \]
@@ -65,12 +65,4 @@
     \[
     \sigma_{scatt} = \iint_{S_{B}}  |\Gamma(\bm{r}')|^{2} \, da'
     \]
-
-
-
-
-
-
-
-
 \end{fullwidth}
