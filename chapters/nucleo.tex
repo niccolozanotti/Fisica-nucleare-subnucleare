@@ -1085,7 +1085,7 @@ Si evidenzia un'intima relazione tra il rate di perdita di energia da parte dell
 e l'ampiezza dell'onda di scattering nella direzione in avanti(direzione di incidenza).
 Questa relazione è quantitativamente espressa dal \textbf{Teorema Ottico} (Optical cross-section theorem) che ora discuteremo.
 
-Nel caso il processo in esame consista nella diffusione da parte dell'ostacolo, risulta possibile calcolare in pochi passaggi la sezione d'urto di diffusione nell'angolo solido elementare.
+Nel caso il processo in esame consista nella diffusione da parte dell'ostacolo, risulta possibile calcolare in pochi passaggi la sezione d'urto di scattering nell'angolo solido elementare.
 Infatti, dalla (\ref{eq:screen-scattered-wave}) si ottengono subito le seguenti espressioni delle funzioni d'onda incidente e di scattering
 \[
 	\psi_{inc} = \psi_o e^{i \bm{k} \cdot \bm{r}} \qquad
@@ -1098,18 +1098,18 @@ Infatti, dalla (\ref{eq:screen-scattered-wave}) si ottengono subito le seguenti 
 	= \Sigma \frac{|\psi_0|^2|f(\bm{q})|^2 d \Omega}{|\psi_0|^2 \Sigma}
 	= |f(\bm{q})|^2 d \Omega
 \]
-da cui, infine, si derivano le espressioni della \textbf{sezione d'urto di diffusione differenziale e totale rispetto all'angolo solido}
+da cui, infine, si derivano le espressioni della \textbf{sezione d'urto di scattering differenziale e totale rispetto all'angolo solido}
 \begin{equation}
 	\frac{d \sigma_{scatt}}{d \Omega} = |f(\bm{q})|^2 \qquad
 	\sigma_{scatt} = \iint_{\Omega}|f(\bm{q})|^2 \, d \Omega
 	\label{eq:scattering-cross-section-solid-angle}
 \end{equation}
 
-Tale espressione chiarisce che la sezione d'urto differenziale di diffusione rispetto all'angolo solido è data dal
+Tale espressione chiarisce che la sezione d'urto differenziale di scattering rispetto all'angolo solido è data dal
 modulo quadrato della ampiezza di scattering, dipendente dal vettore d'onda trasferito che parametrizza l'angolo
 rispetto alla direzione del fascio.
 
-L' espressione (\ref{eq:screen-scattered-wave}	) della funzione d'onda di diffrazione prodotta da un ostacolo ci permette pure il calcolo della sezione d'urto di assorbimento del fascio incidente.
+L' espressione (\ref{eq:screen-scattered-wave}) della funzione d'onda di diffrazione prodotta da un ostacolo ci permette pure il calcolo della sezione d'urto di assorbimento del fascio incidente.
 Tale sezione d'urto può essere ottenuta osservando che la probabilità incidente sulla superficie $S_B$ deve essere assorbita dal bersaglio su $S_B$, oppure diffratta e osservata sullo schermo di osservazione $S_O$.
 Tenendo presente che la funzione d'onda incidente è non nulla sulla sezione del fascio $\Sigma$, mentre quella di assorbimento è non nulla sul bersaglio, si ottiene la relazione di bilancio:
 \begin{gather*}
@@ -1184,19 +1184,19 @@ ottenendo infine
 risultato noto come \textbf{teorema ottico}.
 \marginnote{Teorema ottico}
 
-Questo afferma che la somma delle sezioni d'urto totale di diffusione ed
+Questo afferma che la somma delle sezioni d'urto totale di scattering ed
 assorbimento, detta sezione d'urto totale d'interazione, eguaglia (a
 meno del fattore moltiplicativo, $\frac{4 \pi}{k}$, la parte
-immaginaria dell'ampiezza di diffusione in avanti (ovvero a vettore
+immaginaria dell'ampiezza di scattering in avanti (ovvero a vettore
 d'onda trasferito nullo).
 \bigskip
 
-E' importante sapere che le sezioni d'urto totali di diffusione e
+E' importante sapere che le sezioni d'urto totali di scattering e
 assorbimento possono essere espresse anche attraverso integrali della
 funzione di profilo sulla superficie del bersaglio \(S_B\).
-Integrando l'ampiezza di diffusione su tutto l'angolo solido nella
+Integrando l'ampiezza di scattering su tutto l'angolo solido nella
 (\ref{eq:scattering-cross-section-solid-angle}) si ottiene la seguente espressione della sezione d'urto totale
-di diffusione in funzione del profilo (vedi Appendice A).
+di scattering in funzione del profilo (vedi Appendice A).
 \begin{equation}
 	\sigma_{scatt} = \iint_{S_B} |\Gamma(\bm{r}')|^2 \, da'
 	\label{eq:scattering-cross-section-profile-func}
@@ -1253,7 +1253,7 @@ Si assuma un riferimento con l'origine al centro del disco e l'asse $z$ normale 
 	%    \caption{Sezione d'urto differenziale di una sfera rigida.}
 	\label{fig:vett-trasferito2}
 \end{marginfigure}
-Con questa scelta, se ci limitiamo a considerare angoli di diffusione non troppo grandi, il vettore $\bm{q}$ giace in un piano parallelo a al piano $xy$ e si ha \[
+Con questa scelta, se ci limitiamo a considerare angoli di scattering non troppo grandi, il vettore $\bm{q}$ giace in un piano parallelo a al piano $xy$ e si ha \[
 	\bm{q} = \bm{k} ( \bm{n} - \bm{n}') = k ( \sin \theta \hat{\imath}_r + \cos \theta \hat{k} - \hat{k'}) \simeq
 	k \sin \theta \hat{\imath}_r
 \]
@@ -1278,7 +1278,7 @@ dove \(J_0(qr)\) è nota come \textbf{funzione di Bessel di ordine zero} (vedi A
 %	\caption{Rappresentazione grafica delle funzioni di Bessel del primo tipo.}
 	\label{fig:bessel-func}
 \end{marginfigure}
-Abbiamo allora la seguente espressione dell'ampiezza di diffusione:
+Abbiamo allora la seguente espressione dell'ampiezza di scattering:
 \begin{equation}
 	f(\bm{q}) = ik \int_0^R r J_0(qr) \, dr
 	\label{eq:scattering-amplitude-bessel-zero}
@@ -1305,7 +1305,7 @@ la seguente espressione
 \[
 	\sigma_{scatt} = \iint_{S_B} |\Gamma(\bm{r})|^2 \, da = \iint_{S_B} da
 \]
-dalla quale segue la \textbf{sezione d'urto totale di diffusione del disco assorbente}
+dalla quale segue la \textbf{sezione d'urto totale di scattering del disco assorbente}
 \begin{equation}
 	\sigma_{scatt} = \pi R^2
 	\label{eq:total-scattering-cross-section-absorptive-disk}
@@ -1336,7 +1336,7 @@ assorbimento del disco assorbente}
 
 Troviamo allora che la sezione d'urto totale d'interazione di un'onda
 piana su di un disco assorbente è il doppio della superficie del disco
-stesso, poiché sia la sezione d'urto totale di diffusione che quella di
+stesso, poiché sia la sezione d'urto totale di scattering che quella di
 assorbimento hanno entrambe il valore di quella superficie.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Il raggio nucleare}\label{sec:raggio-nucleare}
@@ -1350,8 +1350,10 @@ che caratterizza l'oggetto illuminato. Data l'onda incidente quindi, il
 problema sarà quello di risalire dalla distribuzione della intensità
 luminosa osservata alle proprietà dell'oggetto illuminato.
 
-In fisica nucleare e subnucleare le cose vanno esattamente nello stesso
-modo.
+In fisica nucleare e subnucleare le cose vanno esattamente nello stesso modo.
+L’oggetto da studiare può essere un nucleo oppure - se si dispone di sufficiente potere risolutivo (ovvero di un fascio di sufficiente energia) - un nucleone o addirittura una sua parte.
+Tale oggetto potrà essere illuminato non solo con fasci di luce (tipicamente nella regione dei raggi X e gamma) ma anche con fasci di ‘onde materiali’ (nel senso di De Broglie) di elettroni, protoni, neutroni ed altre particelle ancora, con le quali è in generale più facile ottenere piccole lunghezze d’onda e dunque elevate risoluzioni.
+Le ‘onde materiali’ emergenti potranno essere registrate come ‘particelle’ da superfici sensibili (rivelatori), distribuite spazialmente in un modo caratteristico dipendente dalle proprietà dell’oggetto illuminato.
 
 Ciò premesso, i ragionamenti che potrebbero guidare un esperimento per
 la \textbf{misura delle dimensioni del nucleo atomico} sono i seguenti:
@@ -1377,94 +1379,163 @@ la \textbf{misura delle dimensioni del nucleo atomico} sono i seguenti:
 	Broglie delle particelle del fascio deve essere almeno dell'ordine di
 	grandezza delle dimensioni nucleari. Nel caso dei neutroni, si avrebbe
 	una risoluzione dell'ordine di \(10 \  fm \,(1 fm=10^{-15} m)\) con
-	circa \(10 Mev\) di energia cinetica
-	\[ \lambda \simeq 10 fm \simeq 10 \frac{1}{200} \frac{\hbar r c}{MeV} \simeq \frac{1}{20} \frac{\hbar  c}{MeV}\]
-	\[ E_{cin} = \sqrt{ p^{2}c^{2}+m^{2}c^4 } - mc^{2} \simeq mc^{2} \left(1 + \frac{1}{2} \frac{{p^{2}c^{2}}}{m^{2}c^4}- mc^{2}\right) \simeq \frac{p^{2}}{2m} \simeq \frac{\hbar^{2}k^{2}}{2m}\]
-	\[ \simeq 2\pi^{2} \frac{\hbar c^{2}}{mc^{2}\lambda^{2}} \simeq 20 \frac{\hbar^{2} c^{2} }{1000MeV_{1}} \frac{1}{400} \frac{\hbar^{2} c^{2}}{MeV^2} \simeq 8 MeV\]
+	circa 10 MeV di energia cinetica
+	\[
+		\lambda \simeq 10 fm \simeq 10 \frac{1}{200} \frac{\hbar c}{MeV} \simeq \frac{1}{20} \frac{\hbar  c}{MeV}
+	\]
+	Sfruttando ora il fatto che $v \ll c$ si ha
+	\begin{gather*}
+	    E_{cin} = \sqrt{ p^{2}c^{2}+m^{2}c^4 } - mc^{2} \simeq mc^{2} \left(1 + \frac{1}{2} \frac{{p^{2}c^{2}}}{m^{2}c^4}- mc^{2}\right) \simeq \frac{p^{2}}{2m} \simeq \frac{\hbar^{2}k^{2}}{2m}\\
+	    \simeq 2\pi^{2} \frac{\hbar c^{2}}{mc^{2}\lambda^{2}} \simeq 20 \frac{\hbar^{2} c^{2} }{1000MeV_{1}} \frac{1}{400} \frac{\hbar^{2} c^{2}}{MeV^2} \simeq 8 MeV
+	\end{gather*}
 	\item
-	\emph{Processi in gioco}. Difficilmente un sperimento può prescindere
+	\emph{Processi in gioco}. Difficilmente un esperimento può prescindere
 	da una qualche ipotesi/conoscenza dei processi che avranno luogo nelle
-	condizioni scelte. Assumendo che i neutroni da \(10 \ MeV\) non
+	condizioni scelte. \textbf{Assumendo che i neutroni da \(10 \ MeV\) non
 	riescano a trapassare il nucleo atomico, questo potrà essere
-	assimilato ad un disco assorbente.
+	assimilato ad un disco assorbente}.
 \end{enumerate}
 
 Sulla base di queste considerazioni si potrà costruire un esperimento
-per determinare il raggio nucleare, attarverso la misura delle sezioni
-d'urto totali e di difusione di neutroni su bersagli materiali.
+per determinare il raggio nucleare, attraverso la misura delle sezioni
+d'urto totali e di scattering di neutroni su bersagli materiali.
 Ipotizzando che il nucleo possa essere descritto da un disco assorbente
-si ha la seguente espressione della sezione d'urto totale (\(28\))
+si ha la seguente espressione della sezione d'urto totale (\ref{eq:total-interaction-cross-section-absorptive-disk})
 \[
 	\sigma = 2 \pi R^2
 \]
 Si possono allora determinare i raggi nucleari misurando la sezione
 d'urto totale di neutroni di circa 10 MeV su bersagli materiali puri
 contenenti i diversi tipi di nucleo.
-
-Nella figura è mostrato un grafico della \textbf{sezione d'urto totale e
+Dato che sia le interazioni elastiche che inelastiche rimuovono i neutroni del fascio, la sezione d'urto totale di
+interazione potrà essere misurata contanto i neutroni persi dal fascio stesso.
+In figura~\ref{fig:cross-section-neutroni} è mostrato un grafico della \textbf{sezione d'urto totale e
 di assorbimento} di neutroni da 14 MeV in funzione della radice cubica
 del numero di nucleoni A del nucleo.
-\begin{marginfigure}
-	\includegraphics[width = 1.35 \textwidth, height = 1.35 \textheight]{figs/grafico-cross-sect-neutroni}
-	%    \caption{Sezione d'urto differenziale di una sfera rigida.}
+\begin{figure}
+	\centering
+	\includegraphics{figs/grafico-cross-sect-neutroni}
+	\caption{Sezione d'urto totale di neutroni da $14$ MeV su nuclei.}
 	\label{fig:cross-section-neutroni}
-\end{marginfigure}
+\end{figure}
 
 Ci serve un modello capace di fornire una relazione tra la sezione d'urto totale ed il numero di nucleoni del nucleo.
-Per cominciare, potremmo modellare il nucleo come un \textbf{aggregato sferico di nucleoni} a loro volta assimilati a piccole sfere.
-Ipotizzando che la forza che lega netroni e protoni sia a \textbf{corto raggio} con raggio d'azione dell'ordine delle dimensioni del singolo nucleone, il nucleo tenderà ad avere una \textbf{densità volumetrica uniforme} per cui potremo scrivere le seguenti relazioni \[
+Per cominciare, potremmo modellizzare il nucleo come un \textbf{aggregato sferico di nucleoni} a loro volta assimilati a piccole sfere.
+Ipotizzando che la forza che lega neutroni e protoni sia a \textbf{corto raggio} con raggio d'azione dell'ordine delle dimensioni del singolo nucleone, il nucleo tenderà ad avere una \textbf{densità volumetrica uniforme} per cui potremo scrivere le seguenti relazioni \[
 	V_{Nuc} \simeq \frac{4}{3} \pi R^3 \qquad V_{Nuc} \simeq A\frac{4}{3} \pi {r_{0}}^3
-\] dalle quali si ottiene la seguente relazione tra raggio nucleare e numero atomico \[
-	R \simeq r_{0} A^{1/3}
-\] Immaginando ora il nucleo come un disco assorbente, possiamo sostituire questa relazione nella ($28$) ed ottenere la seguente formula con la quale interpretare i dati \[
-	\sigma = 2 \pi r_{0}^{2}(A^{1/3})^{2}
-\] In prima approssimazione la formula funziona.
-Si noti infatti che i dati hanno effettivamente un andamento ad arco di parabola nella variabile $A^{1/3}$ ma, contrariamente alla previsione della formula, intersecano l'asse verticale ($A=0$) ad un valore di sezione d'urto non nullo.
-Ciò significa che dobbiamo aggiungere un termine costante alla sezione d'urto di cui sopra ottenibile solo con l'aggiunta di un termine costante nella espressione del raggio nucleare \[
-	R_{Nuc} = r_{0} A^{1/3} + b
-\] Bethe suggerì che tale termine dovesse interpretarsi come un una specie di \textbf{'alone nucleare'(nuclear skin), di spessore costante ed uguale per tutti nuclei, dovuto al raggio finito della interazione forte tra nucleoni.} Stimando in circa $0.5 \ barn$ il valore approssimativo della sezione d'urto totale ad $A=0$ possiamo estrarre la corrispondente stima di $b$ \[
-	\sigma = 2 \pi R^{2} = 2 \pi (r_{0} A^{1/3} +b)^{2} \quad \sigma(A^{1/3}=0) = 2\pi b^{2} \qquad b = \sqrt{ \frac{\sigma(A^{1/3}=0)}{2 \pi} }\sim 2.8 \ fm
-\] Il valore meglio compatibile con i dati sperimentali oggi disponibili è circa $b=2.4 \, fm$.
-Una volta determinata la 'skin' nucleare possiamo determinare anche il raggio del nucleone $r_0$.
-Leggendo il valore della sezione d'urto totale d'interazione corrispondente ad un secondo nucleo (ad esempio $A^{1/3}=4$ dove $\sigma = 2.8 barn$) possiamo ottenere la seguente stima di $\bm{r_0}$ \begin{gather*}
-	\sigma = 2 \pi R^2 = 2 \pi (r_0 A^{1/3} +b)^2  \qquad r_0 = \frac{1}{A^{1/3}} \left( \sqrt{\frac{\sigma}{2 \pi}}-b \right)\\
-	r_0 \simeq \frac{1}{4} \left( \sqrt{\frac{2.8 \times 10^{-24}}{2 \pi} } - 2.4 \times 10^{-13} \right) \simeq1.1 \ fm\\
-\end{gather*} Informazioni più dettagliate sulla geometria del nucleo possono essere ottenute da esperimenti capaci di misura- re la sezione d'urto differenziale di diffusione.
-Modellando il nucleo come un disco circolare assorbente la una sezione d'urto differenziale di diffusione sarà data dalla espressione \[
-	\frac{d\sigma_{scatt}}{d \Omega} = \frac{R^{2}}{\sin ^{2}\theta}J_{1}^{2}\left( \frac{2 \pi R}{\lambda} \sin \theta \right)
-\] che va confrontata con i dati sperimentali mostrati a fianco.
-Si nota subito che i dati mostrano un andamento con l'angolo $\theta$ di tipo diffrattivo, in prima approssimazione compatibile con quello di una funzione di Bessel del primo ordine.
-
-È interessante considerare la sezione d'urto differenziale in avanti, ovvero per $\theta$ prossimo a zero.
-Sviluppando asintoticamente la funzione di Bessel per piccoli valori dell'argomento si ha \[
-	J_{1}(z) \sim \frac{1}{2}z - \frac{1}{16}z^{3}
-\] da cui - sostituendo - otteniamo la \textbf{sezione d'urto differenziale di diffusione in avanti} dalla quale si può ottenere una nuova \textbf{stima del raggio nucleare}
+\] dalle quali si ottiene la seguente relazione tra raggio nucleare e numero atomico
 \[
-	\frac{d\sigma_{scatt}}{d \Omega} = \frac{R^{2}}{\sin ^{2}\theta}J_{1}^{2}\left( \frac{2 \pi R}{\lambda} \sin \theta \right) \sim \frac{R^{2}}{\sin ^{2}\theta} \frac{1}{4} \frac{4 \pi^{2} R^{2}}{\lambda^{2}} \sin ^{2} \theta \sim \frac{\pi^{2}R^{4}}{\lambda^{2}}
+	R \simeq r_{0} A^{1/3}
 \]
+Immaginando ora il nucleo come un disco assorbente, possiamo sostituire questa relazione nella (\ref{eq:total-interaction-cross-section-absorptive-disk}) ed ottenere la seguente formula con la quale interpretare i dati \[
+	\sigma = 2 \pi r_{0}^{2}(A^{1/3})^{2}
+\]
+In prima approssimazione la formula funziona.
+Si noti infatti che i dati hanno effettivamente un andamento ad arco di parabola nella variabile $A^{1/3}$ ma, contrariamente alla previsione della formula, intersecano l'asse verticale ($A=0$) ad un valore di sezione d'urto non nullo.
+Ciò significa che dobbiamo aggiungere un termine costante alla sezione d'urto di cui sopra ottenibile solo con l'aggiunta di un termine costante nella espressione del raggio nucleare
+\begin{equation}
+	R_{Nuc} = r_{0} A^{1/3} + b
+	\label{eq:nuclear-radius-skin}
+\end{equation}
+Hans Bethe suggerì che tale termine dovesse interpretarsi come un una specie di \textbf{'alone nucleare'(nuclear skin), di spessore costante ed uguale per tutti nuclei, dovuto al raggio finito della interazione forte tra nucleoni.} Stimando in circa $0.5$ barn
+il valore approssimativo della sezione d'urto totale ad $A=0$ possiamo estrarre la corrispondente stima di $b$
+\begin{gather*}
+    \sigma = 2 \pi R^{2} = 2 \pi (r_{0} A^{1/3} +b)^{2} \quad \sigma(A^{1/3}=0) = 2\pi b^{2}\\
+    b = \sqrt{ \frac{\sigma(A^{1/3}=0)}{2 \pi} }\sim 2.8 \ \text{fm}
+\end{gather*}
+Il valore meglio compatibile con i dati sperimentali oggi disponibili è circa $b=2.4 \, fm$.
+Una volta determinata la `skin' nucleare possiamo determinare anche il raggio del nucleone $r_0$.
+
+Leggendo il valore della sezione d'urto totale d'interazione corrispondente ad un secondo nucleo (ad esempio $A^{1/3}=4$ dove $\sigma = 2.8$ barn)
+possiamo ottenere la seguente stima di $\bm{r_0}$
+\begin{gather*}
+	\sigma = 2 \pi R^2 = 2 \pi (r_0 A^{1/3} +b)^2  \qquad r_0 = \frac{1}{A^{1/3}} \left( \sqrt{\frac{\sigma}{2 \pi}}-b \right)\\
+	r_0 \simeq \frac{1}{4} \left( \sqrt{\frac{2.8 \times 10^{-24}}{2 \pi} } - 2.4 \times 10^{-13} \right) \simeq1.1 \ fm
+\end{gather*}
+Il valore meglio compatibile con i dati sperimentali oggi disponibili fornisce $ \bm{r}_0 = 1.24$.
+In sintesi, dato il numero di nucleoni $ A$, la (\ref{eq:nuclear-radius-skin}) - completata dai valori sperimentali della
+skin nucleare e del raggio del nucleone - permette di calcolare in modo preciso \textbf{il raggio dei nuclei nello stato
+fondamentale di minima energia dove il nucleo assume una forma sferica}.
+
+Informazioni più dettagliate sulla geometria del nucleo possono essere ottenute da esperimenti capaci di misurare
+la sezione d'urto differenziale di scattering.
+Modellizzando il \emph{nucleo come un disco circolare assorbente} (vedi assunzione fatta sui processi in gioco)
+la una sezione d'urto differenziale di scattering sarà data dalla espressione (\ref{eq:scattering-differential-cross-section-absorptive-disk})
+\[
+	\frac{d\sigma_{scatt}}{d \Omega} = \frac{R^{2}}{\sin ^{2}\theta}J_{1}^{2}\left( \frac{2 \pi R}{\lambda} \sin \theta \right)
+\]
+che va confrontata con i dati sperimentali mostrati a fianco.
 \begin{marginfigure}
 	\centering
 	\includegraphics[width = 1.25 \textwidth,height = 1.25 \textheight]{figs/grafico-cross-sect-neutroni-2}
 	%    \caption{Sezione d'urto differenziale di una sfera rigida.}
 	\label{fig:cross-section-neutroni2}
 \end{marginfigure}
+Si nota subito che i dati mostrano un andamento con l'angolo $\theta$ di tipo diffrattivo, in prima approssimazione
+compatibile con quello di una funzione di Bessel del primo ordine.
+
+È interessante considerare la sezione d'urto differenziale in avanti, ovvero per $\theta$ prossimo a zero.
+Sviluppando asintoticamente la funzione di Bessel per piccoli valori dell'argomento si ha(9.4.4 Abramowitz-Stegun\cite{AbramSteg})
+\[
+	J_{1}(z) \sim \frac{1}{2}z - \frac{1}{16}z^{3}
+\]
+da cui - sostituendo - otteniamo la \textbf{sezione d'urto differenziale di scattering in avanti} dalla quale si può ottenere una nuova \textbf{stima del raggio nucleare}
+\[
+	\frac{d\sigma_{scatt}}{d \Omega} = \frac{R^{2}}{\sin ^{2}\theta}J_{1}^{2}\left( \frac{2 \pi R}{\lambda} \sin \theta \right) \sim \frac{R^{2}}{\sin ^{2}\theta} \frac{1}{4} \frac{4 \pi^{2} R^{2}}{\lambda^{2}} \sin ^{2} \theta \sim \frac{\pi^{2}R^{4}}{\lambda^{2}}
+\]
 Dalla figura si vede chiaramente che tale sezione d'urto a $\theta=0$ aumenta rapidamente con il numero di nucleoni $A$.
 
-na seconda possibilità consiste nel lavorare sui minimi di diffrazione la cui spaziatura -- come noto dall'ottica -- deve dipendere dal raggio del disco ovvero dal raggio nucleare.
+A titolo di esempio potremmo determinare il raggio nucleare leggendo sul grafico il valore della sezione d'urto sul picco di
+diffrazione.
+Calcolando la lunghezza d'onda di De Broglie dei neutroni del fascio:
+\[
+ E = \frac{{p}^{2}}{2m} = \frac{2 \pi^2 \hslash^2}{m \lambda^2} \quadd
+ \lambda = \sqrt{\frac{2 \pi^2}{m c^2 E}} \hslash c = 7.5 \, fm
+\]
+nel caso del \textbf{picco centrale di diffrazione dell'alluminio} si ottiene
+\[
+ R = \sqrt[4]{\frac{\lambda^2}{\pi^2} \frac{d \sigma}{d \Omega}} = 5.2 \, fm
+\]
 
-Ora è noto che le funzioni di Bessel si annullano ripetutamente, un fatto che però non trova corrispondenza nell'andamento delle sezioni d'urto di diffuzione misurate che, pur avendo dei minimi pronunciati, non si annullano mai.
-Questo fatto indica che modellizzare il nucleo come un disco completamente assorbente non è del tutto appropriato e che esiste un certo grado di trasparenza del nucleo rispetto ai neutroni incidenti.
-Trascurando per ora questo fatto ed assumendo che i minimi della sezione d'urto corrispondano agli zeri della funzione di Bessel, abbiamo nel caso del primo zero \[
-	J_{1}\left( \frac{2 \pi R}{\lambda}\sin \theta = 3.832 \right)
-\] da cui si ottiene la seguente espressione \[
+Una seconda possibilità consiste nel lavorare sui minimi di diffrazione la cui spaziatura - come noto dall'ottica - deve dipendere dal raggio del disco ovvero dal raggio nucleare.
+Notiamo subito che l’andamento della sezione d’urto di diffusione per angoli non nulli dovrebbe essere governato dal quadrato della funzione di Bessel del primo ordine.
+Ora è noto che le funzioni di Bessel si annullano ripetutamente, un fatto che però non trova corrispondenza nell’andamento
+delle sezioni d’urto di diffuzione misurate che, pur avendo dei minimi pronunciati, non si annullano mai (vedi figura).
+Questo fatto indica che \emph{modellizzare il nucleo come un disco completamente assorbente non è del tutto appropriato e che esiste un certo grado di trasparenza del nucleo rispetto ai neutroni incidenti}.
+Trascurando per ora questo fatto ed assumendo che i minimi della sezione d’urto corrispondano agli zeri della funzione di Bessel, abbiamo nel caso del primo zero (9.5.14 Abramowitz-Stegun)
+\[
+	J_{1}\left( \frac{2 \pi R}{\lambda}\sin \theta \right) = 0  \quad \text{se}
+	\quad \frac{2 \pi R}{\lambda}\sin \theta = 3.832
+\]
+da cui si ottiene la seguente espressione
+\[
 	R = \frac{3.832}{2 \pi} \frac{\lambda}{\sin \theta}
-\] che fornisce un'altra stima del raggio nucleare a partire dalla posizione angolare del primo minimo della sezione d'urto differenziale di diffusione.
+\] che fornisce un'altra \emph{stima del raggio nucleare} a partire dalla posizione angolare del primo minimo della
+sezione d'urto differenziale di scattering.
 
-Per estrarne in modo corretto tutto il contenuto informativo, sarebbe necessario eseguire un 'fit' utilizzando il corrispondente chi-quadrato come criterio di bontà e affidabilità della funzione teorica adottata.
-In questo modo otterremmo un solo valore del raggio nucleare piuttosto che i due stimati e, soprattutto, verificheremmo che l'ipotesi che il nucleo assorba totalmente i neutroni incidenti è troppo drastica poiché non riesce a riprodurre correttamente l'andamento delle sezioni d'urto di diffusione.
-
-I dati richiedono l'ipotesi che il nucleo sia parzialmente trasmittente.
-Si è pensato quindi di modellizzare il nucleo per mezzo di un potenziale complesso dando origine al cosiddetto modello ottico del nucleo(la parte reale del potenziale è solitamente assunta nella forma di Saxon-Woods mentre quella immaginaria nella forma di una gaussiana).
+Posizionandoci sul primo minimo di diffrazione dell’alluminio - molto marcato - otteniamo il valore seguente
+\[
+ R = \frac{3.832 \lambda}{2 \pi \sin \theta} = 6.12 \, fm
+\]
+in ottimo accordo con la stima ottenuta dalla (\ref{eq:nuclear-radius-skin})
+\[
+      R_{Nuc} = r_0 A^{1/3} + b \simeq 6.12 \, fm 
+\]
+La lettura diretta dei dati che abbiamo commentato è solo un modo per prendere confidenza con i dati stessi.
+Per estrarne in modo corretto tutto il contenuto informativo, sarebbe necessario eseguire un ‘fit’ utilizzando il corrispondente chi-quadrato come criterio di bontà e affidabilità della funzione teorica adottata.
+In questo modo otterremmo un solo valore del raggio nucleare piuttosto che i due stimati e, soprattutto,
+verificheremmo che l’ipotesi che il nucleo assorba totalmente i neutroni incidenti è troppo drastica poiché non riesce a riprodurre correttamente l’andamento delle sezioni d’urto di diffusione.
+I dati richiedono l’ipotesi che il nucleo sia parzialmente trasmittente un po’ come accade alla luce incidente su di una sfera di vetro solo parzialmente opaca.
+Dato che nel caso della luce si descriverebbe un simile comportamento per mezzo di un indice di rifrazione dotato sia di
+una parte reale che immaginaria, si è pensato di modellizzare il nucleo per mezzo di un potenziale complesso (dotato sia
+di una parte reale che immaginaria) dando origine al cosiddetto \textbf{modello ottico del nucleo}\sidenote{
+	Description of atomic nuclei as similar to cloudy crystal balls in that, when struck by a beam of particles,
+	they partially absorb the beam, partially scatter it, and partially transmit it in a way analogous to the behaviour
+	of light. The nuclear optical model has proved very successful in explaining nuclear reactions in which the incident
+	(striking) particles have energies of about $10^6$ to $10^9$ eV.
+}, capace di descrivere
+perfettamente i dati sperimentali disponibili (la parte reale del potenziale è solitamente assunta nella forma di
+Saxon-Woods mentre quella immaginaria nella forma di una gaussiana).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Energia di legame nucleare}\label{sec:energia-di-legame-nucleare}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
