@@ -1159,7 +1159,7 @@ Assumendo l'origine del riferimento al centro dell'ostacolo e l'asse z normale a
 	\centering
 	\includegraphics[width = 1.25 \textwidth, height = 1.25 \textheight]{figs/schema-vett-trasferito}
 	%    \caption{Sezione d'urto differenziale di una sfera rigida.}
-	\label{fig:vett-trasferito}
+%	\label{fig:vett-trasferito}
 \end{marginfigure}
 \begin{align*}
 	r - z & = \sqrt{x^2 + y^2+z^2} -z = z\sqrt{1 + \frac{x^2}{z^2}+\frac{y^2}{z^2}} -z                       \\
@@ -1539,13 +1539,14 @@ Saxon-Woods mentre quella immaginaria nella forma di una gaussiana).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Energia di legame nucleare}\label{sec:energia-di-legame-nucleare}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+Importanti indicazioni sulle proprietà della forza nucleare che unisce i nucleoni nel nucleo provengono dalle misure sperimentali
+della \textbf{energia di legame} compiute in modo sistematico a partire dagli anni ’20.
+Introduciamo ora il concetto di energia di legame del nucleo per mezzo di un semplice esempio.
 
 Si immagini un sistema formato da due sferette omogenee di massa m e raggio $R$, soggette alla mutua attrazione gravitazionale, disposte in quiete l'una accanto all'altra con una energia potenziale iniziale $E_{i}$.
 Sappiamo che per separare le sferette dobbiamo applicare su una di esse una forza esterna uguale e contraria a quella attrattiva in modo da portarla all'infinito (avendo avuto cura di fissare l'altra!).
 Nel linguaggio della meccanica dobbiamo compiere lavoro contro la forza attrattiva gravitazionale che tiene unite le sferette, nel più generale linguaggio della energia dobbiamo fornire energia al sistema legato in modo da separarlo nei suoi componenti portandolo ad una energia potenziale finale che indicheremo con $E_{f}$ (in questo caso nulla).
-Tale energia viene detta energia di legame del sistema e soddisfa la seguente relazione
-
+Tale energia viene detta \textbf{energia di legame del sistema} e soddisfa la seguente relazione
 \begin{marginfigure}
 	\includegraphics{figs/en-legame}
 	%    \caption{Sezione d'urto differenziale di una sfera rigida.}
@@ -1554,47 +1555,44 @@ Tale energia viene detta energia di legame del sistema e soddisfa la seguente re
 
 \begin{equation}
 	\Delta E = E_{i} = E_{f}
+	\label{eq:binding-energy-experimental}
 \end{equation}
 Ora immaginiamo di volerla determinare.
 In linea di principio potremmo utilizzare \textbf{tre diversi metodi}:
 \begin{enumerate}
-	\def\labelenumi{\arabic{enumi}.}
 	\tightlist
-	\item
-	disponendo di una espressione esplicita della forza, potremmo
-	calcolarla teoricamente \[
-								\Delta E = \int_{2 R}^{\infty} \bm{F}_{est} \cdot d\bm{l} = \int_{2 R}^{\infty} G \frac{m^{2}}{r^{2}} \, dr
-								= G \frac{m^{2}}{2R}
+	\item Disponendo di una espressione esplicita della forza, potremmo
+	calcolarla teoricamente
+	\[
+		\Delta E = \int_{2 R}^{\infty} \bm{F}_{est} \cdot d\bm{l} = \int_{2 R}^{\infty} G \frac{m^{2}}{r^{2}} \, dr
+		= G \frac{m^{2}}{2R}
 	\]
 	\item
-	non disponendo della espressione teorica potremmo misurare
+	Non disponendo della espressione teorica potremmo misurare
 	ripetutamente la forza applicata sulla sferetta e sommare in modo da
-	ottenere il lavoro compiuto \[
-									\Delta E = \int _{2R}^{\infty} \bm{F}_{est} \cdot d\bm{l}
+	ottenere il lavoro compiuto
+	\[
+		\Delta E = \int _{2R}^{\infty} \bm{F}_{est} \cdot d\bm{l}
 	\]
 	\item
-	non disponendo della espressione teorica potremmo anche affidarci alla
-	teoria della relatività ristretta (TRR). Sappiamo infatti che ad ogni
-	forma di energia \(E\)corrisponde una massa inerziale equivalente
-	\(M\) data dalla ben nota equazione \(M=E/c^{2}\). Su questa base,
-	dato che il contenuto energetico del sistema iniziale legato e del
+	Non disponendo della espressione teorica potremmo anche affidarci alla
+	teoria della relatività ristretta (TRR).
+	Sappiamo infatti che ad ogni forma di energia $E$ corrisponde una massa inerziale equivalente
+	\(M\) data dalla ben nota equazione \(M=E/c^{2}\).
+	Su questa base,dato che il contenuto energetico del sistema iniziale legato e del
 	sistema finale separato sono diversi, dobbiamo aspettarci che diverse
 	siano pure le corrispondenti masse inerziali. In particolare da
 	\(\Delta E = E_{i} = E_{f}\) otteniamo \(E_{f} > E_{i}\) (poiché
-	\(\Delta E >0\)) da cui discende pure che \(M_{f} > M_{i}\) . Dalle
-	espressioni relativistiche \[
-								   E_{f} = M_{f}c^{2} \qquad E_{i} = M_{i}c^{2}
-	\]otteniamo allora la seguente differenza di massa detta
-	\textbf{difetto di massa del sistema legato} \[
-													 (M_{f}-M_{i}) = \frac{\Delta E}{c^{2}}
+	\(\Delta E >0\)) da cui discende pure che \(M_{f} > M_{i}\) .
+	Dalle espressioni relativistiche
+	\[
+		E_{f} = M_{f}c^{2} \qquad E_{i} = M_{i}c^{2}
+	\] otteniamo allora la seguente differenza di massa detta
+	\textbf{difetto di massa del sistema legato}
+	\[
+		(M_{f}-M_{i}) = \frac{\Delta E}{c^{2}}
 	\] la quale offre una terza via per accedere all'energia di legame.
 \end{enumerate}
-
-\begin{marginfigure}
-	\includegraphics[width = 1.3 \textwidth,scale = 1]{figs/en-legame-graph}
-	\caption{Grafico dell'energia di legame media per nucleone in funzione del numero di nucleoni $A$.}
-	\label{fig:en-legame-graph}
-\end{marginfigure}
 
 Nel caso di un sistema macroscopico di due masse legate dalla forza
 gravitazionale, il metodo \(1\) risulta praticabile poiché conosciamo
@@ -1602,11 +1600,13 @@ l'espressione teorica della forza. Superando un certo numero di
 difficoltà sperimentali potremmo anche utilizzare il metodo \(2.\)
 Certamente nessun fisico sperimentale sarebbe però in grado di
 utilizzare il metodo \(3\) dato che dovrebbe misurare il seguente
-difetto di massa \[
-					 (M_{f}-M_{i}) = \frac{\Delta E}{c^{2}} = G \frac{m^{2}}{2Rc^{2}} = 5.6 \times 10^{-54} MeV
-\] Nel caso della interazione forte tra nucleoni le cose vanno
+difetto di massa
+\[
+	(M_{f}-M_{i}) = \frac{\Delta E}{c^{2}} = G \frac{m^{2}}{2Rc^{2}} = 5.6 \times 10^{-54} MeV
+\]
+Nel caso della interazione forte tra nucleoni le cose vanno
 diversamente. Il metodo \(1\) richiederebbe una conoscenza della forte
-che non abbiamo poiché -- appunto -- dobbiamo ancora determinarne le
+che non abbiamo poiché - appunto - dobbiamo ancora determinarne le
 proprietà. Il metodo \(2\) è chiaramente inapplicabile ad un sistema
 microscopico. Il metodo \(3\), basato sulla TRR, potrebbe essere
 applicabile qualora il difetto di massa del sistema fosse consistente.
@@ -1619,32 +1619,43 @@ nucleo stesso.
 Sulla base di quanto detto, siamo ora in grado di fornire la seguente
 \textbf{definizione operativa della energia di legame} ovvero della
 \emph{energia necessaria per separare il nucleo nei nucleoni componenti}
-
 \begin{equation}
-	B\left( {}^{A}_{Z}X \right)  = \left[ Nm_{n} + Zm_{p} -m_{N}\left( {}^{A}_{Z}X \right) \right]c^{2}
+	B \left( {\isotope[A][Z]{\mathlarger{X}_{N}} \right)  = \left[ Nm_{n} + Zm_{p} -m_{N}
+	\left( \isotope[A][Z]{\mathlarger{X}_{N}} \right) \right] c^{2}
+	\label{eq:binding-energy-definition}
 \end{equation}
-dove $m_{n},m_{p},m_{N}$ sono rispettivamente le masse del neutrone, del protone e del nucleo
-\sidenote{Vale la pena precisare che le masse nucleari sono misurabili con minore precisione di quelle atomiche per cui è utile ricavare le prime delle seconde attraverso la relazione \[
-	m_{A}\left( {}^{A}_{Z}X \right) = m_{N}\left( {}^{A}_{Z}X \right)+Zm_{e} - \frac{1}{c^{2}}\sum_{i = 1}^{Z}B_{i}^{el}
+dove $m_{n},m_{p},m_{N}$ sono rispettivamente le masse del neutrone, del protone e del nucleo\sidenote{
+	Vale la pena precisare che le masse nucleari sono misurabili con minore precisione di quelle atomiche per cui è utile ricavare le prime delle seconde attraverso la relazione \[
+	m_{A}\left( \isotope[A][Z]{\mathlarger{X}_{N}} \right) = m_{N}\left( \isotope[A][Z]{\mathlarger{X}_{N}} \right)+Zm_{e}
+	- \frac{1}{c^{2}}\sum_{i = 1}^{Z}B_{i}^{el}
 \] dove $m_{A}$ è la massa dell'atomo corrispondendente al nucleo in esame.}.
-Limitando la rappresentazione ai soli nuclidi stabili (nel caso vi fosse più di un isotopo stabile si sceglie quello più abbondante) si ottiene l'energia di legame media per nucleone $B/A$ in funzione di $A$ mostrata qui a fianco.
-
-Il quoziente $B/A$ dà una indicazione quantitativa del grado di stabilità del nuclide e permette di stabilire se una data reazione nucleare sia esoenergetica o endoenergetica e, dunque, se possa avvenire spontaneamente oppure no.
-
-Dal grafico in figura \ref{fig:en-legame-graph} possiamo trarre alcune conclusioni generali:
+La formula (\ref{eq:binding-energy-definition}), attraverso la misura sistematica delle masse nucleari, rende possibile la determinazione dell’energia
+di legame dei nuclidi che può essere tabulata in funzione di una qualunque coppia tra le variabili A, Z ed N (vedi \ref{sec:le-carte-dei-nuclidi}).
+Limitando la rappresentazione ai soli nuclidi stabili (nel caso vi fosse più di un isotopo
+stabile si sceglie quello più abbondante) si ottiene l’energia di legame media per nucleone B/A in funzione di A riportata
+in Figura~\ref{fig:binding-energy-stable} e riportata nella pagina seguente.
+Il quoziente B/A da una indicazione quantitativa del grado di stabilità del nuclide e permette di stabilire se una data reazione nucleare sia esoenergetica o endoenergetica e, dunque, se possa avvenire spontaneamente oppure no.
+\begin{figure}
+	\centering
+	\includegraphics{figs/en-legame-graph}
+	\caption{Grafico dell'energia di legame media per nucleone in funzione del numero di nucleoni $A$.}
+	\label{fig:en-legame-graph}
+\end{figure}
+Dal grafico in figura~\ref{fig:en-legame-graph} possiamo trarre alcune conclusioni generali:
 \begin{enumerate}
 	\item Ci sono configurazioni nucleari particolarmente stabili quali ${}^{4}He, {}^{12}_{}C, {}^{16}_{}O, \dots$
 	\item a parte queste eccezioni, l'energia di legame media per nucleone ha un andamento regolare.
 	      Aumenta rapidamente con il numero di nucleoni fino ad un valore dell'ordine degli $8 \ MeV$ per poi diminuire assai lentamente
 	\item i nucleo piu stabili sono ${}^{56}_{}Fe$ e ${}^{62}_{}Ni$.
-	      Ciò significa che i nuclei pesanti alla sua destra pososno raggiungere configurazioni piu stabili (ovvero con $B / A$ piu elevato) aumentando $A$, ovvero aggregandosi in nuclei piu grandi.
-	      Detto in altri termini ciò significa che \textbf{le reazioni di fissione dei nuclei pesanti e e quelle di fusione dei nuclei leggeri sono esoenergetiche} ovvero producono energia qualora si sia in grado di innescarle;
+	Ciò significa che i nuclei pesanti alla sua destra possono raggiungere configurazioni più stabili ($B/A$ più elevato) diminuendo il numero di nucleoni A, ovvero frazionandosi in nuclei più piccoli.
+	Mentre i nuclei leggeri alla sua sinistra possono raggiungere configurazioni più stabili ($B/A$ più elevato) aumentando A, ovvero aggregandosi in nuclei più grandi.
+	Detto in altri termini ciò significa che le \textbf{reazioni di fissione dei nuclei pesanti e e quelle di fusione dei nuclei
+	leggeri sono esoenergetiche} ovvero producono energia qualora si sia in grado di innescarle;
 	\item dal punto precedente consegue che \textbf{le reazioni di fusione dei nuclei leggeri e fissione dei nuclei pesanti} costituiscono la doppia opportunità offerta dalla fisica nucleare per la produzione di energia.
-
 \end{enumerate}
 
-La via della fusione nucleare è stata scelta dalle stelle. Oggi sappiamo
-che una stella come il sole ricava la quasi totalità della energia
+La via della \emph{fusione nucleare} è stata scelta dalle stelle.
+Oggi sappiamo che una stella come il sole ricava la quasi totalità della energia
 (circa il \(98 \%\)) dalla fusione di nuclei d'idrogeno in nuclei di
 elio.
 L'energia prodotta dalle reazioni di fusione fluisce verso
@@ -1652,7 +1663,29 @@ l'esterno.
 Tale flusso, nella forma di energia cinetica dei prodotti
 delle reazioni di fusione, fornisce la spinta verso l'esterno capace di
 opporsi alla contrazione gravitazionale mantenendo il sole in una
-situazione di equilibrio di forze detto equilibrio idrostatico.
+situazione di equilibrio di forze detto equilibrio idrostatico\sidenote
+{
+I fisici delle particelle elemtnari trovano naturale misurare le masse atmoiche e nucleare in unita di $ eV/c^2$
+ma, i fisici nucleari e soprattutto i chimici, biochimici, e i biologi molecolari preferiscono usare una scala di
+massa la cui unità è prossima a quella del protone e del neutrone.
+Si tratta della \textbf{unità di massa atomica} (simbolo \textbf{u}) definita come \textbf{la dodicesima parte della massa
+dell'atomo di carbonio-12}.
+È evidente che tale unità di massa, a causa dell'inerzia negativa associata all'energia di legame del nucleo deve essere
+inferiore sia alla massa del protone che a quella del neutrone:
+\[
+   \frac{1}{12} M_A (\isotope[12][6]{\mathlarger{C}}) = \frac{1}{12} \left[M_N \isotope[12][6]{\mathlarger{C}} + 6 m_e -
+	\frac{1}{{c}^{2}} \sum_{i = 1 }^{6} B_i^{e^-} \right]
+\]
+\[
+	= \left[\frac{1}{12} 6 m_n + 6 m_p - \frac{1}{{c}^{2}} \sum_{i = 1 }^{12} B_i^{nucl} + 6 m_e -
+	\frac{1}{{c}^{2}} \sum_{i = 1 }^{6} B_i^{e^-}\right]
+\]
+\[
+	\simeq \frac{m_n + m_p + m_e}{2} - \frac{1}{12} \sum_{i = 1 }^{12} \frac{B_i^{nucl} }{{c}^{2}}
+	\simeq 931.5 MeV
+\]
+Infatti la conversione tra $u$ e MeV/$c^2$ è ovvero $ 1 \%$ inferiore alla massa del neutrone e del protone.
+}.
 
 Dal grafico si può leggere il decorso del processo una volta esaurito
 l'idrogeno: la contrazione gravitazionale prenderà il sopravvento
@@ -1668,3 +1701,32 @@ compatto di materia in uno stato degenere.
 
 La via della \emph{fissione nucleare} trova invece una sua applicazione
 nei reattori nucleari.
+Alcuni nuclidi detti \emph{fissili}– quali ad esempio l'$ \isotope[235][92]{\mathlarger{U}}$
+ed il $ \isotope[239][94]{\mathlarger{Pu}}$ - possiedono elevate sezioni d’urto di cattura di neutroni termici
+(neutroni con energie dell’ordine di 0.03 eV, comparabili con quella di agitazione termica a temperatura ambiente) e,
+a seguito della cattura neutronica, tendono a spezzarsi in due nuclei leggeri più alcuni neutroni liberi di
+qualche MeV di energia.
+
+E’chiaro che irradiando con neutroni termici un \emph{nocciolo materiale} contenente materiale fissile, la elevata
+energia cinetica (quasi 200 MeV) dei nuclidi prodotti dalla fissione diffonderà all’esterno come \emph{calore} asportato
+da un \emph{fluido refrigerante} mentre i \emph{neutroni liberi} potranno indurre ulteriori reazioni di fissione del
+materiale dando luogo ad una \emph{reazione a catena}.
+Come detto però, affinchè ciò avvenga in misura sufficiente, è necessario abbassare l’energia di tali neutroni liberi
+da qualche Mev al livello termico, funzione cui provvede il \emph{materiale moderatore}.
+Fondamentale è poi la possibilità di controllare la rapidità di sviluppo delle reazioni a catena che solitamente viene
+ottenuta inserendo o togliendo dal nocciolo apposite \emph{barre di controllo} capaci di assorbire i neutroni prodotti
+dalla fissione.
+
+Un tipico reattore a fissione può avere un \emph{nocciolo} costituito da una miscela di $ \isotope[235][92]{\mathlarger{U}}$
+(fino al 5\%) e $ \isotope[238][92]{\mathlarger{U}}$.
+Dato che nell’uranio naturale la frazione dominante è quella dell’isotopo $ \isotope[238][92]{\mathlarger{U}}$ -
+mentre $ \isotope[235][92]{\mathlarger{U}}$ è presente con frazione ell’ordine dello 0.7 \% - ne consegue che l’uranio
+naturale deve essere \emph{arricchito} (vi si aggiunge $ \isotope[235][92]{\mathlarger{U}}$ puro separato dall’
+$ \isotope[238][92]{\mathlarger{U}}$ ad esempio attraverso centrifugazione basata sulla diversa massa dei nuclidi).
+Il \emph{fluido refrigerante} è spesso costituito da \emph{acqua pressurizzata} che cede il calore assorbito all’interno
+del nocciolo ad un contenitore che trasforma acqua in vapore che a sua volta muove le turbine che azionano gli alternatori
+per la produzione e l’immissione in rete della energia elettrica.
+Il moderatore è spesso costituito da acqua pesante (acqua con elevatissime frazioni di deuterio essendo 156 ppm la
+frazione nell’acqua naturale) o grafite distribuite all’interno del nocciolo, mentre le barre di controllo sono
+costituite da metalli quali cadmio e indio che vengono inserite od estratte dal nocciolo con la funzione di modulare
+la quantità di energia prodotta.
