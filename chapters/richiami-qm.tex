@@ -40,16 +40,16 @@ cui una misurazione ripetuta potrebbe portare ad un esito diverso della
 posizione. \(\implies\)ragionamento in termini
 statistici\(\implies\)posso solo conoscere il \textbf{valore medio}
 della posizione. \[
-                     \bm{r} |\psi(\bm{r},t)|^{2}dV \qquad <\bm{r}> = \sum_{i}^{n} \frac{\bm{r}_{i}p_{i}}{\sum_{i}^{n}p_{i}}
+                     \bm{r} |\psi(\bm{r},t)|^{2}dV \qquad \langle \bm{r} \rangle = \sum_{i}^{n} \frac{\bm{r}_{i}p_{i}}{\sum_{i}^{n}p_{i}}
 \]
 \begin{equation}
-    <\bm{r}> = \frac{\iiint_{V} \bm{r} |\psi(\bm{r},t)|^{2}dV }{\iiint_{V}|\psi(\bm{r},t)|^{2}dV }
+    \langle \bm{r} \rangle = \frac{\iiint_{V} \bm{r} |\psi(\bm{r},t)|^{2}dV }{\iiint_{V}|\psi(\bm{r},t)|^{2}dV }
     \label{eq:mean-value-quantum-position}
 \end{equation} dove il denominatore è unitario dalla condizione di
 normalizzazione.
 A questo punto si ha, con \(\psi^*\) complesso
 coniugato, \[
-               <\bm{r}> = \iiint_{V} \psi^*(\bm{r},t)\bm{r}\psi(\bm{r},t)\,dV
+               \langle \bm{r} \rangle = \iiint_{V} \psi^*(\bm{r},t)\bm{r}\psi(\bm{r},t)\,dV
 \] ovvero la \emph{media delle posizioni corrisponde alla media del
 vettore posizione \(\bm{r}\) pesata dal modulo quadro della funzione
 d'onda.}
@@ -91,7 +91,7 @@ Non è difficile mostrare che nel caso di un generico \emph{pacchetto d'onde} i
 valore medio della quantità di moto della particella continua ad essere
 dato da questo integrale per cui scriveremo
 \[
-    <\bm{p}> = \iiint_{V} \psi^{*}\hat{P}\psi \, dV = \iiint_{V} \psi^{*}(- i \hslash \nabla )\psi \, dV
+    \langle \bm{p}\rangle = \iiint_{V} \psi^{*}\hat{P}\psi \, dV = \iiint_{V} \psi^{*}(- i \hslash \nabla )\psi \, dV
 \] Inoltre, essendo le grandezze fisiche espresse da numeri reali, gli
 operatori associati alle variabili dinamiche dovranno essere
 \textbf{hermitiani}.
@@ -107,7 +107,7 @@ quantistica nella seguente forma:
     al tempo \(t\) in un certo stato quantomeccanico \(\psi(\bm{r},t)\) è
     dato dal seguente integrale detto \textbf{valore di aspettazione}
     \begin{equation}
-        \boxed{<o> = \iiint_{V} \psi^{*}(\bm{r},t)\hat{O}\psi(\bm{r},t) \, dV}
+        \boxed{\langle o \rangle = \iiint_{V} \psi^{*}(\bm{r},t)\hat{O}\psi(\bm{r},t) \, dV}
         \label{eq:observable-qm-axiom}
     \end{equation}
 \end{quote}
@@ -399,7 +399,7 @@ quadrato del momento angolare e della sua terza componente}, mentre le
 corrispondenti \textbf{autofunzioni} forniranno le espressioni delle
 \textbf{funzioni d'onda} degli stati quantomeccanici: \begin{gather*}
                                                           \hat{L}^{2}\psi = \lambda \psi\\
-                                                          < \hat{L}^{2}> = \iiint_{V} \psi^{*} \hat{L}^{2}\psi \, dV = \lambda \iiint_{V} \psi \psi^{*} \, dV = \lambda\\
+                                                          \langle \hat{L}^{2}\rangle = \iiint_{V} \psi^{*} \hat{L}^{2}\psi \, dV = \lambda \iiint_{V} \psi \psi^{*} \, dV = \lambda\\
                                                           \hat{L}^{2} \psi = \lambda' \psi \qquad  \hat{L}_{z} \psi = \lambda'' \psi
 \end{gather*}
 Sviluppando il conto (vedi un testo di QM) si ha
