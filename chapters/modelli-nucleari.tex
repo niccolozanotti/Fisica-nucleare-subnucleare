@@ -1,3 +1,34 @@
+Esamineremo ora alcuni modelli che sono stati costruiti per finalizzare la descrizione del nucleo.
+
+Una classificazione di alcuni modelli nucleari in base al tipo di interazione tra nucleoni è la seguente:
+\begin{multicols}{2}
+	\begin{center}
+		Models with strong interaction between nucleons:
+	\end{center}
+	\begin{itemize}
+		\item \textbf{Liquid drop model} (Modello a goccia);
+		\item \textbf{Shell model} (Modello a shell);
+		\item $ \alpha-$particle model.
+	\end{itemize}
+   \begin{center}
+	   Nucleons interact with the nearest neighbors and practically don‘t move: mean free path \[ \lambda \ll R\]
+   \end{center}
+	\columnbreak
+
+	\begin{center}
+		Models of non-interacting nucleons :
+	\end{center}
+	\begin{itemize}
+		\item \textbf{Fermi gas model} (Modello a gas di fermioni);
+		\item Optical model (Modello ottico).
+	\end{itemize}
+	\begin{center}
+		Nucleons move freely inside the nucleus: mean free path \[ \lambda \sim R\]
+	\end{center}
+\end{multicols}
+\begin{center}
+($ R$ being the nuclear radius)
+\end{center}
 \section{Il modello nucleare a goccia}\label{sec:il-modello-nucleare-a-goccia}
 Il grafico (Fig.~\ref{fig:en-legame-graph}) della energia di legame media per nucleone commentato in precedenza
 contiene un certo numero di importanti indicazioni
@@ -126,9 +157,11 @@ l'espressione dell'energia di legame acquisirà la forma seguente
 	coulombiano}.
 Il termine coulombiano deve chiaramente annullarsi per
 \(A=1\)(non c'e interazione elettrostatica) per cui l'unica forma
-possibile è \[
+possibile è
+\begin{equation}
 	L \propto \frac{Z(Z-1)}{A^{1/3}} \quad
-\]
+   \label{eq:work-to-seperate-uniformly-distributed-protons}
+\end{equation}
 \begin{marginfigure}
 	\includegraphics{figs/goccia3}
 	%    \caption{This is a margin figure.}
@@ -265,16 +298,242 @@ Vedremo, infine, che il \emph{modello a shell} sarà quello piu preciso.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Il nucleo come gas di fermioni}\label{sec:il-nucleo-come-gas-di-fermioni}
 
-Il modello a goccia del nucleo - essenzialmente fondato sulla natura a corto raggio delle interazioni forti - riesce a
-descrivere alcune proprietà del nucleo tra le quali l’esistenza di una energia di legame con termini di volume, superficie e coulombiano.
-Non riesce invece a rendere conto in nessun modo dei termini di asimmetria e accoppiamento, chiaramente richiesti dai
-dati sperimentali, ma che devono essere introdotti ‘a mano’ nella formula di Weizsacker.
-Tale fatto dimostra che oltre alla natura a corto raggio delle interazioni forti, nel nucleo giocano un ruolo di rilievo
-altre proprietà trascurate dal modello a goccia, presumibilmente legate alla natura quantomeccanica dei suoi costituenti.
-Il modello nucleare a gas di fermioni introduce nel gioco alcuni essenziali proprietà quantomeccaniche in una forma il
-più possibile semplificata.
+
+
+Il modello a goccia del nucleo - essenzialmente fondato sulla natura a corto raggio delle interazioni forti - riesce a descrivere alcune proprietà del nucleo tra le quali l’esistenza di una energia di legame con termini di volume, superficie e coulombiano.
+Non riesce invece a rendere conto in nessun modo dei termini di asimmetria e accoppiamento, chiaramente richiesti dai dati sperimentali, ma che devono essere introdotti ‘a mano’ nella formula di Weizsacker.
+Tale fatto dimostra che oltre alla natura a corto raggio delle interazioni forti, nel nucleo giocano un ruolo di rilievo altre proprietà trascurate dal modello a goccia, presumibilmente legate alla natura quantomeccanica dei suoi costituenti.
+Il modello nucleare a gas di fermioni introduce nel gioco alcuni essenziali proprietà quantomeccaniche in una forma il più possibile semplificata.
+
+\subsection{Aspetti generali}\label{sec:aspetti-generali}
+
+Le considerazioni fisiche che conducono alla formulazione del modello a gas di fermioni possono essere riassunte nei seguenti punti:
+\begin{itemize}
+	\item l’interazione forte che lega protoni e neutroni nel nucleo è a corto raggio
+	e dell’ordine del raggio dei nucleoni stessi;
+	\item ogni nucleone sarà quindi soggetto alla forza forte dei nucleoni
+	immediatamente a contatto che tenderanno così a disporsi con densità
+	volumetrica approssimativamente costante;
+	\item ciò comporta che la risultante delle forze agenti sul singolo nucleone sia
+	mediamente nulla quando questo si trova all’interno al nucleo e mediamente non nulla e diretta verso il centro quando questo si trova sulla superficie del nucleo;
+	\item riassumersi in una forza dipendente dalla posizione, nulla all’interno di un volume sferico di raggio $R$ (raggio nucleare) e non nulla e centrale sulla sua superficie;
+	\item essendo $ \bm{F} = - grad \, U$, tale forza può essere descritta da un potenziale
+	nullo all’interno del volume sferico di raggio R, che sale con una certa ripidità in corrispondenza della superficie sferica,
+	fino a raggiungere un valore costante al di fuori di essa. \\
+	In sintesi, una \textbf{buca sferica di potenziale di raggio R} all’interno della quale vanno a collocarsi sia i neutroni che i protoni.
+\end{itemize}
+\bisgkip
+
+Dato questo assetto delle forze, la meccanica quantistica fa il resto.
+Infatti sappiamo che
+\begin{itemize}
+	\item una particella microscopica vincolata a rimanere in una regione di spazio
+	limitata (nel nostro caso all’interno della buca di potenziale) deve annullare la propria funzione d’onda più o meno sulla superficie di tale regione ed all’esterno di essa;
+	\item ciò comporta la quantizzazione delle lunghezze d’onda di De Broglie dei neutroni e dei protoni e, con esse, della loro energia (fenomeno analogo alla quantizzazione delle lunghezze d’onda in una corda vibrante) cosicchè gli stati quantomeccanici vanno a costituire una serie discreta e numerabile;
+	\item dato che protoni e neutroni hanno spin $s=\frac{1}{2}$, essi vanno a costituire due insiemi di fermioni identici soggetti alle restrizioni del principio di esclusione;
+	\item organizzando la serie discreta degli stati quantomeccanici possibili secondo i valori crescenti delle loro energie, il principio di esclusione permette di collocare in ciascuno di essi un solo protone ed un solo neutrone;
+	\item nello stato fondamentale di minima energia del nucleo, neutroni e protoni nucleari riempiranno allora dal basso tutti gli stati quantomeccanici fino ad un livello energetico massimo detto \textbf{livello di Fermi} (nello stato fondamentale di minima energia dunque, i neutroni ed i protoni non sono immobili ma possiedono una certa energia cinetica crescente).
+\end{itemize}
+
+Le precedenti considerazioni ci conducono a concludere che la \emph{natura della forza media nucleare}, combinata con la
+\emph{natura quantomeccanica dei suoi costituenti}, \textbf{assimila il nucleo nel suo stato fondamentale ad un doppio
+gas di neutroni e protoni in condizioni di massima degenerazione}.
+Parliamo di `gas’ poiché neutroni e protoni – come si è detto – si muovono essenzialmente liberi all’interno del volume nucleare subendo le sole forze di contenimento delle pareti nucleari.
+Il termine ‘doppio’ ricorda che le restrizioni del principio di esclusione si applicano separatamente ai protoni ed ai neutroni.
+Infine, il termine ‘degenerazione’ si riferisce al fatto che gli stati quantomeccanici quantizzati si riempiono tutti a partire da quelli meno energetici fino al livello di Fermi.
+Come noto, tale condizione si realizza nei \textbf{gas di fermioni identici alle bassissime temperature che trovano così una loro sorprendente relazione con il nucleo nel suo stato fondamentale}.
+Da questo punto di vista la differenza è solo quantitativa poiché i gas quantomeccanici contano un numero di elementi dell’ordine del numero di Avogadro mentre il doppio gas nucleare risulta costituito da decine di unità un fatto che – come già osservato – rende sostanzialmente inapplicabili i metodi della meccanica statistica.
+
+Nel prosieguo, l’approccio del modello a gas di fermioni verrà utilizzato per costruire una formula della energia di legame più evoluta di quella fornita dal modello a goccia nella speranza che la meccanica quantistica possa rendere conto dei termini introdotti in modo puramente fenomenologico nella formula di Weizsacker.
+
+\subsection{La funzione d'onda dei nucleoni}\label{sec:funzione-onda-nucleoni}
+
+Il primo passo è quello di scrivere la funzione d’onda di $N$ neutroni e $Z$ protoni soggetti alla buca di potenziale sferica che descrive la forza media agente su di loro all’interno del nucleo.
+Senza perdere in generalità, possiamo semplificare i calcoli immaginando una \emph{buca di potenziale cubica di lato L} all’interno della quale si trova un emph{nucleone} (protone o neutrone) in uno stato quantomeccanico descritto da un’onda piana di De Broglie
+\[
+\psi(\bm{r},t) = A e^{ i(\bm{k} \cdot \bm{r} - \omega t) } =
+Ae^{ \frac{i}{\hslash} (\bm{p} \cdot \bm{r} -Et)  } =
+(Ae^{ \frac{i}{\hslash}p_{x}x }e^{ \frac{i}{\hslash}p_{y}y }e^{ \frac{i}{\hslash}p_{z}z })e^{ - \frac{i}{\hslash}Et }
+\]
+Con tutta evidenza, per descrivere correttamente lo stato quantomeccanico del nucleone, tale emph{funzione d’onda dovrà annullarsi sulla superficie cubica}.
+Gli esponenziali complessi non possono annullarsi per cui è necessario ipotizzare che la funzione d’onda contenga solo le parti sinusoidali o cosinusoidali di tali esponenziali
+\begin{equation}
+	\psi(\bm{r},t) = A \sin\left(  \frac{1}{\hslash}p_{x}x \right) \sin\left(  \frac{1}{\hslash}p_{y}y \right) \sin\left(  \frac{1}{\hslash}p_{z}z \right) e^{ - \frac{i}{\hslash}Et }
+	\label{eq:wave-function-nucleon-fermion-gas-non-normalized}
+\end{equation}
+In questa forma è agevole imporre l’annullamento della funzione d’onda sulle pareti della cavità nucleare ovvero sui piani $x=0$, $x=L$;  $y=0$, $y=L$; $z=0$, $z=L$.
+Ragionando ad esempio lungo la direzione $x$ abbiamo le condizioni
+\[
+\frac{1}{\hslash} p_{x}x \big|_{x = 0,L} = 0
+\]
+sempre soddisfatta in $x=0$ e soddisfatta in $x=L$ solo se
+\[
+\frac{1}{\hslash}p_{x}L = n_{x} \pi \qquad n_{x} = 1,2, \dots, N
+\]
+Dato che condizioni analoghe si trovano immediatamente anche nelle direzioni y e z, giungiamo alla conclusione che le componenti cartesiane della \emph{quantità di moto} del nucleone soddisfano le seguenti \emph{condizioni di quantizzazione}
+\begin{equation}
+	p_{x} = n_{x} \frac{\pi \hslash}{L} \quad
+	p_{y} = n_{y} \frac{\pi \hslash}{L} \quad
+	p_{z} = n_{z} \frac{\pi \hslash}{L} \qquad
+	n_{x},n_{y},n_{z} = 1,2, \dots , n
+	\label{eq:quantized-momentum-fermions-gas}
+\end{equation}
+Come anticipato, ciò comporta che pure \emph{l’energia} del nucleone soddisfi la seguente \emph{condizione di quantizzazione}
+\begin{equation}
+	E = \frac{p^{2}}{2 M} = \frac{1}{2 M} \left( \frac{\pi \hslash}{L} \right)^{2} (n_{x}^{2} + n_{y}^{2}+n_{z}^{2}) \qquad
+	n_{x},n_{y},n_{z} = 1,2, \dots , n
+	\label{eq:energy-nucleon-fermions-gas}
+\end{equation}
+dove l'energia considerata è la cinetica in quanto nel modello che stiamo costruendo $ V(r) = 0$ per $ r< R$.
+Sostituendo le (\ref{eq:quantized-momentum-fermions-gas}) nella (\ref{eq:wave-function-nucleon-fermion-gas-non-normalized})
+ed imponendo la condizione di normalizzazione sul volume nucleare
+\begin{gather*}
+    \iiint_{V} |\psi(\bm{r},t) |^{2} \, dV = 1 \iff
+1 = A^{2} \prod_{i = 1}^{3} \int_{0}^{L} \sin ^{2}\left( n_{x_{i}} \frac{\pi x_{i}}{L} \right) \, dx_{i}\\
+    1 = A^{2} \left( \frac{L}{2} \right)^{3} \Longrightarrow A = \sqrt{ \frac{8}{L^{3}} }
+\end{gather*}
+otteniamo la \textbf{funzione d’onda del nucleone nel volume nucleare cubico di lato L}
+\begin{equation}
+	\psi(\bm{r},t) = \sqrt{ \frac{8}{L^{3}}} \sin\left( n_{x} \frac{\pi x}{L} \right) \sin\left( n_{y} \frac{\pi y}{L} \right)
+	\sin\left( n_{z} \frac{\pi z}{L} \right) e^{ -\frac{i}{\hslash}Et }
+	\label{eq:wave-function-nucleon-fermion-gas-normalized}
+\end{equation}
+Si comprende allora che gli stati quantomeccanici del nucleone vanno a costituire una \emph{sequenza discreta e numerabile di stati univocamente identificati da una terna ordinata di numeri naturali (non nulli e positivi)} $n_x, n_y, n_z$  \emph{detti numeri quantici dello stato}.
+
+\subsection{Nucleoni e principio di esclusione} \label{sec:nucleoni-principio-di-esclusione}
+
+Trovata l’espressione degli stati quantomeccanici di un generico nucleone nella cavità nucleare, vogliamo ora calcolare \emph{il numero di stati che possiedono una energia minore o uguale ad un certo prefissato valore}.
+Con tutta evidenza - dato il legame esistente tra energia e quantità di moto – ciò equivale a calcolare il numero di stati che possiedono un modulo della quantità di moto minore od uguale ad un certo prefissato valore.
+
+Premesso che il calcolo si base sulla stessa tecnica applicata a suo tempo al caso della radiazione elettromagnetica di cavità, si comincia \emph{introducendo uno spazio tridimensionale i cui punti rappresentano i vettori della quantità di moto che avranno così proiezioni} $p_x, p_y \ \text{e} \ p_z$.
+
+Tenendo conto delle relazioni di quantizzazione della quantità di moto (\ref{eq:quantized-momentum-fermions-gas}), si comprende immediatamente che – in tale spazio – i valori delle quantità di moto accessibili al nucleone si collocano nel primo ottante sulle intersezioni di un grigliato tridimensionale di passo $\frac{\pi \hslash}{L}$.
+A ciascuna di tali intersezioni corrisponde anche una determinata terna ordinata di numeri quantici $n_{x}, n_{y}$ e $n_{z}$ e, con essa, un determinato stato quantomeccanico.
+
+Ciò premesso, si capisce che \textit{il numero di stati quantomeccanici aventi modulo della quantità di moto uguale o inferiore ad un prefissato valore}
+$\tilde{p}$ è approssimativamente uguale al quoziente tra il volume dell’ottante di sfera di raggio $\tilde{p}$ ed il volumetto cubico del grigliato
+\[
+n_{s} = \frac{1}{8} \frac{ \frac{4}{3} \pi \tilde{p}^{3}}{\left( \frac{\pi \hslash}{L} \right)^{3}} = \frac{L^{3}}{6 \pi^{2}\hslash^{3}}\tilde{p}^{3}
+\]
+dove abbiamo posto $L^{3} = V$.
+Un attimo di attenzione chiarisce che tale formula in realtà sovrastima il numero di stati quantomeccanici.
+Infatti, tutti gli statti quantomeccanici interni all’ottante sferico di cui sopra, ma giacenti sui tre piani coordinati $p_x=0, p_y=0$ e $p_z=0$, annullano la funzione d’onda (\ref{eq:wave-function-nucleon-fermion-gas-normalized}) e corrispondono pertanto ad un medesimo stato quantico che deve essere contato una volta sola. E’ facile capire che il numero di tali stati è uguale al quoziente tra le aree dei tre quarti di circonferenza di raggio $\tilde{p}$ dell’ottante sferico e l’areola quadrata associata a ciascuno stato quantomeccanico
+\[
+n_{0} = \frac{3 \frac{1}{4} \pi \tilde{p}^{2}}{\left( \frac{\pi \hslash}{L} \right)^{2}} = \frac{3}{4} \frac{L^{2}}{\pi \hslash^{2}} \tilde{p}^{2} =
+\frac{S}{8\pi \hslash^{2}}\tilde{p}^{2}
+\]
+dove, nell’ultimo passaggio, abbiamo introdotto la superficie della scatola cubica $S = 6 L^{2}$.
+Troviamo allora che \textit{ il numero di stati quantici tali che} $0< | p|<\tilde{p}$  in realtà vale
+\[
+n_{s} = \frac{V}{6 \pi^{2}\hslash^{3}} \tilde{p}^{3} - \frac{S}{8\pi \hslash^{2}}\tilde{p}^{2}
+\]
+\begin{marginfigure}
+	\includegraphics{figs/Fermi-surface}
+	    \caption{Fermi surface.}
+%	\label{fig:goccia1}
+\end{marginfigure}
+Dato che, secondo il principio di esclusione di Pauli, ciascuno stato quantistico della funzione d’onda orbitale può alloggiare al massimo due fermioni identici (uno per ciascuno dei due stati di spin del nucleone descritti da uno spinore che abbiamo omesso) concludiamo che \textbf{il numero di neutroni o protoni identici che possono essere contenuti nel volume nucleare V di superficie S con valore massimo dell’impulso} $P_f$ è dato dalla espressione seguente
+\begin{equation}
+	n_{f} = \frac{V P_{F}^{3}}{3 \pi^{2}\hslash^{3}} \left( 1 - \frac{3\pi \hslash}{4} \frac{S}{VP_{F}} \right)
+	\label{eq:fermions-number-specified-volume-momentum}
+\end{equation}
+
+Essa costituisce la formula fondamentale del modello a gas di fermioni, base di ogni successivo sviluppo del modello stesso.
+La (\ref{eq:fermions-number-specified-volume-momentum}) permette di stimare immediatamente alcune grandezze fisiche fondamentali del modello. Trascurando il termine di superficie che si può mostrare essere assi più piccolo di quello di volume, ricaviamo l’espressione \emph{dell’impulso di fermi in funzione del numero di fermioni nucleari}( tenendo conto del fatto che $\frac{\hslash S}{V} \ll 1$)
+\begin{equation}
+	P_{F} \simeq \hslash \left(\frac{3\pi^{2}n_{F}}{V} \right)^{1/3}
+	\label{eq:fermi-momentum-estimate}
+\end{equation}
+Le ipotesi di \emph{stabilità} del nuclide e dell'occupazione dello \emph{stato di minima energia} si traducono in
+\[
+	V \simeq \frac{4}{3}\pi r_{0}^{3}A \quad e \quad n_{p}\simeq n_{s} \simeq \frac{A}{2}
+\]
+per cui usando la (\ref{eq:fermi-momentum-estimate}) possiamo ottenere una stima del valore \textbf{dell’impulso di Fermi} dei protoni e neutroni nucleari
+\[
+P_{F} = \left( \frac{9\pi}{8} \right)^{1/3} \frac{\hslash}{r_{0}} \simeq 1.52 \frac{\hslash}{1.2 \times \frac{1}{200}\frac{\hslash c}{MeV}} \simeq 254 \frac{MeV}{c}
+\]
+Dunque, \emph{nel nucleo prossimo allo stato fondamentale, esiste una frazione di nucleoni con un impulso piuttosto rilevante}. Inoltre, \emph{l’impulso di Fermi dei protoni e neutroni risulta essere indipendentemente dal tipo e dimensioni del nucleo}, un fatto che non ci sorprende solo a posteriori.
+\bigskip
+
+E’ immediato allora stimare la \textbf{energia cinetica di Fermi} dei protoni e neutroni nucleari
+\begin{equation}
+	E_{F} = \frac{P_{F}^{2}}{2M_{n,p}} \simeq 34 \, MeV
+	\label{eq:fermi-kinetic-energy-estimate}
+\end{equation}
+%Nel caso del nuclepiù semplice ($H$) si avrà che
+%%%TODO 20/12/22 niccolozanotti: farsi spiegare da marco cosa scrivere qui
+ed anche la \textbf{profondità della buca di potenziale nucleare} che sarà approssimativamente uguale alla somma della energia di Fermi con la energia media di separazione dei nucleoni che vale circa $8 \, MeV$
+(vedi Fig.~\ref{fig:en-legame-graph})
+\begin{equation}
+	V_{0} \simeq E_{F} + \frac{B}{A} \simeq (34 + 8)\, MeV \simeq 42 \, MeV
+   \label{eq:}
+\end{equation}
+entrambi indipendenti da A \emph{e dunque approssimativamente valide per tutti i nuclei}.
+
+\subsection{L'espressione dell'energia di legame}\label{subsec:energia-di-legame-fermions-gas}
+
+Si noti che l’energia cinetica dei nucleoni non è molto inferiore alla profondità della buca (è inferiore di 8 MeV appunto) per cui \emph{il nucleo è un insieme di nucleoni debolmente legati}.
+
+Nel caso dei nuclei stabili pesanti dobbiamo tenere conto che il numero di neutroni eccede quello dei protoni per cui dalla (\ref4.30) e (\ref4.31) otteniamo \emph{che l’impulso e la energia di Fermi dei neutroni supera quello dei protoni}
+\[
+P_{F}^n > P_{F}^p \qquad E_{F}^n > E_{F}^p
+\]
+e così pure per la (\ref4.32) \emph{la profondità della buca di potenziale dei neutroni supera quella dei protoni}
+\[
+V_{0}^n > V_{0}^p
+\]
+Se ora teniamo conto che i protoni - a causa della carica elettrica che possiedono - sono soggetti ad un potenziale repulsivo coulombiano sostanzialmente apprezzabile solo
+quando quello nucleare si azzera, abbiamo che i potenziali complessivi di
+neutroni e protoni devono avere l’andamento approssimato mostrato in Figura~\ref{fig:fermi-gas-model-potential-scheme}.
+
+\begin{figure}
+	\centering
+	\includegraphics{../figs/fermi-gas-model-potential-scheme}
+	\caption{Scheme of Fermi gas model potential.}
+	\label{fig:fermi-gas-model-potential-scheme}
+\end{figure}
+
+Queste considerazioni chiariscono le linee di ragionamento che possono condurre alla costruzione della \emph{formula della energia di legame basata sul modello a gas di fermioni}.
+
+Un \textbf{neutrone porta un contributo medio alla energia di legame nucleare} pari alla differenza tra la profondità della buca di potenziale e la sua energia cinetica media
+\[
+b_{n} = V_{0} - \langle T_{n} \rangle
+\]
+Per un protone si deve ragionare allo stesso modo aggiungendovi però la repulsione coulombiana che rende la buca del potenziale totale meno profonda.
+La repulsione coulombiana media per protone ha la seguente espressione (8-1 Feynman\cite{FeynLect2})
+\[
+	\langle V_{coul} \rangle = \frac{1}{Z} \mathlarger{\sum}_{\substack{j,k=1 \\ j \neq k, \,j > k  }}^{Z} \frac{e^{2}}{4 \pi \epsilon_{0}r_{jk}}\]
+e dipende dalla disposizione spaziale dei protoni.
+Ipotizzando una distribuzione spazialmente uniforme (problema della sfera uniformemente carica) otteniamo
+\[
+U_{coul}^{tot} = \frac{3}{5} \frac{e^{2}}{4 \pi \epsilon_{0}} \frac{Z^{2}}{R} = \frac{3}{5} \frac{e^{2}}{4 \pi \epsilon_{0} \hslash c} \hslash c \frac{Z^{2}}{R} = \frac{3}{5} \alpha \hslash c \frac{Z^{2}}{R}
+\]
+dove $\alpha \simeq \frac{1}{137}$ è la \emph{costante adimensionale di struttura fina} e $R$ è il raggio della distribuzione sferica di carica ovvero il raggio nucleare.
+Invocando un ragionamento già fatto per il modello a goccia quando si è parlato del termine coulombiano (si veda (\ref{eq:work-to-seperate-uniformly-distributed-protons})) nel nostro modello la precedente si riscrive come
+\[
+U_{coul}^{tot} = \frac{3}{5} \alpha \hslash c \frac{Z (Z-1)}{R} \ \cdot
+\]
+Possiamo ora scrivere il \emph{contributo medio del protone alla energia di legame nucleare} $b_{p}$\sidenote
+{
+Osserviamo che $ b_n$ e $ b_p$ sono stati stimati teoricamente a partire dal modello a gas di Fermi e non tramite
+considerazioni sul difetto di massa come in precedenza. Di fatto si vuole migliorare il precedente modello fenomenologico
+(a goccia) cercando di ricavare la dipendenza di $ B$ da $ A$ e $ Z$.
+}
+\begin{gather*}
+    \langle U^{tot}_{coul} \rangle = \frac{U^{tot}_{coul}}{Z}\\
+    b_{p} = V_{0} - \langle T_{p} \rangle  - \frac{1}{Z}
+\end{gather*}
+Tenendo ora conto espressione e dell’analoga per i neutroni possiamo comporre la seguente \textbf{espressione della energia di legame nucleare}
+\begin{equation}
+	B = N b_{n} + Z b_{p} = A V_{0} - N \langle T_{n} \rangle - Z \langle T_{p} \rangle - \frac{3}{5} \alpha \hslash c \frac{Z(Z-1)}{R}
+	\label{eq:binding-energy-fermi-gas-model}
+\end{equation}
+
+
+\subsection{Il calcolo dell'energia di legame}\label{sec:calcolo-energia-legame-fermions-gas}
 
 
 
+\section{Il modello a Shell}\label{sec:il-modello-a-shell}
 
 
