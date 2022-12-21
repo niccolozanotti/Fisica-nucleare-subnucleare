@@ -271,11 +271,12 @@ legame nucleare
 \end{equation} Essa dipende da 5 parametri(vedi Fig.~\ref{fig:liquid-drop-model}) il cui valore numerico
 viene determinato adattando la formula ai dati sperimentali di \(B/A\).
 
-A titolo di esempio, una possibile combinazione di valori è la seguente(i
+A titolo di esempio, una possibile combinazione di valori è la seguente (i
 valori sono in \(MeV\)):
-\[
+\begin{equation}
 	a_{v} = 15.5 \quad a_{s} = 16.8 \quad a_{c} = 0.72 \quad a_{a} = 23.0 \quad a_{p} = 34.0
-\]
+	\label{eq:typical-values-drop-model}
+\end{equation}
 La formula della energia di legame nucleare è utile - come strumento di
 calcolo - perchè suggerisce una prima interpretazione del nucleo e delle
 forze che lo tengono insieme.
@@ -654,6 +655,66 @@ Sostituendo $N=A-Z$ otteniamo infine le seguenti espressioni
 \end{align*}
 che sostituite nella (\ref{eq:intermediate-calc-binding-energy-fermi-gas}) permettono di sviluppare ulteriormente
 l’espressione della energia di legame
+\begin{align*}
+	B \simeq A V_{0} &- \frac{9\hbar^{2}}{80 mr_{0}^{2}}\left( \frac{3\pi^{2}}{2} \right)^{2/3} \frac{A^{2/3}}{2^{1/3}}  \left[ 1+ \frac{2}{9} \left( \frac{A-2Z}{A} \right)^{2} \right] \\
+	&- 3 \frac{\hbar^{2}}{10 m r_{0}^{2}} \left( \frac{9\pi}{4} \right)^{2/3} \frac{A}{2^{2/3}}  \left[ 1 + \frac{5}{9} \left( \frac{A-2Z}{A} \right)^{2} \right] - \frac{3 \alpha \hbar c}{5 r_{0}} \frac{Z(Z-1)}{A^{1/3}} \\
+	AV_{0} &- \frac{9\hbar^{2}}{80mr_{0}^{2}} \left( \frac{3\pi^{2}}{2\sqrt{ 2 }} \right)^{2/3} A^{2/3} - \frac{\hbar^{2}}{\textcolor{cyan}{40} m r_{0}^{2}} \left( \frac{3\pi^{2}}{2\sqrt{ 2 }} \right)^{2/3} \frac{(A-2Z)^{2}}{A^{4/3}} \\
+	&- \frac{3\hbar^{2}}{10mr_{0}^{2}} \left( \frac{9\pi}{8} \right)^{2/3}A - \frac{\hbar^{2}}{6mr_{0}^{2}} \left( \frac{9\pi}{8} \right)^{2/3} \frac{(A-2Z)^{2}}{A} - \frac{3 \alpha \hbar c}{5 r_{0}} \frac{Z(Z-1)}{A^{1/3}}
+\end{align*}
+che ora riscriviamo nella sua forma finale
+\begin{align}
+		B &\simeq \left[ V_{0} - \frac{3\hbar^{2}}{10mr_{0}^{2}} \left( \frac{9\pi}{8} \right)^{2/3} \right] A - \left[ \frac{9\hbar^{2}}{80mr_{0}^{2}} \left( \frac{3\pi^{2}}{2\sqrt{ 2 }} \right)^{2/3} \right]A^{2/3}
+	- \frac{3 \alpha \hbar c}{5 r_{0}} \frac{Z(Z-1)}{A^{1/3}} \nonumber \\
+	&- \left[ \frac{\hbar^{2}}{6mr_{0}^{2}} \left( \frac{9\pi}{8} \right)^{2/3}  \right]\frac{(A-2Z)^{2}}{A}
+	- \left[ \frac{\hbar^{2}}{\textcolor{cyan}{40} m r_{0}^{2}} \left( \frac{3\pi^{2}}{2\sqrt{ 2 }} \right)^{2/3} \right] \frac{(A-2Z)^{2}}{A^{4/3}}
+	\label{eq:binding-energy-expression-fermi-gas-model}
+\end{align}
+
+
+Abbiamo così ottenuto l’espressione della \textbf{energia di legame nucleare nell’ambito del modello a gas di fermioni}.
+
+Si noti che i coefficienti dei termini in $A$ e $Z $dipendono - oltre che da costanti fisiche ben note - da due soli parametri nucleari:
+la profondità della buca di potenziale $V_{0}$ ed il raggio del nucleone $r_{0}$ confermando la notevole capacità preditiva del modello. 
+Fatto ancor più rilevante, vengono correttamente previsti i termini di volume, superficie, coulombiano e asimmetria della 
+espressione del modello a goccia (\ref{eq:weizsacker-formula}):
+\begin{align}
+	a_{v} &= V_{0} - 3 \frac{\hbar^{2}}{10 m r_{0}^{2}} \left( \frac{9\pi}{8} \right)^{2/3} \\ \\
+	a_{s} &= \frac{9\hbar^{2}}{80 m r_{0}^{2}} \left(  \frac{3\pi^{2}}{2\sqrt{ 2 }} \right)^{2/3} \\ \\
+	a_{c} &= \frac{3 \alpha \hbar c}{5 r_{0}} \\ \\
+	a_{a} &= \frac{\hbar^{2}}{6 m r_{0}^{2}} \left(\frac{9\pi}{8} \right)^{2/3}
+\end{align}
+Tali termini vengono così ricondotti ai principi generali della meccanica quantistica e possono ora fondarsi su di un meccanismo fisico di validità generale.
+
+Ad esempio, tenendo presente il procedimento seguito, possiamo verificare che i termini di volume e superficie sono essenzialmente dovuti alla quantizzazione degli stati dei nucleoni a seguito del loro confinamento all’interno del volume nucleare.
+
+Il termine coulombiano è trattato allo stesso modo del modello a goccia.
+
+Il termine di asimmetria, invece, è ricondotto al principio di esclusione di Pauli e dunque ad uno dei fatti più profondi della meccanica quantistica: nello stato nucleare di minima energia risulta energeticamente conveniente
+legare tra loro numeri confrontabili di protoni e neutroni piuttosto che soli neutroni, spiegando così una delle proprietà più controintuitive dei nuclei.
+Se si tiene poi conto della mutua repulsione dei protoni si capisce anche la tendenza a legare numeri di neutroni eccedenti rispetto ai protoni.
+
+Meno fortuna ha il termine di accoppiamento.
+D’altra parte gli ingredienti immessi nel modello non potevano in nessun modo condurre al risultato di una maggiore stabilità dei nuclei pari-pari, un fatto che richiede evidentemente un potenziale più appropriato che tenga conto anche dello spin dei nucleoni.
+
+In generale, il successo del modello a gas di fermioni dimostra che
+\emph{la maggior parte delle proprietà dei nuclei in prossimità dello stato fondamentale sono legate alle proprietà
+collettive dei nucleoni in condizioni di forte degenerazione piuttosto che alle specifiche proprietà della forza nucleare}
+la quale viene riassunta in una semplice forza di contenimento dei nucleoni.
+
+Si può mettere alla prova in modo ancora più severo il modello calcolando esplicitamente i valori dei diversi termini e confrontandoli con quelli empirici.
+Sostituendo i valori numerici otteniamo ( i valori sono in $MeV$)
+\[
+	a_v \simeq 22 \quad
+	a_s \simeq 14.6 \quad
+	a_c \simeq 0.070 \quad
+	a_a \simeq 10.5
+\]
+Ad esclusione del termine di accoppiamento di cui abbiamo detto, l’accordo è relativamente soddisfacente
+(vedi set di valori (\ref{eq:typical-values-drop-model})) ed è assai degno di nota il fatto che tale accordo sia
+ottenuto introducendo due soli parametri liberi (la profondità della buca di potenziale nucleare $V_0$
+ed il raggio del nucleone $r_0$).
+
+
 
 \section{Il modello a Shell}\label{sec:il-modello-a-shell}
 
