@@ -432,9 +432,9 @@ n_{s} = \frac{V}{6 \pi^{2}\hslash^{3}} \tilde{p}^{3} - \frac{S}{8\pi \hslash^{2}
 	    \caption{Fermi surface.}
 %	\label{fig:goccia1}
 \end{marginfigure}
-Dato che, secondo il principio di esclusione di Pauli, ciascuno stato quantistico della funzione d’onda orbitale può alloggiare al massimo due fermioni identici (uno per ciascuno dei due stati di spin del nucleone descritti da uno spinore che abbiamo omesso) concludiamo che \textbf{il numero di neutroni o protoni identici che possono essere contenuti nel volume nucleare V di superficie S con valore massimo dell’impulso} $P_f$ è dato dalla espressione seguente
+Dato che, secondo il principio di esclusione di Pauli, ciascuno stato quantistico della funzione d’onda orbitale può alloggiare al massimo due fermioni identici (uno per ciascuno dei due stati di spin del nucleone descritti da uno spinore che abbiamo omesso) concludiamo che \textbf{il numero di neutroni o protoni identici che possono essere contenuti nel volume nucleare V di superficie S con valore massimo dell’impulso} $P_F$ è dato dalla espressione seguente
 \begin{equation}
-	n_{f} = \frac{V P_{F}^{3}}{3 \pi^{2}\hslash^{3}} \left( 1 - \frac{3\pi \hslash}{4} \frac{S}{VP_{F}} \right)
+	n_{F} = \frac{V P_{F}^{3}}{3 \pi^{2}\hslash^{3}} \left( 1 - \frac{3\pi \hslash}{4} \frac{S}{VP_{F}} \right)
 	\label{eq:fermions-number-specified-volume-momentum}
 \end{equation}
 
@@ -532,7 +532,128 @@ Tenendo ora conto espressione e dell’analoga per i neutroni possiamo comporre 
 
 \subsection{Il calcolo dell'energia di legame}\label{sec:calcolo-energia-legame-fermions-gas}
 
+Per sviluppare l'enegia di legame è ora necessario calcolare le energie cinetiche medie dei neutroni e protoni nucleari.
+Si ha
+\[
+\langle T \rangle = \frac{\sum_{i}T_{i}n_{i}'}{\sum_{i}n_{i}'} \quad , \quad n_{i}' \circeq \Delta_{i}n = n_{i+1}- n_{i} \quad
+i = 0, \dots, \bar{n}
+\]
+dove $\bar{n}$ è il numero di protoni/neutroni propri del livello di Fermi.
+Ora, immaginando un addensamento di strati energetici tra $0$ ed il livello di fermi $E_{F}$, possiamo effettuare il passaggio al continuo
+\begin{equation}
+	\langle T \rangle = \fraclarg{\int_{0}^{P_{F}} \frac{p^{2}}{2m} \, dn}{\int_{0}^{P_{F}}  \, dn }
+	\label{eq:average-kinetic-energy-nucleons}
+\end{equation}
+dove $dn$ indica il numero di neutroni/protoni con impulso compreso tra $p$ e $p+dp$.
 
+Il differenziale della (\ref{eq:fermions-number-specified-volume-momentum}) fornisce tale numero di neutroni/protoni
+\[
+dn = \frac{V}{\pi^{2}\hbar^{3}} p^{2}dp - \frac{S}{2 \pi \hbar^{2}} pdp
+\]
+che può essere sostituito nella (\ref{eq:average-kinetic-energy-nucleons}) ottenendo
+\begin{align*}
+    \langle T \rangle &= \fraclarg{\int_{0}^{P_{F}} \frac{p^{2}}{ 2m}\left(\frac{V}{\pi^{2}\hbar^{3}} p^{2}dp - \frac{S}{2 \pi \hbar^{2}} pdp \right)  }{\frac{V}{3\pi^{2}\hbar^{3}} P_{F}^{3} - \frac{S}{4 \pi \hbar^{2}} P_{F}^{2} }
+    = \fraclarg{\frac{VP_{F}^{5}}{10m\pi^{2}\hbar^{3}} - \frac{SP_{F}^{4}}{16m\pi \hbar^{2}}}{\frac{V}{3\pi^{2}\hbar^{3}} P_{F}^{3} - \frac{S}{4 \pi \hbar^{2}} P_{F}^{2}}\\
+    &= \fraclarg{\frac{VP_{F}^{5}}{10m \pi^{2}\hbar^{3}}\left( 1 - \frac{10m\pi^{2}\hbar^{3}}{VP_{F}^{5}} \frac{SP_F^{4}}{16 m \pi \hbar^{2}} \right)}{\frac{VP_{F}^{3}}{3\pi^{2}\hbar^{3}}\left( 1 - \frac{3\pi^{2}\hbar^{3}}{VP_{F}^{3}} \frac{S}{4 \pi \hbar^{2}}P_{F}^{2} \right)}
+	= \frac{3}{10 \,m}P_{F}^{2} \fraclarg{1 - \frac{5\pi \hbar}{8} \frac{S}{VP_{F}}}{1 - \frac{3\pi \hbar}{4} \frac{S}{VP_{F}}}
+\end{align*}
+Tramite un'espansione in serie di Taylor al primo ordine
+\begin{gather*}
+    a = \frac{5\pi \hbar}{8 P_{F}} \quad b = \frac{3\pi \hbar}{4 P_{F}} \quad x = \frac{S}{V}\\
+    \frac{1-ax}{1-bx} = 1 + (b-a)x + O(x^{2})
+\end{gather*}
+otteniamo
+\begin{align}
+    \langle T \rangle &\simeq  \frac{3P_{F}^{2}}{10 \, m} \left( 1 - \frac{\frac{5\pi \hbar}{8}S}{VP_{F}}+ \frac{3\pi \hbar}{4} \frac{S}{V P_{F}} \right) \nonumber\\
+     &= \frac{3}{10 \, m}P_{F}^{2} \left( 1 + \frac{\pi\hbar S}{8 V P_{F}} \right)
+	\label{eq:approximated-kinetic-energy-nucleons}
+\end{align}
+Tenendo conto solo del termine dominante, possiamo migliorare la stima (\ref{eq:fermi-kinetic-energy-estimate}) del \emph{valore della energia cinetica media dei neutroni e protoni nucleari}
+\[
+\langle T \rangle \simeq \frac{3}{10 \, m} P_{F}^{2} \simeq \frac{3}{5}E_{F} \simeq \frac{3 \times 34}{5} \simeq 21 \, MeV
+\]
+Ritornando alla (\ref{eq:approximated-kinetic-energy-nucleons}) è chiaro che si vuole disporre di una espressione della energia cinetica media dove compaiano i parametri nucleari $(N, Z, V, S)$ e non il valore dell’impulso di Fermi.
+Ciò significa che conviene eliminare la variabile $P_{F}$ nella (\ref{eq:approximated-kinetic-energy-nucleons}) utilizzando la (\ref{eq:fermions-number-specified-volume-momentum}), che nel contesto delle approssimazioni utilizzate\sidenote{
+Per arrivare a (\ref{eq:approximated-kinetic-energy-nucleons}) si è sviluppato in serie di Taylor. Tale serie risulta convergente nel caso in cui $| b| < \frac{1}{| x|}$, cioè se
+	\[
+		\frac{3\pi \hbar}{4} \frac{S}{V P_{F}} \ll 1
+	\]
+	condizione che permette di compiere l'approssimazione svolta.
+} si approssima a
+\[
+n_{F} =  \frac{VP_{F}^{3}}{3 \pi^{2}\hbar^{3}} \left( 1 -  \frac{3\pi \hbar}{4} \frac{S}{V P_{F}} \right) \simeq \frac{VP_{F}^{3}}{3 \pi^{2} \hbar^{3}}
+\]
+da cui
+\begin{equation}
+	P_{F} = \left( \frac{3\pi^{2}\hbar^{3}n_{F}}{V} \right)^{1/3}
+	\label{eq:fermi-momentum-in-terms-of-fermi-number}
+\end{equation}
+Sostituendo (\ref{eq:fermi-momentum-in-terms-of-fermi-number}) in (\ref{eq:approximated-kinetic-energy-nucleons})
+\[
+\langle T \rangle \simeq \frac{3}{10 \, m}     P_{F} = \left( \frac{3\pi^{2}\hbar^{3}n_{F}}{V} \right)^{2/3} + \frac{3}{80 \, m} \frac{\pi \hbar S}{V}\left( \frac{3\pi^{2}\hbar^{3}n_{F}}{V} \right)^{1/3}
+\]
+da cui, infine, \emph{l’espressione cercata della energia cinetica media dei fermioni in funzione dei parametri nucleari}
+\[
+\langle T \rangle \simeq \frac{9\hbar^{2}}{10 \, m} \left( \frac{\pi^{4}n_{F}^{2}}{3 V^{2}}\right)^{1/3}  + \frac{9\hbar^{2}}{80 \, m}\left( \frac{\pi^{5}n_{F}}{9V^{4}} \right)^{1/3}S
+\]
+Sostituendo questa espressione nella (\ref{eq:binding-energy-fermi-gas-model}) ci avviamo verso l’espressione finale della energia di legame
+\begin{align*}
+	B \simeq A V_{0} &- N \left[ \frac{9\hbar^{2}}{10\, m} \left( \frac{\pi^{4}N^{2}}{3 V^{2}} \right)^{1/3} + \left( \frac{9\hbar^{2}}{80 \, m} \frac{\pi^{5}N}{9V^{4}} \right)^{1/3}S \right] \\
+	& -Z \left[ \frac{9\hbar^{2}}{10\, m} \left( \frac{\pi^{4}Z^{2}}{3 V^{2}} \right)^{1/3} + \left( \frac{9\hbar^{2}}{80 \, m} \frac{\pi^{5}Z}{9V^{4}} \right)^{1/3}S \right] \\
+	& - \frac{3}{5} \alpha \hbar c \frac{Z(Z-1)}{R} \\
+	= AV_{0} & - \frac{9\hbar^{2}}{80 \, m}\left( \frac{\pi^{5}}{9} \right)^{1/3} \frac{S(N^{4/3}+Z^{4/3})}{V^{4/3}} \\
+	&- \frac{9\hbar^{2}}{10 \, m} \left( \frac{\pi^{4}}{3} \right)^{1/3} \frac{N^{5/3}+Z^{5/3}}{V^{2/3}} - \frac{3}{5} \alpha \hbar c \frac{Z(Z-1)}{R}
+\end{align*}
+dove abbiamo introdotto una unica massa per protone e neutrone.
+Ora dobbiamo ricordare che nel nucleo $V, R, N$ e $Z$ sono variabili correlate
+\[
+V = \frac{4}{3} \pi r_{0}^{3} \qquad S = 4\pi r_{0}^{2}A^{2/3} \qquad R = r_{0}A^{1/3}
+\]
+per cui sostituendo nella precedente
+\begin{align*}
+	AV_{0} &- \frac{9 \hbar^{2}}{80 \, m} \left( \frac{\pi^{5}}{9} \right)^{1/3} \frac{4 \pi r_{0}^{2}A^{2/3}(N^{4/3}+Z^{4/3})}{\left( \frac{4}{3} \pi r_{0}^{3} A\right)^{4/3}} \\
+	&- \frac{9 \hbar^{2}}{10 \, m} \left( \frac{\pi^{4}}{3} \right)^{1/3} \frac{N^{5/3}+Z^{5/3}}{\left( \frac{4}{3} \pi r_{0}^{3} A\right)^{2/3}} - \frac{3}{5} \alpha \hbar c \frac{Z(Z-1)}{r_{0}A^{1/3}} \\
+	AV_{0} &- \frac{9 \hbar^{2}}{80 \, m} \left( \frac{\pi^{5}}{9} \right)^{1/3} \frac{3^{4/3}}{ 4^{1/3}\pi^{1/3}r_{0}^{2}} \frac{N^{4/3}+Z^{4/3}}{A^{2/3}} \\
+	&- \frac{9 \hbar^{2}}{10 \, m} \left( \frac{\pi^{4}}{3} \right)^{1/3} \frac{3^{2/3}}{ 4^{2/3}\pi^{2/3}r_{0}^{2}}\frac{N^{5/3}+Z^{5/3}}{ A^{2/3}} - \frac{3}{5} \alpha \hbar c \frac{Z(Z-1)}{r_{0}A^{1/3}} \\
+	= AV_{0} &- \frac{9 \hbar^{2}}{80 \, m} \left( \frac{9\pi^{4}}{4} \right)^{1/3} \frac{3^{4/3}}{ 4^{1/3}\pi^{1/3}r_{0}^{2}} \frac{N^{4/3}+Z^{4/3}}{A^{2/3}} \\
+	&- \frac{9 \hbar^{2}}{10 \, mr_{0}^{2}} \left( \frac{3\pi^{2}}{16} \right)^{1/3} \frac{N^{5/3}+Z^{5/3}}{ A^{2/3}} - \frac{3}{5} \alpha \hbar c \frac{Z(Z-1)}{r_{0}A^{1/3}} \\
+\end{align*}
+da cui infine
+\begin{align}
+	B = A V_{0} &- \frac{9\hbar^{2}}{80 mr_{0}^{2}} \left( \frac{3\pi^{2}}{2} \right)^{2/3}\frac{N^{4/3}+Z^{4/3}}{A^{2/3}} \nonumber\\
+	&- \frac{3\hbar^{2}}{10 mr_{0^{2}}}\left( \frac{9\pi}{4} \right)^{2/3} \frac{N^{5/3}+Z^{5/3}}{A^{2/3}} - \frac{3}{5} \alpha \hbar c \frac{Z(Z-1)}{r_{0}A^{1/3}}
+	\label{eq:intermediate-calc-binding-energy-fermi-gas}
+\end{align}
+Per avere questa espressione in una forma confrontabile con l’espressione empirica della energia di legame nucleare conviene passare alle variabili
+\[
+A=(N+Z) \quad\delta = (N-Z) \qquad N = \frac{A+\delta}{2} \quad Z = \frac{A- \delta}{2}
+\]
+tenendo anche presente che la variabile $\delta$, nel caso dei nuclei stabili, tende ad essere piccola.
+
+Possiamo allora approssimare con il seguente sviluppo in serie, trattenendo anche i termini del secondo ordine
+\[
+(1 + x)^{\alpha} \simeq 1 + \alpha x + \frac{1}{2} \alpha (\alpha - 1)x^{2}
+\]
+I termini in N, Z e A della (\ref{eq:intermediate-calc-binding-energy-fermi-gas}) prendono allora le seguenti forme
+\begin{align*}
+	\frac{N^{5/3}+Z^{5/3}}{ A^{2/3}} & = \frac{(A+\delta)^{5/3} + (A-\delta)^{5/3}}{2^{5/3} A^{2/3}} = \frac{A}{2^{5/3}} \left[ \left( 1+\frac{\delta}{A} \right)^{5/3} +\left( 1 - \frac{\delta}{A} \right)^{5/3} \right] \\
+	& \simeq \frac{A}{2^{5/3}} \left[ 1 + \frac{5}{3}\left( \frac{\delta}{A} \right) + \frac{5}{9} \left( \frac{\delta}{A} \right)^{2} + 1 - \frac{5}{3} \left( \frac{\delta}{A} \right) + \frac{5}{9} \left( \frac{\delta}{A} \right)^{2} \right] \\
+	& = \frac{A}{2^{2/3}}  \left[ 1+\frac{5}{9} \left( \frac{\delta}{A} \right)^{2} \right]
+	\simeq \frac{A}{2^{2/3}} \left[ 1 + \frac{5}{9} \left( \frac{N-Z}{A} \right)^{2} \right]
+\end{align*}
+\begin{align*}
+	\frac{N^{4/3}+Z^{4/3}}{ A^{2/3}} & = \frac{(A+\delta)^{4/3} + (A-\delta)^{4/3}}{2^{4/3} A^{2/3}} = \frac{A}{2^{4/3}} \left[ \left( 1+\frac{\delta}{A} \right)^{4/3} +\left( 1 - \frac{\delta}{A} \right)^{4/3} \right] \\
+	& \simeq \frac{A}{2^{4/3}} \left[ 1 + \frac{4}{3}\left( \frac{\delta}{A} \right) + \frac{2}{9} \left( \frac{\delta}{A} \right)^{2} + 1 - \frac{4}{3} \left( \frac{\delta}{A} \right) + \frac{2}{9} \left( \frac{\delta}{A} \right)^{2} \right] \\
+	& = \frac{A}{2^{1/3}}  1+\frac{5}{9} \left( \frac{\delta}{A} \right)^{2}
+	\simeq \frac{A}{2^{2/3}} \left[ 1 + \frac{2}{9} \left( \frac{N-Z}{A} \right)^{2} \right]
+\end{align*}
+Sostituendo $N=A-Z$ otteniamo infine le seguenti espressioni
+\begin{align*}
+	\frac{N^{5/3}+Z^{5/3}}{ A^{2/3}} &\simeq \frac{A}{2^{2/3}} \left[ 1 + \frac{5}{9} \left( \frac{A-2Z}{A} \right)^{2} \right]\\
+	\frac{N^{4/3}+Z^{4/3}}{ A^{2/3}} &\simeq \frac{A}{2^{2/3}} \left[ 1 + \frac{2}{9} \left( \frac{A-2Z}{A} \right)^{2} \right]
+\end{align*}
+che sostituite nella (\ref{eq:intermediate-calc-binding-energy-fermi-gas}) permettono di sviluppare ulteriormente
+l’espressione della energia di legame
 
 \section{Il modello a Shell}\label{sec:il-modello-a-shell}
 
