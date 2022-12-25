@@ -347,7 +347,7 @@ Da questo punto di vista la differenza è solo quantitativa poiché i gas quanto
 
 Nel prosieguo, l’approccio del modello a gas di fermioni verrà utilizzato per costruire una formula della energia di legame più evoluta di quella fornita dal modello a goccia nella speranza che la meccanica quantistica possa rendere conto dei termini introdotti in modo puramente fenomenologico nella formula di Weizsacker.
 
-\subsection{La funzione d'onda dei nucleoni}\label{sec:funzione-onda-nucleoni}
+\subsection{La funzione d'onda del nucleone}\label{sec:funzione-onda-nucleone}
 
 Il primo passo è quello di scrivere la funzione d’onda di $N$ neutroni e $Z$ protoni soggetti alla buca di potenziale sferica che descrive la forza media agente su di loro all’interno del nucleo.
 Senza perdere in generalità, possiamo semplificare i calcoli immaginando una \emph{buca di potenziale cubica di lato L} all’interno della quale si trova un emph{nucleone} (protone o neutrone) in uno stato quantomeccanico descritto da un’onda piana di De Broglie
@@ -357,6 +357,11 @@ Ae^{ \frac{i}{\hslash} (\bm{p} \cdot \bm{r} -Et)  } =
 (Ae^{ \frac{i}{\hslash}p_{x}x }e^{ \frac{i}{\hslash}p_{y}y }e^{ \frac{i}{\hslash}p_{z}z })e^{ - \frac{i}{\hslash}Et }
 \]
 Con tutta evidenza, per descrivere correttamente lo stato quantomeccanico del nucleone, tale emph{funzione d’onda dovrà annullarsi sulla superficie cubica}.
+\begin{marginfigure}
+	\includegraphics{figs/cube-fermion-gas1}
+%	\caption{Fermi surface.}
+%	\label{fig:goccia1}
+\end{marginfigure}
 Gli esponenziali complessi non possono annullarsi per cui è necessario ipotizzare che la funzione d’onda contenga solo le parti sinusoidali o cosinusoidali di tali esponenziali
 \begin{equation}
 	\psi(\bm{r},t) = A \sin\left(  \frac{1}{\hslash}p_{x}x \right) \sin\left(  \frac{1}{\hslash}p_{y}y \right) \sin\left(  \frac{1}{\hslash}p_{z}z \right) e^{ - \frac{i}{\hslash}Et }
@@ -402,14 +407,31 @@ otteniamo la \textbf{funzione d’onda del nucleone nel volume nucleare cubico d
 Si comprende allora che gli stati quantomeccanici del nucleone vanno a costituire una \emph{sequenza discreta e numerabile di stati univocamente identificati da una terna ordinata di numeri naturali (non nulli e positivi)} $n_x, n_y, n_z$  \emph{detti numeri quantici dello stato}.
 
 \subsection{Nucleoni e principio di esclusione} \label{sec:nucleoni-principio-di-esclusione}
+%
+%Trovata l’espressione degli stati quantomeccanici di un generico nucleone nella cavità nucleare, vogliamo ora calcolare \emph{il numero di stati che possiedono una energia minore o uguale ad un certo prefissato valore}.
+%Con tutta evidenza - dato il legame esistente tra energia e quantità di moto – ciò equivale a calcolare il numero di stati che possiedono un modulo della quantità di moto minore od uguale ad un certo prefissato valore.
+%
+%Premesso che il calcolo si base sulla stessa tecnica applicata a suo tempo al caso della radiazione elettromagnetica di cavità, si comincia \emph{introducendo uno spazio tridimensionale i cui punti rappresentano i vettori della quantità di moto che avranno così proiezioni} $p_x, p_y \ \text{e} \ p_z$.
+%
+%Tenendo conto delle relazioni di quantizzazione della quantità di moto (\ref{eq:quantized-momentum-fermions-gas}), si comprende immediatamente che – in tale spazio – i valori delle quantità di moto accessibili al nucleone si collocano nel primo ottante sulle intersezioni di un grigliato tridimensionale di passo $\frac{\pi \hslash}{L}$.
+%A ciascuna di tali intersezioni corrisponde anche una determinata terna ordinata di numeri quantici $n_{x}, n_{y}$ e $n_{z}$ e, con essa, un determinato stato quantomeccanico.
+%
+Prima proseguire sono necessarie alcune precisazioni.
+A rigore, la funzione d’onda (\ref{eq:wave-function-nucleon-fermion-gas-normalized}) descrive lo stato di uno dei nucleoni del nucleo dato che soddisfa le condizioni imposte dal potenziale nucleare medio. Lo stato del nucleo nel suo complesso é allora descritto dal prodotto tensoriale di ‘A’ funzioni del tipo (\ref{eq:wave-function-nucleon-fermion-gas-normalized}), ciascuna con la propria terna $n_{x}, n_{y}$ e $n_{z}$ di \emph{numeri quantici di stato}. Ciò premesso, si capisce che non fa differenza descrivere lo stato del nucleo nel modo suddetto oppure immaginare di utilizzare una sola funzione d’onda del tipo (\ref{eq:wave-function-nucleon-fermion-gas-normalized}) specificando però per ciascuna terna $n_{x},n_{y},n_{z}$ il numero di nucleoni che vi risiedono. Questo seconda possibilità, basata sui \emph{numeri di occupazione} dello stato, risulta particolarmente utile nel caso dei fermioni dove il principio di esclusione limita i numeri di occupazione ai soli valori ‘0’ ed ‘1’. Nel prosieguo interpreteremo la funzione d’onda in questo modo.
 
-Trovata l’espressione degli stati quantomeccanici di un generico nucleone nella cavità nucleare, vogliamo ora calcolare \emph{il numero di stati che possiedono una energia minore o uguale ad un certo prefissato valore}.
-Con tutta evidenza - dato il legame esistente tra energia e quantità di moto – ciò equivale a calcolare il numero di stati che possiedono un modulo della quantità di moto minore od uguale ad un certo prefissato valore.
+Fatta questa precisazione possiamo proseguire ricordando che, in accordo con i principi generali della meccanica quantistica, la funzione d’onda (\ref{eq:wave-function-nucleon-fermion-gas-normalized}) descrive nel modo più completo possibile lo stato del nucleo per cui è attraverso di essa che si possono calcolare tutte le grandezze fisiche d’interesse. Nel prosieguo deriveremo la \emph{distribuzione energetica cumulativa} dei nucleoni, necessarie per calcolare le \emph{energie medie dei nucleoni} a loro volta necessarie per il calcolo delle \emph{energie di legame}. Vediamo di cosa si tratta.
 
-Premesso che il calcolo si base sulla stessa tecnica applicata a suo tempo al caso della radiazione elettromagnetica di cavità, si comincia \emph{introducendo uno spazio tridimensionale i cui punti rappresentano i vettori della quantità di moto che avranno così proiezioni} $p_x, p_y \ \text{e} \ p_z$.
+Per cominciare domandiamoci quale sia \emph{il numero di stati quantomeccanici che possiedono una energia minore o uguale ad un certo prefissato valore}.
+\begin{marginfigure}
+	\includegraphics{figs/cube-fermion-gas2}
+	%%\caption{Fermi surface.}%%
+%  \label{fig:goccia1}
+\end{marginfigure}
+Dato il legame esistente tra energia e quantità di moto, si deve calcolare il numero di stati aventi modulo della quantità di moto minore od uguale ad un certo prefissato valore.
 
-Tenendo conto delle relazioni di quantizzazione della quantità di moto (\ref{eq:quantized-momentum-fermions-gas}), si comprende immediatamente che – in tale spazio – i valori delle quantità di moto accessibili al nucleone si collocano nel primo ottante sulle intersezioni di un grigliato tridimensionale di passo $\frac{\pi \hslash}{L}$.
-A ciascuna di tali intersezioni corrisponde anche una determinata terna ordinata di numeri quantici $n_{x}, n_{y}$ e $n_{z}$ e, con essa, un determinato stato quantomeccanico.
+Utilizzando una tecnica impiegata nel caso della radiazione elettromagnetica di cavità, introduce lo \emph{spazio tridimensionale delle quantità di moto} di assi $p_{x}, p_{y}$ e $p_{z}$. Tenendo conto delle relazioni di quantizzazione (\ref{eq:quantized-momentum-fermions-gas}), si comprende immediatamente che i valori delle quantità di moto accessibili al nucleone si collocano nell’ottante positivo dello spazio (data la positività di $n_{x}, n_{y}$ e $n_{z}$ ), sulle intersezioni di un grigliato tridimensionale di passo $\frac{\pi \hbar}{L}$.
+A ciascuna di tali intersezioni corrisponde una determinata terna ordinata di numeri quantici $n_{x}, n_{y}$ e $n_{z}$ e, con essa, un determinato stato quantomeccanico (\ref{eq:wave-function-nucleon-fermion-gas-normalized}).
+
 
 Ciò premesso, si capisce che \textit{il numero di stati quantomeccanici aventi modulo della quantità di moto uguale o inferiore ad un prefissato valore}
 $\tilde{p}$ è approssimativamente uguale al quoziente tra il volume dell’ottante di sfera di raggio $\tilde{p}$ ed il volumetto cubico del grigliato
@@ -428,12 +450,12 @@ Troviamo allora che \textit{ il numero di stati quantici tali che} $0< | p|<\til
 \[
 n_{s} = \frac{V}{6 \pi^{2}\hslash^{3}} \tilde{p}^{3} - \frac{S}{8\pi \hslash^{2}}\tilde{p}^{2}
 \]
+Dato che, secondo il principio di esclusione di Pauli, ciascuno stato quantistico della funzione d’onda orbitale può alloggiare al massimo due fermioni identici (uno per ciascuno dei due stati di spin del nucleone descritti da uno spinore che abbiamo omesso) concludiamo che \textbf{il numero di neutroni o protoni identici che possono essere contenuti nel volume nucleare V di superficie S con valore massimo dell’impulso} $P_F$ è dato dalla espressione seguente
 \begin{marginfigure}
 	\includegraphics{figs/Fermi-surface}
-	    \caption{Fermi surface.}
+	\caption{Fermi surface.}
 %	\label{fig:goccia1}
 \end{marginfigure}
-Dato che, secondo il principio di esclusione di Pauli, ciascuno stato quantistico della funzione d’onda orbitale può alloggiare al massimo due fermioni identici (uno per ciascuno dei due stati di spin del nucleone descritti da uno spinore che abbiamo omesso) concludiamo che \textbf{il numero di neutroni o protoni identici che possono essere contenuti nel volume nucleare V di superficie S con valore massimo dell’impulso} $P_F$ è dato dalla espressione seguente
 \begin{equation}
 	n_{F} = \frac{V P_{F}^{3}}{3 \pi^{2}\hslash^{3}} \left( 1 - \frac{3\pi \hslash}{4} \frac{S}{VP_{F}} \right)
 	\label{eq:fermions-number-specified-volume-momentum}
@@ -677,12 +699,12 @@ Si noti che i coefficienti dei termini in $A$ e $Z $dipendono - oltre che da cos
 la profondità della buca di potenziale $V_{0}$ ed il raggio del nucleone $r_{0}$ confermando la notevole capacità preditiva del modello. 
 Fatto ancor più rilevante, vengono correttamente previsti i termini di volume, superficie, coulombiano e asimmetria della 
 espressione del modello a goccia (\ref{eq:weizsacker-formula}):
-\begin{align}
-	a_{v} &= V_{0} - 3 \frac{\hbar^{2}}{10 m r_{0}^{2}} \left( \frac{9\pi}{8} \right)^{2/3} \\ \\
-	a_{s} &= \frac{9\hbar^{2}}{80 m r_{0}^{2}} \left(  \frac{3\pi^{2}}{2\sqrt{ 2 }} \right)^{2/3} \\ \\
-	a_{c} &= \frac{3 \alpha \hbar c}{5 r_{0}} \\ \\
+\begin{align*}
+	a_{v} &= V_{0} - 3 \frac{\hbar^{2}}{10 m r_{0}^{2}} \left( \frac{9\pi}{8} \right)^{2/3} \\
+	a_{s} &= \frac{9\hbar^{2}}{80 m r_{0}^{2}} \left(  \frac{3\pi^{2}}{2\sqrt{ 2 }} \right)^{2/3} \\
+	a_{c} &= \frac{3 \alpha \hbar c}{5 r_{0}} \\
 	a_{a} &= \frac{\hbar^{2}}{6 m r_{0}^{2}} \left(\frac{9\pi}{8} \right)^{2/3}
-\end{align}
+\end{align*}
 Tali termini vengono così ricondotti ai principi generali della meccanica quantistica e possono ora fondarsi su di un meccanismo fisico di validità generale.
 
 Ad esempio, tenendo presente il procedimento seguito, possiamo verificare che i termini di volume e superficie sono essenzialmente dovuti alla quantizzazione degli stati dei nucleoni a seguito del loro confinamento all’interno del volume nucleare.
@@ -713,9 +735,231 @@ Ad esclusione del termine di accoppiamento di cui abbiamo detto, l’accordo è
 (vedi set di valori (\ref{eq:typical-values-drop-model})) ed è assai degno di nota il fatto che tale accordo sia
 ottenuto introducendo due soli parametri liberi (la profondità della buca di potenziale nucleare $V_0$
 ed il raggio del nucleone $r_0$).
-
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Il modello a Shell}\label{sec:il-modello-a-shell}
+
+Dobbiamo ora domandarci quale possa essere il motivo del successo solo parziale del modello a gas di Fermi nella descrizione della energia di legame dei nuclei stabili.
+
+Il suo successo è certamente dovuto al fatto che riconosce il \textbf{ruolo determinante giocato dalla meccanica quantistica} che si manifesta
+\begin{itemize}
+	\item nella discretizzazione degli stati quantomeccanici e delle loro energie;
+	\item nella possibilità di collocare in ciascuno stato quantomeccanico un solo nucleone (principio di esclusione di Pauli).
+\end{itemize}
+
+Il suo insuccesso, invece, è probabilmente dovuto alla eccessiva \textbf{semplificazione delle forze nucleari} in gioco poiché si ipotizza che le complesse interazioni che ogni nucleone ha con i suoi vicini possano riassumersi in una \textbf{interazione efficace} \emph{dipendente dalla posizione, nulla all’interno del volume nucleare e di modulo assai elevato e centripeta sulla sua superficie} (buca sferica di potenziale). Tali assunzioni devono essere riviste criticamente.
+
+\subsection{Il potenziale nucleare medio}\label{sec:potenziale-nucleare-medio}
+
+Come già osservato quando costruimmo il modello nucleare a gas di fermioni, la risultante delle forze percepita dal singolo nucleone si dovrebbe riassumere in una forza mediamente nulla all’interno del volume nucleare e mediamente non nulla e centripeta in prossimità della superficie nucleare.
+Dunque, un potenziale medio a forma di scatola – se assumiamo la descrizione più drastica – o di forma fisicamente più plausibile con variazioni di potenziale meglio raccordate.
+
+Rimandando per ora il problema della forma concreta del potenziale, sappiamo che - sulla base della meccanica quantistica – gli stati quantomeccanici e le energie dei nucleoni soggetti ad un tale potenziale risulteranno discretizzati.
+D’altra parte, il principio di Pauli permette di occupare ciascun stato quantomeccanico con un solo nucleone (qualora si tenga conto anche dello spin) per cui su ogni livello energetico potranno risiedere solo un ben definito numero di neutroni e protoni.
+Dato che un nucleo nello stato fondamentale possiede la minima energia, deduciamo che i neutroni ed i protoni andranno a riempire dal basso i diversi livelli energetici nucleari fino a raggiungere due livelli massimi detti \emph{livelli di Fermi} in completa analogia con un gas di fermioni degenere alle bassissime temperature.
+
+Ora, immaginiamo che un neutrone (protone) del nucleo collida con un secondo neutrone (protone).
+A seguito della collisione il neutrone (protone) dovrebbe variare la propria energia ma, essendo gli stati quantomeccanici dei livelli energetici completamente occupati, tale variazione avverrà solo nel caso in cui l’energia scambiata sia sufficiente a farlo saltare oltre il livello di Fermi (fenomeno chiamato ‘Pauli blocking’).
+Dato che nella maggioranza dei casi ciò non avviene, \emph{il moto del neutrone (protone) risulterà essenzialmente imperturbato} come se gli altri neutroni (protoni) non esistessero affatto e si svilupperà seguendo ‘traiettorie’ regolari ben diverse dalle traiettorie degli atomi/molecole di un gas classico continuamente spezzate dalle reciproche collisioni.
+
+A causa del `Pauli blocking’(vedi sidenote pag~\pageref{siden:pauli-blocking}) dunque, \textbf{l’interazione efficace che governa il moto dei nucleoni nel nucleo non è di tipo stocastico ma piuttosto assimilabile ad una forza posizionale descrivibile quindi da un potenziale}.
+\bigskip
+
+Verificata la esistenza di un potenziale nucleare si apre il problema della sua forma che non è detto possa ridursi alla buca sferica di potenziale assunta dal modello a gas di fermioni.
+Benchè capace di riprodurre alcune importanti proprietà del nucleo, questa ipotesi deve essere sottoposta a verifica sperimentale. \emph{In che modo, allora, si può determinare la forma del potenziale nucleare}?
+
+La forma del potenziale determina il numero di stati quantomeccanici di ogni possibile livello energetico (ovvero il grado di degenerazione) ed anche la loro spaziatura.
+D’altra parte il principio di esclusione lascia risiedere un solo nucleone in ogni stato quantomeccanico e dunque un numero di nucleoni pari al grado di degenerazione in ogni livello energetico.
+Ciò significa che contando i nucleoni sui diversi livelli energetici possiamo ottenere informazioni stringenti sulla forma del potenziale nucleare. \emph{In che modo allora si possono contare i protoni ed i neutroni alloggiati nei livelli energetici nucleari}?
+\begin{marginfigure}
+	\includegraphics{figs/energy-level-shell1}
+	    \caption{Energetic scheme of a nucleon in the mimimum energy state. The highest-energy state is Fermi level.}
+	\label{fig:energy-level-shell1}
+\end{marginfigure}
+Sappiamo che in un nucleo nello stato fondamentale i neutroni ed i protoni vanno ad occupare tutti gli stati quantomeccanici dei diversi livelli energetici fino a raggiungere i rispettivi livelli di Fermi.
+\begin{marginfigure}
+	\includegraphics{figs/energy-level-shell2}
+	\caption{Energetic scheme of a nucleon in the mimimum energy state. The highest-energy state is Fermi level.}
+	\label{fig:energy-level-shell2}
+\end{marginfigure}
+Dato un nucleo di $N$ neutroni e $Z$ protoni, l’energia che dobbiamo fornire ai neutroni per estrarne uno eguaglia la differenza tra la profondità energetica della buca di potenziale e l’energia del livello di Fermi dei neutroni, ovvero $V_{0}-E_{l}$ (vedi Figura \ref{fig:energy-level-shell1}). Consideriamo allora l’isotopo con N+1 neutroni e Z protoni e domandiamoci ancora una volta quanta energia si debba fornire ai neutroni per estrarne uno dal nucleo. Ci sono due possibili risposte:
+\begin{itemize}
+	\item se il livello di Fermi dei neutroni del nucleo ($N, Z$) era incompleto, il neutrone in più andrà a collocarsi sullo stesso livello energetico (figura \ref{fig:energy-level-shell1}) e l’energia necessaria sarà ancora $V_{0}-E_{l}$;
+    \item se il livello di Fermi dei neutroni del nucleo ($N, Z$) era completo il neutrone in più andrà a collocarsi sul livello energetico successivo e l’energia necessaria avrà un valore inferiore ovvero $V_0 - E_{l+1}$ (vedi Figura \ref{fig:energy-level-shell2}).
+\end{itemize}
+
+Giungiamo allora alla conclusione che \emph{le energie di separazione del neutrone in una serie isotopica e del protone in una serie isotonica devono subire bruschi salti in basso in corrispondenza del completamento dei rispettivi livelli energetici nucleari}.
+\bigskip
+
+I dati sperimentali delle energie di separazione dei neutroni e protoni nucleari confermano l’andamento previsto.
+Nei grafici in Figura~\ref{fig:neutron-separation-energy8-20-82} a lato è infatti possibile osservare diversi salti verso il basso della energia di
+separazione del neutrone nel caso delle serie isotopiche dell’Ossigeno, del Calcio e del Piombo che permettono di esplorare
+rispettivamente numeri bassi, medi ed elevati di neutroni nucleari.
+\begin{marginfigure}
+	\includegraphics{figs/neutron-separation-energy8-20-82}
+	\caption{Energetic scheme of a nucleon in the mimimum energy state. The highest-energy state is Fermi level.}
+	\label{fig:neutron-separation-energy8-20-82}
+\end{marginfigure}
+Si vedono chiaramente i completamenti dei livelli energetici nucleari dei neutroni in corrispondenza dei numeri $8$
+(ossigeno), $20, 28$ (calcio) e $126$ (piombo).
+Dati analoghi mostrano altri completamenti in corrispondenza dei numeri $50$ e $82$.
+
+La stessa serie di numeri può essere ottenuta anche per i protoni dalla analisi dei dati sperimentali sulle serie isotoniche.
+
+In sintesi possiamo affermare che
+\emph{i dati sperimentali sulla energia di separazione dei neutroni e dei protoni indicano che i  livelli energetici nucleari (‘shell’ nucleari)
+	si completano in corrispondenza dei numeri 8, 20, 28, 50, 82 e 126 detti numeri magici}.
+\bigskip
+
+Si pone ora il problema di stabilire se il potenziale nucleare a forma di \textbf{buca sferica infinita} sia in grado di riprodurre i numeri magici nucleari. Premesso che già sappiamo che questo potenziale non è adeguato poiché prevede una energia di separazione infinita per neutroni e protoni, da un punto di vista generale si tratta di \textbf{risolvere l’equazione di Schroedinger} trovando le \textbf{autofunzioni} e gli \textbf{autovalori} dell’\textbf{operatore hamiltoniano} costruito con il potenziale
+\[
+V(r) =
+\begin{cases}
+	0 \qquad \ se \quad r <R \\
+	+ \infty \quad se \quad r > R
+\end{cases}
+\]
+Adottato un \emph{sistema di coordinate sferiche} e tenuto conto che l’hamiltoniano non contiene termini dipendenti dal tempo, l’equazione di Schroedinger può essere risolta sostituendo la seguente espressione generale della funzione d’onda separata nelle variabili spaziali e nella variabile temporale
+\[
+\psi(\mathbf{r},t) = \varphi(r, \theta, \phi) e^{ \frac{i}{\hbar} Et}
+\]
+Dato che il potenziale non dipende dalle variabili angolari, la parte spaziale della funzione d’onda può essere a sua volta separata nelle variabili angolari stesse e nella variabile radiale
+\[
+\varphi(r, \theta, \phi) = R(r) \Theta(\theta, \phi)
+\]
+Svolgendo i calcoli è possibile mostrare che \emph{la parte spaziale della funzione d’onda} deve avere la seguente espressione
+\[
+\varphi (r, \theta, \phi) = j_{l} (kr) Y_{l,m}(\theta,\phi)
+\]
+dove le $Y_{l,m}(\theta,\phi)$ sono le già viste \emph{armoniche sferiche}, la famiglia di autofunzioni degli operatori quadrato e terza componente del momento angolare che soddisfano le seguenti \emph{equazioni agli autovalori}
+\begin{align*}
+	L^{2} Y_{l,m} (\theta, \phi) &= l(l+1) \hbar^{2} Y_{l,m}(\theta,\phi) \qquad l = 0,1,2,\dots \\
+	L_{z}Y_{l,m}(\theta, \phi) &= m \hbar Y_{l,m}(\theta,\phi) \qquad
+	\qquad \ \ \,
+	m = -l,-l+1, \dots, l-1,l
+\end{align*}
+mentre le $j_{l}(kr)$ sono le altrettanto già viste \emph{funzioni di Bessel} dipendenti in questo caso dal numero quantico del momento angolare $l$.
+
+Ora, affinché \emph{la funzione d’onda possa annullarsi in} $r=R$ (si ricordi che è una delle condizioni al contorno della equazione di Schrödinger per questo problema) si deve avere
+\[
+j_{l}(kR) = 0
+\]
+da cui otteniamo la seguente condizione
+\[
+kR = z_{l,n}
+\]
+dove, $z_{l,n} \ (n= 1,2,3,\dots)$ \emph{descrive la serie infinita di valori crescenti dell’argomento che annullano la funzione di Bessel} $j_{l}(z)$ di ordine $l$ ed $n$ viene detto \emph{numero quantico principale}. Tale relazione conduce evidentemente alla \emph{quantizzazione del modulo del vettore d’onda} $k$
+\[
+k = \frac{1}{R} z_{l,n}
+\]
+Dato che nel problema in esame l’energia possiede solo il termine cinetico (U=0 all’interno del volume sferico), sostituendo la precedente relazione giungiamo alla seguente espressione dei \emph{livelli energetici della buca di potenziale sferica infinita}
+\begin{equation}
+	E = \frac{\hbar^{2}k^{2}}{2m} = \frac{\hbar^{2}}{2mR^{2}}z_{l,n}^{2}
+	\label{eq:energy-levels-infinite-spherical-potential-well}
+\end{equation}
+dalla quale si evince che
+\begin{itemize}
+	\item l’energia dipende dal numero quantico del momento angolare $l$ e dal numero quantico principale
+	$n$ e per ogni fissato $l$ (ordine della funzione di bessel) aumenta con $n$ (termine ennesimo della serie di zeri);
+	\item ad ogni valore della energia, ovvero ad ogni coppia di valori di $l$ ed $n$, corrispondono $(2l+1)$ funzioni d’onda
+	diverse nella sola parte angolare: $Y_{l,l} \  Y_{l, -l+1} \dots Y_{l,l-1} \ Y_{l,l}$ , fatto che si riassume dicendo
+	che il livello energetico $l, n$ ha una degenerazione di ordine $(2l+1)$.
+\end{itemize}
+
+Quasi sempre si utilizza la \textbf{notazione atomica} dove il numero quantico $n$ è indicato esplicitamente al primo posto mentre il numero quantico $l$ è indicato al secondo posto per mezzo della convenzione seguente
+\[
+l = 0 \to s \quad l = 1 \to p \quad l = 2 \to d \quad l = 3 \to f
+\quad l = 4 \to g \quad \dots
+\]
+
+\begin{table*}[h]
+	\begin{tabular}{|ccccccc|}
+		\hline
+		\multicolumn{7}{|c|}{3Zeros of Bessel’s Functions of the First Kind} \\ \hline
+		\multicolumn{1}{|c|}{Number of Zeros} & \multicolumn{1}{c|}{$J_{0}(x)$} & \multicolumn{1}{c|}{$J_{1}(x)$} & \multicolumn{1}{c|}{$J_{2}(x)$} & \multicolumn{1}{c|}{$J_{3}(x)$} & \multicolumn{1}{c|}{$J_{4}(x)$} & $J_{5}(x)$ \\ \hline
+		\multicolumn{1}{|c|}{$1$} & \multicolumn{1}{c|}{$2.40483$} & \multicolumn{1}{c|}{$3.83171$} & \multicolumn{1}{c|}{$5.13562$} & \multicolumn{1}{c|}{$6.38016$} & \multicolumn{1}{c|}{$7.58834$} & $8.77148$ \\ \hline
+		\multicolumn{1}{|c|}{$2$} & \multicolumn{1}{c|}{$5.52008$} & \multicolumn{1}{c|}{$7.01559$} & \multicolumn{1}{c|}{$8.41724$} & \multicolumn{1}{c|}{$9.76102$} & \multicolumn{1}{c|}{$11.06471$} & $12.3386$ \\ \hline
+		\multicolumn{1}{|c|}{$3$} & \multicolumn{1}{c|}{$8.65373$} & \multicolumn{1}{c|}{$10.17347$} & \multicolumn{1}{c|}{$11.61984$} & \multicolumn{1}{c|}{$13.0152$} & \multicolumn{1}{c|}{$14.37254$} & $15.70017$ \\ \hline
+		\multicolumn{1}{|c|}{$4$} & \multicolumn{1}{c|}{$11.79153$} & \multicolumn{1}{c|}{$13.32369$} & \multicolumn{1}{c|}{$14.79595$} & \multicolumn{1}{c|}{$16.22347$} & \multicolumn{1}{c|}{$17.61597$} & $18.98013$ \\ \hline
+		\multicolumn{1}{|c|}{$5$} & \multicolumn{1}{c|}{$14.93092$} & \multicolumn{1}{c|}{$16.47063$} & \multicolumn{1}{c|}{$17.95982$} & \multicolumn{1}{c|}{$19.40941$} & \multicolumn{1}{c|}{$20.82693$} & $22.2178$ \\ \hline
+	\end{tabular}
+\end{table*}
+Utilizzando allora la formula (\ref{eq:energy-levels-infinite-spherical-potential-well}) e tenendo conto della tabella
+qui riportata degli zeri delle funzioni di Bessel otteniamo i
+\emph{livelli energetici della buca di potenziale sferica infinita} indicati in figura~\ref{fig:energetic-levels-infinite-potential-well}.
+\begin{marginfigure}
+	\includegraphics{figs/energetic-levels-infinite-potential-well}
+	\caption{Energetic scheme of a nucleon in the mimimum energy state. The highest-energy state is Fermi level.}
+	\label{fig:energetic-levels-infinite-potential-well}
+\end{marginfigure}
+Raggruppando ora i livelli energetici vicini non risolvibili sperimentalmente, possiamo calcolare facilmente i numeri
+cumulativi dei diversi gruppi che andranno a costituire i numeri magici della buca di potenziale sferica infinita.
+
+Otteniamo così i numeri marcati in rosso: $2, 8, 20, 34, 58, \dots$.
+La serie empirica di numeri magici $8, 20, 28, 50, 82$ e $126$ non è riprodotta in modo soddisfacente per cui dobbiamo concludere che \emph{la forma del potenziale deve essere modificata}.
+
+Una prima ovvia modifica non può essere che quella di richiedere che il potenziale abbia una \emph{profondità finita e non infinita} con una \emph{risalita ripida} ma \emph{non verticale} in $r=R$ così da essere privo di punti assai poco fisici di non derivabilità. Una espressione semplice che soddisfi questi requisiti è data dal \textbf{potenziale di Saxon-Wood}
+\[
+V_{SW}(r) = -\frac{V_{0}}{1 + \exp{\left( \frac{r-R}{d} \right)}}
+\]
+dove $V_{0}$ è la profondità della buca di potenziale (dell’ordine di $50 \, MeV$), $R=r_{0}A^{1/3} (r_{0} = 1.24 \, fm)$ è il raggio nucleare e $d = 0.52 \, fm$ lo spessore dell’alone nucleare.
+\begin{marginfigure}
+	\includegraphics{figs/energetic-levels-sw}
+	\caption{Energetic scheme }
+	\label{fig:energetic-levels-sw}
+\end{marginfigure}
+I livelli energetici del potenziale sferico di Saxon-Woods, confrontati con quelli della buca di potenziale sferica infinita, sono mostrati in figura~\ref{fig:energetic-levels-sw}.
+Come si vede risultano confermati i numeri magici 2, 8 e 20, quest’ultimo con maggior nettezza del caso precedente, mentre i numeri magici più alti sono errati.
+In particolare, il numero magico $28$ sembra davvero problematico poiché nessuno dei livelli successivi al $2s$ porta con sé $8$ nucleoni (il livello $1f$ ne porta ben $14$!).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -1020,23 +1020,50 @@ Per definizone, la \emph{probabilitá che si verifichi una certa ``interazione''
 un fatto che ci permette di affermare che la sezione d'urto del
 processo altro non è che la frazione di sezione del fascio che produce
 eventi di quel processo di interazione.
-D'altra parte, nella meccanica quantistica, la
-probabilità di un certo processo può essere calcolata mettendo a
-quoziente il modulo quadrato della funzione d'onda del processo
-integrato sulla \emph{superficie di osservazione} $ S_O$ con il modulo
-quadrato della funzione d'onda incidente integrata sulla sezione del
-fascio \(\Sigma\)\sidenote
+
+D’altra parte, la meccanica quantistica ci permette di calcolare le densità
+volumetriche di probabilità attraverso la funzione d’onda.
+Consideriamo allora due volumi identici $V$ le cui superfici d’ingresso $\Sigma$ ed $S$ sono attraversate dalle onde di De Broglie per tutta la loro larghezza $v \Delta t$.
+\begin{marginfigure}
+	\centering
+	\includegraphics{figs/quantum-process-cross-section}
+%	    \caption{Schema }
+%	\label{fig:vett-trasferito}
+\end{marginfigure}
+L’integrale sul volume $V$ della funzione d’onda incidente è proporzionale alla probabilità di misurare in $V$ una particella del fascio, mentre l’integrale sul volume $V$ della funzione d’onda associata al processo in esame (ad esempio alla diffusione) è proporzionale alla probabilità di misurare in $V$ una particella defl fascio che ha subito quel processo.
+Il quoziente tra i suddetti integrali di volume altro non è che la probabilità che abbia luogo il processo\sidenote
 {
-Si ha una profonda analogia con l'ottica classica. Basti pensare al caso delle onde elettromagnetiche, per cui l'equivalente
-della relazione~\ref{eq:quantum-interaction-probability} sarebbe la valutazione del bilancio energetico
+	Le precedenti considerazioni sarebbero assai semplificate introducendo l’espressione quantomeccanica della
+	densità di corrente di probabilità che per ora non vogliamo introdurre.
+}\sidenote
+{
+	Si ha una profonda analogia con l'ottica classica. Basti pensare al caso delle onde elettromagnetiche, per cui l'equivalente
+della relazione (\ref{eq:quantum-interaction-probability}) sarebbe la valutazione del bilancio energetico
 tra l'energia dell'onda post processo(scattering/absorption) e quella di quella incidente pre processo.
-Il denominatore della ~\ref{eq:quantum-interaction-probability} rappresenta quindi una ``probabilità entrante'',
-ovvero il fascio incidente appena prima di interagire con il bersaglio.
+Il denominatore della (\ref{eq:quantum-interaction-probability}) rappresenta quindi una ``probabilità entrante'',
+	ovvero il fascio incidente appena prima di interagire con il bersaglio.
 }
 \begin{equation}
-	p_{int}  = \fraclarg{ \iint_{S_O} |\psi_{int}|^2 \, dS}{\iint_{\Sigma} |\psi_{inc}|^2| \, d \Sigma}
+	p_{int} = \fraclarg{\iiint_{V} |\psi_{proc} |^{2} \, dV}{\iiint_{V} |\psi_{inc} |^{2} \, dV} = \fraclarg{\int_{L}  v\, dt \iint_{S}| \psi_{int}|^{2} \, dS}{\int_{L}  v\, dt \iint_{S}| \psi_{inc}|^{2} \, d \Sigma} = \fraclarg{\iint_{S}| \psi_{int}|^{2} \, dS}{\iint_{\Sigma}|\psi_{inc} |^{2}  \, d \Sigma}
 	\label{eq:quantum-interaction-probability}
 \end{equation}
+%D'altra parte, nella meccanica quantistica, la
+%probabilità di un certo processo può essere calcolata mettendo a
+%quoziente il modulo quadrato della funzione d'onda del processo
+%integrato sulla \emph{superficie di osservazione} $ S_O$ con il modulo
+%quadrato della funzione d'onda incidente integrata sulla sezione del
+%fascio \(\Sigma\)\sidenote
+%{
+%Si ha una profonda analogia con l'ottica classica. Basti pensare al caso delle onde elettromagnetiche, per cui l'equivalente
+%della relazione (\ref{eq:quantum-interaction-probability}) sarebbe la valutazione del bilancio energetico
+%tra l'energia dell'onda post processo(scattering/absorption) e quella di quella incidente pre processo.
+%Il denominatore della (\ref{eq:quantum-interaction-probability}) rappresenta quindi una ``probabilità entrante'',
+%ovvero il fascio incidente appena prima di interagire con il bersaglio.
+%}
+%\begin{equation}
+%	p_{int}  = \fraclarg{ \iint_{S_O} |\psi_{int}|^2 \, dS}{\iint_{\Sigma} |\psi_{inc}|^2| \, d \Sigma}
+%	\label{eq:quantum-interaction-probability}
+%\end{equation}
 Il termine a denominatore fa si che sia rispettata la condizione di normalizzazione per cui il quoziente può davvero
 rappresentare una probabilità.
 Si pensi infatti ai casi limite(per definitezza consideriamo il processo in questione un processo di scattering):
@@ -1046,7 +1073,7 @@ Si pensi infatti ai casi limite(per definitezza consideriamo il processo in ques
 	scattering che ha prodotto l’onda stessa;
 	\item $ \psi_{scatt} = 0$: l'interezza dell'onda viene assorbita dallo schermo per cui $ p_{scatt} = 0$.
 \end{itemize}
-Otteniamo allora la seguente espressione della \textbf{sezione d'urto integrale del processo}
+Eguagliando le due forme della probabilità otteniamo l’espressione quantomeccanica della \textbf{sezione d’urto integrale del processo}:
 \begin{equation}
 	\sigma_{int} = \Sigma \fraclarg{\iint_{S_0} |\psi_{int}|^2 \, dS}{\iint_{\Sigma}|\psi_{inc}|^2 \, d \Sigma}
 	\label{eq:integral-interaction-cross-section}
