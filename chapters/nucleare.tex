@@ -126,9 +126,10 @@ dove la grandezza $\frac{e \hp}{2m}$ viene detta \textbf{magnetone di Bohr} e va
 E' un fatto ben noto però che la relazione tra $\mu$ ed $L$ differisce da quella classica per un fattore numerico.
 Ad esempio, nel caso di particelle puntiformi di spin $1/2$, l'equazione \textbf{quantomeccanica relativistica di Dirac}
 conduce ad una relazione contenente un fattore $g$:
-\[
+\begin{equation}
     \mu_{qm} = g \frac{e \hp}{2m}\left( \frac{L}{\hp}\right)
-\]
+    \label{eq:qm-magnetic-dipole-moment}
+\end{equation}
 di valore $2$.
 
 Preso atto di questo fatto dobbiamo aggiungere che le teorie di campo quantizzato hanno dimostrato che il fattore $g=2$
@@ -256,38 +257,58 @@ Si hanno allora i seguenti casi:
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Le carte dei nuclidi}\label{sec:le-carte-dei-nuclidi}
-    \begin{figure}
-        \centering
-        \includegraphics{../figs/nuclides-chart-emilife}
-        \caption{Nuclides plotted in $ NZ $ plane as a function of half-life.}
-        \label{fig:nuclides-chart-emilife}
-    \end{figure}
-In figura \ref{fig:nuclides-chart-emilife} sono rappresentati gli stati fondamentali degli oltre 3300 nuclidi a tutt’oggi
-noti in funzione di $ N $ e $ Z $ (nelle carte interattive sono rappresentati anche gli stati eccitati o isomeri, 
+In figura~\ref{fig:nuclides-chart-emilife} sono rappresentati gli stati fondamentali degli oltre 3300 nuclidi a tutt’oggi
+noti in funzione di $ N $ e $ Z $ (nelle carte interattive sono rappresentati anche gli stati eccitati o isomeri,
 si veda ad esempio \url{https://www-nds.iaea.org/relnsd/vcharthtml/VChartHTML.html}).
+\begin{marginfigure}
+    Secondo la meccanica quantistica i processi fisici sono di natura intrinsecamente statistica per cui è possibile predire
+    solo la probabilità che avvengano.
+    Data, pertanto, una popolazione di $ N $ nuclidi la variazione di $ N $ in un tempo elementare $ dt $ sará data dalla
+    espressione
+    \[
+        dN = - N \lambda dt
+    \]
+    dove $ \lambda $ è la \textbf{costante di decadimento del processo} e $ \frac{1}{\lambda} = \tau $ è detta \textbf{vita
+    media del processo}.
+    La popolazione in funzione del tempo è allora data da
+    \[
+        N(t) = N(0) e^{- \lambda t}
+    \]
+    Spesso, in fisica nucleare ci si riferisce però al \textbf{tempo di dimezzamento} $ t_{1/2} $ definito come il tempo
+    necessario per dimezzare un qualunque campione di una data sostanza. Si ottiene
+    \[
+        N(t_{1/2}) = N(0) \to t_{1/2} = \frac{\log 2}{\lambda} = \tau \log 2
+    \]
+\end{marginfigure}
 Evidentemente, per ciascun nuclide, in linea orizzontale sono disposti gli isotopi, in linea verticale gli isotoni ed
 in linea obliqua gli isobari.
 In nero sono indicati i $253$ \emph{nuclidi stabili}, negli altri colori gli oltre $3000$ nuclidi instabili con un
-codice colore che da una indicazione del tempo di dimezzamento o emivita
-\sidenote{
-Secondo la meccanica quantistica i processi fisici sono di natura intrinsecamente statistica per cui è possibile predire
-solo la probabilità che avvengano.
-Data, pertanto, una popolazione di $ N $ nuclidi la variazione di $ N $ in un tempo elementare $ dt $ sará data dalla
-espressione
-\[
-     dN = - N \lambda dt
-\]
-dove $ \lambda $ è la \textbf{costante di decadimento del processo} e $ \frac{1}{\lambda} = \tau $ è detta \textbf{vita
-    media del processo}. La popolazione in funzione del tempo è allora data da
-\[
-   N(t) = N(0) e^{- \lambda t}
-\]
-Spesso, in fisica nucleare ci si riferisce però al \textbf{tempo di dimezzamento} $ t_{1/2} $ definito come il tempo
-necessario per dimezzare un qualunque campione di una data sostanza. Si ottiene
-\[
- N(t_{1/2}) = N(0) \to t_{1/2} = \frac{\log 2}{\lambda} = \tau \log 2
-\]
-}. %%TODO Sistemare che esce dal bordo
+codice colore che da una indicazione del tempo di dimezzamento o emivita.
+\begin{figure}
+    \centering
+    \includegraphics{../figs/nuclides-chart-emilife}
+    \caption{Nuclides plotted in $ NZ $ plane as a function of half-life.}
+    \label{fig:nuclides-chart-emilife}
+\end{figure}
+%\sidenote{
+%Secondo la meccanica quantistica i processi fisici sono di natura intrinsecamente statistica per cui è possibile predire
+%solo la probabilità che avvengano.
+%Data, pertanto, una popolazione di $ N $ nuclidi la variazione di $ N $ in un tempo elementare $ dt $ sará data dalla
+%espressione
+%\[
+%     dN = - N \lambda dt
+%\]
+%dove $ \lambda $ è la \textbf{costante di decadimento del processo} e $ \frac{1}{\lambda} = \tau $ è detta \textbf{vita
+%    media del processo}. La popolazione in funzione del tempo è allora data da
+%\[
+%   N(t) = N(0) e^{- \lambda t}
+%\]
+%Spesso, in fisica nucleare ci si riferisce però al \textbf{tempo di dimezzamento} $ t_{1/2} $ definito come il tempo
+%necessario per dimezzare un qualunque campione di una data sostanza. Si ottiene
+%\[
+% N(t_{1/2}) = N(0) \to t_{1/2} = \frac{\log 2}{\lambda} = \tau \log 2
+%\]
+%}.
 
 Un primo fatto rilevante riguarda la distribuzione dei nuclidi nel piano $ ZN $.
 Già a colpo d’occhio si apprezza che \textbf{i nuclidi tendono ad avere più neutroni che protoni}.

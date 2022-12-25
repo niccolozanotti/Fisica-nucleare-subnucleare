@@ -48,7 +48,7 @@ giustifica il nome spesso usato di \textbf{modello a goccia}.
 
 Il suddetto modello ha base \textbf{fenomenologica}; la sola ipotesi
 dell'andamento a corto raggio della forza non è sufficiente a
-giustificare l'andamento reale
+giustificare l'andamento reale.
 
 Come accennato, l'energia di legame tende ad assumere rapidamente il
 valore medio di circa \(8MeV\) per nucleone (saturazione) il che indica
@@ -429,7 +429,7 @@ Per cominciare domandiamoci quale sia \emph{il numero di stati quantomeccanici c
 \end{marginfigure}
 Dato il legame esistente tra energia e quantità di moto, si deve calcolare il numero di stati aventi modulo della quantità di moto minore od uguale ad un certo prefissato valore.
 
-Utilizzando una tecnica impiegata nel caso della radiazione elettromagnetica di cavità, introduce lo \emph{spazio tridimensionale delle quantità di moto} di assi $p_{x}, p_{y}$ e $p_{z}$. Tenendo conto delle relazioni di quantizzazione (\ref{eq:quantized-momentum-fermions-gas}), si comprende immediatamente che i valori delle quantità di moto accessibili al nucleone si collocano nell’ottante positivo dello spazio (data la positività di $n_{x}, n_{y}$ e $n_{z}$ ), sulle intersezioni di un grigliato tridimensionale di passo $\frac{\pi \hbar}{L}$.
+Utilizzando una tecnica impiegata nel caso della radiazione elettromagnetica di cavità, introduce lo \emph{spazio tridimensionale delle quantità di moto} di assi $p_{x}, p_{y}$ e $p_{z}$. Tenendo conto delle relazioni di quantizzazione (\ref{eq:quantized-momentum-fermions-gas}), si comprende immediatamente che i valori delle quantità di moto accessibili al nucleone si collocano nell’ottante positivo dello spazio (data la positività di $n_{x}, n_{y}$ e $n_{z}$ ), sulle intersezioni di un grigliato tridimensionale di passo $\frac{\pi \hslash}{L}$.
 A ciascuna di tali intersezioni corrisponde una determinata terna ordinata di numeri quantici $n_{x}, n_{y}$ e $n_{z}$ e, con essa, un determinato stato quantomeccanico (\ref{eq:wave-function-nucleon-fermion-gas-normalized}).
 
 
@@ -484,12 +484,11 @@ E’ immediato allora stimare la \textbf{energia cinetica di Fermi} dei protoni 
 	\label{eq:fermi-kinetic-energy-estimate}
 \end{equation}
 %Nel caso del nuclepiù semplice ($H$) si avrà che
-%%%TODO 20/12/22 niccolozanotti: farsi spiegare da marco cosa scrivere qui
 ed anche la \textbf{profondità della buca di potenziale nucleare} che sarà approssimativamente uguale alla somma della energia di Fermi con la energia media di separazione dei nucleoni che vale circa $8 \, MeV$
 (vedi Fig.~\ref{fig:en-legame-graph})
 \begin{equation}
 	V_{0} \simeq E_{F} + \frac{B}{A} \simeq (34 + 8)\, MeV \simeq 42 \, MeV
-   \label{eq:}
+   \label{eq:potential-well-fermion-gas-estimate}
 \end{equation}
 entrambi indipendenti da A \emph{e dunque approssimativamente valide per tutti i nuclei}.
 
@@ -497,11 +496,11 @@ entrambi indipendenti da A \emph{e dunque approssimativamente valide per tutti i
 
 Si noti che l’energia cinetica dei nucleoni non è molto inferiore alla profondità della buca (è inferiore di 8 MeV appunto) per cui \emph{il nucleo è un insieme di nucleoni debolmente legati}.
 
-Nel caso dei nuclei stabili pesanti dobbiamo tenere conto che il numero di neutroni eccede quello dei protoni per cui dalla (\ref4.30) e (\ref4.31) otteniamo \emph{che l’impulso e la energia di Fermi dei neutroni supera quello dei protoni}
+Nel caso dei nuclei stabili pesanti dobbiamo tenere conto che il numero di neutroni eccede quello dei protoni per cui dalla (\ref{eq:fermi-momentum-estimate}) e (\ref{eq:fermi-kinetic-energy-estimate}) otteniamo \emph{che l’impulso e la energia di Fermi dei neutroni supera quello dei protoni}
 \[
 P_{F}^n > P_{F}^p \qquad E_{F}^n > E_{F}^p
 \]
-e così pure per la (\ref4.32) \emph{la profondità della buca di potenziale dei neutroni supera quella dei protoni}
+e così pure per la (\ref{eq:potential-well-fermion-gas-estimate}) \emph{la profondità della buca di potenziale dei neutroni supera quella dei protoni}
 \[
 V_{0}^n > V_{0}^p
 \]
@@ -571,24 +570,24 @@ dove $dn$ indica il numero di neutroni/protoni con impulso compreso tra $p$ e $p
 
 Il differenziale della (\ref{eq:fermions-number-specified-volume-momentum}) fornisce tale numero di neutroni/protoni
 \[
-dn = \frac{V}{\pi^{2}\hbar^{3}} p^{2}dp - \frac{S}{2 \pi \hbar^{2}} pdp
+dn = \frac{V}{\pi^{2}\hslash^{3}} p^{2}dp - \frac{S}{2 \pi \hslash^{2}} pdp
 \]
 che può essere sostituito nella (\ref{eq:average-kinetic-energy-nucleons}) ottenendo
 \begin{align*}
-    \langle T \rangle &= \fraclarg{\int_{0}^{P_{F}} \frac{p^{2}}{ 2m}\left(\frac{V}{\pi^{2}\hbar^{3}} p^{2}dp - \frac{S}{2 \pi \hbar^{2}} pdp \right)  }{\frac{V}{3\pi^{2}\hbar^{3}} P_{F}^{3} - \frac{S}{4 \pi \hbar^{2}} P_{F}^{2} }
-    = \fraclarg{\frac{VP_{F}^{5}}{10m\pi^{2}\hbar^{3}} - \frac{SP_{F}^{4}}{16m\pi \hbar^{2}}}{\frac{V}{3\pi^{2}\hbar^{3}} P_{F}^{3} - \frac{S}{4 \pi \hbar^{2}} P_{F}^{2}}\\
-    &= \fraclarg{\frac{VP_{F}^{5}}{10m \pi^{2}\hbar^{3}}\left( 1 - \frac{10m\pi^{2}\hbar^{3}}{VP_{F}^{5}} \frac{SP_F^{4}}{16 m \pi \hbar^{2}} \right)}{\frac{VP_{F}^{3}}{3\pi^{2}\hbar^{3}}\left( 1 - \frac{3\pi^{2}\hbar^{3}}{VP_{F}^{3}} \frac{S}{4 \pi \hbar^{2}}P_{F}^{2} \right)}
-	= \frac{3}{10 \,m}P_{F}^{2} \fraclarg{1 - \frac{5\pi \hbar}{8} \frac{S}{VP_{F}}}{1 - \frac{3\pi \hbar}{4} \frac{S}{VP_{F}}}
+    \langle T \rangle &= \fraclarg{\int_{0}^{P_{F}} \frac{p^{2}}{ 2m}\left(\frac{V}{\pi^{2}\hslash^{3}} p^{2}dp - \frac{S}{2 \pi \hslash^{2}} pdp \right)  }{\frac{V}{3\pi^{2}\hslash^{3}} P_{F}^{3} - \frac{S}{4 \pi \hslash^{2}} P_{F}^{2} }
+    = \fraclarg{\frac{VP_{F}^{5}}{10m\pi^{2}\hslash^{3}} - \frac{SP_{F}^{4}}{16m\pi \hslash^{2}}}{\frac{V}{3\pi^{2}\hslash^{3}} P_{F}^{3} - \frac{S}{4 \pi \hslash^{2}} P_{F}^{2}}\\
+    &= \fraclarg{\frac{VP_{F}^{5}}{10m \pi^{2}\hslash^{3}}\left( 1 - \frac{10m\pi^{2}\hslash^{3}}{VP_{F}^{5}} \frac{SP_F^{4}}{16 m \pi \hslash^{2}} \right)}{\frac{VP_{F}^{3}}{3\pi^{2}\hslash^{3}}\left( 1 - \frac{3\pi^{2}\hslash^{3}}{VP_{F}^{3}} \frac{S}{4 \pi \hslash^{2}}P_{F}^{2} \right)}
+	= \frac{3}{10 \,m}P_{F}^{2} \fraclarg{1 - \frac{5\pi \hslash}{8} \frac{S}{VP_{F}}}{1 - \frac{3\pi \hslash}{4} \frac{S}{VP_{F}}}
 \end{align*}
 Tramite un'espansione in serie di Taylor al primo ordine
 \begin{gather*}
-    a = \frac{5\pi \hbar}{8 P_{F}} \quad b = \frac{3\pi \hbar}{4 P_{F}} \quad x = \frac{S}{V}\\
+    a = \frac{5\pi \hslash}{8 P_{F}} \quad b = \frac{3\pi \hslash}{4 P_{F}} \quad x = \frac{S}{V}\\
     \frac{1-ax}{1-bx} = 1 + (b-a)x + O(x^{2})
 \end{gather*}
 otteniamo
 \begin{align}
-    \langle T \rangle &\simeq  \frac{3P_{F}^{2}}{10 \, m} \left( 1 - \frac{\frac{5\pi \hbar}{8}S}{VP_{F}}+ \frac{3\pi \hbar}{4} \frac{S}{V P_{F}} \right) \nonumber\\
-     &= \frac{3}{10 \, m}P_{F}^{2} \left( 1 + \frac{\pi\hbar S}{8 V P_{F}} \right)
+    \langle T \rangle &\simeq  \frac{3P_{F}^{2}}{10 \, m} \left( 1 - \frac{\frac{5\pi \hslash}{8}S}{VP_{F}}+ \frac{3\pi \hslash}{4} \frac{S}{V P_{F}} \right) \nonumber\\
+     &= \frac{3}{10 \, m}P_{F}^{2} \left( 1 + \frac{\pi\hslash S}{8 V P_{F}} \right)
 	\label{eq:approximated-kinetic-energy-nucleons}
 \end{align}
 Tenendo conto solo del termine dominante, possiamo migliorare la stima (\ref{eq:fermi-kinetic-energy-estimate}) del \emph{valore della energia cinetica media dei neutroni e protoni nucleari}
@@ -599,33 +598,33 @@ Ritornando alla (\ref{eq:approximated-kinetic-energy-nucleons}) è chiaro che si
 Ciò significa che conviene eliminare la variabile $P_{F}$ nella (\ref{eq:approximated-kinetic-energy-nucleons}) utilizzando la (\ref{eq:fermions-number-specified-volume-momentum}), che nel contesto delle approssimazioni utilizzate\sidenote{
 Per arrivare a (\ref{eq:approximated-kinetic-energy-nucleons}) si è sviluppato in serie di Taylor. Tale serie risulta convergente nel caso in cui $| b| < \frac{1}{| x|}$, cioè se
 	\[
-		\frac{3\pi \hbar}{4} \frac{S}{V P_{F}} \ll 1
+		\frac{3\pi \hslash}{4} \frac{S}{V P_{F}} \ll 1
 	\]
 	condizione che permette di compiere l'approssimazione svolta.
 } si approssima a
 \[
-n_{F} =  \frac{VP_{F}^{3}}{3 \pi^{2}\hbar^{3}} \left( 1 -  \frac{3\pi \hbar}{4} \frac{S}{V P_{F}} \right) \simeq \frac{VP_{F}^{3}}{3 \pi^{2} \hbar^{3}}
+n_{F} =  \frac{VP_{F}^{3}}{3 \pi^{2}\hslash^{3}} \left( 1 -  \frac{3\pi \hslash}{4} \frac{S}{V P_{F}} \right) \simeq \frac{VP_{F}^{3}}{3 \pi^{2} \hslash^{3}}
 \]
 da cui
 \begin{equation}
-	P_{F} = \left( \frac{3\pi^{2}\hbar^{3}n_{F}}{V} \right)^{1/3}
+	P_{F} = \left( \frac{3\pi^{2}\hslash^{3}n_{F}}{V} \right)^{1/3}
 	\label{eq:fermi-momentum-in-terms-of-fermi-number}
 \end{equation}
 Sostituendo (\ref{eq:fermi-momentum-in-terms-of-fermi-number}) in (\ref{eq:approximated-kinetic-energy-nucleons})
 \[
-\langle T \rangle \simeq \frac{3}{10 \, m}     P_{F} = \left( \frac{3\pi^{2}\hbar^{3}n_{F}}{V} \right)^{2/3} + \frac{3}{80 \, m} \frac{\pi \hbar S}{V}\left( \frac{3\pi^{2}\hbar^{3}n_{F}}{V} \right)^{1/3}
+\langle T \rangle \simeq \frac{3}{10 \, m}     P_{F} = \left( \frac{3\pi^{2}\hslash^{3}n_{F}}{V} \right)^{2/3} + \frac{3}{80 \, m} \frac{\pi \hslash S}{V}\left( \frac{3\pi^{2}\hslash^{3}n_{F}}{V} \right)^{1/3}
 \]
 da cui, infine, \emph{l’espressione cercata della energia cinetica media dei fermioni in funzione dei parametri nucleari}
 \[
-\langle T \rangle \simeq \frac{9\hbar^{2}}{10 \, m} \left( \frac{\pi^{4}n_{F}^{2}}{3 V^{2}}\right)^{1/3}  + \frac{9\hbar^{2}}{80 \, m}\left( \frac{\pi^{5}n_{F}}{9V^{4}} \right)^{1/3}S
+\langle T \rangle \simeq \frac{9\hslash^{2}}{10 \, m} \left( \frac{\pi^{4}n_{F}^{2}}{3 V^{2}}\right)^{1/3}  + \frac{9\hslash^{2}}{80 \, m}\left( \frac{\pi^{5}n_{F}}{9V^{4}} \right)^{1/3}S
 \]
 Sostituendo questa espressione nella (\ref{eq:binding-energy-fermi-gas-model}) ci avviamo verso l’espressione finale della energia di legame
 \begin{align*}
-	B \simeq A V_{0} &- N \left[ \frac{9\hbar^{2}}{10\, m} \left( \frac{\pi^{4}N^{2}}{3 V^{2}} \right)^{1/3} + \left( \frac{9\hbar^{2}}{80 \, m} \frac{\pi^{5}N}{9V^{4}} \right)^{1/3}S \right] \\
-	& -Z \left[ \frac{9\hbar^{2}}{10\, m} \left( \frac{\pi^{4}Z^{2}}{3 V^{2}} \right)^{1/3} + \left( \frac{9\hbar^{2}}{80 \, m} \frac{\pi^{5}Z}{9V^{4}} \right)^{1/3}S \right] \\
-	& - \frac{3}{5} \alpha \hbar c \frac{Z(Z-1)}{R} \\
-	= AV_{0} & - \frac{9\hbar^{2}}{80 \, m}\left( \frac{\pi^{5}}{9} \right)^{1/3} \frac{S(N^{4/3}+Z^{4/3})}{V^{4/3}} \\
-	&- \frac{9\hbar^{2}}{10 \, m} \left( \frac{\pi^{4}}{3} \right)^{1/3} \frac{N^{5/3}+Z^{5/3}}{V^{2/3}} - \frac{3}{5} \alpha \hbar c \frac{Z(Z-1)}{R}
+	B \simeq A V_{0} &- N \left[ \frac{9\hslash^{2}}{10\, m} \left( \frac{\pi^{4}N^{2}}{3 V^{2}} \right)^{1/3} + \left( \frac{9\hslash^{2}}{80 \, m} \frac{\pi^{5}N}{9V^{4}} \right)^{1/3}S \right] \\
+	& -Z \left[ \frac{9\hslash^{2}}{10\, m} \left( \frac{\pi^{4}Z^{2}}{3 V^{2}} \right)^{1/3} + \left( \frac{9\hslash^{2}}{80 \, m} \frac{\pi^{5}Z}{9V^{4}} \right)^{1/3}S \right] \\
+	& - \frac{3}{5} \alpha \hslash c \frac{Z(Z-1)}{R} \\
+	= AV_{0} & - \frac{9\hslash^{2}}{80 \, m}\left( \frac{\pi^{5}}{9} \right)^{1/3} \frac{S(N^{4/3}+Z^{4/3})}{V^{4/3}} \\
+	&- \frac{9\hslash^{2}}{10 \, m} \left( \frac{\pi^{4}}{3} \right)^{1/3} \frac{N^{5/3}+Z^{5/3}}{V^{2/3}} - \frac{3}{5} \alpha \hslash c \frac{Z(Z-1)}{R}
 \end{align*}
 dove abbiamo introdotto una unica massa per protone e neutrone.
 Ora dobbiamo ricordare che nel nucleo $V, R, N$ e $Z$ sono variabili correlate
@@ -634,17 +633,17 @@ V = \frac{4}{3} \pi r_{0}^{3} \qquad S = 4\pi r_{0}^{2}A^{2/3} \qquad R = r_{0}A
 \]
 per cui sostituendo nella precedente
 \begin{align*}
-	AV_{0} &- \frac{9 \hbar^{2}}{80 \, m} \left( \frac{\pi^{5}}{9} \right)^{1/3} \frac{4 \pi r_{0}^{2}A^{2/3}(N^{4/3}+Z^{4/3})}{\left( \frac{4}{3} \pi r_{0}^{3} A\right)^{4/3}} \\
-	&- \frac{9 \hbar^{2}}{10 \, m} \left( \frac{\pi^{4}}{3} \right)^{1/3} \frac{N^{5/3}+Z^{5/3}}{\left( \frac{4}{3} \pi r_{0}^{3} A\right)^{2/3}} - \frac{3}{5} \alpha \hbar c \frac{Z(Z-1)}{r_{0}A^{1/3}} \\
-	AV_{0} &- \frac{9 \hbar^{2}}{80 \, m} \left( \frac{\pi^{5}}{9} \right)^{1/3} \frac{3^{4/3}}{ 4^{1/3}\pi^{1/3}r_{0}^{2}} \frac{N^{4/3}+Z^{4/3}}{A^{2/3}} \\
-	&- \frac{9 \hbar^{2}}{10 \, m} \left( \frac{\pi^{4}}{3} \right)^{1/3} \frac{3^{2/3}}{ 4^{2/3}\pi^{2/3}r_{0}^{2}}\frac{N^{5/3}+Z^{5/3}}{ A^{2/3}} - \frac{3}{5} \alpha \hbar c \frac{Z(Z-1)}{r_{0}A^{1/3}} \\
-	= AV_{0} &- \frac{9 \hbar^{2}}{80 \, m} \left( \frac{9\pi^{4}}{4} \right)^{1/3} \frac{3^{4/3}}{ 4^{1/3}\pi^{1/3}r_{0}^{2}} \frac{N^{4/3}+Z^{4/3}}{A^{2/3}} \\
-	&- \frac{9 \hbar^{2}}{10 \, mr_{0}^{2}} \left( \frac{3\pi^{2}}{16} \right)^{1/3} \frac{N^{5/3}+Z^{5/3}}{ A^{2/3}} - \frac{3}{5} \alpha \hbar c \frac{Z(Z-1)}{r_{0}A^{1/3}} \\
+	AV_{0} &- \frac{9 \hslash^{2}}{80 \, m} \left( \frac{\pi^{5}}{9} \right)^{1/3} \frac{4 \pi r_{0}^{2}A^{2/3}(N^{4/3}+Z^{4/3})}{\left( \frac{4}{3} \pi r_{0}^{3} A\right)^{4/3}} \\
+	&- \frac{9 \hslash^{2}}{10 \, m} \left( \frac{\pi^{4}}{3} \right)^{1/3} \frac{N^{5/3}+Z^{5/3}}{\left( \frac{4}{3} \pi r_{0}^{3} A\right)^{2/3}} - \frac{3}{5} \alpha \hslash c \frac{Z(Z-1)}{r_{0}A^{1/3}} \\
+	AV_{0} &- \frac{9 \hslash^{2}}{80 \, m} \left( \frac{\pi^{5}}{9} \right)^{1/3} \frac{3^{4/3}}{ 4^{1/3}\pi^{1/3}r_{0}^{2}} \frac{N^{4/3}+Z^{4/3}}{A^{2/3}} \\
+	&- \frac{9 \hslash^{2}}{10 \, m} \left( \frac{\pi^{4}}{3} \right)^{1/3} \frac{3^{2/3}}{ 4^{2/3}\pi^{2/3}r_{0}^{2}}\frac{N^{5/3}+Z^{5/3}}{ A^{2/3}} - \frac{3}{5} \alpha \hslash c \frac{Z(Z-1)}{r_{0}A^{1/3}} \\
+	= AV_{0} &- \frac{9 \hslash^{2}}{80 \, m} \left( \frac{9\pi^{4}}{4} \right)^{1/3} \frac{3^{4/3}}{ 4^{1/3}\pi^{1/3}r_{0}^{2}} \frac{N^{4/3}+Z^{4/3}}{A^{2/3}} \\
+	&- \frac{9 \hslash^{2}}{10 \, mr_{0}^{2}} \left( \frac{3\pi^{2}}{16} \right)^{1/3} \frac{N^{5/3}+Z^{5/3}}{ A^{2/3}} - \frac{3}{5} \alpha \hslash c \frac{Z(Z-1)}{r_{0}A^{1/3}} \\
 \end{align*}
 da cui infine
 \begin{align}
-	B = A V_{0} &- \frac{9\hbar^{2}}{80 mr_{0}^{2}} \left( \frac{3\pi^{2}}{2} \right)^{2/3}\frac{N^{4/3}+Z^{4/3}}{A^{2/3}} \nonumber\\
-	&- \frac{3\hbar^{2}}{10 mr_{0^{2}}}\left( \frac{9\pi}{4} \right)^{2/3} \frac{N^{5/3}+Z^{5/3}}{A^{2/3}} - \frac{3}{5} \alpha \hbar c \frac{Z(Z-1)}{r_{0}A^{1/3}}
+	B = A V_{0} &- \frac{9\hslash^{2}}{80 mr_{0}^{2}} \left( \frac{3\pi^{2}}{2} \right)^{2/3}\frac{N^{4/3}+Z^{4/3}}{A^{2/3}} \nonumber\\
+	&- \frac{3\hslash^{2}}{10 mr_{0^{2}}}\left( \frac{9\pi}{4} \right)^{2/3} \frac{N^{5/3}+Z^{5/3}}{A^{2/3}} - \frac{3}{5} \alpha \hslash c \frac{Z(Z-1)}{r_{0}A^{1/3}}
 	\label{eq:intermediate-calc-binding-energy-fermi-gas}
 \end{align}
 Per avere questa espressione in una forma confrontabile con l’espressione empirica della energia di legame nucleare conviene passare alle variabili
@@ -678,19 +677,30 @@ Sostituendo $N=A-Z$ otteniamo infine le seguenti espressioni
 che sostituite nella (\ref{eq:intermediate-calc-binding-energy-fermi-gas}) permettono di sviluppare ulteriormente
 l’espressione della energia di legame
 \begin{align*}
-	B \simeq A V_{0} &- \frac{9\hbar^{2}}{80 mr_{0}^{2}}\left( \frac{3\pi^{2}}{2} \right)^{2/3} \frac{A^{2/3}}{2^{1/3}}  \left[ 1+ \frac{2}{9} \left( \frac{A-2Z}{A} \right)^{2} \right] \\
-	&- 3 \frac{\hbar^{2}}{10 m r_{0}^{2}} \left( \frac{9\pi}{4} \right)^{2/3} \frac{A}{2^{2/3}}  \left[ 1 + \frac{5}{9} \left( \frac{A-2Z}{A} \right)^{2} \right] - \frac{3 \alpha \hbar c}{5 r_{0}} \frac{Z(Z-1)}{A^{1/3}} \\
-	AV_{0} &- \frac{9\hbar^{2}}{80mr_{0}^{2}} \left( \frac{3\pi^{2}}{2\sqrt{ 2 }} \right)^{2/3} A^{2/3} - \frac{\hbar^{2}}{\textcolor{cyan}{40} m r_{0}^{2}} \left( \frac{3\pi^{2}}{2\sqrt{ 2 }} \right)^{2/3} \frac{(A-2Z)^{2}}{A^{4/3}} \\
-	&- \frac{3\hbar^{2}}{10mr_{0}^{2}} \left( \frac{9\pi}{8} \right)^{2/3}A - \frac{\hbar^{2}}{6mr_{0}^{2}} \left( \frac{9\pi}{8} \right)^{2/3} \frac{(A-2Z)^{2}}{A} - \frac{3 \alpha \hbar c}{5 r_{0}} \frac{Z(Z-1)}{A^{1/3}}
+	B \simeq A V_{0} &- \frac{9\hslash^{2}}{80 mr_{0}^{2}}\left( \frac{3\pi^{2}}{2} \right)^{2/3} \frac{A^{2/3}}{2^{1/3}}  \left[ 1+ \frac{2}{9} \left( \frac{A-2Z}{A} \right)^{2} \right] \\
+	&- 3 \frac{\hslash^{2}}{10 m r_{0}^{2}} \left( \frac{9\pi}{4} \right)^{2/3} \frac{A}{2^{2/3}}  \left[ 1 + \frac{5}{9} \left( \frac{A-2Z}{A} \right)^{2} \right] - \frac{3 \alpha \hslash c}{5 r_{0}} \frac{Z(Z-1)}{A^{1/3}} \\
+	AV_{0} &- \frac{9\hslash^{2}}{80mr_{0}^{2}} \left( \frac{3\pi^{2}}{2\sqrt{ 2 }} \right)^{2/3} A^{2/3} - \frac{\hslash^{2}}{\textcolor{cyan}{40} m r_{0}^{2}} \left( \frac{3\pi^{2}}{2\sqrt{ 2 }} \right)^{2/3} \frac{(A-2Z)^{2}}{A^{4/3}} \\
+	&- \frac{3\hslash^{2}}{10mr_{0}^{2}} \left( \frac{9\pi}{8} \right)^{2/3}A - \frac{\hslash^{2}}{6mr_{0}^{2}} \left( \frac{9\pi}{8} \right)^{2/3} \frac{(A-2Z)^{2}}{A} - \frac{3 \alpha \hslash c}{5 r_{0}} \frac{Z(Z-1)}{A^{1/3}}
 \end{align*}
 che ora riscriviamo nella sua forma finale
-\begin{align}
-		B &\simeq \left[ V_{0} - \frac{3\hbar^{2}}{10mr_{0}^{2}} \left( \frac{9\pi}{8} \right)^{2/3} \right] A - \left[ \frac{9\hbar^{2}}{80mr_{0}^{2}} \left( \frac{3\pi^{2}}{2\sqrt{ 2 }} \right)^{2/3} \right]A^{2/3}
-	- \frac{3 \alpha \hbar c}{5 r_{0}} \frac{Z(Z-1)}{A^{1/3}} \nonumber \\
-	&- \left[ \frac{\hbar^{2}}{6mr_{0}^{2}} \left( \frac{9\pi}{8} \right)^{2/3}  \right]\frac{(A-2Z)^{2}}{A}
-	- \left[ \frac{\hbar^{2}}{\textcolor{cyan}{40} m r_{0}^{2}} \left( \frac{3\pi^{2}}{2\sqrt{ 2 }} \right)^{2/3} \right] \frac{(A-2Z)^{2}}{A^{4/3}}
+\begin{equation}
+	\boxed{
+	\begin{aligned}
+		B &\simeq \left[ V_{0} - \frac{3\hslash^{2}}{10mr_{0}^{2}} \left( \frac{9\pi}{8} \right)^{2/3} \right] A - \left[ \frac{9\hslash^{2}}{80mr_{0}^{2}} \left( \frac{3\pi^{2}}{2\sqrt{ 2 }} \right)^{2/3} \right]A^{2/3}
+		- \frac{3 \alpha \hslash c}{5 r_{0}} \frac{Z(Z-1)}{A^{1/3}}  \\
+		&- \left[ \frac{\hslash^{2}}{6mr_{0}^{2}} \left( \frac{9\pi}{8} \right)^{2/3}  \right]\frac{(A-2Z)^{2}}{A}
+		- \left[ \frac{\hslash^{2}}{\textcolor{cyan}{40} m r_{0}^{2}} \left( \frac{3\pi^{2}}{2\sqrt{ 2 }} \right)^{2/3} \right] \frac{(A-2Z)^{2}}{A^{4/3}}
+	\end{aligned}
+	}
 	\label{eq:binding-energy-expression-fermi-gas-model}
-\end{align}
+\end{equation}
+%\begin{align}
+%		B &\simeq \left[ V_{0} - \frac{3\hslash^{2}}{10mr_{0}^{2}} \left( \frac{9\pi}{8} \right)^{2/3} \right] A - \left[ \frac{9\hslash^{2}}{80mr_{0}^{2}} \left( \frac{3\pi^{2}}{2\sqrt{ 2 }} \right)^{2/3} \right]A^{2/3}
+%	- \frac{3 \alpha \hslash c}{5 r_{0}} \frac{Z(Z-1)}{A^{1/3}} \nonumber \\
+%	&- \left[ \frac{\hslash^{2}}{6mr_{0}^{2}} \left( \frac{9\pi}{8} \right)^{2/3}  \right]\frac{(A-2Z)^{2}}{A}
+%	- \left[ \frac{\hslash^{2}}{\textcolor{cyan}{40} m r_{0}^{2}} \left( \frac{3\pi^{2}}{2\sqrt{ 2 }} \right)^{2/3} \right] \frac{(A-2Z)^{2}}{A^{4/3}}
+%	\label{eq:binding-energy-expression-fermi-gas-model}
+%\end{align}
 
 
 Abbiamo così ottenuto l’espressione della \textbf{energia di legame nucleare nell’ambito del modello a gas di fermioni}.
@@ -700,10 +710,10 @@ la profondità della buca di potenziale $V_{0}$ ed il raggio del nucleone $r_{0}
 Fatto ancor più rilevante, vengono correttamente previsti i termini di volume, superficie, coulombiano e asimmetria della 
 espressione del modello a goccia (\ref{eq:weizsacker-formula}):
 \begin{align*}
-	a_{v} &= V_{0} - 3 \frac{\hbar^{2}}{10 m r_{0}^{2}} \left( \frac{9\pi}{8} \right)^{2/3} \\
-	a_{s} &= \frac{9\hbar^{2}}{80 m r_{0}^{2}} \left(  \frac{3\pi^{2}}{2\sqrt{ 2 }} \right)^{2/3} \\
-	a_{c} &= \frac{3 \alpha \hbar c}{5 r_{0}} \\
-	a_{a} &= \frac{\hbar^{2}}{6 m r_{0}^{2}} \left(\frac{9\pi}{8} \right)^{2/3}
+	a_{v} &= V_{0} - 3 \frac{\hslash^{2}}{10 m r_{0}^{2}} \left( \frac{9\pi}{8} \right)^{2/3} \\
+	a_{s} &= \frac{9\hslash^{2}}{80 m r_{0}^{2}} \left(  \frac{3\pi^{2}}{2\sqrt{ 2 }} \right)^{2/3} \\
+	a_{c} &= \frac{3 \alpha \hslash c}{5 r_{0}} \\
+	a_{a} &= \frac{\hslash^{2}}{6 m r_{0}^{2}} \left(\frac{9\pi}{8} \right)^{2/3}
 \end{align*}
 Tali termini vengono così ricondotti ai principi generali della meccanica quantistica e possono ora fondarsi su di un meccanismo fisico di validità generale.
 
@@ -763,24 +773,24 @@ Dato che nella maggioranza dei casi ciò non avviene, \emph{il moto del neutrone
 
 A causa del `Pauli blocking’(vedi sidenote pag~\pageref{siden:pauli-blocking}) dunque, \textbf{l’interazione efficace che governa il moto dei nucleoni nel nucleo non è di tipo stocastico ma piuttosto assimilabile ad una forza posizionale descrivibile quindi da un potenziale}.
 \bigskip
-
-Verificata la esistenza di un potenziale nucleare si apre il problema della sua forma che non è detto possa ridursi alla buca sferica di potenziale assunta dal modello a gas di fermioni.
-Benchè capace di riprodurre alcune importanti proprietà del nucleo, questa ipotesi deve essere sottoposta a verifica sperimentale. \emph{In che modo, allora, si può determinare la forma del potenziale nucleare}?
-
-La forma del potenziale determina il numero di stati quantomeccanici di ogni possibile livello energetico (ovvero il grado di degenerazione) ed anche la loro spaziatura.
-D’altra parte il principio di esclusione lascia risiedere un solo nucleone in ogni stato quantomeccanico e dunque un numero di nucleoni pari al grado di degenerazione in ogni livello energetico.
-Ciò significa che contando i nucleoni sui diversi livelli energetici possiamo ottenere informazioni stringenti sulla forma del potenziale nucleare. \emph{In che modo allora si possono contare i protoni ed i neutroni alloggiati nei livelli energetici nucleari}?
 \begin{marginfigure}
 	\includegraphics{figs/energy-level-shell1}
-	    \caption{Energetic scheme of a nucleon in the mimimum energy state. The highest-energy state is Fermi level.}
+	\caption{Energetic scheme of a nucleon in the mimimum energy state. The highest-energy state is Fermi level.}
 	\label{fig:energy-level-shell1}
 \end{marginfigure}
-Sappiamo che in un nucleo nello stato fondamentale i neutroni ed i protoni vanno ad occupare tutti gli stati quantomeccanici dei diversi livelli energetici fino a raggiungere i rispettivi livelli di Fermi.
+Verificata la esistenza di un potenziale nucleare si apre il problema della sua forma che non è detto possa ridursi alla buca sferica di potenziale assunta dal modello a gas di fermioni.
+Benchè capace di riprodurre alcune importanti proprietà del nucleo, questa ipotesi deve essere sottoposta a verifica sperimentale. \emph{In che modo, allora, si può determinare la forma del potenziale nucleare}?
 \begin{marginfigure}
 	\includegraphics{figs/energy-level-shell2}
 	\caption{Energetic scheme of a nucleon in the mimimum energy state. The highest-energy state is Fermi level.}
 	\label{fig:energy-level-shell2}
 \end{marginfigure}
+La forma del potenziale determina il numero di stati quantomeccanici di ogni possibile livello energetico (ovvero il grado di degenerazione) ed anche la loro spaziatura.
+D’altra parte il principio di esclusione lascia risiedere un solo nucleone in ogni stato quantomeccanico e dunque un numero di nucleoni pari al grado di degenerazione in ogni livello energetico.
+Ciò significa che contando i nucleoni sui diversi livelli energetici possiamo ottenere informazioni stringenti sulla forma del potenziale nucleare. \emph{In che modo allora si possono contare i protoni ed i neutroni alloggiati nei livelli energetici nucleari}?
+
+Sappiamo che in un nucleo nello stato fondamentale i neutroni ed i protoni vanno ad occupare tutti gli stati quantomeccanici dei diversi livelli energetici fino a raggiungere i rispettivi livelli di Fermi.
+
 Dato un nucleo di $N$ neutroni e $Z$ protoni, l’energia che dobbiamo fornire ai neutroni per estrarne uno eguaglia la differenza tra la profondità energetica della buca di potenziale e l’energia del livello di Fermi dei neutroni, ovvero $V_{0}-E_{l}$ (vedi Figura \ref{fig:energy-level-shell1}). Consideriamo allora l’isotopo con N+1 neutroni e Z protoni e domandiamoci ancora una volta quanta energia si debba fornire ai neutroni per estrarne uno dal nucleo. Ci sono due possibili risposte:
 \begin{itemize}
 	\item se il livello di Fermi dei neutroni del nucleo ($N, Z$) era incompleto, il neutrone in più andrà a collocarsi sullo stesso livello energetico (figura \ref{fig:energy-level-shell1}) e l’energia necessaria sarà ancora $V_{0}-E_{l}$;
@@ -820,61 +830,52 @@ V(r) =
 \]
 Adottato un \emph{sistema di coordinate sferiche} e tenuto conto che l’hamiltoniano non contiene termini dipendenti dal tempo, l’equazione di Schroedinger può essere risolta sostituendo la seguente espressione generale della funzione d’onda separata nelle variabili spaziali e nella variabile temporale
 \[
-\psi(\mathbf{r},t) = \varphi(r, \theta, \phi) e^{ \frac{i}{\hbar} Et}
+\psi(\bm{r},t) = \varphi(r, \theta, \phi) e^{ \frac{i}{\hslash} Et}
 \]
-Dato che il potenziale non dipende dalle variabili angolari, la parte spaziale della funzione d’onda può essere a sua volta separata nelle variabili angolari stesse e nella variabile radiale
-\[
-\varphi(r, \theta, \phi) = R(r) \Theta(\theta, \phi)
-\]
-Svolgendo i calcoli è possibile mostrare che \emph{la parte spaziale della funzione d’onda} deve avere la seguente espressione
-\[
-\varphi (r, \theta, \phi) = j_{l} (kr) Y_{l,m}(\theta,\phi)
-\]
-dove le $Y_{l,m}(\theta,\phi)$ sono le già viste \emph{armoniche sferiche}, la famiglia di autofunzioni degli operatori quadrato e terza componente del momento angolare che soddisfano le seguenti \emph{equazioni agli autovalori}
-\begin{align*}
-	L^{2} Y_{l,m} (\theta, \phi) &= l(l+1) \hbar^{2} Y_{l,m}(\theta,\phi) \qquad l = 0,1,2,\dots \\
-	L_{z}Y_{l,m}(\theta, \phi) &= m \hbar Y_{l,m}(\theta,\phi) \qquad
-	\qquad \ \ \,
-	m = -l,-l+1, \dots, l-1,l
-\end{align*}
-mentre le $j_{l}(kr)$ sono le altrettanto già viste \emph{funzioni di Bessel} dipendenti in questo caso dal numero quantico del momento angolare $l$.
-
-Ora, affinché \emph{la funzione d’onda possa annullarsi in} $r=R$ (si ricordi che è una delle condizioni al contorno della equazione di Schrödinger per questo problema) si deve avere
+Dato che il potenziale non dipende dalle variabili angolari, la parte spaziale della funzione d’onda può essere a sua volta separata in due parti: una dipendente dalle variabili angolari ed una dalla variabile radiale. Svolgendo i calcoli si trova che la prima risulta essere una delle \emph{autofunzioni dell’operatore momento angolare}, ovvero una delle armoniche sferiche dipendente dai numeri quantici $l$ ed $m$, mentre la seconda una funzione di Bessel di ordine $l$
+\begin{equation}
+	\varphi (r, \theta, \phi) = j_{l} (kr) Y_{l,m}(\theta,\phi)
+	\label{eq:spatial-part-wave-function}
+\end{equation}
+Ora, affinché la funzione d’onda possa annullarsi sulla superficie del nucleo ovvero in $r=R$ si deve avere
 \[
 j_{l}(kR) = 0
 \]
-da cui otteniamo la seguente condizione
+che impone la condizione
 \[
 kR = z_{l,n}
 \]
-dove, $z_{l,n} \ (n= 1,2,3,\dots)$ \emph{descrive la serie infinita di valori crescenti dell’argomento che annullano la funzione di Bessel} $j_{l}(z)$ di ordine $l$ ed $n$ viene detto \emph{numero quantico principale}. Tale relazione conduce evidentemente alla \emph{quantizzazione del modulo del vettore d’onda} $k$
+dove, $z_{l,n} \ (n= 1,2,3,\dots)$ \emph{descrive la serie infinita di valori crescenti dell’argomento che annullano la funzione di Bessel} $j_{l}(z)$ di ordine $l$ ed $n$ viene detto \emph{numero quantico principale}. Tale condizione conduce evidentemente alla \emph{quantizzazione del modulo del vettore d’onda} e della \emph{quantità di moto}
 \[
-k = \frac{1}{R} z_{l,n}
+k = \frac{1}{R} z_{l,n} \qquad p = \frac{\hslash}{R}z_{l,n}
 \]
-Dato che nel problema in esame l’energia possiede solo il termine cinetico (U=0 all’interno del volume sferico), sostituendo la precedente relazione giungiamo alla seguente espressione dei \emph{livelli energetici della buca di potenziale sferica infinita}
+Dato che nel problema in esame l’energia possiede solo il termine cinetico (U=0 all’interno del volume sferico), le precedenti condizioni determinano la \emph{quantizzazione della energia degli stati quantici della buca di potenziale sferica infinita}
 \begin{equation}
-	E = \frac{\hbar^{2}k^{2}}{2m} = \frac{\hbar^{2}}{2mR^{2}}z_{l,n}^{2}
+	E = \frac{\hslash^{2}k^{2}}{2m} = \frac{\hslash^{2}}{2mR^{2}}z_{l,n}^{2}
 	\label{eq:energy-levels-infinite-spherical-potential-well}
 \end{equation}
-dalla quale si evince che
+Da questa espressione si evince che
 \begin{itemize}
-	\item l’energia dipende dal numero quantico del momento angolare $l$ e dal numero quantico principale
-	$n$ e per ogni fissato $l$ (ordine della funzione di bessel) aumenta con $n$ (termine ennesimo della serie di zeri);
+	\item l’energia dipende dal numero quantico del momento angolare $l$ e dal numero quantico principale  $n$ e per ogni fissato $l$ (ordine della funzione di bessel) aumenta con $n$ (termine ennesimo della serie di zeri);
 	\item ad ogni valore della energia, ovvero ad ogni coppia di valori di $l$ ed $n$, corrispondono $(2l+1)$ funzioni d’onda
 	diverse nella sola parte angolare: $Y_{l,l} \  Y_{l, -l+1} \dots Y_{l,l-1} \ Y_{l,l}$ , fatto che si riassume dicendo
 	che il livello energetico $l, n$ ha una degenerazione di ordine $(2l+1)$.
 \end{itemize}
-
-Quasi sempre si utilizza la \textbf{notazione atomica} dove il numero quantico $n$ è indicato esplicitamente al primo posto mentre il numero quantico $l$ è indicato al secondo posto per mezzo della convenzione seguente
+\begin{marginfigure}
+	\includegraphics{figs/energetic-levels-infinite-potential-well}
+	\caption{Energetic levels.}
+	\label{fig:energetic-levels-infinite-potential-well}
+\end{marginfigure}
+Introduciamo ora la notazione atomica dove il numero quantico $n$ è indicato esplicitamente al primo posto, mentre il numero quantico $l$ è indicato al secondo posto per mezzo della seguente corrispondenza
 \[
 l = 0 \to s \quad l = 1 \to p \quad l = 2 \to d \quad l = 3 \to f
 \quad l = 4 \to g \quad \dots
 \]
-
+Tenuto conto della tabella sottostante che riporta gli zeri delle funzioni di Bessel, dalla formula (\ref{eq:energy-levels-infinite-spherical-potential-well}) otteniamo i livelli energetici della buca di potenziale sferica infinita indicati nella figura: nella prima colonna di destra è indicata la degernerazione in $m$ del livello energetico, nella seconda colonna si calcola il numero di nucleoni contenuti nel livello (due stati di spin per ogni stato orbitale), nella terza colonna è indicato il numero cumulativo di nucleoni. Raggruppando i livelli energetici vicini non risolvibili sperimentalmente, possiamo infine calcolare i numeri cumulativi di nucleoni che completano le ‘shell’ nucleari (indicati in rosso) $2, 8, 20, 34, 58, 92, 132$. Il confronto con i numeri magici osservati $8, 20, 28, 50, 82$ e $126$ non è soddisfacente per cui dobbiamo concludere che \emph{la forma del potenziale deve essere modificata}.
 \begin{table*}[h]
 	\begin{tabular}{|ccccccc|}
 		\hline
-		\multicolumn{7}{|c|}{3Zeros of Bessel’s Functions of the First Kind} \\ \hline
+		\multicolumn{7}{|c|}{Zeros of Bessel’s Functions of the First Kind} \\ \hline
 		\multicolumn{1}{|c|}{Number of Zeros} & \multicolumn{1}{c|}{$J_{0}(x)$} & \multicolumn{1}{c|}{$J_{1}(x)$} & \multicolumn{1}{c|}{$J_{2}(x)$} & \multicolumn{1}{c|}{$J_{3}(x)$} & \multicolumn{1}{c|}{$J_{4}(x)$} & $J_{5}(x)$ \\ \hline
 		\multicolumn{1}{|c|}{$1$} & \multicolumn{1}{c|}{$2.40483$} & \multicolumn{1}{c|}{$3.83171$} & \multicolumn{1}{c|}{$5.13562$} & \multicolumn{1}{c|}{$6.38016$} & \multicolumn{1}{c|}{$7.58834$} & $8.77148$ \\ \hline
 		\multicolumn{1}{|c|}{$2$} & \multicolumn{1}{c|}{$5.52008$} & \multicolumn{1}{c|}{$7.01559$} & \multicolumn{1}{c|}{$8.41724$} & \multicolumn{1}{c|}{$9.76102$} & \multicolumn{1}{c|}{$11.06471$} & $12.3386$ \\ \hline
@@ -883,36 +884,316 @@ l = 0 \to s \quad l = 1 \to p \quad l = 2 \to d \quad l = 3 \to f
 		\multicolumn{1}{|c|}{$5$} & \multicolumn{1}{c|}{$14.93092$} & \multicolumn{1}{c|}{$16.47063$} & \multicolumn{1}{c|}{$17.95982$} & \multicolumn{1}{c|}{$19.40941$} & \multicolumn{1}{c|}{$20.82693$} & $22.2178$ \\ \hline
 	\end{tabular}
 \end{table*}
-Utilizzando allora la formula (\ref{eq:energy-levels-infinite-spherical-potential-well}) e tenendo conto della tabella
-qui riportata degli zeri delle funzioni di Bessel otteniamo i
-\emph{livelli energetici della buca di potenziale sferica infinita} indicati in figura~\ref{fig:energetic-levels-infinite-potential-well}.
-\begin{marginfigure}
-	\includegraphics{figs/energetic-levels-infinite-potential-well}
-	\caption{Energetic scheme of a nucleon in the mimimum energy state. The highest-energy state is Fermi level.}
-	\label{fig:energetic-levels-infinite-potential-well}
-\end{marginfigure}
-Raggruppando ora i livelli energetici vicini non risolvibili sperimentalmente, possiamo calcolare facilmente i numeri
-cumulativi dei diversi gruppi che andranno a costituire i numeri magici della buca di potenziale sferica infinita.
+\bigskip
 
-Otteniamo così i numeri marcati in rosso: $2, 8, 20, 34, 58, \dots$.
-La serie empirica di numeri magici $8, 20, 28, 50, 82$ e $126$ non è riprodotta in modo soddisfacente per cui dobbiamo concludere che \emph{la forma del potenziale deve essere modificata}.
-
-Una prima ovvia modifica non può essere che quella di richiedere che il potenziale abbia una \emph{profondità finita e non infinita} con una \emph{risalita ripida} ma \emph{non verticale} in $r=R$ così da essere privo di punti assai poco fisici di non derivabilità. Una espressione semplice che soddisfi questi requisiti è data dal \textbf{potenziale di Saxon-Wood}
+Una prima ovvia modifica non può essere che quella di richiedere che il potenziale abbia una \emph{profondità finita e non infinita}
+con una \emph{risalita ripida} ma \emph{non verticale} in $r=R$ così da essere privo di punti assai poco fisici di non derivabilità.
+Una espressione semplice che soddisfi questi requisiti è data dal \textbf{potenziale di Saxon-Wood}
 \[
 V_{SW}(r) = -\frac{V_{0}}{1 + \exp{\left( \frac{r-R}{d} \right)}}
 \]
+\begin{marginfigure}
+	\includegraphics{figs/saxon-woods-potential}
+	\caption{Woods–Saxon potential for $A = 50$,with $d = 0.5 \, fm$ and $R=4.6 \, fm$.}
+	\label{fig:saxon-woods-graph}
+\end{marginfigure}
 dove $V_{0}$ è la profondità della buca di potenziale (dell’ordine di $50 \, MeV$), $R=r_{0}A^{1/3} (r_{0} = 1.24 \, fm)$ è il raggio nucleare e $d = 0.52 \, fm$ lo spessore dell’alone nucleare.
+
+I livelli energetici del potenziale sferico
+di Saxon-Woods, confrontati con quelli
+della buca di potenziale sferica infinita,
+sono mostrati in figura~\ref{fig:energetic-levels-sw}. Come
+si vede risultano confermati i numeri
+magici 2, 8 e 20, quest’ultimo con
+maggior nettezza del caso precedente,
+mentre i numeri magici più alti sono
+errati.
 \begin{marginfigure}
 	\includegraphics{figs/energetic-levels-sw}
-	\caption{Energetic scheme }
+	\caption{Energetic levels confronting based on Saxon-Woods potential compared to the infinite spherical well.}
 	\label{fig:energetic-levels-sw}
 \end{marginfigure}
-I livelli energetici del potenziale sferico di Saxon-Woods, confrontati con quelli della buca di potenziale sferica infinita, sono mostrati in figura~\ref{fig:energetic-levels-sw}.
-Come si vede risultano confermati i numeri magici 2, 8 e 20, quest’ultimo con maggior nettezza del caso precedente, mentre i numeri magici più alti sono errati.
-In particolare, il numero magico $28$ sembra davvero problematico poiché nessuno dei livelli successivi al $2s$ porta con sé $8$ nucleoni (il livello $1f$ ne porta ben $14$!).
+In particolare, il numero magico
+28 sembra davvero problematico
+poiché nessuno dei livelli successivi al
+2s porta con sé 8 nucleoni (il livello 1f ne porta ben 14!).
+La soluzione del problema discusso fu trovata introducendo nel potenziale nucleare medio un termine spin-orbita,
+modellato sul caso del potenziale elettromagnetico dell’elettrone legato al nucleo atomico che discuteremo nel paragrafo seguente.
 
 
+\subsection{L'interazione spin orbita nell'atomo}\label{sec:spin-orbita-atomo}
+Per cominciare, ricordiamo che una \emph{carica elettrica puntiforme} che si muova in modo tale che possa essere trascurato l’irraggiamento di campi elettromagnetici, possiede solo una energia potenziale elettrostatica $U_{em} = qV$. Infatti, dalla relazione generale che lega il potenziale alla forza
+\[
+dU = - \bm{F} \cdot d \bm{s}
+\]
+nel caso della forza elettromagnetica otteniamo
+\begin{align*}
+	dU_{em} &= - \bm{F} \cdot d \bm{s} \\
+	& = - (q \bm{E} + q \bm{v} \wedge \bm{B}) \cdot d \bm{s}
+	= - q \msathbf{E} \cdot d \bm{s} - q \bm{v} \wedge \bm{B} \cdot d \bm{s} \\
+	& = q \nabla V \cdot d \bm{s} = d(qV)
+\end{align*}
+da cui
+\begin{equation}
+	U_{em} = qV
+	\label{eq:potential-energy-electrostatic}
+\end{equation}
+Se invece la carica \emph{non è puntiforme}, ci sono ulteriori gradi di libertà che contribuiscono all’energia che aggiungo no al potenziale elettrostatico termini dipendenti dal \emph{momento di dipolo elettrico e dal momento di dipolo magnetico}, legati essenzialmente alla distribuzione spaziale di cariche e correnti.
 
+Dato che sappiamo che \emph{le particelle fondamentali non possiedono momento di dipolo elettrico} ci occuperemo solamente del contributo al potenziale derivante dal momento di dipolo magnetico.
+A questo proposito, si può derivare una formula di validità generale analizzando il caso particolare di una distribuzione di correnti particolarmente semplice: quella di una \emph{spira rettangolare percorsa da una corrente costante immersa in un campo elettrico e magnetico uniformi}. E’ facile rendersi conto che una tale distribuzione spaziale di corrente determina l’insorgere di una azione da parte del solo campo magnetico. Si tratta di una azione assente nel caso puntiforme, sostanzialmente dovuta al \emph{termine di Lorentz} della forza elettromagnetica.
+
+A causa della diversa orientazione delle correnti rispetto al campo magnetico, le forze in gioco sui lati lunghi sono compensate dalla rigidità della spira, mentre quelle operanti sui lati corti determinano di fatto una coppia che tende a ruotare la spira attorno all’asse mediano.
+\begin{marginfigure}
+	\includegraphics{figs/rectangular-coil}
+	\caption{Rectangular coil immersed in a uniform magnetic field.}
+	\label{fig:rectangular-coil}
+\end{marginfigure}
+Compreso questo fatto possiamo facilmente calcolare il contributo al potenziale di un elemento $dl$ della spira
+\begin{align*}
+	d U &= - \bm{F} \cdot d \bm{s} \\
+	&= - (id \bm{l} \wedge \bm{B}) \cdot d \bm{s} \\
+	& = - (i dl B) ds \cos\left( \frac{\pi}{2} - \theta \right) = -(idlB)\left( - \frac{b}{2} d \theta \right)(\sin \theta) \\
+	&= i dl \frac{b}{2} B \sin \theta d \theta
+\end{align*}
+\begin{marginfigure}
+	\includegraphics{figs/rectangular-coil-angle}
+	%%\caption{Rectangular coil immersed inside a uniform magnetic field.}%%
+	\label{fig:rectangular-coil-angle}
+\end{marginfigure}
+Integrando l’elemento dl della spira sui due lati corti, ed introducendo il \emph{vettore momento di dipolo magnetico} della spira $\bm{\mu} = i ab \, \hat{n}$ dove $\hat{n}$ è il versore normale al piano della spira orientato dal verso della corrente secondo la regola della mano destra, otteniamo
+\[
+dU = i 2a \frac{b}{2} B \sin \theta d \theta = i a bB \sin \theta d \theta =
+d(-iabB \cos \theta) = d (-\bm{\mu} \cdot \bm{B})
+\]
+da cui la seguente espressione del \emph{contributo al potenziale del momento di  dipolo magnetico} $\bm{\mu}$ \emph{immerso nel campo magnetico} $\bm{B}$
+\begin{equation}
+	U = - \bm{\mu} \cdot \bm{B}
+	\label{eq:potential-energy-coil-magnetic-field}
+\end{equation}
+Il fatto che la formula abbia una struttura del tutto indipendente dalle proprietà geometriche del sistema fisico esaminato, suggerisce che abbia validità del tutto generale.
+Sulla base delle (\ref{eq:potential-energy-electrostatic}) e (\ref{eq:potential-energy-coil-magnetic-field}), concludiamo che un \emph{corpo elettricamente carico dotato di momento di dipolo magnetico immerso in un campo elettrico e magnetico ha il seguente potenziale complessivo}
+\begin{equation}
+	U_{em} = qV - \bm{\mu} \cdot \bm{B}
+	\label{eq:total-potential-energy-charged-body}
+\end{equation}
+Il potenziale (\ref{eq:total-potential-energy-charged-body}) può essere utilizzato nel caso dell’elettrone legato al nucleo atomico. Infatti, da un lato l’elettrone possiede un momento di dipolo magnetico, dall’altro risulta immerso nel campo magnetico generato dal moto apparente del nucleo carico positivamente.
+\bigskip
+
+Il fatto che l’elettrone possieda un momento di dipolo magnetico trova la sua evidenza ultima nei fatti sperimentali. Tuttavia, è istruttivo avvicinarci gradualmente a questo concetto assumendo per cominciare la prospettiva della fisica classica.
+Pensiamo allora l’elettrone come una \emph{distribuzione volumetrica di carica elettrica in rotazione attorno ad un asse baricentrico}. Tralasciando il problema della forza necessaria per tenere insieme una tale distribuzione di carica, immaginiamo per semplicità che la carica elettrica –e abbia una distribuzione anulare, rotante attorno all’asse normale passante per il centro.
+Definendo $S$ il \emph{momento angolare intrinseco} generato dalla rotazione del sistema, è facile trovare la seguente relazione
+\[
+\bm{\mu} = - \frac{e}{2m} \bm{S}
+\]
+la quale chiarisce che una \emph{distribuzione estesa di carica elettrica rotante, possiede inevitabilmente un momento di dipolo magnetico}.
+Possiamo ora domandarci se tale relazione valga davvero per l’elettrone che sappiamo essere invece una \emph{particella puntiforme, dotata di spin ed in generale soggetta alle leggi della meccanica quantistica e non a quelle della fisica classica}. La risposta è piuttosto sorprendente poiché i fatti sperimentali mostrano che, al netto di alcune importanti correzioni, la formula mantiene una sua validità. Rimane vero infatti che una \emph{particella dotata di carica elettrica e spin possiede inevitabilmente un momento di dipolo magnetico}. Si parla però di \emph{spin quantomeccanico}, dunque di un momento angolare intrinseco con valori quantizzati e stati corrispondenti rispettivamente agli autovalori ed agli autostati degli \emph{operatori dello spin}.
+
+Infine, il fattore numerico non è quello giusto e deve essere moltiplicato da un termine correttivo detto \emph{rapporto giromagnetico}.
+Tenendo presente che le componenti cartesiane degli operatori dello spin hanno autovalori multipli di $\hslash$, l’espressione quantomeccanica del \emph{momento di dipolo magnetico} assume la forma seguente
+\begin{equation}
+	\hat{\bm{\mu}} = - g  \frac{e\hslash}{2 m} \frac{\hat{\bm{S}}}{\hslash}
+	\label{eq:quantum-magnetic-dipole-moment}
+\end{equation}
+dove, $g$ è il rapporto giromagnetico che nel caso delle particelle puntiformi vale $g=2$ (predicibile teoricamente attraverso l’equazione relativistica di Dirac a meno di correzioni elettrodinamiche),$\frac{e\hslash}{2m}$ è il \emph{magnetone di Bohr} (che avevamo introdotto a pag. \pageref{eq:qm-magnetic-dipole-moment}) ed $S$, infine, una generica componente cartesiana dell’operatore dello spin.
+Dato che solo gli operatori ${\hat{S}}^{2}$ e ${\hat{S}}_{z}$ possono assumere valori definiti, ne deriva che il momento di dipolo magnetico potrà assumere i seguenti valori
+\begin{align*}
+	| \bm{\mu} | &= -g  \frac{e\hslash}{2m} \sqrt{ s(s+1) } \qquad s= 0, \frac{1}{2}, \frac{3}{2}, \dots \\
+	\mu_{z} &= -g  \frac{e\hslash}{2m} s_{z} \qquad \quad \qquad-s \leq s_{z} \leq +s
+\end{align*}
+Per l'elettrone che possiede uno \emph{spin} $s = \frac{1}{2}$ otteniamo
+\begin{align*}
+	| \bm{\mu} | &= -g  \frac{e\hslash}{2m} \sqrt{ \frac{3}{4} } \qquad \qquad \quad  s= 0, \frac{1}{2}, \frac{3}{2}, \dots \\
+	\mu_{z} &= -g  \frac{e\hslash}{2m} \left( \pm \frac{1}{2} \right) \qquad \quad \qquad-s \leq s_{z} \leq +s
+\end{align*}
+ovvero due soli possibili valori per la componente definita del momento di dipolo magnetico.
+
+Il nucleo, in quanto dotato di carica elettrica positiva, crea attorno a sé un campo elettrico radiale che trattiene l’elettrone (carico negativamente) su di una orbita chiusa per mezzo della forza coulombiana. E’ essenziale notare però che un osservatore solidale con l’elettrone vedrebbe, in ogni istante,  un nucleo carico in moto con velocità $- \bm{v}$ opposta a quella $\bm{v}$ dell’elettrone, per cui su di esso deve agire pure il \emph{seguente campo magnetico}
+\begin{gather*}
+\bm{B} = \frac{\mu_{0}}{4 \pi} \frac{q_{nuc} \bm{v}_{nuc} \wedge \bm{r}}{r^{3}} = \frac{\mu_{0}}{4 \pi} \frac{q_{nuc} (-\bm{v}_{el}) \wedge \bm{r}}{r^{3}} = \frac{\mu_{0}}{4 \pi} \frac{q_{nuc} (\bm{r} \wedge m\bm{v}_{el})}{mr^{3}} \\
+= \frac{\mu_{0}}{4 \pi} \frac{q_{nuc}}{m r^{3}} \bm{L}  = \frac{q_{nuc}}{4 \pi \epsilon_{0}r^{2}} \frac{1}{mc^{2}r} \bm{L} = \frac{1}{mc^{2}}  \frac{|\bm{E}|}{r} \bm{L}
+\end{gather*}
+da cui
+\begin{equation}
+	\bm{B} = \frac{1}{mc^{2}} \frac{1}{r} \bigg|\frac{ \partial U }{ \partial r }  \bigg| \bm{L}
+	\label{eq:magnetic-field-on-atomic-electron}
+\end{equation}
+Ora abbiamo tutti gli elementi per giungere al risultato finale.
+Infatti il campo magnetico (\ref{eq:magnetic-field-on-atomic-electron}) agente sull’elettrone si accoppia al suo momento di dipolo magnetico intrinseco (\ref{eq:quantum-magnetic-dipole-moment}) determinando il seguente contributo (\ref{eq:potential-energy-coil-magnetic-field}) al \emph{potenziale elettromagnetico}
+\begin{equation}
+	U = \frac{g \left( \frac{e\hslash}{2m} \right)}{m c^{2}} \frac{1}{r} \bigg| \frac{ \partial U }{ \partial r }  \bigg| \bm{L} \cdot \bm{S}
+	\label{eq:spin-orbit-em-potential}
+\end{equation}
+spesso indicato come \textbf{potenziale eletromagnetico spin-orbita} proprio perchè determinato dall’accoppiamento tra i i momenti angolari orbitale ed intrinseco dell’elettrone.
+Richiamando la (\ref{eq:total-potential-energy-charged-body}) otteniamo infine la seguente espressione del \emph{potenziale dell’elettrone atomico}
+\begin{equation}
+	U = qV + \frac{g \left( \frac{e\hslash}{2m} \right)}{m c^{2}} \frac{1}{r} \bigg| \frac{ \partial U }{ \partial r }  \bigg| \bm{L} \cdot \bm{S}
+	\label{eq:total-em-potential-spin-orbit}
+\end{equation}
+Il fatto che il potenziale dell’elettrone dipenda dal \emph{prodotto scalare tra momento angolare orbitale e spin} è degno di nota. Infatti, ciò significa che a seconda dell’angolo formato da questi due vettori la ‘posizione’ del livello energetico varia all’interno di un intervallo centrato sul valore $qV$
+\[
+U = qV \pm \frac{g \left( \frac{e\hslash}{2m} \right)}{m c^{2}} \frac{1}{r} \bigg| \frac{ \partial U }{ \partial r }  \bigg| \bigg|\bm{L}  \bigg|  \bigg|\bm{S} \bigg|
+\]
+A causa di questo fatto, la ‘luce’ emessa o assorbita dall’elettrone nel corso di un processo di diseccitazione o eccitazione dovrebbe possedere una gamma continua di frequenze centrate attorno ad un valore centrale calcolabili con la formula $\nu = E / h$.
+In realtà i dati sperimentali mostrano chiaramente che una tale distribuzione continua di frequenze non si realizza. Piuttosto queste si dividono in coppie di righe ben definite assai ravvicinate (la cosiddetta struttura fina).
+
+Tale fatto, come vedremo nel prosieguo, può essere spiegato solo sostituendo le quantità vettoriali della espressione classica con i corrispondenti operatori quantomeccanici. Allora accadrà che il «prodotto scalare» tra gli operatori del momento angolare orbitale e dello spin fornirà non una distribuzione continua di valori, ma una distribuzione discreta che, nel caso dello spin $s=1/2$, si ridurrà a due soli valori capaci di interpretare perfettamente i dati sperimentali.
+
+\subsection{L'interazione spin-orbita nel nucleo}\label{sec:spin-orbit-interaction-nucleus}
+
+Sulla falsariga del potenziale elettromagnetico (5.9), Mayer, Haxel, Suess e Jensen (il primo e l’ultimo ricevettero per questo contributo il premio Nobel nel 1963) ipotizzarono - su suggerimento di E. Fermi - che anche le interazioni forti tra nucleoni fossero caratterizzate da una interazione spin orbita in virtù di una supposta analogia strutturale tra interazione elettromagnetica ed interazione forte dotata anch’essa di un termine tipo Lorenz dipendente dalla velocità.
+\bigskip
+
+Premesso il passaggio agli operatori quantomeccanici, l’assunzione di tale ipotesi comportava che, accanto al termine centrale di Saxon-Woods, l’operatore potenziale medio nucleare della interazione forte tra nucleoni dovesse contenere pure un secondo termine centrale del tipo spin-orbita acquisendo così la forma seguente
+\begin{equation}
+	\boxed{\hat{V}_{forte} = V_{SW}(r) + V_{ls}(r) \hat{L} \cdot  \hat{S}}
+	\label{eq:mean-nuclear-potential-operator}
+\end{equation}
+
+Ottenuto questo risultato, il passo successivo non può che essere quello di calcolare i valori di aspettazione di tale potenziale che dovranno essere poi confrontati con quelli sperimentali.
+
+Come noto, secondo le regole della meccanica quantistica, il valore di una variabile dinamica $o$ in uno stato quantomeccanico descritto dalla funzione d’onda $\psi$ è dato da un certo integrale convolutivo della funzione d’onda $\psi$ e dell’operatore $O$ associato alla variabile dinamica detto \emph{valore di aspettazione dell’operatore} espresso dall'equazione (\ref{eq:observable-qm-axiom}).
+Sostituendo la (\ref{eq:mean-nuclear-potential-operator}), e tenendo conto che lo stato quantomeccanico dei nucleoni è descritto da funzioni delle variabili radiali ed angolari dipendenti dai numeri quantici del momento angolare $l$ ed $m$ (vedi la (\ref{eq:spatial-part-wave-function}) ), otteniamo
+\begin{equation}
+	\begin{aligned}
+		\langle \hat{V}_{forte} \rangle &= \int_{V} \overline{\varphi}_{l,m}(r,\theta,\phi) [V_{SW}(r)+V_{ls}(r) \hat{L} \cdot \hat{S}]\varphi_{l,m}(r,\theta,\phi) \ dV  \\
+		&= \int_{V} \overline{\varphi}_{l,m} V_{SW}(r)\varphi_{l,m} \ dV + \int_{V}\overline{\varphi}_{l,m}(\bm{r},t) V_{ls}(r)\, \hat{L} \cdot \hat{S} \, \varphi_{l,m} \ dV
+	\end{aligned}
+	\label{eq:mean-potential-calc}
+\end{equation}
+Per procedere nel calcolo consideriamo l’ultimo integrale.
+L’azione dell’operatore $\hat{L} \cdot  \hat{S}$ sullo stato quantomeccanico $\varphi_{l,m}$ può essere determinata introducendo l’operatore \emph{momento angolare totale} $\hat{J}$ del nucleone, dato dalla somma degli operatori \emph{momento angolare orbitale} $\hat{L}$ e \emph{momento angolare di spin} $\hat{S}$
+\begin{equation}
+	\hat{J} = \hat{L} + \hat{S}
+	\label{eq:total-angular-momentum-operator}
+\end{equation}
+Infatti, calcolando il ‘quadrato’ dell’operatore $\hat{J}$ si ottiene
+\[
+	\hat{J}^{2} = \hat{L}^{2} + \hat{S}^{2} + 2 \hat{L} \cdot \hat{S}
+\]
+da cui si ricava la seguente relazione operatoriale
+\[
+	\hat{L} \cdot \hat{S} = \frac{1}{2} (\hat{J}^{2} - \hat{L}^{2} - \hat{S}^{2})
+\]
+Applicando tale espressione al generico stato quantomeccanico del nucleone nel nucleo otteniamo la seguente espressione
+\[
+	\hat{L} \cdot \hat{S} \varphi_{l,m} = \frac{1}{2} (\hat{J}^{2} - \hat{L}^{2} - \hat{S}^{2}) \varphi_{l,m} = \frac{\hslash^{2}}{2} [j(j+1) - l(l+1) -s(s+1) ]\varphi_{l,m}
+\]
+che sostituita nella (\ref{eq:mean-potential-calc}) fornisce
+\begin{align*}
+	\langle \hat{V}_{forte} \rangle & = \int_{V} \overline{\varphi}_{l,m} V_{SW}(r)\varphi_{l,m} \ dV + \\
+	&+\frac{\hslash^{2}}{2} [j(j+1) - l(l+1) -s(s+1) ]
+	\int_{V}\overline{\varphi}_{l,m}(\bm{r},t) V_{ls}(r)\,  \varphi_{l,m} \ dV
+\end{align*}
+Ora si noti che le espressioni integrali, note le funzioni della coordinata radiale che descrivono i potenziali di Saxon-Wood e spin-orbita, assumeranno un definito valore numerico per cui potremo scrivere
+\begin{equation}
+	\langle \hat{V}_{forte} \rangle = \beta' + \beta\frac{\hslash^{2}}{2} [j(j+1) - l(l+1) -s(s+1) ]
+	\label{eq:mean-potential-calc2}
+\end{equation}
+Richiamando ora il teorema di somma dei momenti angolari, dalla (\ref{eq:total-angular-momentum-operator}) otteniamo i seguenti \emph{numeri quantici del momento angolare totale}
+\[
+	j = |l-s|, \dots , |l+s| \qquad l = 0,1,2,\dots \quad s = 0, \frac{1}{2}, \frac{3}{2}, \dots
+\]
+che, nel caso dei nucleoni che hanno spin $s=1/2$, forniscono
+\[
+	j = l - \frac{1}{2}, l + \frac{1}{2} \qquad l = 0,1,2,\dots
+\]
+Sostituendo infine nella (\ref{eq:mean-potential-calc2}) otteniamo facilmente i \emph{valori di aspettazione del potenziale medio nucleare dei nucleoni nel nucleo}
+\begin{equation}
+	\langle \hat{V}_{forte} \rangle = \beta' + \beta\frac{\hslash^{2}}{2}
+	\begin{cases}
+		\qquad l \qquad \quad j = l+\frac{1}{2} \\ \\
+		-(l+1) \qquad j = l -\frac{1}{2}
+	\end{cases}
+	\quad l = 1,2,\dots
+	\label{eq:expected-value-shell-model-potential}
+\end{equation}
+Si noti che ciascun livello energetico $\beta'$ del potenziale di Saxon-Woods - ad eccezione dei livelli corrispondenti ad $l=0$ per quali si ha $\hat{L} \cdot \hat{S} \varphi_{l,m}$ (vedi la (\ref{eq:mean-potential-calc})) - risulta «splittato» in due sottolivelli spaziati in misura crescente con il momento angolare orbitale $l$ del nucleone
+\begin{equation}
+	\langle \Delta \hat{V}_{forte} \rangle = \frac{\beta \hbar^{2}}{2}(2l+1)
+	\label{eq:saxon-woods-potential-energy-levels-splitting}
+\end{equation}
+\begin{figure}
+	\centering
+	\includegraphics{figs/shell-model-energy-level-final}
+	\caption{Livelli energetici derivanti dal modello a shell a confronto con approssimazioni precedenti.}
+	\label{fig:shell-model-energy-level-final}
+\end{figure}
+E’ importante precisare – come mostreremo tra poco - che i dati sperimentali richiedono un coefficiente $\beta$ negativo il che significa che i sottolivelli $j=l-1/2$ hanno una energia superiore a quelli $j=l+1/2$.
+Fatte queste premesse lo schema dei livelli del potenziale nucleare medio, completo del contributo spin-orbita, è mostrato nella figura sottostante.
+Come anticipato, i livelli energetici ns ($l=0$) non vengono separati, al contrario dei livelli $p, d, f$ etc \ldots
+che vengono divisi con una separazione sempre più ampia.
+
+Per calcolare i numeri magici associati a tale potenziale è necessario precisare in quale modo i nucleoni andranno a disporsi nei diversi sottolivelli, tenendo presente che nello stato del nucleo di minima energia i livelli saranno occupati a partire da quelli di energia inferiore. Dato che, in accordo con il principio di esclusione di Pauli, su ciascuno stato quantico potrà risiedere un solo nucleone (si ricordi che, a differenza del modello a gas di fermioni, lo spin interviene esplicitamente nella definizione dello stato quantico del nucleone) ciò significa che uno dopo l’altro i nucleoni andranno a riempire i livelli energetici partendo dal basso.
+
+Ora, il generico livello con numero quantico del \emph{momento angolare totale} $j$ (nella notazione atomica indicato in basso a destra) ha degenerazione $2j+1$, ovvero contiene $2j+1$ stati quantomeccanici identificati dal valore del numero quantico magnetico $m=-j, -j+1,\dots,j-1, j$.
+Ciò significa che il sottolivello $j=l+1/2$ avrà degenerazione $2l+2$ e quello $j=l-1/2$ degenerazione $2l$.
+Dunque, i 6 nucleoni che possono ad esempio stabilirsi sui livelli np ($l=1$) del potenziale di Saxon-Woods si suddivideranno in $2l+2=4$ nucleoni sul sottolivello $j=3/2$ e $2l=2$ nucleoni sul sottolivello $j=1/2$.
+
+Fatte queste premesse possiamo comprendere nei dettagli in Figura~\ref{fig:shell-model-energy-level-final}.
+
+
+Tra i vari dettagli, vale la pena notare come lo «splitting» del livello $1f$ (unitamente al valore negativo di $\beta$) stacchi 8 dei 14 nucleoni nello stato $1f_{\frac{7}{2}}$ spiegando l’origine del problematico numero magico 28.
+Anche nel caso dei numeri magici più elevati lo «splitting» dei livelli risulta determinante nella loro strutturazione a bande in perfetto accordo con i dati sperimentali.
+
+Per finire, sottolineiamo che la struttura dei livelli mostrata vale per tutti i nucleoni e dunque sia per i neutroni che per i protoni con l’unica differenza che, a causa della repulsione coulombiana, i livelli energetici dei protoni dovranno essere spostati un po' più verso l’alto.
+
+\subsection{Previsioni del modello a Shell}\label{sec:forecast-shell-model}
+
+Il modello a shell introduce un potenziale nucleare medio i cui livelli energetici si accordano in modo soddisfacente con i dati sperimentali ed è in grado di fare numerose previsioni.
+Come già osservato, nello stato fondamentale del nucleo, gli $N$ neutroni ed i $Z$ protoni occuperanno i rispettivi livelli energetici a partire dal basso. Nel fare questo, completeranno un certo numero di livelli ma vi sarà in generale anche un resto che andrà a disporsi sul livello energetico più alto. I neutroni o protoni che completano i livelli sono detti neutroni o protoni del ‘core’, quelli invece che occupano in modo incompleto il livello di energia più elevata sono detti neutroni o protoni di valenza.
+Il modello a shell, nella sua forma più semplice (a singola particella) assume che
+i) i neutroni e protoni del ‘core’ non contribuiscano alle proprietà del nucleo;
+ii) i neutroni e protoni di valenza che possono appaiarsi non contribuiscano alle prorpietà del nucleo;
+iii) solo i singoli neutroni e protoni di valenza non appaiati contribuiscano alle proprietà del nucleo.
+Premesso che la vera giustificazione di tali ipotesi risiede nella loro capacità di prevedere correttamente le proprietà dei nuclei, ci si può chiedere se vi sia un fondamento teorico alla idea che i nucleoni del ‘core’ non diano alcun contributo.
+\begin{marginfigure}
+	\includegraphics{figs/magic-numbers-shell-model}
+	%    \caption{This is a margin figure.}
+	\label{fig:magic-numbers-shell-model}
+\end{marginfigure}
+Consideriamo il caso del momento
+angolare nucleare. Tali ipotesi implicano
+che lo spin del nucleo sia determinato dai
+soli neutroni o protoni di valenza spaiati,
+per cui la somma dei momenti angolari
+totali dei neutroni e protoni del ‘core’, e
+dunque di ciascuna ‘shell’ completa,
+debba annullarsi.
+Ora, se una ‘shell’ di determinato
+momento angolare orbitale $j$ è
+completa, saranno occupati anche tutti
+gli stati $(j,-j), (j,-j+1)...(j,j-1), (j,j)$ che così
+concorrono con uguale peso a formare lo
+stato quantistico complessivo (infatti, una
+ipotetica misura di momento angolare,
+deve trovare con uguale probabilità i
+suddetti valori). Ma l’unico stato quantico
+che, fissato il momento angolare $j$, da
+uguale peso a tutti i diversi valori di $j_{z}$ è lo
+stato di momento angolare nullo, per cui
+deduciamo che i neutroni o protoni di una
+‘shell’ completa non contribuiscono al
+momento angolare totale del nucleo.
+Sulla base di queste premesse possiamo fare alcune semplici previsioni.
+Ad esempio ne deriva che, secondo il modello a ‘shell’, non solo i nuclei doppiamente magici (che giocano un ruolo simile a quello dei gas nobili nella fisica atomica) ma tutti i nuclei \emph{pari-pari} \emph{non possiedono spin}, un fatto pienamente confermato dai dati sperimentali.
+Consideriamo ora il caso dei nuclei \emph{pari-dispari}.
+Nel caso dell’ossigeno (magico in $Z=8$) prevediamo per la serie isotopica i seguenti spin: $\isotope[14][8]{O}: s= 0,
+\isotope[15][8]{O}: s= 1/2, \isotope[16][8]{O}: s= 0, \isotope[17][8]{O}: s= 5/2, \isotope[18][8]{O}: s= 0$, e così via a valori
+alternati $0, 5/2$ fino all’isotopo $\isotope[23][8]{O}: s= 1/2$.
+Anche in questo caso i dati sperimentali confermano la previsione.
+Non sempre il modello a shell a singola particella coglie nel segno. Ad
+esempio il (\isotope[47][22]{Ti}) dovrebbe avere uno spin $s=7/2$ mentre sperimentalmente 22
+si trova $s=5/2$. In questi casi si ammette che lo spin venga deteminato non
+dal solo nucleone di valenza spaiato ma da tutti i nucleoni di valenza
+opportunamente accoppiati.
+Consideriamo infine il caso dei nuclei \emph{dispari-dispari}. Ad esempio, il nucleo
+($\isotope[6][3]{Li}$) ha un protone ed un neutrone spaiati portatori di momento angolare
+$J=3/2$ ciascuno che possono comporsi nei valori di spin totale $s=3,2,1,0$.
+Nella sua forma basilare, il modello non può dire di più ma non è smentito dal valore sperimentale $s=1$.
+Concludiamo questa parte ricordando che il modello a shell può fare anche previsioni sui momenti di dipolo magnetico ed elettrico dei nuclei.
+Si tratta però di previsioni problematiche soprattutto nel caso dei momenti di dipolo elettrico che risultano essere nel caso $150<A<190$ e $A>220$ fortemente sottostimati rispetto ai valori sperimentali.
+Sono queste le ragioni che hanno spinto i fisici nucleari a sviluppare il \emph{Modello Collettivo} basato su di un potenziale non sfericamente simmetrico che introduce forti deformazioni nei nuclei pesanti e con esse consitenti valori del momento di dipolo elettrico.
 
 
 
