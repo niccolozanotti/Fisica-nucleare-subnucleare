@@ -6,4 +6,4 @@
 
 Versione pdf degli appunti [qui](appunti-nucleare.pdf).
 
-Appunti riassuntivi (fino alla parte di fisica delle particelle) [qui](appunti-nucleare-nicola.pdf).
+Appunti riassuntivi (fino alla parte di fisica delle particelle) [qui](appunti-nucleare-nm.pdf).
