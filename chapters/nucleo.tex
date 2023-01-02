@@ -437,7 +437,7 @@ da cui la \textbf{sezione d'urto differenziale di Rutherford}
 \end{equation}
 un risultato valido anche in meccanica quantistica.
 
-[Esercizio in dispensa pag 38.]
+[Esercizio in dispensa pag 39.]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Le proprietà ondulatorie delle particelle microscopiche}\label{sec:proprieta-ondulatorie-delle-particelle-microscopiche}
@@ -455,7 +455,7 @@ particelle microscopiche, oltre a possedere proprietà corpuscolari,
 	dovevano possedere anche proprietà ondulatorie,} per cui ad esse si
 doveva associare una lunghezza d'onda e frequenza (De Broglie) ed una
 funzione d'onda (Born), soluzione quest'ultima di una determinata
-equazione d'onda (Schrödinger), giungendo così alla formulazione della
+equazione d'onda (Schrödinger), giungendo così alla formulazione della meccanica quantistica.
 
 D'altra parte, a partire dai lavori di Planck sul corpo nero (1900) e di
 Einstein sull'effetto fotoelettrico (1905), venne contemporaneamente
@@ -530,7 +530,7 @@ De Broglie'} a loro associate
 	\label{eq:de-broglie-einstein-rel}
 \end{equation}
 
-La relazione dispersione (relazione energia-impulso) indica chiaramente
+La relazione di dispersione (relazione energia-impulso) indica chiaramente
 che le componenti di Fourier delle `onde quantomeccaniche' si propagano
 come se il vuoto fosse un \textbf{mezzo dispersivo}.
 Se ad una particella materiale si devono associare grandezze ondulatorie
@@ -586,7 +586,7 @@ di moto} ed \textbf{energia}:
 		\hat{E} = i \hp \frac{\partial}{\partial t}
 	\]
 \end{itemize}
-Nel linguaggio degli operatori, le precenti espressioni possono allora
+Nel linguaggio degli operatori, le precedenti espressioni possono allora
 essere rilette affermando che in una data componente di Fourier
 dell'onda quantomeccanica \textbf{i valori della quantità di moto e
 della energia sono autovalori degli operatori} \(\hat{P}\) ed
@@ -878,7 +878,7 @@ Nell'integrale appena ottenuto vogliamo esprimere la fase dell'esponenziale in f
 \begin{gather*}
 	k(s + z') = k(|\bm{r}-\bm{r'}|+z') = k \left(\sqrt{(\bm{r}-\bm{r'})\cdot(\bm{r}-\bm{r'})}+\bm{n}' \cdot \bm{r'}\right)\\
 	= k\left(r \sqrt{1 - \frac{2 \bm{r}\cdot \bm{r'}}{r^2} + \frac{r'^2}{r^2}} + \bm{n}' \cdot \bm{r'}\right)
-	\simeq k \left\{ r  \left[ 1 + \frac{1}{2} \left( \frac{2 \bm{r}\cdot \bm{r'}}{r^2} + \frac{r'^2}{r^2}\right) \right]
+	\simeq k \left\{ r  \left[ 1 + \frac{1}{2} \left( - \frac{2 \bm{r}\cdot \bm{r'}}{r^2} + \frac{r'^2}{r^2}\right) \right]
 	+ \bm{n}' \cdot \bm{r'} \right\} \\
 	=  k\left( r + \frac{r'^2}{2r} - \frac{ \bm{r}\cdot \bm{r'}}{r} + \bm{n}' \cdot \bm{r'}\right)
 	= k r + k \frac{r'^2}{2r} - k \frac{ \bm{r}\cdot \bm{r'}}{r} + k \bm{n}' \cdot \bm{r'}
@@ -959,7 +959,7 @@ Da questa relazione possiamo allora ricavare la seguente espressione della \text
 		\label{eq:screen-scattered-wave}
 \end{align}
 All'interno dell'integrale di superficie di questa espressione conviene introdurre la \textbf{funzione di profilo}
-$\Gamma$ (nota anche come ``f̀unzione pupilla'' in ottica classica) la quale, nel caso di una apertura A totalmente trasparente, risulta definita nel modo seguente
+$\Gamma$ (nota anche come ``f̀unzione pupilla'' in ottica classica) la quale, nel caso di un ostacolo A totalmente assorbente, risulta definita nel modo seguente
 \[
 	\Gamma =
 	\begin{cases}
@@ -1293,7 +1293,7 @@ L'ampiezza di scattering (\ref{eq:scattering-amplitude}) si scriverá come
 \begin{align*}
 	f(\bm{q}) & = \frac{ik}{2 \pi} \int_0^{2 \pi} \int_0^{\infty} \Gamma(r) e^{-iq \cos \varphi r} r \,d \varphi dr                      \\
 	& = \frac{ik}{2 \pi} \int_0^R r \left[ \int_0^{2 \pi} e^{-iq \cos \varphi r} d \varphi \right] \, dr                       \\
-	& = ik \int_0^R \underbrace{\left[ \frac{1}{2 \pi}\int_0^{2 \pi} e^{-iq \cos \varphi r} d \varphi \right]}_{J_0(qr)} \, dr
+	& = ik \int_0^R r \underbrace{\left[ \frac{1}{2 \pi}\int_0^{2 \pi} e^{-iq \cos \varphi r} d \varphi \right]}_{J_0(qr)} \, dr
 \end{align*}
 dove \(J_0(qr)\) è nota come \textbf{funzione di Bessel di ordine zero} (vedi Appendice B):
 \[
@@ -1324,7 +1324,7 @@ Tenendo ora conto che \(q = k \sin \theta\) otteniamo infine
 e da (\ref{eq:scattering-cross-section-solid-angle}) segue l'espressione della \textbf{sezione d'urto differenziale di
 scattering del disco assorbente}
 \begin{equation}
-	\frac{d \sigma_{scatt}}{d \Omega} = \frac{{R}^{2}}{\sin^2 \theta} J_1(kR \sin \theta)
+	\frac{d \sigma_{scatt}}{d \Omega} = \frac{{R}^{2}}{\sin^2 \theta} J_1^2(kR \sin \theta)
     \label{eq:scattering-differential-cross-section-absorptive-disk}
 \end{equation}
 Tenendo conto ora della funzione profilo considerata dalla (\ref{eq:scattering-cross-section-profile-func}) si ottiene
@@ -1352,7 +1352,7 @@ da segue la \textbf{sezione dl'urto totale d'interazione del disco assorbente}
 \end{equation}
 Dal teorema ottico infine
 \[
-	\sigma_{ass} = \sigma_{tot} - \sigma_{scatt} = 2\pi ^2 - \pi R^2
+	\sigma_{ass} = \sigma_{tot} - \sigma_{scatt} = 2\pi R^2 - \pi R^2
 \]
 da cui segue l'espressione della \textbf{sezione d'urto totale di
 assorbimento del disco assorbente}
