@@ -47,9 +47,9 @@ della posizione. \[
     \label{eq:mean-value-quantum-position}
 \end{equation} dove il denominatore è unitario dalla condizione di
 normalizzazione.
-A questo punto si ha, con \(\psi^*\) complesso
+A questo punto si ha, con \(\bar{\psi}\) complesso
 coniugato, \[
-               \langle \bm{r} \rangle = \iiint_{V} \psi^*(\bm{r},t)\bm{r}\psi(\bm{r},t)\,dV
+               \langle \bm{r} \rangle = \iiint_{V} \bar{\psi}(\bm{r},t)\bm{r}\psi(\bm{r},t)\,dV
 \] ovvero la \emph{media delle posizioni corrisponde alla media del
 vettore posizione \(\bm{r}\) pesata dal modulo quadro della funzione
 d'onda.}
@@ -76,12 +76,12 @@ che tale fatto abbia valida generale:
 \end{quote}
 
 Proseguiamo nel ragionamento, operando sulla prima delle equazioni
-precedenti (prima moltiplicando per \(\psi^{*}\) e poi integrando ambo i
+precedenti (prima moltiplicando per \(\bar{\psi}\) e poi integrando ambo i
 membri) si ha
 \begin{gather*}
     - i \hslash \nabla \psi = \bm{p} \psi \implies
-    \psi^{*}(-i \hslash \nabla) \psi = \bm{p} \psi^{*}\psi\\
-    \iiint_{V} \psi^{*}(-i \hslash \nabla) \psi \, dV = \iiint_{V} \bm{p} \psi^{*}\psi \, dV = \bm{p}
+    \bar{\psi}(-i \hslash \nabla) \psi = \bm{p} \bar{\psi}\psi\\
+    \iiint_{V} \bar{\psi}(-i \hslash \nabla) \psi \, dV = \iiint_{V} \bm{p} \bar{\psi}\psi \, dV = \bm{p}
 \end{gather*} dove si è sfruttata la normalizzazione della funzione d'onda.
 Si noti
 che tale espressione, valida nel caso di una data componente di Fourier,
@@ -91,7 +91,7 @@ Non è difficile mostrare che nel caso di un generico \emph{pacchetto d'onde} i
 valore medio della quantità di moto della particella continua ad essere
 dato da questo integrale per cui scriveremo
 \[
-    \langle \bm{p}\rangle = \iiint_{V} \psi^{*}\hat{P}\psi \, dV = \iiint_{V} \psi^{*}(- i \hslash \nabla )\psi \, dV
+    \langle \bm{p}\rangle = \iiint_{V} \bar{\psi}\hat{P}\psi \, dV = \iiint_{V} \bar{\psi}(- i \hslash \nabla )\psi \, dV
 \] Inoltre, essendo le grandezze fisiche espresse da numeri reali, gli
 operatori associati alle variabili dinamiche dovranno essere
 \textbf{hermitiani}.
@@ -107,7 +107,7 @@ quantistica nella seguente forma:
     al tempo \(t\) in un certo stato quantomeccanico \(\psi(\bm{r},t)\) è
     dato dal seguente integrale detto \textbf{valore di aspettazione}
     \begin{equation}
-        \boxed{\langle o \rangle = \iiint_{V} \psi^{*}(\bm{r},t)\hat{O}\psi(\bm{r},t) \, dV}
+        \boxed{\langle o \rangle = \iiint_{V} \bar{\psi}(\bm{r},t)\hat{O}\psi(\bm{r},t) \, dV}
         \label{eq:observable-qm-axiom}
     \end{equation}
 \end{quote}
@@ -284,7 +284,7 @@ della meccanica quantistica il quale stabilisce che
     valore di aspettazione del commutatore dei loro operatori diviso il
     fattore \(2i\)
     \begin{equation}
-        \boxed{\sigma_{a} \sigma_{b} \geq \iiint_{V} \psi^{*}(\bm{r},t) \frac{\hat{A}\hat{B} -\hat{B}\hat{A}}{2i}
+        \boxed{\sigma_{a} \sigma_{b} \geq \iiint_{V} \bar{\psi}(\bm{r},t) \frac{\hat{A}\hat{B} -\hat{B}\hat{A}}{2i}
         \psi(\bm{r},t) \, dV}
         \label{eq:sigma-product-commutator-theorem}
     \end{equation}
@@ -315,8 +315,8 @@ da cui il valore del commutatore
 \]
 che sostituito nella (\ref{eq:sigma-product-commutator-theorem}) fornisce
 \begin{gather*}
-    \sigma_{x} \sigma_{p_{x}} \geq \iiint_{V} \psi^{*}(\bm{r},t) \frac{\hat{X}\hat{P}_{x} - \hat{P}_{x}\hat{X}}{2 i } \psi(\bm{r},t) \, dV =
-    \iiint_{V} \psi^{*}(\bm{r},t) \frac{i \hslash  \hat{1}}{2i}\psi(\bm{r},t) \, dV\\
+    \sigma_{x} \sigma_{p_{x}} \geq \iiint_{V} \bar{\psi}(\bm{r},t) \frac{\hat{X}\hat{P}_{x} - \hat{P}_{x}\hat{X}}{2 i } \psi(\bm{r},t) \, dV =
+    \iiint_{V} \bar{\psi}(\bm{r},t) \frac{i \hslash  \hat{1}}{2i}\psi(\bm{r},t) \, dV\\
     \sigma_{x}\sigma_{p_{x}} \geq \frac{\hslash}{2}
 \end{gather*}
 che esprime in forma rigorosa il principio di indeterminazione per le
@@ -399,7 +399,7 @@ quadrato del momento angolare e della sua terza componente}, mentre le
 corrispondenti \textbf{autofunzioni} forniranno le espressioni delle
 \textbf{funzioni d'onda} degli stati quantomeccanici: \begin{gather*}
                                                           \hat{L}^{2}\psi = \lambda \psi\\
-                                                          \langle \hat{L}^{2}\rangle = \iiint_{V} \psi^{*} \hat{L}^{2}\psi \, dV = \lambda \iiint_{V} \psi \psi^{*} \, dV = \lambda\\
+                                                          \langle \hat{L}^{2}\rangle = \iiint_{V} \bar{\psi} \hat{L}^{2}\psi \, dV = \lambda \iiint_{V} \psi \bar{\psi} \, dV = \lambda\\
                                                           \hat{L}^{2} \psi = \lambda' \psi \qquad  \hat{L}_{z} \psi = \lambda'' \psi
 \end{gather*}
 Sviluppando il conto (vedi un testo di QM) si ha
