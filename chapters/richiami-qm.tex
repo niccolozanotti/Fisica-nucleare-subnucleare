@@ -791,17 +791,17 @@ dei momenti angolari} in meccanica quantistica:
 \begin{quote}
     Dati due stati quantomeccanici con momento angolare definito
     \(\phi_{j_{1},m_{1}}\)e \(\phi_{j_{2},m_{2}}\) autostati degli operatori
-    \(\hat{J}_{1},\hat{J}_{1z}\) e \(\hat{J}_{2}, \hat{J}_{2z}\) tali che
+    \(\hat{J}_{1}^2,\hat{J}_{1z}\) e \(\hat{J}_{2}^2, \hat{J}_{2z}\) tali che
     \begin{equation}
         \begin{aligned}
-            \hat{J}_{1}^{2} \ \phi_{j_{1},m_{1}}(\bm{r}) &= j_{1}(j_{1}+1) \hslash \ \phi_{j_{1},m_{1}}(\bm{r}) \qquad j_{1} = 0, \frac{1}{2}, 1, \frac{3}{2}\\
+            \hat{J}_{1}^{2} \ \phi_{j_{1},m_{1}}(\bm{r}) &= j_{1}(j_{1}+1) \hslash \ \phi_{j_{1},m_{1}}(\bm{r}) \qquad j_{1} = 0, \frac{1}{2}, 1, \frac{3}{2}, \dots\\
             \hat{J}_{1z} \ \phi_{j_{1},m_{1}}(\bm{r}) &= m \hslash \ \phi_{j_{1},m_{1}}(\bm{r})  \qquad m_{1} = -j_{1} , -j_{1} +1, \dots , j_{1}-1, j_{1}
         \end{aligned}
         \label{eq:angular-momentum-theorem-1}
     \end{equation}
     \begin{equation}
         \begin{aligned}
-            \hat{J}_{2}^{2} \ \phi_{j_{2},m_{2}}(\bm{r}) &= j_{2}(j_{2}+1) \hslash \ \phi_{j_{2},m_{2}}(\bm{r}) \qquad j_{2} = 0, \frac{1}{2}, 1, \frac{3}{2}\\
+            \hat{J}_{2}^{2} \ \phi_{j_{2},m_{2}}(\bm{r}) &= j_{2}(j_{2}+1) \hslash \ \phi_{j_{2},m_{2}}(\bm{r}) \qquad j_{2} = 0, \frac{1}{2}, 1, \frac{3}{2}, \dots\\
             \hat{J}_{2z} \ \phi_{j_{2},m_{2}}(\bm{r}) &= m \hslash \ \phi_{j_{2},m_{2}}(\bm{r})  \qquad m_{2} = -j_{2} , -j_{2} +1, \dots , j_{2}-1, j_{2}
         \end{aligned}
         \label{eq:angular-momentum-theorem-2}
@@ -827,7 +827,7 @@ Con tutta evidenza, si tratta di una conseguenza delle indefinizioni delle compo
 $ \phi_{j_1,m_1}$ e $ \phi_{j_2,m_2}$ dei sottosistemi componenti e lo stato $ \psi_{j,m}$ del sistema complessivo.
 Si può dimostrare che vale la seguente relazione
 \begin{equation}
-    \phi_{j_{1}m_{1}} \phi_{j_{2}m_{2}} = \mathlarger{\sum}_{\substack{j=| j_{1}-j_{2}| \\ m = m_{1}+m_{2}} }^{| j_{1}+j_{2}|} C_{jm}^{j_{1}m_{1}j_{2}m_{2}} \phi_{jm}
+    \phi_{j_{1}m_{1}} \phi_{j_{2}m_{2}} = \mathlarger{\sum}_{\substack{j=| j_{1}-j_{2}| \\ m = m_{1}+m_{2}} }^{| j_{1}+j_{2}|} C_{jm}^{j_{1}m_{1}j_{2}m_{2}} \psi_{jm}
    \label{eq:clebsch-gordan-def}
 \end{equation}
 dove i coefficienti moltiplicativi sono detti \textbf{Coefficienti di Clebsch-Gordan}.
@@ -836,7 +836,7 @@ E’ utile sottolineare ancora una volta che tale relazione mostra che mettendo 
 Naturalmente si può porre anche il problema inverso.
 Ovvero, dato un sistema in uno stato di momento angolare definito $\psi_{j,m}$ e dati i numeri quantici $j_{1}$ e $j_{2}$ dei sottosistemi componenti, determinare i possibili stati di momento angolare  $\phi_{j_{1},m_{1}}$e $\phi_{j_{2},m_{2}}$
 \begin{equation}
-    \phi_{j_{1}m_{1}} \phi_{j_{2}m_{2}} =  \underset{m_{1}+m_{2}=m}{\mathlarger{\sum}_{m_{1}=-j_{1}} \mathlarger{\sum}_{ m_{2}=-j_{2}}}
+    \psi_{jm} =  \underset{m_{1}+m_{2}=m}{\mathlarger{\sum}_{m_{1}=-j_{1}} \mathlarger{\sum}_{ m_{2}=-j_{2}}}
     C^{j,m}_{j_{1},m_{1} \, j_{2},m_{2}} \, \phi_{j_{1},m_{1}}\phi_{j_{2},m_{2}}
     \label{eq:inverse-clebsch-gordan}
 \end{equation}
